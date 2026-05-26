@@ -39,13 +39,13 @@
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Audio File</label>
           <div class="flex gap-2 items-center">
-            <input type="file" accept="audio/*" @change="onAudioSelect" />
+            <input ref="audioInput" type="file" accept="audio/*" @change="onAudioSelect" class="hidden" />
             <button
-              @click="handleUploadAudio"
-              :disabled="!selectedAudioFile"
+              @click="triggerAudioUpload"
+              :disabled="isUploadingAudio"
               class="text-xs bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50 hover:bg-green-700"
             >
-              Upload
+              {{ isUploadingAudio ? 'Uploading...' : 'Upload' }}
             </button>
           </div>
           <p v-if="form.audioFilePath" class="text-xs text-green-600 mt-1">{{ form.audioFilePath }}</p>
@@ -54,13 +54,13 @@
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Subtitle File (.srt / .vtt)</label>
           <div class="flex gap-2 items-center">
-            <input type="file" accept=".srt,.vtt" @change="onSubtitleSelect" />
+            <input ref="subtitleInput" type="file" accept=".srt,.vtt" @change="onSubtitleSelect" class="hidden" />
             <button
-              @click="handleUploadSubtitle"
-              :disabled="!selectedSubtitleFile"
+              @click="triggerSubtitleUpload"
+              :disabled="isUploadingSubtitle"
               class="text-xs bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50 hover:bg-green-700"
             >
-              Upload &amp; Parse
+              {{ isUploadingSubtitle ? 'Parsing...' : 'Upload & Parse' }}
             </button>
           </div>
           <div v-if="form.subtitles.length" class="mt-2 max-h-40 overflow-y-auto border rounded p-2 text-xs bg-gray-50">
@@ -114,8 +114,10 @@ interface SubtitleItem {
 const materials = ref<any[]>([]);
 const editingId = ref<number | null>(null);
 const isEditing = ref(false);
-const selectedAudioFile = ref<File | null>(null);
-const selectedSubtitleFile = ref<File | null>(null);
+const audioInput = ref<HTMLInputElement | null>(null);
+const subtitleInput = ref<HTMLInputElement | null>(null);
+const isUploadingAudio = ref(false);
+const isUploadingSubtitle = ref(false);
 
 const form = reactive({
   title: '',
@@ -143,8 +145,7 @@ function resetForm() {
   form.audioFilePath = '';
   form.originalText = '';
   form.subtitles = [];
-  selectedAudioFile.value = null;
-  selectedSubtitleFile.value = null;
+
 }
 
 async function selectItem(id: number) {
@@ -158,26 +159,43 @@ async function selectItem(id: number) {
   form.subtitles = data.subtitles || [];
 }
 
-function onAudioSelect(e: Event) {
+function triggerAudioUpload() {
+  audioInput.value?.click();
+}
+
+function triggerSubtitleUpload() {
+  subtitleInput.value?.click();
+}
+
+async function onAudioSelect(e: Event) {
   const file = (e.target as HTMLInputElement).files?.[0];
-  selectedAudioFile.value = file ?? null;
+  if (!file) return;
+  isUploadingAudio.value = true;
+  try {
+    const result = await api.uploadAudio(file);
+    form.audioFilePath = result.url;
+  } catch (err: any) {
+    alert('Audio upload failed: ' + (err.message || 'Unknown error'));
+  } finally {
+    isUploadingAudio.value = false;
+    // Reset file input so the same file can be re-selected
+    if (audioInput.value) audioInput.value.value = '';
+  }
 }
 
-function onSubtitleSelect(e: Event) {
+async function onSubtitleSelect(e: Event) {
   const file = (e.target as HTMLInputElement).files?.[0];
-  selectedSubtitleFile.value = file ?? null;
-}
-
-async function handleUploadAudio() {
-  if (!selectedAudioFile.value) return;
-  const result = await api.uploadAudio(selectedAudioFile.value);
-  form.audioFilePath = result.url;
-}
-
-async function handleUploadSubtitle() {
-  if (!selectedSubtitleFile.value) return;
-  const result = await api.uploadSubtitle(selectedSubtitleFile.value);
-  form.subtitles = result.subtitles;
+  if (!file) return;
+  isUploadingSubtitle.value = true;
+  try {
+    const result = await api.uploadSubtitle(file);
+    form.subtitles = result.subtitles;
+  } catch (err: any) {
+    alert('Subtitle upload failed: ' + (err.message || 'Unknown error'));
+  } finally {
+    isUploadingSubtitle.value = false;
+    if (subtitleInput.value) subtitleInput.value.value = '';
+  }
 }
 
 async function handleSave() {
