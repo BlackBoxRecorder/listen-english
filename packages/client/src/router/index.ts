@@ -5,6 +5,7 @@ const router = createRouter({
   routes: [
     { path: '/', redirect: '/listening' },
     { path: '/listening', name: 'listening', component: () => import('../views/ListeningView.vue') },
+    { path: '/vocabulary', name: 'vocabulary', component: () => import('../views/VocabularyView.vue') },
     { path: '/admin', name: 'admin', component: () => import('../views/AdminView.vue') },
   ],
 });

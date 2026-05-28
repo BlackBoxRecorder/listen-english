@@ -4,6 +4,7 @@
       <h1 class="text-lg font-semibold">Listen English</h1>
       <nav class="ml-8 flex gap-4">
         <router-link to="/listening" class="hover:text-blue-300 transition-colors">Listening</router-link>
+        <router-link to="/vocabulary" class="hover:text-blue-300 transition-colors">Vocabulary</router-link>
         <router-link to="/admin" class="hover:text-blue-300 transition-colors">Admin</router-link>
       </nav>
     </header>

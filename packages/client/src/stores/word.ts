@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 import type { WordData, WordSearchResponse } from '../types/word';
+import { useVocabularyStore } from './vocabulary';
 
 const cache = new Map<string, WordData | null>();
 
@@ -16,6 +17,10 @@ export const useWordStore = defineStore('word', () => {
   async function selectWord(word: string) {
     const normalized = word.trim().toLowerCase();
     if (!normalized) return;
+
+    // Auto-save to vocabulary notebook
+    const vocabularyStore = useVocabularyStore();
+    vocabularyStore.addWord(normalized);
 
     selectedWord.value = normalized;
     panelOpen.value = true;
