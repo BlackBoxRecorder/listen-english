@@ -7,11 +7,14 @@
       @select="onSelect"
     />
 
-    <!-- Right content -->
-    <div class="flex-1 flex flex-col overflow-hidden">
+    <!-- Center content -->
+    <div class="flex-1 flex flex-col overflow-hidden min-w-0">
       <SubtitleDisplay />
       <AudioPlayer />
     </div>
+
+    <!-- Word detail panel -->
+    <WordDetailPanel v-if="wordStore.panelOpen" />
   </div>
 </template>
 
@@ -19,12 +22,15 @@
 import { onMounted } from 'vue';
 import { useListeningStore } from '../stores/listening';
 import { usePlayerStore } from '../stores/player';
+import { useWordStore } from '../stores/word';
 import ListeningList from '../components/listening/ListeningList.vue';
 import SubtitleDisplay from '../components/subtitle/SubtitleDisplay.vue';
 import AudioPlayer from '../components/player/AudioPlayer.vue';
+import WordDetailPanel from '../components/word/WordDetailPanel.vue';
 
 const listeningStore = useListeningStore();
 const playerStore = usePlayerStore();
+const wordStore = useWordStore();
 
 onMounted(async () => {
   await listeningStore.fetchMaterials();
@@ -34,6 +40,7 @@ onMounted(async () => {
 });
 
 async function onSelect(id: number) {
+  wordStore.closePanel();
   await listeningStore.fetchMaterial(id);
   if (listeningStore.currentMaterial) {
     playerStore.setAudio(listeningStore.currentMaterial.audioFilePath);
