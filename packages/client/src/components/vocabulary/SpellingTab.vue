@@ -40,7 +40,7 @@
               {{ wordDefinition.explains?.[0] || "No definition available" }}
             </p>
             <p v-if="wordDefinition.phonetic" class="text-sm text-gray-500">
-              <span class="font-medium">Phonetic:</span> /{{ wordDefinition.phonetic }}/
+              <span class="font-medium">Phonetic:</span> /{{ wordDefinition.phonetic.phonetic }}/
             </p>
           </div>
           <div v-else-if="wordLoading" class="animate-pulse space-y-2">
@@ -190,6 +190,19 @@ watch(userInput, (val) => {
     .replace(/[^a-z]/g, "")
     .slice(0, targetWord.value.length);
 });
+
+// Auto-play audio when word definition loads
+watch(wordDefinition, (def) => {
+  if (def?.phonetic?.audio) {
+    playAudio(def.phonetic.audio);
+  }
+});
+
+/** 播放音频 */
+function playAudio(url: string) {
+  const audio = new window.Audio(url);
+  audio.play();
+}
 
 onMounted(() => {
   if (words.value.length > 0) {
