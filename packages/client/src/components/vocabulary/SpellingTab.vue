@@ -13,9 +13,10 @@
         <h3 class="text-xl font-bold text-gray-900 mb-2">Practice Complete!</h3>
         <p class="text-gray-600 mb-6">
           You got
-          <span class="font-semibold text-green-600">{{ sessionStats.correct }}</span> correct and
-          <span class="font-semibold text-red-600">{{ sessionStats.incorrect }}</span> incorrect out
-          of {{ words.length }} words.
+          <span class="font-semibold text-green-600">{{ sessionStats.correct }}</span> correct,
+          <span class="font-semibold text-red-600">{{ sessionStats.incorrect }}</span> incorrect,
+          and <span class="font-semibold text-gray-500">{{ sessionStats.skipped }}</span> skipped
+          out of {{ words.length }} words.
         </p>
         <button
           @click="restart"
@@ -71,7 +72,7 @@
             :maxlength="targetWord.length"
             class="px-4 py-2 border border-gray-300 rounded-lg text-center text-lg font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-48"
             :placeholder="targetWord.length + ' letters'"
-            @keydown.enter="checkSpelling"
+            @keydown="onKeydown"
             :disabled="feedback === 'correct'"
             autocomplete="off"
             autocapitalize="off"
@@ -84,6 +85,11 @@
           <p v-if="feedback === 'correct'" class="text-green-600 font-medium">Correct!</p>
           <p v-else-if="feedback === 'incorrect'" class="text-red-600 font-medium">Try again</p>
           <p v-else class="text-gray-400 text-sm">Press Enter to check</p>
+        </div>
+
+        <!-- Skip hint -->
+        <div v-if="feedback !== 'correct'" class="text-center mt-4">
+          <span class="text-xs text-gray-400">Press → to skip</span>
         </div>
       </div>
     </div>
@@ -101,7 +107,7 @@ const inputRef = ref<HTMLInputElement | null>(null);
 const currentIndex = ref(0);
 const userInput = ref("");
 const feedback = ref<"idle" | "correct" | "incorrect">("idle");
-const sessionStats = ref({ correct: 0, incorrect: 0 });
+const sessionStats = ref({ correct: 0, incorrect: 0, skipped: 0 });
 const wordDefinition = ref<WordData | null>(null);
 const wordLoading = ref(false);
 
@@ -143,6 +149,15 @@ async function fetchWordDefinition(word: string) {
   }
 }
 
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === "Enter") {
+    checkSpelling();
+  } else if (e.key === "ArrowRight") {
+    e.preventDefault();
+    skipWord();
+  }
+}
+
 function checkSpelling() {
   if (feedback.value === "correct") return;
   if (userInput.value.length === 0) return;
@@ -172,11 +187,23 @@ function checkSpelling() {
   }
 }
 
+function skipWord() {
+  if (feedback.value === "correct") return;
+  sessionStats.value.skipped++;
+  currentIndex.value++;
+  userInput.value = "";
+  feedback.value = "idle";
+  if (!isComplete.value) {
+    fetchWordDefinition(words.value[currentIndex.value]);
+    nextTick(() => inputRef.value?.focus());
+  }
+}
+
 function restart() {
   currentIndex.value = 0;
   userInput.value = "";
   feedback.value = "idle";
-  sessionStats.value = { correct: 0, incorrect: 0 };
+  sessionStats.value = { correct: 0, incorrect: 0, skipped: 0 };
   if (words.value.length > 0) {
     fetchWordDefinition(words.value[0]);
   }
