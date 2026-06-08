@@ -113,16 +113,16 @@ async function scanVoaDir(): Promise<void> {
         // 计算时长（秒），取最后一条字幕的 endTime 向上取整
         const duration = Math.ceil(parsedSubs[parsedSubs.length - 1].endTime / 1000);
 
-        // 事务写入
-        await db.transaction(async (tx) => {
-          const result = await tx
+        // 事务写入（better-sqlite3 事务为同步，不能使用 async/await）
+        db.transaction((tx) => {
+          const result = tx
             .insert(listeningMaterials)
             .values({ title, audioFilePath, duration })
             .returning({ id: listeningMaterials.id });
 
-          const materialId = result[0].id;
+          const materialId = (result as unknown as { id: number }).id;
 
-          await tx.insert(subtitles).values(
+          tx.insert(subtitles).values(
             parsedSubs.map((s, i) => ({
               listeningId: materialId,
               lineIndex: s.lineIndex ?? i,
