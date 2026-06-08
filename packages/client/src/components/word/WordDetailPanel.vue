@@ -118,7 +118,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, watch } from "vue";
 import { useWordStore } from "../../stores/word";
 
 const wordStore = useWordStore();
@@ -128,6 +128,16 @@ function playAudio(url: string) {
   const audio = new window.Audio(url);
   audio.play();
 }
+
+// 查词结果加载完成后自动播放单词发音
+watch(
+  () => wordStore.currentResult,
+  (result) => {
+    if (result?.phonetic?.audio) {
+      playAudio(result.phonetic.audio);
+    }
+  },
+);
 
 function onKeydown(e: KeyboardEvent) {
   if (e.key === "Escape") wordStore.closePanel();
