@@ -1,22 +1,29 @@
-import { Hono } from 'hono';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import { join } from 'path';
+import { Hono } from "hono";
+import { writeFile, mkdir } from "fs/promises";
+import { existsSync } from "fs";
+import { join } from "path";
 
 const app = new Hono();
 
-const UPLOAD_DIR = './uploads/audio';
+const UPLOAD_DIR = "./uploads/audio";
 
 // POST /api/upload/audio
-app.post('/audio', async (c) => {
+app.post("/audio", async (c) => {
   const formData = await c.req.formData();
-  const file = formData.get('file') as File | null;
+  const file = formData.get("file") as File | null;
 
-  if (!file) return c.json({ error: 'No file provided' }, 400);
+  if (!file) return c.json({ error: "No file provided" }, 400);
 
-  const allowedTypes = ['audio/mpeg', 'audio/wav', 'audio/ogg', 'audio/mp4', 'audio/webm', 'audio/x-m4a'];
+  const allowedTypes = [
+    "audio/mpeg",
+    "audio/wav",
+    "audio/ogg",
+    "audio/mp4",
+    "audio/webm",
+    "audio/x-m4a",
+  ];
   if (!allowedTypes.includes(file.type)) {
-    return c.json({ error: 'Unsupported audio format' }, 400);
+    return c.json({ error: "Unsupported audio format" }, 400);
   }
 
   if (!existsSync(UPLOAD_DIR)) {

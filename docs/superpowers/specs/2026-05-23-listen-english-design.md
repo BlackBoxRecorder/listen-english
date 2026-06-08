@@ -7,12 +7,14 @@ Listen English 是一个专注于英语听力训练的 Web 应用程序。用户
 ## 2. 功能范围（简化版）
 
 ### 包含的功能
+
 - **听力播放**：音频播放、暂停、进度控制、变速调节（0.75x / 1.0x / 1.25x / 1.5x / 2.0x）
 - **字幕显示**：四种显示模式（隐藏 / 仅英文 / 仅中文 / 中英双语），实时高亮当前播放行
 - **原文阅读**：阅读模式切换，完整显示原文内容，支持自由滚动
 - **后台管理**：添加/编辑/删除听力资源，上传音频文件，上传并解析字幕文件（SRT/VTT），录入原文内容
 
 ### 明确不包含的功能（V1 阶段）
+
 - 单词本管理
 - 点击字幕/原文查词并显示单词详情
 - 拼写练习
@@ -21,18 +23,18 @@ Listen English 是一个专注于英语听力训练的 Web 应用程序。用户
 
 ## 3. 技术栈
 
-| 层级 | 技术 |
-|------|------|
-| 前端框架 | Vue 3 + TypeScript |
-| 前端构建 | Vite |
-| 前端样式 | Tailwind CSS |
-| 前端状态 | Pinia |
-| 前端路由 | Vue Router |
-| 后端框架 | Hono (Node.js) |
-| 后端语言 | TypeScript |
-| ORM | Drizzle ORM |
-| 数据库 | SQLite |
-| 包管理 | pnpm workspace (Monorepo) |
+| 层级     | 技术                      |
+| -------- | ------------------------- |
+| 前端框架 | Vue 3 + TypeScript        |
+| 前端构建 | Vite                      |
+| 前端样式 | Tailwind CSS              |
+| 前端状态 | Pinia                     |
+| 前端路由 | Vue Router                |
+| 后端框架 | Hono (Node.js)            |
+| 后端语言 | TypeScript                |
+| ORM      | Drizzle ORM               |
+| 数据库   | SQLite                    |
+| 包管理   | pnpm workspace (Monorepo) |
 
 ## 4. 项目结构
 
@@ -76,11 +78,11 @@ listen-english/
 
 ### 5.1 路由设计
 
-| 路径 | 视图 | 说明 |
-|------|------|------|
-| `/` | `ListeningView` | 听力主页面（默认重定向） |
-| `/listening` | `ListeningView` | 听力主页面 |
-| `/admin` | `AdminView` | 后台管理页面 |
+| 路径         | 视图            | 说明                     |
+| ------------ | --------------- | ------------------------ |
+| `/`          | `ListeningView` | 听力主页面（默认重定向） |
+| `/listening` | `ListeningView` | 听力主页面               |
+| `/admin`     | `AdminView`     | 后台管理页面             |
 
 ### 5.2 页面布局
 
@@ -92,6 +94,7 @@ listen-english/
   - 下方（固定 ~100px）：音频播放控制栏
 
 **Tab 切换选项：**
+
 1. `隐藏` — 不显示任何文本
 2. `英文` — 仅显示英文字幕
 3. `中文` — 仅显示中文字幕
@@ -101,24 +104,26 @@ listen-english/
 ### 5.3 Pinia Store 设计
 
 **`playerStore`**
+
 ```typescript
 interface PlayerState {
   currentAudioUrl: string | null;
   isPlaying: boolean;
-  currentTime: number;        // 秒
-  duration: number;           // 秒
-  playbackRate: number;       // 默认 1.0
+  currentTime: number; // 秒
+  duration: number; // 秒
+  playbackRate: number; // 默认 1.0
 }
 ```
 
 **`listeningStore`**
+
 ```typescript
 interface ListeningState {
-  materials: ListeningItem[];     // 听力列表
+  materials: ListeningItem[]; // 听力列表
   currentMaterial: ListeningItem | null;
   subtitles: Subtitle[];
   originalText: string;
-  subtitleMode: 'hidden' | 'english' | 'chinese' | 'bilingual' | 'reading';
+  subtitleMode: "hidden" | "english" | "chinese" | "bilingual" | "reading";
 }
 ```
 
@@ -139,16 +144,16 @@ audio timeupdate 事件
 
 ```typescript
 // packages/server/src/index.ts
-import { Hono } from 'hono';
-import { cors } from 'hono/cors';
-import { serveStatic } from 'hono/serve-static';
+import { Hono } from "hono";
+import { cors } from "hono/cors";
+import { serveStatic } from "hono/serve-static";
 
 const app = new Hono();
 app.use(cors());
-app.use('/uploads/*', serveStatic({ root: './uploads' }));
+app.use("/uploads/*", serveStatic({ root: "./uploads" }));
 
-app.route('/api/listening', listeningRoutes);
-app.route('/api/upload', uploadRoutes);
+app.route("/api/listening", listeningRoutes);
+app.route("/api/upload", uploadRoutes);
 
 export default app;
 ```
@@ -164,29 +169,29 @@ export default app;
 ```typescript
 // packages/server/src/db/schema.ts
 
-import { sqliteTable, integer, text } from 'drizzle-orm/sqlite-core';
+import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
 
-export const listeningMaterials = sqliteTable('listening_materials', {
-  id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
-  title: text('title').notNull(),
-  description: text('description'),
-  audioFilePath: text('audio_file_path').notNull(),
-  originalText: text('original_text'),
-  duration: integer('duration'),              // 音频时长（秒）
-  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
-  updatedAt: integer('updated_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+export const listeningMaterials = sqliteTable("listening_materials", {
+  id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
+  title: text("title").notNull(),
+  description: text("description"),
+  audioFilePath: text("audio_file_path").notNull(),
+  originalText: text("original_text"),
+  duration: integer("duration"), // 音频时长（秒）
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+  updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
 });
 
-export const subtitles = sqliteTable('subtitles', {
-  id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
-  listeningId: integer('listening_id')
+export const subtitles = sqliteTable("subtitles", {
+  id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
+  listeningId: integer("listening_id")
     .notNull()
-    .references(() => listeningMaterials.id, { onDelete: 'cascade' }),
-  lineIndex: integer('line_index').notNull(),
-  startTime: integer('start_time').notNull(),    // 毫秒
-  endTime: integer('end_time').notNull(),        // 毫秒
-  englishText: text('english_text'),
-  chineseText: text('chinese_text'),
+    .references(() => listeningMaterials.id, { onDelete: "cascade" }),
+  lineIndex: integer("line_index").notNull(),
+  startTime: integer("start_time").notNull(), // 毫秒
+  endTime: integer("end_time").notNull(), // 毫秒
+  englishText: text("english_text"),
+  chineseText: text("chinese_text"),
 });
 ```
 
@@ -194,25 +199,25 @@ export const subtitles = sqliteTable('subtitles', {
 
 ### 8.1 听力资源
 
-| 方法 | 路径 | 说明 | 请求体 | 响应 |
-|------|------|------|--------|------|
-| `GET` | `/api/listening` | 获取听力列表 | — | `{ id, title, description, duration, createdAt }[]` |
-| `GET` | `/api/listening/:id` | 获取听力详情（含字幕） | — | `{ id, title, description, audioFilePath, originalText, duration, subtitles: [...] }` |
-| `POST` | `/api/listening` | 创建听力资源 | `{ title, description, audioFilePath, originalText, subtitles?: [...] }` | `{ id }` |
-| `PUT` | `/api/listening/:id` | 更新听力资源 | `{ title?, description?, audioFilePath?, originalText?, subtitles?: [...] }` | `{ id }` |
-| `DELETE` | `/api/listening/:id` | 删除听力资源 | — | `{ success: true }` |
+| 方法     | 路径                 | 说明                   | 请求体                                                                       | 响应                                                                                  |
+| -------- | -------------------- | ---------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `GET`    | `/api/listening`     | 获取听力列表           | —                                                                            | `{ id, title, description, duration, createdAt }[]`                                   |
+| `GET`    | `/api/listening/:id` | 获取听力详情（含字幕） | —                                                                            | `{ id, title, description, audioFilePath, originalText, duration, subtitles: [...] }` |
+| `POST`   | `/api/listening`     | 创建听力资源           | `{ title, description, audioFilePath, originalText, subtitles?: [...] }`     | `{ id }`                                                                              |
+| `PUT`    | `/api/listening/:id` | 更新听力资源           | `{ title?, description?, audioFilePath?, originalText?, subtitles?: [...] }` | `{ id }`                                                                              |
+| `DELETE` | `/api/listening/:id` | 删除听力资源           | —                                                                            | `{ success: true }`                                                                   |
 
 ### 8.2 文件上传
 
-| 方法 | 路径 | 说明 | 请求体 | 响应 |
-|------|------|------|--------|------|
-| `POST` | `/api/upload/audio` | 上传音频文件 | `multipart/form-data` | `{ url, storedName }` |
+| 方法   | 路径                   | 说明               | 请求体                | 响应                   |
+| ------ | ---------------------- | ------------------ | --------------------- | ---------------------- |
+| `POST` | `/api/upload/audio`    | 上传音频文件       | `multipart/form-data` | `{ url, storedName }`  |
 | `POST` | `/api/upload/subtitle` | 上传字幕文件并解析 | `multipart/form-data` | `{ subtitles: [...] }` |
 
 ### 8.3 静态文件
 
-| 方法 | 路径 | 说明 |
-|------|------|------|
+| 方法  | 路径                       | 说明       |
+| ----- | -------------------------- | ---------- |
 | `GET` | `/uploads/audio/:filename` | 音频文件流 |
 
 ## 9. 字幕文件格式与解析
@@ -225,6 +230,7 @@ export const subtitles = sqliteTable('subtitles', {
 ### 9.2 SRT 解析逻辑
 
 SRT 格式示例：
+
 ```
 1
 00:00:01,000 --> 00:00:05,000
@@ -236,17 +242,19 @@ Today we are going to discuss climate change.
 ```
 
 解析后转换为内部数据结构：
+
 ```typescript
 interface Subtitle {
   lineIndex: number;
-  startTime: number;     // 毫秒，如 1000
-  endTime: number;       // 毫秒，如 5000
+  startTime: number; // 毫秒，如 1000
+  endTime: number; // 毫秒，如 5000
   englishText: string;
   chineseText?: string;
 }
 ```
 
 **解析规则：**
+
 1. 按空行分割块
 2. 每块第一行为序号（lineIndex）
 3. 第二行为时间轴 `start --> end`
@@ -254,6 +262,7 @@ interface Subtitle {
 5. 时间格式 `HH:MM:SS,mmm` 转换为毫秒整数
 
 **双语字幕识别：**
+
 - 单文件双语：假设奇数行是英文，偶数行是中文（或反之），通过 `zh-cn` 字符占比自动识别
 - 更可靠的方式：分别上传英文字幕文件和中文字幕文件，后台合并
 
@@ -366,15 +375,15 @@ cd packages/server && pnpm dev
 
 ## 13. 边界情况与错误处理
 
-| 场景 | 处理方式 |
-|------|----------|
-| 音频文件格式不支持 | 上传时后端校验 MIME type，返回 400 |
-| 字幕文件解析失败 | 返回 400 + 错误信息，前端提示"字幕格式不正确" |
-| 当前时间无对应字幕 | 不高亮任何行，保持上一行或清除高亮 |
-| 字幕时间轴有重叠 | 按 lineIndex 排序，取第一个匹配的区间 |
-| 浏览器不支持 `<audio>` | 极罕见，不做额外处理 |
-| 音频加载失败 | 播放器显示错误状态，可重试 |
-| 空列表（无任何听力资源） | 左侧显示"暂无听力材料，请前往后台添加" |
+| 场景                     | 处理方式                                      |
+| ------------------------ | --------------------------------------------- |
+| 音频文件格式不支持       | 上传时后端校验 MIME type，返回 400            |
+| 字幕文件解析失败         | 返回 400 + 错误信息，前端提示"字幕格式不正确" |
+| 当前时间无对应字幕       | 不高亮任何行，保持上一行或清除高亮            |
+| 字幕时间轴有重叠         | 按 lineIndex 排序，取第一个匹配的区间         |
+| 浏览器不支持 `<audio>`   | 极罕见，不做额外处理                          |
+| 音频加载失败             | 播放器显示错误状态，可重试                    |
+| 空列表（无任何听力资源） | 左侧显示"暂无听力材料，请前往后台添加"        |
 
 ## 14. 未来扩展方向
 
@@ -389,5 +398,5 @@ cd packages/server && pnpm dev
 
 ---
 
-*文档版本：v1.0*  
-*最后更新：2026-05-23*
+_文档版本：v1.0_  
+_最后更新：2026-05-23_

@@ -1,6 +1,6 @@
-import { defineStore } from 'pinia';
-import { ref } from 'vue';
-import * as api from '../api';
+import { defineStore } from "pinia";
+import { ref } from "vue";
+import * as api from "../api";
 
 export interface ListeningItem {
   id: number;
@@ -25,12 +25,12 @@ export interface ListeningDetail extends ListeningItem {
   subtitles: Subtitle[];
 }
 
-export type SubtitleMode = 'hidden' | 'english' | 'chinese' | 'bilingual' | 'reading';
+export type SubtitleMode = "hidden" | "english" | "chinese" | "bilingual" | "reading";
 
-export const useListeningStore = defineStore('listening', () => {
+export const useListeningStore = defineStore("listening", () => {
   const materials = ref<ListeningItem[]>([]);
   const currentMaterial = ref<ListeningDetail | null>(null);
-  const subtitleMode = ref<SubtitleMode>('english');
+  const subtitleMode = ref<SubtitleMode>("english");
 
   async function fetchMaterials() {
     materials.value = await api.fetchListenings();

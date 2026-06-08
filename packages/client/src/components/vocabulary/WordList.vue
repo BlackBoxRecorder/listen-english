@@ -47,16 +47,16 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, watch } from 'vue';
-import { useVocabularyStore } from '../../stores/vocabulary';
-import type { WordSearchResponse } from '../../types/word';
+import { reactive, watch } from "vue";
+import { useVocabularyStore } from "../../stores/vocabulary";
+import type { WordSearchResponse } from "../../types/word";
 
 defineProps<{
-  selectedWord: string | null
+  selectedWord: string | null;
 }>();
 
 const emit = defineEmits<{
-  select: [word: string]
+  select: [word: string];
 }>();
 
 const vocabularyStore = useVocabularyStore();
@@ -67,9 +67,7 @@ const briefDefs = reactive<Record<string, string>>({});
 async function fetchBriefDef(word: string) {
   if (briefDefs[word]) return;
   try {
-    const res = await fetch(
-      `/api/words/search?q=${encodeURIComponent(word)}&offset=0&limit=1`
-    );
+    const res = await fetch(`/api/words/search?q=${encodeURIComponent(word)}&offset=0&limit=1`);
     if (!res.ok) return;
     const json: WordSearchResponse = await res.json();
     if (json.success && json.data?.explains?.length) {
@@ -88,11 +86,11 @@ watch(
       fetchBriefDef(word);
     }
   },
-  { immediate: true }
+  { immediate: true },
 );
 
 function onClearAll() {
-  if (confirm('Are you sure you want to clear all words?')) {
+  if (confirm("Are you sure you want to clear all words?")) {
     vocabularyStore.clearAll();
   }
 }

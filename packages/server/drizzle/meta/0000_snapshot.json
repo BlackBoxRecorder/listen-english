@@ -129,12 +129,8 @@
           "name": "subtitles_listening_id_listening_materials_id_fk",
           "tableFrom": "subtitles",
           "tableTo": "listening_materials",
-          "columnsFrom": [
-            "listening_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["listening_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }

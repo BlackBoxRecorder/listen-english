@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ListeningItem } from '../../stores/listening';
+import type { ListeningItem } from "../../stores/listening";
 
 defineProps<{
   materials: ListeningItem[];
@@ -38,6 +38,6 @@ defineEmits<{
 function formatDuration(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;
-  return `${m}:${s.toString().padStart(2, '0')}`;
+  return `${m}:${s.toString().padStart(2, "0")}`;
 }
 </script>

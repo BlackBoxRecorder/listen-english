@@ -19,14 +19,14 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { useListeningStore } from '../stores/listening';
-import { usePlayerStore } from '../stores/player';
-import { useWordStore } from '../stores/word';
-import ListeningList from '../components/listening/ListeningList.vue';
-import SubtitleDisplay from '../components/subtitle/SubtitleDisplay.vue';
-import AudioPlayer from '../components/player/AudioPlayer.vue';
-import WordDetailPanel from '../components/word/WordDetailPanel.vue';
+import { onMounted } from "vue";
+import { useListeningStore } from "../stores/listening";
+import { usePlayerStore } from "../stores/player";
+import { useWordStore } from "../stores/word";
+import ListeningList from "../components/listening/ListeningList.vue";
+import SubtitleDisplay from "../components/subtitle/SubtitleDisplay.vue";
+import AudioPlayer from "../components/player/AudioPlayer.vue";
+import WordDetailPanel from "../components/word/WordDetailPanel.vue";
 
 const listeningStore = useListeningStore();
 const playerStore = usePlayerStore();

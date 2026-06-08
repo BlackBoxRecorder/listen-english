@@ -31,7 +31,9 @@
             @click="playAudio(result.phonetic.audio)"
             class="text-gray-400 hover:text-blue-500 text-sm leading-none"
             title="播放发音"
-          >🔊</button>
+          >
+            🔊
+          </button>
         </div>
       </div>
 
@@ -39,7 +41,9 @@
       <div class="flex-1 overflow-y-auto px-4 py-3 space-y-4">
         <!-- Explains -->
         <section v-if="result.explains?.length">
-          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Definitions</h3>
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+            Definitions
+          </h3>
           <ul class="space-y-1.5">
             <li
               v-for="(explain, i) in result.explains"
@@ -55,25 +59,20 @@
         <section v-if="result.phrase?.length">
           <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Phrases</h3>
           <ul class="space-y-2">
-            <li
-              v-for="(p, i) in result.phrase"
-              :key="i"
-              class="text-sm"
-            >
+            <li v-for="(p, i) in result.phrase" :key="i" class="text-sm">
               <span class="font-medium text-gray-800">{{ p.key }}</span>
-              <span class="text-gray-500 ml-2">{{ p.value.join('; ') }}</span>
+              <span class="text-gray-500 ml-2">{{ p.value.join("; ") }}</span>
             </li>
           </ul>
         </section>
 
         <!-- Collins Examples -->
         <section v-if="result.collins_sents?.length">
-          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Collins Examples</h3>
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+            Collins Examples
+          </h3>
           <ul class="space-y-3">
-            <li
-              v-for="(s, i) in result.collins_sents"
-              :key="i"
-            >
+            <li v-for="(s, i) in result.collins_sents" :key="i">
               <p v-if="s.description" class="text-xs text-gray-400 mb-0.5">{{ s.description }}</p>
               <p class="text-sm font-medium text-gray-800">{{ s.example }}</p>
               <p class="text-sm text-gray-500">{{ s.translate }}</p>
@@ -85,10 +84,7 @@
         <section v-if="result.trans_sents?.length">
           <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Examples</h3>
           <ul class="space-y-3">
-            <li
-              v-for="(s, i) in result.trans_sents"
-              :key="i"
-            >
+            <li v-for="(s, i) in result.trans_sents" :key="i">
               <p class="text-sm font-medium text-gray-800">{{ s.example }}</p>
               <p class="text-sm text-gray-500">{{ s.translate }}</p>
               <button
@@ -96,7 +92,9 @@
                 @click="playAudio(s.audio_url)"
                 class="text-xs text-gray-400 hover:text-blue-500 mt-0.5"
                 title="播放例句发音"
-              >🔊 播放</button>
+              >
+                🔊 播放
+              </button>
             </li>
           </ul>
         </section>
@@ -106,11 +104,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import type { WordData, WordSearchResponse } from '../../types/word';
+import { ref, watch } from "vue";
+import type { WordData, WordSearchResponse } from "../../types/word";
 
 const props = defineProps<{
-  word: string | null
+  word: string | null;
 }>();
 
 const isLoading = ref(false);
@@ -123,34 +121,36 @@ function playAudio(url: string) {
   audio.play();
 }
 
-watch(() => props.word, async (newWord) => {
-  if (!newWord) {
-    result.value = null;
-    error.value = null;
-    return;
-  }
-
-  isLoading.value = true;
-  error.value = null;
-  result.value = null;
-
-  try {
-    const res = await fetch(
-      `/api/words/search?q=${encodeURIComponent(newWord)}`
-    );
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-    const json: WordSearchResponse = await res.json();
-
-    if (json.success && json.data) {
-      result.value = json.data;
-    } else {
-      error.value = `No definition found for "${newWord}"`;
+watch(
+  () => props.word,
+  async (newWord) => {
+    if (!newWord) {
+      result.value = null;
+      error.value = null;
+      return;
     }
-  } catch (e) {
-    error.value = e instanceof Error ? e.message : 'Lookup failed';
-  } finally {
-    isLoading.value = false;
-  }
-}, { immediate: true });
+
+    isLoading.value = true;
+    error.value = null;
+    result.value = null;
+
+    try {
+      const res = await fetch(`/api/words/search?q=${encodeURIComponent(newWord)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const json: WordSearchResponse = await res.json();
+
+      if (json.success && json.data) {
+        result.value = json.data;
+      } else {
+        error.value = `No definition found for "${newWord}"`;
+      }
+    } catch (e) {
+      error.value = e instanceof Error ? e.message : "Lookup failed";
+    } finally {
+      isLoading.value = false;
+    }
+  },
+  { immediate: true },
+);
 </script>

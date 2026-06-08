@@ -1,11 +1,11 @@
-import { defineStore } from 'pinia';
-import { ref } from 'vue';
-import type { WordData, WordSearchResponse } from '../types/word';
-import { useVocabularyStore } from './vocabulary';
+import { defineStore } from "pinia";
+import { ref } from "vue";
+import type { WordData, WordSearchResponse } from "../types/word";
+import { useVocabularyStore } from "./vocabulary";
 
 const cache = new Map<string, WordData | null>();
 
-export const useWordStore = defineStore('word', () => {
+export const useWordStore = defineStore("word", () => {
   const selectedWord = ref<string | null>(null);
   const panelOpen = ref(false);
   const currentResult = ref<WordData | null>(null);
@@ -38,9 +38,7 @@ export const useWordStore = defineStore('word', () => {
     const thisRequestId = ++requestId;
 
     try {
-      const res = await fetch(
-        `/api/words/search?q=${encodeURIComponent(normalized)}`
-      );
+      const res = await fetch(`/api/words/search?q=${encodeURIComponent(normalized)}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       const json: WordSearchResponse = await res.json();
@@ -53,12 +51,12 @@ export const useWordStore = defineStore('word', () => {
         cache.set(normalized, json.data);
       } else {
         currentResult.value = null;
-        error.value = 'No definition found';
+        error.value = "No definition found";
         cache.set(normalized, null);
       }
     } catch (e) {
       if (thisRequestId !== requestId) return;
-      error.value = e instanceof Error ? e.message : 'Lookup failed';
+      error.value = e instanceof Error ? e.message : "Lookup failed";
       currentResult.value = null;
     } finally {
       if (thisRequestId === requestId) {

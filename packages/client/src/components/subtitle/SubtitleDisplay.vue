@@ -7,9 +7,11 @@
         :key="mode.value"
         @click="listeningStore.subtitleMode = mode.value"
         class="px-3 py-1 text-sm rounded-t transition-colors"
-        :class="listeningStore.subtitleMode === mode.value
-          ? 'bg-blue-600 text-white'
-          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+        :class="
+          listeningStore.subtitleMode === mode.value
+            ? 'bg-blue-600 text-white'
+            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+        "
       >
         {{ mode.label }}
       </button>
@@ -29,7 +31,8 @@
             @click="wordStore.selectWord(seg.text)"
             class="cursor-pointer rounded-sm px-0.5 transition-colors hover:bg-blue-100"
             :class="isSelected(seg.text) ? 'bg-blue-200 hover:bg-blue-200' : ''"
-          >{{ seg.text }}</span>
+            >{{ seg.text }}</span
+          >
           <span v-else>{{ seg.text }}</span>
         </template>
       </div>
@@ -52,11 +55,12 @@
               @click="wordStore.selectWord(seg.text)"
               class="cursor-pointer rounded-sm px-0.5 transition-colors hover:bg-blue-100"
               :class="isSelected(seg.text) ? 'bg-blue-200 hover:bg-blue-200' : ''"
-            >{{ seg.text }}</span>
+              >{{ seg.text }}</span
+            >
             <span v-else>{{ seg.text }}</span>
           </template>
         </p>
-        <p v-if="showChinese" class="text-gray-500 text-sm mt-1">{{ sub.chineseText || '' }}</p>
+        <p v-if="showChinese" class="text-gray-500 text-sm mt-1">{{ sub.chineseText || "" }}</p>
       </div>
       <div v-if="subtitles.length === 0" class="text-center text-gray-400 mt-20">
         No subtitles available.
@@ -66,11 +70,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch, nextTick } from 'vue';
-import { useListeningStore } from '../../stores/listening';
-import { useWordStore } from '../../stores/word';
-import { useSubtitleSync } from '../../composables/useSubtitleSync';
-import { splitIntoSegments } from '../../utils/wordSplitter';
+import { computed, ref, watch, nextTick } from "vue";
+import { useListeningStore } from "../../stores/listening";
+import { useWordStore } from "../../stores/word";
+import { useSubtitleSync } from "../../composables/useSubtitleSync";
+import { splitIntoSegments } from "../../utils/wordSplitter";
 
 const listeningStore = useListeningStore();
 const wordStore = useWordStore();
@@ -80,19 +84,15 @@ const subtitles = computed(() => listeningStore.currentMaterial?.subtitles ?? []
 const { activeIndex } = useSubtitleSync(() => subtitles.value);
 
 const modes = [
-  { value: 'hidden' as const, label: 'Hidden' },
-  { value: 'english' as const, label: 'English' },
-  { value: 'chinese' as const, label: 'Chinese' },
-  { value: 'bilingual' as const, label: 'Bilingual' },
-  { value: 'reading' as const, label: 'Reading' },
+  { value: "hidden" as const, label: "Hidden" },
+  { value: "english" as const, label: "English" },
+  { value: "chinese" as const, label: "Chinese" },
+  { value: "bilingual" as const, label: "Bilingual" },
+  { value: "reading" as const, label: "Reading" },
 ];
 
-const showEnglish = computed(() =>
-  ['english', 'bilingual'].includes(listeningStore.subtitleMode)
-);
-const showChinese = computed(() =>
-  ['chinese', 'bilingual'].includes(listeningStore.subtitleMode)
-);
+const showEnglish = computed(() => ["english", "bilingual"].includes(listeningStore.subtitleMode));
+const showChinese = computed(() => ["chinese", "bilingual"].includes(listeningStore.subtitleMode));
 
 const readingSegments = computed(() => {
   const text = listeningStore.currentMaterial?.originalText;
@@ -112,7 +112,7 @@ function setActiveRef(el: HTMLElement | null, idx: number) {
 watch(activeIndex, async () => {
   await nextTick();
   if (activeEl.value) {
-    activeEl.value.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    activeEl.value.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 });
 </script>

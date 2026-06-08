@@ -8,9 +8,11 @@
           :key="tab.value"
           @click="activeTab = tab.value"
           class="px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px"
-          :class="activeTab === tab.value
-            ? 'text-blue-600 border-blue-600'
-            : 'text-gray-500 border-transparent hover:text-gray-700 hover:border-gray-300'"
+          :class="
+            activeTab === tab.value
+              ? 'text-blue-600 border-blue-600'
+              : 'text-gray-500 border-transparent hover:text-gray-700 hover:border-gray-300'
+          "
         >
           {{ tab.label }}
         </button>
@@ -29,18 +31,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import NotebookTab from '../components/vocabulary/NotebookTab.vue';
-import LookupTab from '../components/vocabulary/LookupTab.vue';
-import SpellingTab from '../components/vocabulary/SpellingTab.vue';
+import { ref } from "vue";
+import NotebookTab from "../components/vocabulary/NotebookTab.vue";
+import LookupTab from "../components/vocabulary/LookupTab.vue";
+import SpellingTab from "../components/vocabulary/SpellingTab.vue";
 
-type TabValue = 'notebook' | 'lookup' | 'spelling';
+type TabValue = "notebook" | "lookup" | "spelling";
 
-const activeTab = ref<TabValue>('notebook');
+const activeTab = ref<TabValue>("notebook");
 
 const tabs = [
-  { value: 'notebook' as const, label: '单词本' },
-  { value: 'lookup' as const, label: '查单词' },
-  { value: 'spelling' as const, label: '拼写练习' },
+  { value: "notebook" as const, label: "单词本" },
+  { value: "lookup" as const, label: "查单词" },
+  { value: "spelling" as const, label: "拼写练习" },
 ];
 </script>

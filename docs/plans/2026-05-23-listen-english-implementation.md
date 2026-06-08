@@ -15,6 +15,7 @@
 ### Task 1: Initialize Monorepo Structure
 
 **Files:**
+
 - Modify: `package.json`
 - Create: `pnpm-workspace.yaml`
 - Create: `.gitignore`
@@ -42,7 +43,7 @@
 
 ```yaml
 packages:
-  - 'packages/*'
+  - "packages/*"
 ```
 
 **Step 3: Create .gitignore**
@@ -67,6 +68,7 @@ git commit -m "chore: initialize monorepo structure with pnpm workspace"
 ### Task 2: Scaffold Server Package
 
 **Files:**
+
 - Create: `packages/server/package.json`
 - Create: `packages/server/tsconfig.json`
 - Create: `packages/server/src/index.ts`
@@ -123,14 +125,14 @@ git commit -m "chore: initialize monorepo structure with pnpm workspace"
 
 ```typescript
 // packages/server/src/index.ts
-import { serve } from '@hono/node-server';
-import { Hono } from 'hono';
-import { cors } from 'hono/cors';
+import { serve } from "@hono/node-server";
+import { Hono } from "hono";
+import { cors } from "hono/cors";
 
 const app = new Hono();
 app.use(cors());
 
-app.get('/api/health', (c) => c.json({ status: 'ok' }));
+app.get("/api/health", (c) => c.json({ status: "ok" }));
 
 const port = 3001;
 console.log(`Server running on http://localhost:${port}`);
@@ -154,11 +156,13 @@ git commit -m "feat: scaffold server package with Hono"
 ### Task 3: Scaffold Client Package
 
 **Files:**
+
 - Create: `packages/client/` (via Vite scaffolding)
 
 **Step 1: Create Vue 3 project with Vite**
 
 Run from project root:
+
 ```bash
 cd packages && pnpm create vite client --template vue-ts
 ```
@@ -174,23 +178,25 @@ pnpm add -D tailwindcss @tailwindcss/vite
 **Step 3: Configure Tailwind CSS**
 
 Create `packages/client/src/style.css`:
+
 ```css
 @import "tailwindcss";
 ```
 
 Add Tailwind Vite plugin to `packages/client/vite.config.ts`:
+
 ```typescript
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
   server: {
     port: 5173,
     proxy: {
-      '/api': 'http://localhost:3001',
-      '/uploads': 'http://localhost:3001',
+      "/api": "http://localhost:3001",
+      "/uploads": "http://localhost:3001",
     },
   },
 });
@@ -237,6 +243,7 @@ git commit -m "chore: install workspace dependencies"
 ### Task 5: Database Schema & Migration
 
 **Files:**
+
 - Create: `packages/server/src/db/schema.ts`
 - Create: `packages/server/src/db/index.ts`
 - Create: `packages/server/drizzle.config.ts`
@@ -245,14 +252,14 @@ git commit -m "chore: install workspace dependencies"
 
 ```typescript
 // packages/server/drizzle.config.ts
-import { defineConfig } from 'drizzle-kit';
+import { defineConfig } from "drizzle-kit";
 
 export default defineConfig({
-  schema: './src/db/schema.ts',
-  out: './drizzle',
-  dialect: 'sqlite',
+  schema: "./src/db/schema.ts",
+  out: "./drizzle",
+  dialect: "sqlite",
   dbCredentials: {
-    url: './data.db',
+    url: "./data.db",
   },
 });
 ```
@@ -261,29 +268,29 @@ export default defineConfig({
 
 ```typescript
 // packages/server/src/db/schema.ts
-import { sqliteTable, integer, text } from 'drizzle-orm/sqlite-core';
+import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
 
-export const listeningMaterials = sqliteTable('listening_materials', {
-  id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
-  title: text('title').notNull(),
-  description: text('description'),
-  audioFilePath: text('audio_file_path').notNull(),
-  originalText: text('original_text'),
-  duration: integer('duration'),
-  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
-  updatedAt: integer('updated_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+export const listeningMaterials = sqliteTable("listening_materials", {
+  id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
+  title: text("title").notNull(),
+  description: text("description"),
+  audioFilePath: text("audio_file_path").notNull(),
+  originalText: text("original_text"),
+  duration: integer("duration"),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+  updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
 });
 
-export const subtitles = sqliteTable('subtitles', {
-  id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
-  listeningId: integer('listening_id')
+export const subtitles = sqliteTable("subtitles", {
+  id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
+  listeningId: integer("listening_id")
     .notNull()
-    .references(() => listeningMaterials.id, { onDelete: 'cascade' }),
-  lineIndex: integer('line_index').notNull(),
-  startTime: integer('start_time').notNull(),
-  endTime: integer('end_time').notNull(),
-  englishText: text('english_text'),
-  chineseText: text('chinese_text'),
+    .references(() => listeningMaterials.id, { onDelete: "cascade" }),
+  lineIndex: integer("line_index").notNull(),
+  startTime: integer("start_time").notNull(),
+  endTime: integer("end_time").notNull(),
+  englishText: text("english_text"),
+  chineseText: text("chinese_text"),
 });
 ```
 
@@ -291,11 +298,11 @@ export const subtitles = sqliteTable('subtitles', {
 
 ```typescript
 // packages/server/src/db/index.ts
-import { drizzle } from 'drizzle-orm/better-sqlite3';
-import Database from 'better-sqlite3';
-import * as schema from './schema';
+import { drizzle } from "drizzle-orm/better-sqlite3";
+import Database from "better-sqlite3";
+import * as schema from "./schema";
 
-const sqlite = new Database('./data.db');
+const sqlite = new Database("./data.db");
 export const db = drizzle(sqlite, { schema });
 ```
 
@@ -321,6 +328,7 @@ git commit -m "feat: add database schema with Drizzle ORM (listening_materials +
 ### Task 6: Listening CRUD API Routes
 
 **Files:**
+
 - Create: `packages/server/src/routes/listening.ts`
 - Modify: `packages/server/src/index.ts`
 
@@ -328,33 +336,41 @@ git commit -m "feat: add database schema with Drizzle ORM (listening_materials +
 
 ```typescript
 // packages/server/src/routes/listening.ts
-import { Hono } from 'hono';
-import { eq } from 'drizzle-orm';
-import { db } from '../db';
-import { listeningMaterials, subtitles } from '../db/schema';
+import { Hono } from "hono";
+import { eq } from "drizzle-orm";
+import { db } from "../db";
+import { listeningMaterials, subtitles } from "../db/schema";
 
 const app = new Hono();
 
 // GET /api/listening - list all
-app.get('/', async (c) => {
-  const materials = await db.select({
-    id: listeningMaterials.id,
-    title: listeningMaterials.title,
-    description: listeningMaterials.description,
-    duration: listeningMaterials.duration,
-    createdAt: listeningMaterials.createdAt,
-  }).from(listeningMaterials).orderBy(listeningMaterials.createdAt);
+app.get("/", async (c) => {
+  const materials = await db
+    .select({
+      id: listeningMaterials.id,
+      title: listeningMaterials.title,
+      description: listeningMaterials.description,
+      duration: listeningMaterials.duration,
+      createdAt: listeningMaterials.createdAt,
+    })
+    .from(listeningMaterials)
+    .orderBy(listeningMaterials.createdAt);
   return c.json(materials);
 });
 
 // GET /api/listening/:id - get detail with subtitles
-app.get('/:id', async (c) => {
-  const id = Number(c.req.param('id'));
-  const material = await db.select().from(listeningMaterials)
-    .where(eq(listeningMaterials.id, id)).get();
-  if (!material) return c.json({ error: 'Not found' }, 404);
+app.get("/:id", async (c) => {
+  const id = Number(c.req.param("id"));
+  const material = await db
+    .select()
+    .from(listeningMaterials)
+    .where(eq(listeningMaterials.id, id))
+    .get();
+  if (!material) return c.json({ error: "Not found" }, 404);
 
-  const subs = await db.select().from(subtitles)
+  const subs = await db
+    .select()
+    .from(subtitles)
     .where(eq(subtitles.listeningId, id))
     .orderBy(subtitles.lineIndex);
 
@@ -362,16 +378,19 @@ app.get('/:id', async (c) => {
 });
 
 // POST /api/listening - create
-app.post('/', async (c) => {
+app.post("/", async (c) => {
   const body = await c.req.json();
   const { title, description, audioFilePath, originalText, subtitles: subs } = body;
 
-  const result = await db.insert(listeningMaterials).values({
-    title,
-    description,
-    audioFilePath,
-    originalText,
-  }).returning({ id: listeningMaterials.id });
+  const result = await db
+    .insert(listeningMaterials)
+    .values({
+      title,
+      description,
+      audioFilePath,
+      originalText,
+    })
+    .returning({ id: listeningMaterials.id });
 
   const materialId = result[0].id;
 
@@ -384,7 +403,7 @@ app.post('/', async (c) => {
         endTime: s.endTime,
         englishText: s.englishText ?? null,
         chineseText: s.chineseText ?? null,
-      }))
+      })),
     );
   }
 
@@ -392,12 +411,13 @@ app.post('/', async (c) => {
 });
 
 // PUT /api/listening/:id - update
-app.put('/:id', async (c) => {
-  const id = Number(c.req.param('id'));
+app.put("/:id", async (c) => {
+  const id = Number(c.req.param("id"));
   const body = await c.req.json();
   const { title, description, audioFilePath, originalText, subtitles: subs } = body;
 
-  await db.update(listeningMaterials)
+  await db
+    .update(listeningMaterials)
     .set({ title, description, audioFilePath, originalText, updatedAt: new Date() })
     .where(eq(listeningMaterials.id, id));
 
@@ -412,7 +432,7 @@ app.put('/:id', async (c) => {
           endTime: s.endTime,
           englishText: s.englishText ?? null,
           chineseText: s.chineseText ?? null,
-        }))
+        })),
       );
     }
   }
@@ -421,8 +441,8 @@ app.put('/:id', async (c) => {
 });
 
 // DELETE /api/listening/:id - delete
-app.delete('/:id', async (c) => {
-  const id = Number(c.req.param('id'));
+app.delete("/:id", async (c) => {
+  const id = Number(c.req.param("id"));
   await db.delete(listeningMaterials).where(eq(listeningMaterials.id, id));
   return c.json({ success: true });
 });
@@ -433,9 +453,10 @@ export default app;
 **Step 2: Register routes in main app**
 
 Update `packages/server/src/index.ts` to import and mount:
+
 ```typescript
-import listeningRoutes from './routes/listening';
-app.route('/api/listening', listeningRoutes);
+import listeningRoutes from "./routes/listening";
+app.route("/api/listening", listeningRoutes);
 ```
 
 **Step 3: Verify with curl**
@@ -458,6 +479,7 @@ git commit -m "feat: add listening CRUD API routes"
 ### Task 7: File Upload Routes
 
 **Files:**
+
 - Create: `packages/server/src/routes/file.ts`
 - Modify: `packages/server/src/index.ts`
 
@@ -471,25 +493,25 @@ mkdir -p packages/server/uploads/audio
 
 ```typescript
 // packages/server/src/routes/file.ts
-import { Hono } from 'hono';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import { join } from 'path';
+import { Hono } from "hono";
+import { writeFile, mkdir } from "fs/promises";
+import { existsSync } from "fs";
+import { join } from "path";
 
 const app = new Hono();
 
-const UPLOAD_DIR = './uploads/audio';
+const UPLOAD_DIR = "./uploads/audio";
 
 // POST /api/upload/audio
-app.post('/audio', async (c) => {
+app.post("/audio", async (c) => {
   const formData = await c.req.formData();
-  const file = formData.get('file') as File | null;
+  const file = formData.get("file") as File | null;
 
-  if (!file) return c.json({ error: 'No file provided' }, 400);
+  if (!file) return c.json({ error: "No file provided" }, 400);
 
-  const allowedTypes = ['audio/mpeg', 'audio/wav', 'audio/ogg', 'audio/mp4', 'audio/webm'];
+  const allowedTypes = ["audio/mpeg", "audio/wav", "audio/ogg", "audio/mp4", "audio/webm"];
   if (!allowedTypes.includes(file.type)) {
-    return c.json({ error: 'Unsupported audio format' }, 400);
+    return c.json({ error: "Unsupported audio format" }, 400);
   }
 
   if (!existsSync(UPLOAD_DIR)) {
@@ -511,7 +533,7 @@ export default app;
 
 ```typescript
 // packages/server/src/routes/subtitle.ts
-import { Hono } from 'hono';
+import { Hono } from "hono";
 
 const app = new Hono();
 
@@ -525,66 +547,68 @@ interface ParsedSubtitle {
 
 function parseSRT(content: string): ParsedSubtitle[] {
   const blocks = content.trim().split(/\n\s*\n/);
-  return blocks.map((block) => {
-    const lines = block.trim().split('\n');
-    if (lines.length < 3) return null;
+  return blocks
+    .map((block) => {
+      const lines = block.trim().split("\n");
+      if (lines.length < 3) return null;
 
-    const lineIndex = parseInt(lines[0], 10);
-    const timeLine = lines[1];
-    const timeMatch = timeLine.match(
-      /(\d{2}):(\d{2}):(\d{2})[,.](\d{3})\s*-->\s*(\d{2}):(\d{2}):(\d{2})[,.](\d{3})/
-    );
-    if (!timeMatch) return null;
+      const lineIndex = parseInt(lines[0], 10);
+      const timeLine = lines[1];
+      const timeMatch = timeLine.match(
+        /(\d{2}):(\d{2}):(\d{2})[,.](\d{3})\s*-->\s*(\d{2}):(\d{2}):(\d{2})[,.](\d{3})/,
+      );
+      if (!timeMatch) return null;
 
-    const startTime =
-      parseInt(timeMatch[1]) * 3600000 +
-      parseInt(timeMatch[2]) * 60000 +
-      parseInt(timeMatch[3]) * 1000 +
-      parseInt(timeMatch[4]);
-    const endTime =
-      parseInt(timeMatch[5]) * 3600000 +
-      parseInt(timeMatch[6]) * 60000 +
-      parseInt(timeMatch[7]) * 1000 +
-      parseInt(timeMatch[8]);
+      const startTime =
+        parseInt(timeMatch[1]) * 3600000 +
+        parseInt(timeMatch[2]) * 60000 +
+        parseInt(timeMatch[3]) * 1000 +
+        parseInt(timeMatch[4]);
+      const endTime =
+        parseInt(timeMatch[5]) * 3600000 +
+        parseInt(timeMatch[6]) * 60000 +
+        parseInt(timeMatch[7]) * 1000 +
+        parseInt(timeMatch[8]);
 
-    const text = lines.slice(2).join('\n');
+      const text = lines.slice(2).join("\n");
 
-    return { lineIndex, startTime, endTime, englishText: text, chineseText: null };
-  }).filter(Boolean) as ParsedSubtitle[];
+      return { lineIndex, startTime, endTime, englishText: text, chineseText: null };
+    })
+    .filter(Boolean) as ParsedSubtitle[];
 }
 
 function parseVTT(content: string): ParsedSubtitle[] {
   // Remove WEBVTT header
-  const body = content.replace(/^WEBVTT.*?\n\n/s, '');
+  const body = content.replace(/^WEBVTT.*?\n\n/s, "");
   // VTT uses '.' for milliseconds, reuse SRT parser logic
   return parseSRT(body);
 }
 
 // POST /api/upload/subtitle
-app.post('/subtitle', async (c) => {
+app.post("/subtitle", async (c) => {
   const formData = await c.req.formData();
-  const file = formData.get('file') as File | null;
+  const file = formData.get("file") as File | null;
 
-  if (!file) return c.json({ error: 'No file provided' }, 400);
+  if (!file) return c.json({ error: "No file provided" }, 400);
 
   const content = await file.text();
   const fileName = file.name.toLowerCase();
 
   let subtitles: ParsedSubtitle[];
   try {
-    if (fileName.endsWith('.vtt')) {
+    if (fileName.endsWith(".vtt")) {
       subtitles = parseVTT(content);
-    } else if (fileName.endsWith('.srt')) {
+    } else if (fileName.endsWith(".srt")) {
       subtitles = parseSRT(content);
     } else {
-      return c.json({ error: 'Unsupported subtitle format. Use .srt or .vtt' }, 400);
+      return c.json({ error: "Unsupported subtitle format. Use .srt or .vtt" }, 400);
     }
   } catch {
-    return c.json({ error: 'Failed to parse subtitle file' }, 400);
+    return c.json({ error: "Failed to parse subtitle file" }, 400);
   }
 
   if (subtitles.length === 0) {
-    return c.json({ error: 'No subtitles found in file' }, 400);
+    return c.json({ error: "No subtitles found in file" }, 400);
   }
 
   return c.json({ subtitles });
@@ -596,14 +620,15 @@ export default app;
 **Step 4: Mount routes and static serving in main app**
 
 Update `packages/server/src/index.ts`:
-```typescript
-import { serveStatic } from '@hono/node-server/serve-static';
-import fileRoutes from './routes/file';
-import subtitleRoutes from './routes/subtitle';
 
-app.use('/uploads/*', serveStatic({ root: './' }));
-app.route('/api/upload', fileRoutes);
-app.route('/api/upload', subtitleRoutes);
+```typescript
+import { serveStatic } from "@hono/node-server/serve-static";
+import fileRoutes from "./routes/file";
+import subtitleRoutes from "./routes/subtitle";
+
+app.use("/uploads/*", serveStatic({ root: "./" }));
+app.route("/api/upload", fileRoutes);
+app.route("/api/upload", subtitleRoutes);
 ```
 
 **Step 5: Commit**
@@ -620,6 +645,7 @@ git commit -m "feat: add file upload and subtitle parsing routes"
 ### Task 8: Vue Router & Layout Setup
 
 **Files:**
+
 - Create: `packages/client/src/router/index.ts`
 - Create: `packages/client/src/views/ListeningView.vue`
 - Create: `packages/client/src/views/AdminView.vue`
@@ -631,14 +657,18 @@ git commit -m "feat: add file upload and subtitle parsing routes"
 
 ```typescript
 // packages/client/src/router/index.ts
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', redirect: '/listening' },
-    { path: '/listening', name: 'listening', component: () => import('../views/ListeningView.vue') },
-    { path: '/admin', name: 'admin', component: () => import('../views/AdminView.vue') },
+    { path: "/", redirect: "/listening" },
+    {
+      path: "/listening",
+      name: "listening",
+      component: () => import("../views/ListeningView.vue"),
+    },
+    { path: "/admin", name: "admin", component: () => import("../views/AdminView.vue") },
   ],
 });
 
@@ -691,16 +721,16 @@ export default router;
 
 ```typescript
 // packages/client/src/main.ts
-import { createApp } from 'vue';
-import { createPinia } from 'pinia';
-import App from './App.vue';
-import router from './router';
-import './style.css';
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import App from "./App.vue";
+import router from "./router";
+import "./style.css";
 
 const app = createApp(App);
 app.use(createPinia());
 app.use(router);
-app.mount('#app');
+app.mount("#app");
 ```
 
 **Step 5: Update App.vue**
@@ -714,7 +744,7 @@ app.mount('#app');
 </template>
 
 <script setup lang="ts">
-import AppLayout from './components/layout/AppLayout.vue';
+import AppLayout from "./components/layout/AppLayout.vue";
 </script>
 ```
 
@@ -735,6 +765,7 @@ git commit -m "feat: add Vue Router, AppLayout, and placeholder views"
 ### Task 9: Pinia Stores
 
 **Files:**
+
 - Create: `packages/client/src/stores/player.ts`
 - Create: `packages/client/src/stores/listening.ts`
 
@@ -742,10 +773,10 @@ git commit -m "feat: add Vue Router, AppLayout, and placeholder views"
 
 ```typescript
 // packages/client/src/stores/player.ts
-import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { defineStore } from "pinia";
+import { ref } from "vue";
 
-export const usePlayerStore = defineStore('player', () => {
+export const usePlayerStore = defineStore("player", () => {
   const currentAudioUrl = ref<string | null>(null);
   const isPlaying = ref(false);
   const currentTime = ref(0);
@@ -762,7 +793,15 @@ export const usePlayerStore = defineStore('player', () => {
     playbackRate.value = rate;
   }
 
-  return { currentAudioUrl, isPlaying, currentTime, duration, playbackRate, setAudio, setPlaybackRate };
+  return {
+    currentAudioUrl,
+    isPlaying,
+    currentTime,
+    duration,
+    playbackRate,
+    setAudio,
+    setPlaybackRate,
+  };
 });
 ```
 
@@ -770,8 +809,8 @@ export const usePlayerStore = defineStore('player', () => {
 
 ```typescript
 // packages/client/src/stores/listening.ts
-import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { defineStore } from "pinia";
+import { ref } from "vue";
 
 export interface ListeningItem {
   id: number;
@@ -790,15 +829,22 @@ export interface Subtitle {
   chineseText: string | null;
 }
 
-export type SubtitleMode = 'hidden' | 'english' | 'chinese' | 'bilingual' | 'reading';
+export type SubtitleMode = "hidden" | "english" | "chinese" | "bilingual" | "reading";
 
-export const useListeningStore = defineStore('listening', () => {
+export const useListeningStore = defineStore("listening", () => {
   const materials = ref<ListeningItem[]>([]);
-  const currentMaterial = ref<(ListeningItem & { audioFilePath: string; originalText: string | null; subtitles: Subtitle[] }) | null>(null);
-  const subtitleMode = ref<SubtitleMode>('english');
+  const currentMaterial = ref<
+    | (ListeningItem & {
+        audioFilePath: string;
+        originalText: string | null;
+        subtitles: Subtitle[];
+      })
+    | null
+  >(null);
+  const subtitleMode = ref<SubtitleMode>("english");
 
   async function fetchMaterials() {
-    const res = await fetch('/api/listening');
+    const res = await fetch("/api/listening");
     materials.value = await res.json();
   }
 
@@ -823,13 +869,14 @@ git commit -m "feat: add Pinia stores for player and listening state"
 ### Task 10: API Client Helpers
 
 **Files:**
+
 - Create: `packages/client/src/api/index.ts`
 
 **Step 1: Create API client**
 
 ```typescript
 // packages/client/src/api/index.ts
-const BASE = '/api';
+const BASE = "/api";
 
 export async function fetchListenings() {
   const res = await fetch(`${BASE}/listening`);
@@ -843,8 +890,8 @@ export async function fetchListening(id: number) {
 
 export async function createListening(data: any) {
   const res = await fetch(`${BASE}/listening`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
   return res.json();
@@ -852,29 +899,29 @@ export async function createListening(data: any) {
 
 export async function updateListening(id: number, data: any) {
   const res = await fetch(`${BASE}/listening/${id}`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
   return res.json();
 }
 
 export async function deleteListening(id: number) {
-  const res = await fetch(`${BASE}/listening/${id}`, { method: 'DELETE' });
+  const res = await fetch(`${BASE}/listening/${id}`, { method: "DELETE" });
   return res.json();
 }
 
 export async function uploadAudio(file: File) {
   const formData = new FormData();
-  formData.append('file', file);
-  const res = await fetch(`${BASE}/upload/audio`, { method: 'POST', body: formData });
+  formData.append("file", file);
+  const res = await fetch(`${BASE}/upload/audio`, { method: "POST", body: formData });
   return res.json();
 }
 
 export async function uploadSubtitle(file: File) {
   const formData = new FormData();
-  formData.append('file', file);
-  const res = await fetch(`${BASE}/upload/subtitle`, { method: 'POST', body: formData });
+  formData.append("file", file);
+  const res = await fetch(`${BASE}/upload/subtitle`, { method: "POST", body: formData });
   return res.json();
 }
 ```
@@ -893,6 +940,7 @@ git commit -m "feat: add API client helpers"
 ### Task 11: Listening List Sidebar Component
 
 **Files:**
+
 - Create: `packages/client/src/components/listening/ListeningList.vue`
 
 **Step 1: Create ListeningList component**
@@ -925,7 +973,7 @@ git commit -m "feat: add API client helpers"
 </template>
 
 <script setup lang="ts">
-import type { ListeningItem } from '../../stores/listening';
+import type { ListeningItem } from "../../stores/listening";
 
 defineProps<{
   materials: ListeningItem[];
@@ -939,7 +987,7 @@ defineEmits<{
 function formatDuration(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;
-  return `${m}:${s.toString().padStart(2, '0')}`;
+  return `${m}:${s.toString().padStart(2, "0")}`;
 }
 </script>
 ```
@@ -956,6 +1004,7 @@ git commit -m "feat: add ListeningList sidebar component"
 ### Task 12: Audio Player Component
 
 **Files:**
+
 - Create: `packages/client/src/components/player/AudioPlayer.vue`
 
 **Step 1: Create AudioPlayer component**
@@ -982,7 +1031,9 @@ git commit -m "feat: add ListeningList sidebar component"
     </button>
 
     <!-- Time -->
-    <span class="text-xs text-gray-500 w-12 text-right">{{ formatTime(playerStore.currentTime) }}</span>
+    <span class="text-xs text-gray-500 w-12 text-right">{{
+      formatTime(playerStore.currentTime)
+    }}</span>
 
     <!-- Progress bar -->
     <input
@@ -1012,8 +1063,8 @@ git commit -m "feat: add ListeningList sidebar component"
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { usePlayerStore } from '../../stores/player';
+import { ref, watch } from "vue";
+import { usePlayerStore } from "../../stores/player";
 
 const playerStore = usePlayerStore();
 const audioEl = ref<HTMLAudioElement | null>(null);
@@ -1056,19 +1107,25 @@ function onRateChange(e: Event) {
   }
 }
 
-watch(() => playerStore.playbackRate, (rate) => {
-  if (audioEl.value) audioEl.value.playbackRate = rate;
-});
+watch(
+  () => playerStore.playbackRate,
+  (rate) => {
+    if (audioEl.value) audioEl.value.playbackRate = rate;
+  },
+);
 
-watch(() => playerStore.currentAudioUrl, () => {
-  playerStore.isPlaying = false;
-  playerStore.currentTime = 0;
-});
+watch(
+  () => playerStore.currentAudioUrl,
+  () => {
+    playerStore.isPlaying = false;
+    playerStore.currentTime = 0;
+  },
+);
 
 function formatTime(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = Math.floor(seconds % 60);
-  return `${m}:${s.toString().padStart(2, '0')}`;
+  return `${m}:${s.toString().padStart(2, "0")}`;
 }
 </script>
 ```
@@ -1085,6 +1142,7 @@ git commit -m "feat: add AudioPlayer component with playback controls"
 ### Task 13: Subtitle Display Component
 
 **Files:**
+
 - Create: `packages/client/src/components/subtitle/SubtitleDisplay.vue`
 - Create: `packages/client/src/composables/useSubtitleSync.ts`
 
@@ -1092,9 +1150,9 @@ git commit -m "feat: add AudioPlayer component with playback controls"
 
 ```typescript
 // packages/client/src/composables/useSubtitleSync.ts
-import { computed } from 'vue';
-import { usePlayerStore } from '../stores/player';
-import type { Subtitle } from '../stores/listening';
+import { computed } from "vue";
+import { usePlayerStore } from "../stores/player";
+import type { Subtitle } from "../stores/listening";
 
 export function useSubtitleSync(subtitles: () => Subtitle[]) {
   const playerStore = usePlayerStore();
@@ -1102,9 +1160,7 @@ export function useSubtitleSync(subtitles: () => Subtitle[]) {
   const activeIndex = computed(() => {
     const timeMs = playerStore.currentTime * 1000;
     const subs = subtitles();
-    const idx = subs.findIndex(
-      (s) => timeMs >= s.startTime && timeMs <= s.endTime
-    );
+    const idx = subs.findIndex((s) => timeMs >= s.startTime && timeMs <= s.endTime);
     return idx;
   });
 
@@ -1125,9 +1181,11 @@ export function useSubtitleSync(subtitles: () => Subtitle[]) {
         :key="mode.value"
         @click="listeningStore.subtitleMode = mode.value"
         class="px-3 py-1 text-sm rounded-t"
-        :class="listeningStore.subtitleMode === mode.value
-          ? 'bg-blue-600 text-white'
-          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+        :class="
+          listeningStore.subtitleMode === mode.value
+            ? 'bg-blue-600 text-white'
+            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+        "
       >
         {{ mode.label }}
       </button>
@@ -1141,7 +1199,7 @@ export function useSubtitleSync(subtitles: () => Subtitle[]) {
     <!-- Reading mode -->
     <div v-else-if="listeningStore.subtitleMode === 'reading'" class="prose max-w-none">
       <div class="whitespace-pre-wrap text-gray-800 leading-relaxed">
-        {{ listeningStore.currentMaterial?.originalText || 'No original text available.' }}
+        {{ listeningStore.currentMaterial?.originalText || "No original text available." }}
       </div>
     </div>
 
@@ -1150,21 +1208,25 @@ export function useSubtitleSync(subtitles: () => Subtitle[]) {
       <div
         v-for="(sub, idx) in subtitles"
         :key="sub.lineIndex"
-        :ref="(el) => { if (idx === activeIndex) activeEl = el as HTMLElement }"
+        :ref="
+          (el) => {
+            if (idx === activeIndex) activeEl = el as HTMLElement;
+          }
+        "
         class="p-2 rounded transition-colors"
         :class="idx === activeIndex ? 'bg-blue-50 border-l-4 border-blue-500' : ''"
       >
         <p v-if="showEnglish" class="text-gray-800">{{ sub.englishText }}</p>
-        <p v-if="showChinese" class="text-gray-500 text-sm mt-1">{{ sub.chineseText || '' }}</p>
+        <p v-if="showChinese" class="text-gray-500 text-sm mt-1">{{ sub.chineseText || "" }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch, nextTick } from 'vue';
-import { useListeningStore } from '../../stores/listening';
-import { useSubtitleSync } from '../../composables/useSubtitleSync';
+import { computed, ref, watch, nextTick } from "vue";
+import { useListeningStore } from "../../stores/listening";
+import { useSubtitleSync } from "../../composables/useSubtitleSync";
 
 const listeningStore = useListeningStore();
 const containerEl = ref<HTMLElement | null>(null);
@@ -1174,24 +1236,20 @@ const subtitles = computed(() => listeningStore.currentMaterial?.subtitles ?? []
 const { activeIndex } = useSubtitleSync(() => subtitles.value);
 
 const modes = [
-  { value: 'hidden' as const, label: 'Hidden' },
-  { value: 'english' as const, label: 'English' },
-  { value: 'chinese' as const, label: 'Chinese' },
-  { value: 'bilingual' as const, label: 'Bilingual' },
-  { value: 'reading' as const, label: 'Reading' },
+  { value: "hidden" as const, label: "Hidden" },
+  { value: "english" as const, label: "English" },
+  { value: "chinese" as const, label: "Chinese" },
+  { value: "bilingual" as const, label: "Bilingual" },
+  { value: "reading" as const, label: "Reading" },
 ];
 
-const showEnglish = computed(() =>
-  ['english', 'bilingual'].includes(listeningStore.subtitleMode)
-);
-const showChinese = computed(() =>
-  ['chinese', 'bilingual'].includes(listeningStore.subtitleMode)
-);
+const showEnglish = computed(() => ["english", "bilingual"].includes(listeningStore.subtitleMode));
+const showChinese = computed(() => ["chinese", "bilingual"].includes(listeningStore.subtitleMode));
 
 watch(activeIndex, async () => {
   await nextTick();
   if (activeEl.value) {
-    activeEl.value.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    activeEl.value.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 });
 </script>
@@ -1209,6 +1267,7 @@ git commit -m "feat: add SubtitleDisplay component with sync and mode switching"
 ### Task 14: Assemble Listening View
 
 **Files:**
+
 - Modify: `packages/client/src/views/ListeningView.vue`
 
 **Step 1: Integrate all components into ListeningView**
@@ -1233,12 +1292,12 @@ git commit -m "feat: add SubtitleDisplay component with sync and mode switching"
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { useListeningStore } from '../stores/listening';
-import { usePlayerStore } from '../stores/player';
-import ListeningList from '../components/listening/ListeningList.vue';
-import SubtitleDisplay from '../components/subtitle/SubtitleDisplay.vue';
-import AudioPlayer from '../components/player/AudioPlayer.vue';
+import { onMounted } from "vue";
+import { useListeningStore } from "../stores/listening";
+import { usePlayerStore } from "../stores/player";
+import ListeningList from "../components/listening/ListeningList.vue";
+import SubtitleDisplay from "../components/subtitle/SubtitleDisplay.vue";
+import AudioPlayer from "../components/player/AudioPlayer.vue";
 
 const listeningStore = useListeningStore();
 const playerStore = usePlayerStore();
@@ -1278,6 +1337,7 @@ git commit -m "feat: assemble ListeningView with sidebar, subtitle display, and 
 ### Task 15: Admin View Implementation
 
 **Files:**
+
 - Modify: `packages/client/src/views/AdminView.vue`
 
 **Step 1: Implement full admin page**
@@ -1290,7 +1350,10 @@ git commit -m "feat: assemble ListeningView with sidebar, subtitle display, and 
     <div class="w-[300px] border-r border-gray-200 h-full overflow-y-auto bg-gray-50">
       <div class="p-3 flex justify-between items-center">
         <h3 class="text-sm font-semibold text-gray-600">Resources</h3>
-        <button @click="createNew" class="text-xs bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700">
+        <button
+          @click="createNew"
+          class="text-xs bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700"
+        >
           + Add New
         </button>
       </div>
@@ -1310,7 +1373,7 @@ git commit -m "feat: assemble ListeningView with sidebar, subtitle display, and 
     <!-- Right: Edit form -->
     <div class="flex-1 p-6 overflow-y-auto">
       <div v-if="isEditing" class="max-w-2xl space-y-4">
-        <h2 class="text-lg font-bold">{{ editingId ? 'Edit' : 'New' }} Listening Material</h2>
+        <h2 class="text-lg font-bold">{{ editingId ? "Edit" : "New" }} Listening Material</h2>
 
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Title</label>
@@ -1334,11 +1397,15 @@ git commit -m "feat: assemble ListeningView with sidebar, subtitle display, and 
               Upload
             </button>
           </div>
-          <p v-if="form.audioFilePath" class="text-xs text-green-600 mt-1">{{ form.audioFilePath }}</p>
+          <p v-if="form.audioFilePath" class="text-xs text-green-600 mt-1">
+            {{ form.audioFilePath }}
+          </p>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Subtitle File (.srt / .vtt)</label>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Subtitle File (.srt / .vtt)</label
+          >
           <div class="flex gap-2 items-center">
             <input type="file" accept=".srt,.vtt" @change="onSubtitleSelect" ref="subtitleInput" />
             <button
@@ -1349,7 +1416,10 @@ git commit -m "feat: assemble ListeningView with sidebar, subtitle display, and 
               Upload & Parse
             </button>
           </div>
-          <div v-if="form.subtitles.length" class="mt-2 max-h-40 overflow-y-auto border rounded p-2 text-xs">
+          <div
+            v-if="form.subtitles.length"
+            class="mt-2 max-h-40 overflow-y-auto border rounded p-2 text-xs"
+          >
             <div v-for="s in form.subtitles" :key="s.lineIndex" class="py-0.5">
               {{ s.lineIndex }}. [{{ s.startTime }}ms - {{ s.endTime }}ms] {{ s.englishText }}
             </div>
@@ -1362,10 +1432,16 @@ git commit -m "feat: assemble ListeningView with sidebar, subtitle display, and 
         </div>
 
         <div class="flex gap-3 pt-4">
-          <button @click="handleSave" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <button
+            @click="handleSave"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
             Save
           </button>
-          <button @click="cancelEdit" class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300">
+          <button
+            @click="cancelEdit"
+            class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300"
+          >
             Cancel
           </button>
           <button
@@ -1386,8 +1462,8 @@ git commit -m "feat: assemble ListeningView with sidebar, subtitle display, and 
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted } from 'vue';
-import * as api from '../api';
+import { ref, reactive, onMounted } from "vue";
+import * as api from "../api";
 
 interface SubtitleItem {
   lineIndex: number;
@@ -1404,10 +1480,10 @@ const selectedAudioFile = ref<File | null>(null);
 const selectedSubtitleFile = ref<File | null>(null);
 
 const form = reactive({
-  title: '',
-  description: '',
-  audioFilePath: '',
-  originalText: '',
+  title: "",
+  description: "",
+  audioFilePath: "",
+  originalText: "",
   subtitles: [] as SubtitleItem[],
 });
 
@@ -1424,10 +1500,10 @@ function createNew() {
 }
 
 function resetForm() {
-  form.title = '';
-  form.description = '';
-  form.audioFilePath = '';
-  form.originalText = '';
+  form.title = "";
+  form.description = "";
+  form.audioFilePath = "";
+  form.originalText = "";
   form.subtitles = [];
   selectedAudioFile.value = null;
   selectedSubtitleFile.value = null;
@@ -1438,9 +1514,9 @@ async function selectItem(id: number) {
   isEditing.value = true;
   const data = await api.fetchListening(id);
   form.title = data.title;
-  form.description = data.description || '';
+  form.description = data.description || "";
   form.audioFilePath = data.audioFilePath;
-  form.originalText = data.originalText || '';
+  form.originalText = data.originalText || "";
   form.subtitles = data.subtitles || [];
 }
 
@@ -1494,7 +1570,7 @@ function cancelEdit() {
 
 async function handleDelete() {
   if (!editingId.value) return;
-  if (!confirm('Are you sure you want to delete this?')) return;
+  if (!confirm("Are you sure you want to delete this?")) return;
   await api.deleteListening(editingId.value);
   await loadMaterials();
   isEditing.value = false;
@@ -1556,21 +1632,21 @@ git commit -m "chore: complete v1 integration"
 
 ## Summary of Tasks
 
-| # | Task | Phase |
-|---|------|-------|
-| 1 | Initialize Monorepo Structure | Infrastructure |
-| 2 | Scaffold Server Package | Infrastructure |
-| 3 | Scaffold Client Package | Infrastructure |
-| 4 | Install Workspace Dependencies | Infrastructure |
-| 5 | Database Schema & Migration | Backend |
-| 6 | Listening CRUD API Routes | Backend |
-| 7 | File Upload & Subtitle Parsing Routes | Backend |
-| 8 | Vue Router & Layout Setup | Frontend Core |
-| 9 | Pinia Stores | Frontend Core |
-| 10 | API Client Helpers | Frontend Core |
-| 11 | Listening List Sidebar Component | Listening Page |
-| 12 | Audio Player Component | Listening Page |
-| 13 | Subtitle Display Component | Listening Page |
-| 14 | Assemble Listening View | Listening Page |
-| 15 | Admin View Implementation | Admin Page |
-| 16 | End-to-End Smoke Test | Integration |
+| #   | Task                                  | Phase          |
+| --- | ------------------------------------- | -------------- |
+| 1   | Initialize Monorepo Structure         | Infrastructure |
+| 2   | Scaffold Server Package               | Infrastructure |
+| 3   | Scaffold Client Package               | Infrastructure |
+| 4   | Install Workspace Dependencies        | Infrastructure |
+| 5   | Database Schema & Migration           | Backend        |
+| 6   | Listening CRUD API Routes             | Backend        |
+| 7   | File Upload & Subtitle Parsing Routes | Backend        |
+| 8   | Vue Router & Layout Setup             | Frontend Core  |
+| 9   | Pinia Stores                          | Frontend Core  |
+| 10  | API Client Helpers                    | Frontend Core  |
+| 11  | Listening List Sidebar Component      | Listening Page |
+| 12  | Audio Player Component                | Listening Page |
+| 13  | Subtitle Display Component            | Listening Page |
+| 14  | Assemble Listening View               | Listening Page |
+| 15  | Admin View Implementation             | Admin Page     |
+| 16  | End-to-End Smoke Test                 | Integration    |

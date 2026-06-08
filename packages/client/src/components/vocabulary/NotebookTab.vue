@@ -13,9 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import WordList from './WordList.vue';
-import WordDefinitionCard from './WordDefinitionCard.vue';
+import { ref } from "vue";
+import WordList from "./WordList.vue";
+import WordDefinitionCard from "./WordDefinitionCard.vue";
 
 const activeWord = ref<string | null>(null);
 

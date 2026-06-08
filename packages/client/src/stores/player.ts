@@ -1,7 +1,7 @@
-import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { defineStore } from "pinia";
+import { ref } from "vue";
 
-export const usePlayerStore = defineStore('player', () => {
+export const usePlayerStore = defineStore("player", () => {
   const currentAudioUrl = ref<string | null>(null);
   const isPlaying = ref(false);
   const currentTime = ref(0);
@@ -18,5 +18,13 @@ export const usePlayerStore = defineStore('player', () => {
     playbackRate.value = rate;
   }
 
-  return { currentAudioUrl, isPlaying, currentTime, duration, playbackRate, setAudio, setPlaybackRate };
+  return {
+    currentAudioUrl,
+    isPlaying,
+    currentTime,
+    duration,
+    playbackRate,
+    setAudio,
+    setPlaybackRate,
+  };
 });

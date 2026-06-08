@@ -19,7 +19,9 @@
     </button>
 
     <!-- Time -->
-    <span class="text-xs text-gray-500 w-12 text-right shrink-0">{{ formatTime(playerStore.currentTime) }}</span>
+    <span class="text-xs text-gray-500 w-12 text-right shrink-0">{{
+      formatTime(playerStore.currentTime)
+    }}</span>
 
     <!-- Progress bar -->
     <input
@@ -50,8 +52,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { usePlayerStore } from '../../stores/player';
+import { ref, watch } from "vue";
+import { usePlayerStore } from "../../stores/player";
 
 const playerStore = usePlayerStore();
 const audioEl = ref<HTMLAudioElement | null>(null);
@@ -94,18 +96,24 @@ function onRateChange(e: Event) {
   }
 }
 
-watch(() => playerStore.playbackRate, (rate) => {
-  if (audioEl.value) audioEl.value.playbackRate = rate;
-});
+watch(
+  () => playerStore.playbackRate,
+  (rate) => {
+    if (audioEl.value) audioEl.value.playbackRate = rate;
+  },
+);
 
-watch(() => playerStore.currentAudioUrl, () => {
-  playerStore.isPlaying = false;
-  playerStore.currentTime = 0;
-});
+watch(
+  () => playerStore.currentAudioUrl,
+  () => {
+    playerStore.isPlaying = false;
+    playerStore.currentTime = 0;
+  },
+);
 
 function formatTime(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = Math.floor(seconds % 60);
-  return `${m}:${s.toString().padStart(2, '0')}`;
+  return `${m}:${s.toString().padStart(2, "0")}`;
 }
 </script>

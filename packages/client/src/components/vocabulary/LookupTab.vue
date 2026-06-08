@@ -28,13 +28,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import WordDefinitionCard from './WordDefinitionCard.vue';
-import { useVocabularyStore } from '../../stores/vocabulary';
+import { ref } from "vue";
+import WordDefinitionCard from "./WordDefinitionCard.vue";
+import { useVocabularyStore } from "../../stores/vocabulary";
 
 const vocabularyStore = useVocabularyStore();
 
-const query = ref('');
+const query = ref("");
 const searchedWord = ref<string | null>(null);
 
 function onSearch() {

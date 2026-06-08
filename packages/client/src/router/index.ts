@@ -1,12 +1,20 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', redirect: '/listening' },
-    { path: '/listening', name: 'listening', component: () => import('../views/ListeningView.vue') },
-    { path: '/vocabulary', name: 'vocabulary', component: () => import('../views/VocabularyView.vue') },
-    { path: '/admin', name: 'admin', component: () => import('../views/AdminView.vue') },
+    { path: "/", redirect: "/listening" },
+    {
+      path: "/listening",
+      name: "listening",
+      component: () => import("../views/ListeningView.vue"),
+    },
+    {
+      path: "/vocabulary",
+      name: "vocabulary",
+      component: () => import("../views/VocabularyView.vue"),
+    },
+    { path: "/admin", name: "admin", component: () => import("../views/AdminView.vue") },
   ],
 });
 

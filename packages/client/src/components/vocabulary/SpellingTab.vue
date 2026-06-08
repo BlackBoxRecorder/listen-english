@@ -12,9 +12,10 @@
         <div class="text-4xl mb-4">🎉</div>
         <h3 class="text-xl font-bold text-gray-900 mb-2">Practice Complete!</h3>
         <p class="text-gray-600 mb-6">
-          You got <span class="font-semibold text-green-600">{{ sessionStats.correct }}</span> correct
-          and <span class="font-semibold text-red-600">{{ sessionStats.incorrect }}</span> incorrect
-          out of {{ words.length }} words.
+          You got
+          <span class="font-semibold text-green-600">{{ sessionStats.correct }}</span> correct and
+          <span class="font-semibold text-red-600">{{ sessionStats.incorrect }}</span> incorrect out
+          of {{ words.length }} words.
         </p>
         <button
           @click="restart"
@@ -36,7 +37,7 @@
           <div v-if="wordDefinition" class="space-y-1">
             <p class="text-sm text-gray-600">
               <span class="font-medium">Definition:</span>
-              {{ wordDefinition.explains?.[0] || 'No definition available' }}
+              {{ wordDefinition.explains?.[0] || "No definition available" }}
             </p>
             <p v-if="wordDefinition.phonetic" class="text-sm text-gray-500">
               <span class="font-medium">Phonetic:</span> /{{ wordDefinition.phonetic }}/
@@ -57,7 +58,7 @@
             class="w-10 h-12 flex items-center justify-center rounded-lg border-2 text-lg font-mono font-semibold transition-colors"
             :class="getBoxClass(i)"
           >
-            {{ userInput[i - 1] || '' }}
+            {{ userInput[i - 1] || "" }}
           </div>
         </div>
 
@@ -80,15 +81,9 @@
 
         <!-- Feedback -->
         <div class="text-center min-h-[2rem]">
-          <p v-if="feedback === 'correct'" class="text-green-600 font-medium">
-            Correct!
-          </p>
-          <p v-else-if="feedback === 'incorrect'" class="text-red-600 font-medium">
-            Try again
-          </p>
-          <p v-else class="text-gray-400 text-sm">
-            Press Enter to check
-          </p>
+          <p v-if="feedback === 'correct'" class="text-green-600 font-medium">Correct!</p>
+          <p v-else-if="feedback === 'incorrect'" class="text-red-600 font-medium">Try again</p>
+          <p v-else class="text-gray-400 text-sm">Press Enter to check</p>
         </div>
       </div>
     </div>
@@ -96,47 +91,46 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, nextTick } from 'vue';
-import { useVocabularyStore } from '../../stores/vocabulary';
-import type { WordData, WordSearchResponse } from '../../types/word';
+import { ref, computed, watch, onMounted, nextTick } from "vue";
+import { useVocabularyStore } from "../../stores/vocabulary";
+import type { WordData, WordSearchResponse } from "../../types/word";
 
 const vocabularyStore = useVocabularyStore();
 
 const inputRef = ref<HTMLInputElement | null>(null);
 const currentIndex = ref(0);
-const userInput = ref('');
-const feedback = ref<'idle' | 'correct' | 'incorrect'>('idle');
+const userInput = ref("");
+const feedback = ref<"idle" | "correct" | "incorrect">("idle");
 const sessionStats = ref({ correct: 0, incorrect: 0 });
 const wordDefinition = ref<WordData | null>(null);
 const wordLoading = ref(false);
 
 const words = computed(() => vocabularyStore.recentWords(20));
-const targetWord = computed(() => words.value[currentIndex.value] || '');
+const targetWord = computed(() => words.value[currentIndex.value] || "");
 const isComplete = computed(() => currentIndex.value >= words.value.length);
 
 function getBoxClass(index: number): string {
-  if (feedback.value === 'correct') {
-    return 'border-green-500 bg-green-50 text-green-700';
+  if (feedback.value === "correct") {
+    return "border-green-500 bg-green-50 text-green-700";
   }
-  if (feedback.value === 'incorrect' && index <= userInput.value.length) {
-    const isCorrectLetter = userInput.value[index - 1]?.toLowerCase() === targetWord.value[index - 1]?.toLowerCase();
+  if (feedback.value === "incorrect" && index <= userInput.value.length) {
+    const isCorrectLetter =
+      userInput.value[index - 1]?.toLowerCase() === targetWord.value[index - 1]?.toLowerCase();
     return isCorrectLetter
-      ? 'border-green-500 bg-green-50 text-green-700'
-      : 'border-red-500 bg-red-50 text-red-700';
+      ? "border-green-500 bg-green-50 text-green-700"
+      : "border-red-500 bg-red-50 text-red-700";
   }
   if (index <= userInput.value.length) {
-    return 'border-blue-500 bg-blue-50 text-gray-900';
+    return "border-blue-500 bg-blue-50 text-gray-900";
   }
-  return 'border-gray-300 bg-white text-gray-900';
+  return "border-gray-300 bg-white text-gray-900";
 }
 
 async function fetchWordDefinition(word: string) {
   wordLoading.value = true;
   wordDefinition.value = null;
   try {
-    const res = await fetch(
-      `/api/words/search?q=${encodeURIComponent(word)}&offset=0&limit=1`
-    );
+    const res = await fetch(`/api/words/search?q=${encodeURIComponent(word)}&offset=0&limit=1`);
     if (!res.ok) return;
     const json: WordSearchResponse = await res.json();
     if (json.success && json.data) {
@@ -150,38 +144,38 @@ async function fetchWordDefinition(word: string) {
 }
 
 function checkSpelling() {
-  if (feedback.value === 'correct') return;
+  if (feedback.value === "correct") return;
   if (userInput.value.length === 0) return;
 
   if (userInput.value.toLowerCase() === targetWord.value.toLowerCase()) {
-    feedback.value = 'correct';
+    feedback.value = "correct";
     sessionStats.value.correct++;
 
     // Auto-advance after 1 second
     setTimeout(() => {
       currentIndex.value++;
-      userInput.value = '';
-      feedback.value = 'idle';
+      userInput.value = "";
+      feedback.value = "idle";
       if (!isComplete.value) {
         fetchWordDefinition(words.value[currentIndex.value]);
         nextTick(() => inputRef.value?.focus());
       }
     }, 1000);
   } else {
-    feedback.value = 'incorrect';
+    feedback.value = "incorrect";
     sessionStats.value.incorrect++;
 
     // Reset to allow retry after a short delay
     setTimeout(() => {
-      feedback.value = 'idle';
+      feedback.value = "idle";
     }, 800);
   }
 }
 
 function restart() {
   currentIndex.value = 0;
-  userInput.value = '';
-  feedback.value = 'idle';
+  userInput.value = "";
+  feedback.value = "idle";
   sessionStats.value = { correct: 0, incorrect: 0 };
   if (words.value.length > 0) {
     fetchWordDefinition(words.value[0]);
@@ -191,7 +185,10 @@ function restart() {
 
 // Watch for input changes to auto-update feedback display
 watch(userInput, (val) => {
-  userInput.value = val.toLowerCase().replace(/[^a-z]/g, '').slice(0, targetWord.value.length);
+  userInput.value = val
+    .toLowerCase()
+    .replace(/[^a-z]/g, "")
+    .slice(0, targetWord.value.length);
 });
 
 onMounted(() => {

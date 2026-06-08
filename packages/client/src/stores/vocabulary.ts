@@ -1,9 +1,9 @@
-import { defineStore } from 'pinia';
-import { ref, computed } from 'vue';
+import { defineStore } from "pinia";
+import { ref, computed } from "vue";
 
-const STORAGE_KEY = 'listen-english-vocabulary';
+const STORAGE_KEY = "listen-english-vocabulary";
 
-export const useVocabularyStore = defineStore('vocabulary', () => {
+export const useVocabularyStore = defineStore("vocabulary", () => {
   const words = ref<string[]>([]);
 
   function loadFromStorage() {
@@ -38,7 +38,7 @@ export const useVocabularyStore = defineStore('vocabulary', () => {
   }
 
   function removeWord(word: string) {
-    words.value = words.value.filter(w => w !== word);
+    words.value = words.value.filter((w) => w !== word);
     persist();
   }
 
