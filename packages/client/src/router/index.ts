@@ -14,7 +14,6 @@ const router = createRouter({
       name: "vocabulary",
       component: () => import("../views/VocabularyView.vue"),
     },
-    { path: "/admin", name: "admin", component: () => import("../views/AdminView.vue") },
   ],
 });
 

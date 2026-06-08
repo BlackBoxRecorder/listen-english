@@ -9,7 +9,6 @@
         <router-link to="/vocabulary" class="hover:text-blue-300 transition-colors"
           >Vocabulary</router-link
         >
-        <router-link to="/admin" class="hover:text-blue-300 transition-colors">Admin</router-link>
       </nav>
     </header>
     <main class="flex-1 overflow-hidden">

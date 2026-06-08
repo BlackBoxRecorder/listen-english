@@ -18,7 +18,7 @@
       </li>
     </ul>
     <div v-if="materials.length === 0" class="p-4 text-sm text-gray-400 text-center">
-      No materials available. Add some in Admin.
+      No materials available.
     </div>
   </div>
 </template>
