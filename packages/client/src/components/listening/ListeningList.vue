@@ -12,9 +12,6 @@
         :class="{ 'bg-blue-100': item.id === selectedId }"
       >
         <div class="text-sm font-medium text-gray-800 truncate">{{ item.title }}</div>
-        <div class="text-xs text-gray-500 mt-1" v-if="item.duration">
-          {{ formatDuration(item.duration) }}
-        </div>
       </li>
     </ul>
     <div v-if="materials.length === 0" class="p-4 text-sm text-gray-400 text-center">
@@ -34,10 +31,4 @@ defineProps<{
 defineEmits<{
   select: [id: number];
 }>();
-
-function formatDuration(seconds: number): string {
-  const m = Math.floor(seconds / 60);
-  const s = seconds % 60;
-  return `${m}:${s.toString().padStart(2, "0")}`;
-}
 </script>
