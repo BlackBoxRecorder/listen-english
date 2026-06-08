@@ -93,11 +93,6 @@
           </div>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Original Text</label>
-          <textarea v-model="form.originalText" rows="6" class="w-full border rounded px-3 py-2" />
-        </div>
-
         <div class="flex gap-3 pt-4">
           <button
             @click="handleSave"
@@ -152,7 +147,6 @@ const form = reactive({
   title: "",
   description: "",
   audioFilePath: "",
-  originalText: "",
   subtitles: [] as SubtitleItem[],
 });
 
@@ -172,7 +166,6 @@ function resetForm() {
   form.title = "";
   form.description = "";
   form.audioFilePath = "";
-  form.originalText = "";
   form.subtitles = [];
 }
 
@@ -183,7 +176,6 @@ async function selectItem(id: number) {
   form.title = data.title;
   form.description = data.description || "";
   form.audioFilePath = data.audioFilePath;
-  form.originalText = data.originalText || "";
   form.subtitles = data.subtitles || [];
 }
 
@@ -231,7 +223,6 @@ async function handleSave() {
     title: form.title,
     description: form.description,
     audioFilePath: form.audioFilePath,
-    originalText: form.originalText,
     subtitles: form.subtitles,
   };
 

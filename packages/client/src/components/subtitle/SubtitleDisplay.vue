@@ -1,41 +1,6 @@
 <template>
   <div class="flex-1 overflow-y-auto p-4">
-    <!-- Tab bar -->
-    <div class="flex gap-1 mb-4 border-b pb-2">
-      <button
-        v-for="mode in modes"
-        :key="mode.value"
-        @click="listeningStore.subtitleMode = mode.value"
-        class="px-3 py-1 text-sm rounded-t transition-colors"
-        :class="
-          listeningStore.subtitleMode === mode.value
-            ? 'bg-blue-600 text-white'
-            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-        "
-      >
-        {{ mode.label }}
-      </button>
-    </div>
-
-    <!-- Reading mode -->
-    <div v-if="listeningStore.subtitleMode === 'reading'" class="max-w-none">
-      <div v-if="readingSegments.length" class="whitespace-pre-wrap text-gray-800 leading-relaxed">
-        <template v-for="(seg, i) in readingSegments" :key="i">
-          <span
-            v-if="seg.isWord"
-            @click="wordStore.selectWord(seg.text)"
-            class="cursor-pointer rounded-sm px-0.5 transition-colors hover:bg-blue-100"
-            :class="isSelected(seg.text) ? 'bg-blue-200 hover:bg-blue-200' : ''"
-            >{{ seg.text }}</span
-          >
-          <span v-else>{{ seg.text }}</span>
-        </template>
-      </div>
-      <div v-else class="text-gray-400">No original text available.</div>
-    </div>
-
-    <!-- Subtitle list mode -->
-    <div v-else class="space-y-2">
+    <div class="space-y-2">
       <div
         v-for="(sub, idx) in subtitles"
         :key="sub.lineIndex"
@@ -76,16 +41,6 @@ const activeEl = ref<HTMLElement | null>(null);
 
 const subtitles = computed(() => listeningStore.currentMaterial?.subtitles ?? []);
 const { activeIndex } = useSubtitleSync(() => subtitles.value);
-
-const modes = [
-  { value: "subtitle" as const, label: "subtitle" },
-  { value: "reading" as const, label: "fulltext" },
-];
-
-const readingSegments = computed(() => {
-  const text = listeningStore.currentMaterial?.originalText;
-  return text ? splitIntoSegments(text) : [];
-});
 
 function isSelected(word: string) {
   return wordStore.selectedWord?.toLowerCase() === word.toLowerCase();

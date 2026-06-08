@@ -21,16 +21,12 @@ export interface Subtitle {
 
 export interface ListeningDetail extends ListeningItem {
   audioFilePath: string;
-  originalText: string | null;
   subtitles: Subtitle[];
 }
-
-export type SubtitleMode = "subtitle" | "reading";
 
 export const useListeningStore = defineStore("listening", () => {
   const materials = ref<ListeningItem[]>([]);
   const currentMaterial = ref<ListeningDetail | null>(null);
-  const subtitleMode = ref<SubtitleMode>("subtitle");
 
   async function fetchMaterials() {
     materials.value = await api.fetchListenings();
@@ -40,5 +36,5 @@ export const useListeningStore = defineStore("listening", () => {
     currentMaterial.value = await api.fetchListening(id);
   }
 
-  return { materials, currentMaterial, subtitleMode, fetchMaterials, fetchMaterial };
+  return { materials, currentMaterial, fetchMaterials, fetchMaterial };
 });

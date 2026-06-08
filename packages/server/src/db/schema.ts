@@ -5,7 +5,6 @@ export const listeningMaterials = sqliteTable("listening_materials", {
   title: text("title").notNull(),
   description: text("description"),
   audioFilePath: text("audio_file_path").notNull(),
-  originalText: text("original_text"),
   duration: integer("duration"),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
   updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),

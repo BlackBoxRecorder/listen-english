@@ -42,7 +42,7 @@ app.get("/:id", async (c) => {
 // POST /api/listening - create
 app.post("/", async (c) => {
   const body = await c.req.json();
-  const { title, description, audioFilePath, originalText, subtitles: subs } = body;
+  const { title, description, audioFilePath, subtitles: subs } = body;
 
   const result = await db
     .insert(listeningMaterials)
@@ -50,7 +50,6 @@ app.post("/", async (c) => {
       title,
       description,
       audioFilePath,
-      originalText,
     })
     .returning({ id: listeningMaterials.id });
 
@@ -76,11 +75,11 @@ app.post("/", async (c) => {
 app.put("/:id", async (c) => {
   const id = Number(c.req.param("id"));
   const body = await c.req.json();
-  const { title, description, audioFilePath, originalText, subtitles: subs } = body;
+  const { title, description, audioFilePath, subtitles: subs } = body;
 
   await db
     .update(listeningMaterials)
-    .set({ title, description, audioFilePath, originalText, updatedAt: new Date() })
+    .set({ title, description, audioFilePath, updatedAt: new Date() })
     .where(eq(listeningMaterials.id, id));
 
   if (subs !== undefined) {
