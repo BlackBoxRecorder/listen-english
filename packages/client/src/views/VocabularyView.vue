@@ -41,8 +41,8 @@ type TabValue = "notebook" | "lookup" | "spelling";
 const activeTab = ref<TabValue>("notebook");
 
 const tabs = [
-  { value: "notebook" as const, label: "单词本" },
-  { value: "lookup" as const, label: "查单词" },
-  { value: "spelling" as const, label: "拼写练习" },
+  { value: "notebook" as const, label: "Vocabulary" },
+  { value: "lookup" as const, label: "Word Lookup" },
+  { value: "spelling" as const, label: "Spelling Practice" },
 ];
 </script>

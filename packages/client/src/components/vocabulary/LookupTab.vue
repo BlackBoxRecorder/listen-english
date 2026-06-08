@@ -40,7 +40,7 @@ const searchedWord = ref<string | null>(null);
 function onSearch() {
   const word = query.value.trim().toLowerCase();
   if (!word) return;
-  // 自动保存到单词本
+  // Auto-save to vocabulary
   vocabularyStore.addWord(word);
   searchedWord.value = word;
 }
