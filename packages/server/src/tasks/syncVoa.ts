@@ -12,7 +12,7 @@ import { listeningMaterials, subtitles } from "../db/schema.js";
 import { parseSRT } from "../utils/subtitleParser.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const VOA_DIR = resolve(process.env.VOA_DIR || join(__dirname, "../../../VOA"));
+const VOA_DIR = resolve(process.env.VOA_DIR || join(__dirname, "../../../../VOA"));
 const UPLOAD_DIR = resolve("./uploads/audio");
 
 let scanning = false;
