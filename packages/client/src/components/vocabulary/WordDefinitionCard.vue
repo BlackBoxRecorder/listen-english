@@ -93,7 +93,7 @@
                 class="text-xs text-gray-400 hover:text-blue-500 mt-0.5"
                 title="播放例句发音"
               >
-                🔊 播放
+                🔊 Play
               </button>
             </li>
           </ul>
