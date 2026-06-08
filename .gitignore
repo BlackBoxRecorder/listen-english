@@ -4,3 +4,4 @@ dist/
 .env
 uploads/
 nul
+.DS_Store
