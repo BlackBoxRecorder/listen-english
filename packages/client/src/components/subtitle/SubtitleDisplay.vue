@@ -1,5 +1,13 @@
 <template>
   <div class="flex-1 overflow-y-auto p-4">
+    <!-- 材料标题 -->
+    <h2 v-if="title" class="font-bold text-lg text-gray-900 mb-4 pb-2 border-b border-gray-200">
+      {{ title }}
+    </h2>
+    <div v-else class="text-center text-gray-400 mb-4 pb-2 border-b border-gray-200">
+      No material selected.
+    </div>
+
     <div class="space-y-2">
       <div
         v-for="(sub, idx) in subtitles"
@@ -40,6 +48,7 @@ const wordStore = useWordStore();
 const activeEl = ref<HTMLElement | null>(null);
 
 const subtitles = computed(() => listeningStore.currentMaterial?.subtitles ?? []);
+const title = computed(() => listeningStore.currentMaterial?.title ?? "");
 const { activeIndex } = useSubtitleSync(() => subtitles.value);
 
 function isSelected(word: string) {
