@@ -17,13 +17,8 @@
       </button>
     </div>
 
-    <!-- Hidden mode -->
-    <div v-if="listeningStore.subtitleMode === 'hidden'" class="text-center text-gray-400 mt-20">
-      Subtitles hidden
-    </div>
-
     <!-- Reading mode -->
-    <div v-else-if="listeningStore.subtitleMode === 'reading'" class="max-w-none">
+    <div v-if="listeningStore.subtitleMode === 'reading'" class="max-w-none">
       <div v-if="readingSegments.length" class="whitespace-pre-wrap text-gray-800 leading-relaxed">
         <template v-for="(seg, i) in readingSegments" :key="i">
           <span
@@ -39,7 +34,7 @@
       <div v-else class="text-gray-400">No original text available.</div>
     </div>
 
-    <!-- Subtitle list modes -->
+    <!-- Subtitle list mode -->
     <div v-else class="space-y-2">
       <div
         v-for="(sub, idx) in subtitles"
@@ -48,7 +43,7 @@
         class="p-2 rounded transition-colors"
         :class="idx === activeIndex ? 'bg-blue-50 border-l-4 border-blue-500' : ''"
       >
-        <p v-if="showEnglish" class="text-gray-800">
+        <p class="text-gray-800">
           <template v-for="(seg, i) in splitIntoSegments(sub.englishText || '')" :key="i">
             <span
               v-if="seg.isWord"
@@ -60,7 +55,6 @@
             <span v-else>{{ seg.text }}</span>
           </template>
         </p>
-        <p v-if="showChinese" class="text-gray-500 text-sm mt-1">{{ sub.chineseText || "" }}</p>
       </div>
       <div v-if="subtitles.length === 0" class="text-center text-gray-400 mt-20">
         No subtitles available.
@@ -84,15 +78,9 @@ const subtitles = computed(() => listeningStore.currentMaterial?.subtitles ?? []
 const { activeIndex } = useSubtitleSync(() => subtitles.value);
 
 const modes = [
-  { value: "hidden" as const, label: "Hidden" },
-  { value: "english" as const, label: "English" },
-  { value: "chinese" as const, label: "Chinese" },
-  { value: "bilingual" as const, label: "Bilingual" },
-  { value: "reading" as const, label: "Reading" },
+  { value: "subtitle" as const, label: "subtitle" },
+  { value: "reading" as const, label: "fulltext" },
 ];
-
-const showEnglish = computed(() => ["english", "bilingual"].includes(listeningStore.subtitleMode));
-const showChinese = computed(() => ["chinese", "bilingual"].includes(listeningStore.subtitleMode));
 
 const readingSegments = computed(() => {
   const text = listeningStore.currentMaterial?.originalText;

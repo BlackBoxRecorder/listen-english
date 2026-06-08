@@ -25,12 +25,12 @@ export interface ListeningDetail extends ListeningItem {
   subtitles: Subtitle[];
 }
 
-export type SubtitleMode = "hidden" | "english" | "chinese" | "bilingual" | "reading";
+export type SubtitleMode = "subtitle" | "reading";
 
 export const useListeningStore = defineStore("listening", () => {
   const materials = ref<ListeningItem[]>([]);
   const currentMaterial = ref<ListeningDetail | null>(null);
-  const subtitleMode = ref<SubtitleMode>("english");
+  const subtitleMode = ref<SubtitleMode>("subtitle");
 
   async function fetchMaterials() {
     materials.value = await api.fetchListenings();
