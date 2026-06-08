@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "b84f6e66-05ee-4868-90db-faae2bd05729",
+  "id": "693a5969-9873-499d-be6f-6d23e8957a02",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "listening_materials": {
@@ -21,25 +21,11 @@
           "notNull": true,
           "autoincrement": false
         },
-        "description": {
-          "name": "description",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
         "audio_file_path": {
           "name": "audio_file_path",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
-          "autoincrement": false
-        },
-        "original_text": {
-          "name": "original_text",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
           "autoincrement": false
         },
         "duration": {

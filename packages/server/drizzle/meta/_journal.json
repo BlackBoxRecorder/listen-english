@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1779523854917,
-      "tag": "0000_sleepy_jack_murdock",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1780909386712,
-      "tag": "0001_crazy_vapor",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "6",
-      "when": 1780914292694,
-      "tag": "0002_charming_freak",
+      "when": 1780917367344,
+      "tag": "0000_luxuriant_vulcan",
       "breakpoints": true
     }
   ]

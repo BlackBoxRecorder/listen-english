@@ -1,9 +1,7 @@
 CREATE TABLE `listening_materials` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`title` text NOT NULL,
-	`description` text,
 	`audio_file_path` text NOT NULL,
-	`original_text` text,
 	`duration` integer,
 	`created_at` integer,
 	`updated_at` integer

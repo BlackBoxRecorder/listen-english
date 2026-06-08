@@ -1,1 +1,0 @@
-ALTER TABLE `listening_materials` DROP COLUMN `description`;
