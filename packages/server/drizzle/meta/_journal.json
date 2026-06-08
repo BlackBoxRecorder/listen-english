@@ -15,6 +15,13 @@
       "when": 1780909386712,
       "tag": "0001_crazy_vapor",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1780914292694,
+      "tag": "0002_charming_freak",
+      "breakpoints": true
     }
   ]
 }

@@ -3,7 +3,6 @@ import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
 export const listeningMaterials = sqliteTable("listening_materials", {
   id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
   title: text("title").notNull(),
-  description: text("description"),
   audioFilePath: text("audio_file_path").notNull(),
   duration: integer("duration"),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),

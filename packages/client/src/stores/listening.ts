@@ -5,7 +5,6 @@ import * as api from "../api";
 export interface ListeningItem {
   id: number;
   title: string;
-  description: string | null;
   duration: number | null;
   createdAt: string;
 }

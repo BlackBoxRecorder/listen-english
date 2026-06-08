@@ -35,11 +35,6 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
-          <input v-model="form.description" class="w-full border rounded px-3 py-2" />
-        </div>
-
-        <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Audio File</label>
           <div class="flex gap-2 items-center">
             <input
@@ -145,7 +140,6 @@ const isUploadingSubtitle = ref(false);
 
 const form = reactive({
   title: "",
-  description: "",
   audioFilePath: "",
   subtitles: [] as SubtitleItem[],
 });
@@ -164,7 +158,6 @@ function createNew() {
 
 function resetForm() {
   form.title = "";
-  form.description = "";
   form.audioFilePath = "";
   form.subtitles = [];
 }
@@ -174,7 +167,6 @@ async function selectItem(id: number) {
   isEditing.value = true;
   const data = await api.fetchListening(id);
   form.title = data.title;
-  form.description = data.description || "";
   form.audioFilePath = data.audioFilePath;
   form.subtitles = data.subtitles || [];
 }
@@ -221,7 +213,6 @@ async function onSubtitleSelect(e: Event) {
 async function handleSave() {
   const payload = {
     title: form.title,
-    description: form.description,
     audioFilePath: form.audioFilePath,
     subtitles: form.subtitles,
   };
