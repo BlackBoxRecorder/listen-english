@@ -1,35 +1,72 @@
-import { log } from 'console';
 import { Hono } from 'hono';
 
 const app = new Hono();
 
-const DICT_API_BASE = process.env.DICT_API_BASE || 'http://localhost:3066';
+// 有道词典 API 基础地址
+const DICT_API_BASE = process.env.DICT_API_BASE || 'http://127.0.0.1:5088';
 
-// GET /api/words/search?q=...&offset=0&limit=1
+/**
+ * 将音频相对路径补全为完整 URL
+ * @param filename 音频文件名，如 "abc123.mp3"
+ * @returns 完整音频 URL，filename 为空时返回空字符串
+ */
+function resolveAudioUrl(filename: string | null | undefined): string {
+  if (!filename) return '';
+  return `${DICT_API_BASE}/api/audio/${filename}`;
+}
+
+// GET /api/words/search?q=hello — 查词代理
 app.get('/search', async (c) => {
   const q = c.req.query('q');
-  const offset = c.req.query('offset') ?? '0';
-  const limit = c.req.query('limit') ?? '1';
 
   if (!q) {
     return c.json({ success: false, error: 'Missing query parameter: q' }, 400);
   }
 
-  if (!DICT_API_BASE) {
-    return c.json({ success: false, error: 'Dictionary API not configured' }, 503);
-  }
-
   try {
-    const url = new URL('/api/words/search', DICT_API_BASE);
-    url.searchParams.set('q', q);
-    url.searchParams.set('offset', offset);
-    url.searchParams.set('limit', limit);
+    const url = new URL('/api/translate', DICT_API_BASE);
+    url.searchParams.set('word', q);
 
     const res = await fetch(url.toString());
-    const data = await res.json();
-    return c.json(data);
+    const json = await res.json();
+
+    // 补全响应中的音频相对路径为完整 URL
+    if (json.data?.phonetic?.audio) {
+      json.data.phonetic.audio = resolveAudioUrl(json.data.phonetic.audio);
+    }
+    if (json.data?.trans_sents) {
+      for (const s of json.data.trans_sents) {
+        if (s.audio_url) {
+          s.audio_url = resolveAudioUrl(s.audio_url);
+        }
+      }
+    }
+
+    return c.json(json);
   } catch {
     return c.json({ success: false, error: 'Dictionary service unavailable' }, 502);
+  }
+});
+
+// GET /api/words/audio/:filename — 音频流代理（避免前端跨域）
+app.get('/audio/:filename', async (c) => {
+  const filename = c.req.param('filename');
+  if (!filename) return c.body(null, 400);
+
+  try {
+    const res = await fetch(`${DICT_API_BASE}/api/audio/${filename}`);
+    if (!res.ok) return c.body(null, 404);
+
+    const contentType = res.headers.get('content-type') || 'audio/mpeg';
+    const buffer = await res.arrayBuffer();
+    return new Response(buffer, {
+      headers: {
+        'Content-Type': contentType,
+        'Cache-Control': 'public, max-age=86400',
+      },
+    });
+  } catch {
+    return c.body(null, 502);
   }
 });
 

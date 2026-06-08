@@ -39,7 +39,7 @@ export const useWordStore = defineStore('word', () => {
 
     try {
       const res = await fetch(
-        `/api/words/search?q=${encodeURIComponent(normalized)}&offset=0&limit=1`
+        `/api/words/search?q=${encodeURIComponent(normalized)}`
       );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 

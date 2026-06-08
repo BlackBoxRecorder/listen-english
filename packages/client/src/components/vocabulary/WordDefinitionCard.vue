@@ -24,7 +24,15 @@
       <!-- Sticky header -->
       <div class="sticky top-0 bg-white border-b border-gray-200 px-4 py-3 z-10">
         <h2 class="text-xl font-bold text-gray-900">{{ result.word }}</h2>
-        <p v-if="result.phonetic" class="text-sm text-gray-500 mt-0.5">/{{ result.phonetic }}/</p>
+        <div v-if="result.phonetic" class="flex items-center gap-1.5 mt-0.5">
+          <span class="text-sm text-gray-500">/{{ result.phonetic.phonetic }}/</span>
+          <button
+            v-if="result.phonetic.audio"
+            @click="playAudio(result.phonetic.audio)"
+            class="text-gray-400 hover:text-blue-500 text-sm leading-none"
+            title="播放发音"
+          >🔊</button>
+        </div>
       </div>
 
       <!-- Scrollable body -->
@@ -58,12 +66,12 @@
           </ul>
         </section>
 
-        <!-- Sentences -->
-        <section v-if="result.sents?.length">
-          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Examples</h3>
+        <!-- Collins Examples -->
+        <section v-if="result.collins_sents?.length">
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Collins Examples</h3>
           <ul class="space-y-3">
             <li
-              v-for="(s, i) in result.sents"
+              v-for="(s, i) in result.collins_sents"
               :key="i"
             >
               <p v-if="s.description" class="text-xs text-gray-400 mb-0.5">{{ s.description }}</p>
@@ -73,18 +81,24 @@
           </ul>
         </section>
 
-        <!-- Lemmas -->
-        <section v-if="result.lemmas?.length">
-          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Word Forms</h3>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="(l, i) in result.lemmas"
+        <!-- Translation Examples -->
+        <section v-if="result.trans_sents?.length">
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Examples</h3>
+          <ul class="space-y-3">
+            <li
+              v-for="(s, i) in result.trans_sents"
               :key="i"
-              class="inline-block text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
             >
-              {{ l.variant }}
-            </span>
-          </div>
+              <p class="text-sm font-medium text-gray-800">{{ s.example }}</p>
+              <p class="text-sm text-gray-500">{{ s.translate }}</p>
+              <button
+                v-if="s.audio_url"
+                @click="playAudio(s.audio_url)"
+                class="text-xs text-gray-400 hover:text-blue-500 mt-0.5"
+                title="播放例句发音"
+              >🔊 播放</button>
+            </li>
+          </ul>
         </section>
       </div>
     </div>
@@ -103,6 +117,12 @@ const isLoading = ref(false);
 const error = ref<string | null>(null);
 const result = ref<WordData | null>(null);
 
+/** 播放音频 */
+function playAudio(url: string) {
+  const audio = new window.Audio(url);
+  audio.play();
+}
+
 watch(() => props.word, async (newWord) => {
   if (!newWord) {
     result.value = null;
@@ -116,7 +136,7 @@ watch(() => props.word, async (newWord) => {
 
   try {
     const res = await fetch(
-      `/api/words/search?q=${encodeURIComponent(newWord)}&offset=0&limit=1`
+      `/api/words/search?q=${encodeURIComponent(newWord)}`
     );
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 

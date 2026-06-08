@@ -6,9 +6,15 @@
         <h2 class="text-xl font-bold text-gray-900 break-words">
           {{ wordStore.currentResult?.word ?? wordStore.selectedWord ?? '' }}
         </h2>
-        <p v-if="wordStore.currentResult?.phonetic" class="text-sm text-gray-500 mt-0.5">
-          /{{ wordStore.currentResult.phonetic }}/
-        </p>
+        <div v-if="wordStore.currentResult?.phonetic" class="flex items-center gap-1.5 mt-0.5">
+          <span class="text-sm text-gray-500">/{{ wordStore.currentResult.phonetic.phonetic }}/</span>
+          <button
+            v-if="wordStore.currentResult.phonetic.audio"
+            @click="playAudio(wordStore.currentResult!.phonetic.audio)"
+            class="text-gray-400 hover:text-blue-500 text-sm leading-none"
+            title="播放发音"
+          >🔊</button>
+        </div>
       </div>
       <button
         @click="wordStore.closePanel()"
@@ -70,12 +76,12 @@
           </ul>
         </section>
 
-        <!-- Sentences -->
-        <section v-if="wordStore.currentResult.sents?.length">
-          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Examples</h3>
+        <!-- Collins Examples -->
+        <section v-if="wordStore.currentResult.collins_sents?.length">
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Collins Examples</h3>
           <ul class="space-y-3">
             <li
-              v-for="(s, i) in wordStore.currentResult.sents"
+              v-for="(s, i) in wordStore.currentResult.collins_sents"
               :key="i"
             >
               <p v-if="s.description" class="text-xs text-gray-400 mb-0.5">{{ s.description }}</p>
@@ -85,18 +91,24 @@
           </ul>
         </section>
 
-        <!-- Lemmas -->
-        <section v-if="wordStore.currentResult.lemmas?.length">
-          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Word Forms</h3>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="(l, i) in wordStore.currentResult.lemmas"
+        <!-- Translation Examples -->
+        <section v-if="wordStore.currentResult.trans_sents?.length">
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Examples</h3>
+          <ul class="space-y-3">
+            <li
+              v-for="(s, i) in wordStore.currentResult.trans_sents"
               :key="i"
-              class="inline-block text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
             >
-              {{ l.variant }}
-            </span>
-          </div>
+              <p class="text-sm font-medium text-gray-800">{{ s.example }}</p>
+              <p class="text-sm text-gray-500">{{ s.translate }}</p>
+              <button
+                v-if="s.audio_url"
+                @click="playAudio(s.audio_url)"
+                class="text-xs text-gray-400 hover:text-blue-500 mt-0.5"
+                title="播放例句发音"
+              >🔊 播放</button>
+            </li>
+          </ul>
         </section>
       </div>
     </div>
@@ -108,6 +120,12 @@ import { onMounted, onUnmounted } from 'vue';
 import { useWordStore } from '../../stores/word';
 
 const wordStore = useWordStore();
+
+/** 播放音频 */
+function playAudio(url: string) {
+  const audio = new window.Audio(url);
+  audio.play();
+}
 
 function onKeydown(e: KeyboardEvent) {
   if (e.key === 'Escape') wordStore.closePanel();
