@@ -1,8 +1,8 @@
 <template>
-  <div class="h-full overflow-y-auto py-8 px-4">
-    <div class="max-w-2xl mx-auto">
-      <!-- Search input -->
-      <div class="mb-8">
+  <div class="h-full flex flex-col">
+    <!-- Search input - fixed at top -->
+    <div class="shrink-0 px-4 pt-8 pb-4">
+      <div class="max-w-2xl mx-auto">
         <div class="flex gap-2">
           <input
             v-model="query"
@@ -20,9 +20,13 @@
           </button>
         </div>
       </div>
+    </div>
 
-      <!-- Result -->
-      <WordDefinitionCard :word="searchedWord" />
+    <!-- Result - scrollable area -->
+    <div class="flex-1 min-h-0 px-4 pb-8">
+      <div class="max-w-2xl mx-auto h-full">
+        <WordDefinitionCard :word="searchedWord" />
+      </div>
     </div>
   </div>
 </template>
