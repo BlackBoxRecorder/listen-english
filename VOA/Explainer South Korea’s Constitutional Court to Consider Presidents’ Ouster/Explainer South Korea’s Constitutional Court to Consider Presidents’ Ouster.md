@@ -1,0 +1,57 @@
+# Explainer: South Korea’s Constitutional Court to Consider Presidents’ Ouster
+
+No media source currently available
+
+The impeachment late last month of South Korea’s acting President Han Duck-soo has deepened political division in the country. He had replaced President Yoon Suk Yeol, who was impeached earlier in December.
+
+Two impeachments suspending the country’s top two officials in a short period of time has never happened before in South Korea. Now, the deputy prime minister and finance minister, Choi Sang-mok, is the new temporary leader.
+
+When he took power, Choi quickly ordered the military to increase readiness in the event of an act of aggression by North Korea. Diplomats communicated with important partners including the United States and Japan.
+
+Duyeon Kim is an expert with the Center for a New American Security in Washington, D.C. Kim said: “(Han’s) impeachment now creates an opportunity for external threats.”
+
+How Han was impeached
+
+Before Yoon declared martial law on December 3, Han Duck-soo was the prime minister and the second highest official in South Korea. Lawmakers impeached Yoon on December 14 over his martial law order.
+
+Han tried to ease the concerns of South Korea’s major diplomatic partners and to calm its financial markets. However, he became involved in a political dispute with the opposition Democratic Party, or DP.
+
+DP lawmakers demanded that Han immediately appoint three justices to seats on the Constitutional Court to rule on Yoon’s impeachment. The court normally has nine justices. Currently three seats remain open. Han refused to fill the open seats. He said he would not appoint justices without the approval of both the DP and the governing People Power Party, or PPP.
+
+Choi Jin is director of the Institute of Presidential Leadership based in Seoul. He said Han lacked a good reason not to appoint the justices. But Choi said the DP should not have moved to impeach Han so quickly.
+
+International surprise
+
+Han’s impeachment came as South Korean officials told international partners that the situation was returning to normal. Officials in Japan, Europe and the United States had been surprised by Yoon’s declaration of martial law.
+
+Duyeon Kim said: “South Korea is now in a far more serious crisis of leadership and governance,” adding that, “Han had the experience and credentials to deal with both security and financial crises….”
+
+Kim expressed concern that the leadership situation would harm the economy, culture and industry.
+
+What might happen?
+
+The governing party argues that Han’s impeachment is “invalid” because it is based on a simple majority of the 300-member National Assembly. The PPP says a two-thirds majority is necessary. It has brought a case before the Constitutional Court to consider the impeachment vote of Yoon.
+
+The Constitutional Court has 180 days to decide on the legality of both impeachments.
+
+Han called his impeachment “regrettable,” but said he respects the assembly’s decision. If Yoon is ousted, then a national election must take place within 60 days.
+
+Yoon faces several separate investigations into possible wrongdoing linked to his martial law declaration. DP leader Lee Jae-myung is favored to win a possible presidential election.
+
+However, Lee faces legal cases as well. He was found guilty of election law violations in November. He is appealing the ruling.
+
+If Lee becomes president, his trials would be suspended because South Korean law does not permit a sitting president to face legal action for most crimes.
+
+I’m Mario Ritter Jr.
+
+Hyung-Jin Kim reported this story for the Associated Press. Mario Ritter, Jr. adapted it for VOA Learning English.
+
+---
+
+impeachment –n. (political) an action that is defined in a country’s constitution that is part of a process for removing the executive officer from power for a crime or wrongdoing
+opportunity –n. a good chance for advancement or progress
+external –adj. not inside something but outside of it
+invalid –adj. being without foundation or force in fact, truth, or law
+credentials –n. (usually pl.) qualities or abilities that make someone able to do something; documents that state a person is permitted to do a certain job
+
+We want to hear from you.

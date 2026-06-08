@@ -1,0 +1,47 @@
+# Blind Pianist Says Music Gives Him Energy, Hope
+
+No media source currently available
+
+Takosangba Pongen could see until he was 14 years old. He has been blind for the 13 years since.
+
+But, nobody would know that by watching Pongen perform on the piano.
+
+Pongen said playing the piano helped him after he lost his sight. “It opened a window to see the world. It gives me energy and hope to go forward,” he said.
+
+Recently, he performed at the Brillante Piano Festival in Bengaluru, the capital of the southern Indian state of Karnataka.
+
+Pongen plays by ear. He taught himself to play, assisted by piano play training on YouTube that he began using in 2020. He said he would like to be a professional musician someday.
+
+But he is having difficulty finding a place that teaches piano to people with sight, or vision, problems.
+
+Pongen first noticed his vision problems at school. He could not see clearly enough to read words on the blackboard in the room.
+
+Then he remembers having difficulty seeing the small, glass balls called marbles that he liked to play with.
+
+A medical operation to treat the problem failed, worsening his vision. By 14, Pongen was blind.
+
+Pongen says that he sometimes wishes he could see but adds that he also accepts his condition as “God’s plan.” He believes he is meant to serve as a model in how to face difficulty, lending support to others through example.
+
+"If a blind man can do it, why can’t others who are fully able,” Pongen said.
+
+Brillante organizers said they believe in the “power of music as an agent of social development.” Pongen is a part of their “Specially Abled Musicians” program.
+
+He played Nocturne in B Flat Minor, a work written by Frederic Chopin. Pongen said Chopin is one of his favorite writers of music.
+
+“I love music that is expressive and emotional,” he said.
+
+Pongen came more than 3,000 kilometers to Bengaluru. He traveled with his sister, Imlibenla, by his side to play at Brillante Festival, the fifth of its kind. His heart was racing, he said, when the program director, Khyochano TCK, presented him to the other musicians.
+
+The nervousness returned as his performance time arrived. Pongen said he took a deep breath to calm himself.
+
+Then, Imlibenla gently guided him onto the stage. She helped to seat him in front of the piano.
+
+From there, he played beautifully.
+
+I'm John Russell.
+
+Yirmiyan Arthur reported on this story for the Associated Press. John Russell adapted it for VOA Learning English.
+
+---
+
+blackboard – n. a hard smooth usually dark surface used especially in a classroom for writing or drawing on with chalk

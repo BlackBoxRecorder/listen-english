@@ -1,0 +1,147 @@
+# How to Use VOA Learning English for Speaking, Writing
+
+Editor's Note: This guide is useful for classroom learning as well as English language practice groups. For the printable, extended list of activities and instructions, click here.
+
+No media source currently available
+
+Here at VOA Learning English, we love to help teachers. Our aim is to make learning more interactive, student-centered and fun.
+
+In today’s Education Tips, we offer speaking and writing activities for beginning, intermediate and advanced English learners.
+
+As a teacher who uses the VOA Learning English website, you know about our quizzes, downloadable lesson plans, and other materials. But, there are other creative and less obvious ways to use our programs in your classroom.
+
+Let’s start with a speaking activity for beginners.
+
+Speaking activities
+
+Beginners: Using the Day in Photos
+
+Every day, VOA Learning English posts fascinating photos from around the world. We call it the Day in Photos. You can find photos of all kinds of things, such as a fireworks display in Mexico City or a fisherman sitting in his boat in the Egyptian Nile River Delta.
+
+Here’s a speaking activity that will inspire even the shyest beginning speakers to talk to their classmates.
+
+With students sitting in pairs, show the image on the screen, without showing the description. Have one student describe what she sees in the image. Then, have the other student imagine what the people or animals in the photo are thinking or saying.
+
+This activity gives learners the chance not just to practice speaking but to use their imaginations.
+
+Intermediate: Using Learning English TV
+
+Our video series are also a great tool for getting students talking. For example, Learning English TV features two-minute videos on topics from science to politics to health.
+
+For intermediate learners, you can use pair work to have students summarize what they learn watching the videos. You can play two different videos so both students get the chance to summarize something different. Then, as a whole class, you can discuss what the students learned from the videos.
+
+No media source currently available
+
+​
+
+Advanced: Using Learning English TV
+
+Advanced speakers can also get talking by watching Learning English TV.
+
+For this level, have students do the activity exactly as they did in the intermediate activity. But, ask students to come up with three questions on additional things they’d like to learn about the topic.
+
+For advanced speakers, you can also use our video series America’s Presidents to spark discussion on debatable topics. Students can work in small groups to express their opinions on what they watched in the video.
+
+For example, John Adams, America’s second president, made policies about immigrants that became controversial during his time.
+
+Advanced: Additional Video Series
+
+English in a Minute and English at the Movies are also great for sparking lively conversation among advanced English learners.
+
+These short series explore an idiom, or common expression. For example, in one English at the Movies episode, the expression "fresh start" is explored.
+
+A young man and his mother move to a new place, and the mother says, "Fresh start."
+
+No media source currently available
+
+Students can use the context of the movie clip and its explanation – based on the multiple choice quiz in the video – to develop their understanding of the expression.
+
+One fun activity is to have students create two- or three-person dialogues using the new idioms. They can act out or voice the dialogues in their groups, then move around and share them with other groups. Or, they can share the dialogues with the whole class.
+
+Writing activities
+
+Beginning: Using the Day in Photos
+
+You can use the Day in Photos series for writing, too.
+
+Before doing this activity, choose a photo or a few photos to display on the screen, without the descriptions.
+
+Tell students they will write a story about the person or people in the photo. If the students need help using their imaginations, provide a list of questions on the board or a shared screen, such as: What are they doing in the photo and why? What are they thinking in the photo?
+
+Beginners: Using Let’s Learn English
+
+Another great way to get beginning learners writing is our Let’s Learn English series. Each lesson asks learners to write a response to the topic of the lesson. For example, Lesson 25 shows the main character, Anna, learning about a new video game. Learners are asked to write an answer to this question: What games do you like to play?
+
+Intermediate: Using News Words
+
+Use our videos to also get your intermediate learners excited about writing. News Words is a series featuring short videos about popular words in the news.
+
+No media source currently available
+
+For this intermediate writing activity, choose a video that features a word relevant to most of your students.
+
+For example, the video News Words: Sacred talks about two uses of the word: one is in reference to something that deserves great respect, and the other is about religious or holy topics. Many students may be able to relate to the idea of something being sacred.
+
+For this activity, students watch the video and then write a paragraph about the importance of the word for them. They sit in pairs or small groups and share their writing with one another.
+
+Advanced: Using Words and Their Stories
+
+The series Words and Their Stories explores common expressions in American English. Each story contains many idioms, or expressions, usually with a mysterious or exciting storyline.
+
+For example, “Mystery at the Ice Castle Inn” told the story of four strangers stuck at a faraway inn on a mountain during an ice storm. All the idioms in the story are related to ice, snow or cold.
+
+Words and Their Stories is good for advanced writing activities because students get to practice using many idioms.
+
+For this activity, students work in pairs or small groups, depending on class size. Play the audio as the students view the text on a shared screen. Students then discuss the idioms in the story to make sure they fully understand the meanings. Together, they then write sentences for each idiom. After they’re finished, you can ask for examples from each group.
+
+Tips on giving feedback
+
+Before doing any of the activities, decide on your method of feedback.
+
+Speaking:
+
+A good feedback method for speaking activities is for you to monitor students as they speak. Take notes on some of the phrases you hear, whether they are correct or incorrect.
+
+After the activity, write the phrases on the board or shared screen. Then, ask students whether the grammar is correct.
+
+If students agree that the phrase is already correct, have the class simply repeat the phrase aloud. If it’s incorrect, ask for corrections. You can have volunteers make the corrections on the board.
+
+Writing Feedback
+
+For giving writing feedback, we recommend that you also keep things interactive. Put a checklist of questions on the board and then have students correct each other’s writing based on the questions.
+
+The checklist can include questions such as: Is the main point clear? Did the details support the main point? Is the punctuation correct? Are the sentences complete? Does the writer use correct grammar?
+
+You can also go around and monitor to make sure students are giving one another accurate corrections.
+
+Stay tuned for more Education Tips stories in the coming weeks.
+
+I'm Alice Bryant. And I'm John Russell.
+
+For the printable, extended list of activities and instructions, click here or on the image below.
+
+​
+
+Alice Bryant wrote this story for Learning English. Kelly Jean Kelly was the editor.
+
+Do you teach English? Have you used our website in your classroom? Tell us what you've done and what you've enjoyed. We want to hear from you. Write to us in the Comments Section or email the Education team.
+
+---
+
+obvious - adj. easy to see or notice
+
+fascinating - adj. very interesting or appealing
+
+shy - adj. feeling nervous and uncomfortable about meeting and talking to people
+
+intermediate - adj. relating to or having the knowledge or skill of someone who is more advanced than a beginner but not yet an expert
+
+controversial - adj. relating to or causing much discussion, disagreement, or argument
+
+idiom - n. an expression that cannot be understood from the meanings of its separate words but that has a separate meaning of its own
+
+context - n. the words that are used with a certain word or phrase and that help to explain its meaning
+
+castle - n. a large building usually with high, thick walls and towers that was built in the past to protect against attack
+
+inn - n. a house usually in the country where people can eat and rent a room to sleep in

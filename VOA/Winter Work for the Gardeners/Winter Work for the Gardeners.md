@@ -1,0 +1,63 @@
+# Winter Work for the Gardeners
+
+No media source currently available
+
+For people in parts of the world with seasons — especially cold ones — winter might seem like a time to rest and to take a break from garden work.
+
+But it is not, says Associated Press gardening expert Jessica Damiano.
+
+Autumn and winter are the best times to attend to your garden’s needs and prepare for the next growing season. There is much to do for both outdoor and indoor plants.
+
+Outdoor care
+
+For people who want flowers like tulips in the early spring plant the bulbs that produce them if your soil is not frozen. If you can still dig, plant tulips, daffodils and other bulbs.
+
+Cover them with about eight centimeters of mulch, leaves or dried grass. This will prevent freezing and melting temperatures from forcing them out of the ground over the winter.
+
+During winter months, even in more temperate areas, some plants need protection from the cold. These include some fruit trees, like citrus, dahlias and many plants that bloom in the spring. In winter conditions, a cloth cover called burlap can help limit the damaging effects of wind.
+
+If snow builds up on the branches of evergreen trees and shrubs, remove it. The heavy weight can damage branches.
+
+Keep a record of plants you mean to move from one place to another in your garden. The notes will guide you in early spring: a time that is best to move plants that bloom early in the season.
+
+if you have extra seeds, consider trading them with gardening friends or at a gardening event. Store and organize seeds for the future in glass containers in cool places without light. Make sure to write down what they are and when they were collected.
+
+If insects or diseases were a problem during the growing season, use winter months to read about companion plants that can ease the problem in the coming year.
+
+Indoor care
+
+The cold winter months also affect houseplants. Bring houseplants near a south-facing or west-facing window to get the most sunlight possible. Turn the houseplants about one fourth of a turn each time you water them. This will support more even growth.
+
+If you are buying poinsettias for the holidays, be sure to examine them for whiteflies before bringing them home. If you do not, you could bring home insects.
+
+If you plant Amaryllis bulbs indoors now, they will bloom during the coldest months of the winter. Plant them with their pointed ends reaching out of the potting soil and place them in a warm, sunny spot, watering them well.
+
+After they bloom, keep them in a cooler place to extend the life of their flowers but keep them away from children and pets. Amaryllis bulbs are poisonous to eat.
+
+Remember the birds
+
+Damiano also advises to remember that non-migrating birds need food because most of their food sources are gone during the winter months. High quality birdseed and water can help.
+
+These same birds will repay the effort by feeding on thousands of insects that threaten your garden during the warm growing season.
+
+I’m Caty Weaver.
+
+Jessica Damiano reported this story for the Associated Press. Mario Ritter, Jr. adapted it for VOA Learning English.
+
+---
+
+garden –n. an area where trees and plants grow in a way designed by a gardener to produce flowers and small crops for food
+
+bulb –n. a round piece of plant tissue that becomes a flowing plant when grown in the ground
+
+bloom –n. the flowering state
+
+mulch –n. broken down plant material such as leaves and bark that is put on the ground to enrich the soil and protect existing plants
+
+delicate –adj. very fine and sensitive to difficult conditions
+
+companion –n. someone or something that goes well with another
+
+We want to hear from you.
+
+Our comment policy is here.

@@ -1,0 +1,63 @@
+# What Is the Oropouche Virus Found in US Travelers to Cuba?
+
+No media source currently available
+
+American health officials have identified a virus spread by insects in more than 20 people who visited Cuba. The virus is officially called Oropouche. It is also known as sloth fever.
+
+The U.S. Centers for Disease Control and Prevention (CDC) said August 27 it had received reports of 21 cases in the United States. All of the cases – 20 in Florida and one in New York – involved people who had traveled to Cuba.
+
+European health officials said they had identified 19 cases of the virus, nearly all of them in travelers.
+
+The CDC explains that Oropouche is usually spread through the bites of small flies called midges, as well as mosquitoes. Signs, or symptoms, of the sickness usually start three to 10 days after an insect bite. They can include headache, high temperature, joint stiffness, stomach problems and sensitivity to light.
+
+The CDC says most virus cases last from three to six days and people generally recover without any long-term effects. There is currently no specific treatment or vaccine for the sickness.
+
+Where did Oropouche come from?
+
+The Oropouche virus is native to forested tropical areas. It was first identified in 1955 in the Caribbean island nation of Trinidad and Tobago. The virus was named after a nearby village and water system.
+
+The sickness is sometimes called sloth fever because scientists investigating the virus found it in a three-toed sloth. Researchers believed the sloths were important in spreading the virus between insects and animals.
+
+How does it spread?
+
+The virus is spread to humans by small biting flies called midges, and by some kinds of mosquitoes. Humans have become infected while visiting forested areas and are believed to be responsible for helping the virus make its way to towns and cities. So far, person-to-person transmission, or spread, has not been documented.
+
+How many cases have there been?
+
+The virus has recently caused large outbreaks in Amazon areas where it was known to exist. It has also been found in new areas of South America and the Caribbean. About 8,000 local infections have been reported in Bolivia, Brazil, Colombia, Cuba, and Peru.
+
+Most patients returning from Cuba reported their symptoms between May and July. Three of the patients were hospitalized, with no deaths reported, the CDC said in its Morbidity and Mortality Weekly Report.
+
+What are the symptoms and treatments?
+
+Symptoms can seem similar to other tropical diseases like dengue, Zika or malaria. The most common ones include fever, headaches and muscle pains. Some infected people also suffer from diarrhea, unsettled stomach, vomiting or skin reactions.
+
+Some patients can suffer symptoms repeatedly. And one in 20 people may experience more severe symptoms like bleeding, meningitis and encephalitis. The virus rarely causes death, although there were recent reports of deaths in two healthy young people in Brazil.
+
+There are no vaccines to prevent infections and no medicines are currently available to treat the symptoms.
+
+Are there other concerns?
+
+In Brazil, officials are investigating reports that infections might be passed on from pregnant women to their unborn babies. This kind of spread was documented during Zika outbreaks nearly 10 years ago.
+
+The CDC has issued guidance that pregnant women should avoid non-necessary travel to Cuba. The agency also suggested that all travelers take steps to prevent insect bites, such as using insect repellents and wearing long-sleeved shirts and long pants.
+
+I’m Bryan Lynn.
+
+The Associated Press and Reuters reported on this story. Bryan Lynn adapted the reports for VOA Learning English.
+
+---
+
+stiff – adj. hard and difficult to move
+
+specific – adj. exact or containing details
+
+tropical – adj. from or in the hottest parts of the world
+
+fever – n. a high body temperature caused by sickness
+
+diarrhea – n. a sickness in which a person’s solid waste is more liquid than usual and comes out of the body more often
+
+vomit – v. to have the food, liquid, etc., that is in your stomach come out through your mouth because you are sick​
+
+repellent – n. a substance used to keep insects away

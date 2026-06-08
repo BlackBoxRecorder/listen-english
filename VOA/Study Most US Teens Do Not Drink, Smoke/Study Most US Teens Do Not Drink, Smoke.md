@@ -1,0 +1,53 @@
+# Study: Most US Teens Do Not Drink, Smoke
+
+No media source currently available
+
+Drug use among teenagers has continued to drop since the early years of the COVID-19 pandemic, a large national study says.
+
+The federally financed Monitoring the Future study has been carried out yearly since 1975. However, the study only started measuring abstinence – the practice of rejecting alcohol or recreational drug use – in 2017.
+
+This year’s findings are based on answers from about 24,000 students in grades 8, 10 and 12 in schools across the United States.
+
+One major finding: About 66 percent of 12th graders said they had not used alcohol, marijuana, and traditional or electronic cigarettes in the previous 30 days.
+
+That share, or proportion, of students is the largest since the yearly study started measuring abstinence.
+
+The study is “one of the best, if not the best” source of national data for substance use by teens, said Noah Kreski. Kreski is a Columbia University data analyst who has studied teen drug use.
+
+Among 10th graders, 80 percent said they had not used alcohol, marijuana, cigarettes or e-cigarettes recently, another record. Among 8th graders, 90 percent did not use any of them, the same as was reported in the previous study.
+
+The only major increase found was in the use of nicotine pouches, small, white containers of nicotine which users place in their mouths. About 6 percent of 12th graders said they had used that form of nicotine in the past year, up from about 3 percent in 2023.
+
+Whether that has the makings of a new public health problem is unclear. The University of Michigan’s Richard Miech, who leads the study, said: “It’s hard to know if we’re seeing the start of something, or not.”
+
+Early in the pandemic, students across the country were told not to go to schools and to avoid parties or other gatherings. Alcohol and drug use of all kinds dropped likely because use most often happens in friend group settings. Friends often influence each other to use drugs, experts say.
+
+As lockdowns ended, “I think everyone expected at least a partial rebound,” Miech said.
+
+Even before the pandemic, there were decreases in teen cigarette smoking, drinking and the use of several kinds of drugs. Experts suggested that teens were staying home as opposed to spending time in social settings, in which use of illegal substances is more likely.
+
+But marijuana use was not falling before the pandemic. And vaping was increasing. It was only during the pandemic that those activities began to decrease also.
+
+Some experts wonder if the pandemic lockdowns had a deeper influence.
+
+Miech noted that a lot of teens who experiment with e-cigarettes or drugs start in the 9th grade, sometimes because older children are doing it. But the children who were 9th graders during the lockdowns never picked up the activity. And they never had the opportunity to turn into negative influencers of their younger classmates, he said.
+
+“The pandemic stopped the cycle of new kids coming in and being recruited to drug use,” Miech said.
+
+Mental health may also play a part. There were increased reports of depression and anxiety in kids after the pandemic began. Depression is often linked with substance use, but some people with depression and anxiety are very cautious about experimenting with drugs, said Dr. Duncan Clark. Clark is a University of Pittsburgh medical doctor who researches substance use in kids.
+
+“Some teens with anxiety are worried about the effects of substances. They may also be socially inhibited and have less opportunity to use drugs,” Clark said.
+
+I’m John Russell.
+
+Mike Stobbe reported on this story for the Associated Press. John Russell adapted it for VOA Learning English.
+
+---
+
+teenager – n. a child over the age of 12
+
+nicotine – n. an alkaloid substance that is the chief active principle of tobacco
+
+rebound – n. an upward movement
+
+inhibit –v. to prohibit from doing something; to discourage from activity

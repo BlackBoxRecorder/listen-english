@@ -1,0 +1,67 @@
+# Tips for Better Conversations in English at Work
+
+No media source currently available
+
+When we are learning a new language, carrying on a conversation can be difficult. It is even harder when there is the added pressure of doing a job well using the new language. One of our readers, Emre, works at a job that requires him to talk with customers in English. He recently asked for advice on how he can improve his listening skills.
+
+There are probably many other readers who use English in their daily work, too. So today, we will suggest some simple learning strategies to improve your ability to listen and carry on conversations.
+
+A learning strategy can be a thought or an action you take to make learning easier.
+
+Here are four strategies for you to consider.
+
+Predict
+
+The first strategy is to predict what you will hear. Maybe your customers sometimes say they have problems with placing an order on your website. You can think about the ways they usually ask about that problem. What words do they often use in that kind of conversation? For example, customers may often use the word “order.”
+
+Focus
+
+The next strategy is to prepare a list of those words and listen for them when a customer begins talking with you. I call this “focusing when you listen.” The next time you are listening to a customer, pay attention to the key words that help you understand their question.
+
+Ask
+
+Next, think about what you can say to the customer to let them know you need a little help understanding them. You can let the customer know you are an English learner.
+
+There are two questions you can ask. At the beginning of the conversation, you can ask, “Would you please speak more slowly?”
+
+The other kind of question is one I call, “asking to clarify.” Remember, you predicted some of the words your customers may use. You should listen closely for those words. When you hear one, you can ask the customer a short question to be sure. “Did you say you want to order?”
+
+Rehearse
+
+You can prepare your answers to customers’ questions and rehearse them in your free time. You may want to keep a notebook with your usual answers. You can practice saying them out loud to yourself.
+
+Putting them together
+
+Finally, you can put all these actions and thoughts together. Let’s say a customer calls and says:
+
+I want to order some face cream but I cannot find the button for ordering.
+
+You are not sure of the product the customer wants. But you did note the words “order” and “button,” so you can ask a question to clarify the customer’s request. You rehearsed this question:
+
+Are you looking for the button to order?
+
+The customer says, “Yes.” Then, you can ask another question that you practiced.
+
+May I ask the name of the product you want to order?
+
+We hope that these four strategies will help you to better deal with your customers in English. Learning English takes time and effort, but sometimes a few good strategies make things easier.
+
+Another way you can prepare is to listen to English movies and podcasts as often as you can. The more you listen to conversations in English, the more you will understand over time.
+
+I’m Jill Robbins.
+
+Jill Robbins wrote this story for VOA Learning English. Ashley Thompson was the editor.
+
+---
+
+customer – n. someone who buys goods or services from a business
+
+conversation – n. an informal talk involving two people or a small group of people or the act of talking in an informal way
+
+focus – v. to direct your attention or effort at something specific
+
+rehearse – v. to say or do (something) several times in order to practice
+
+button – n. a small area on a computer screen that you click on to make the computer software do something
+
+What do you want to read about in a future Ed Tips story? We want to hear from you. Write to us in the Comments Section.

@@ -1,0 +1,75 @@
+# Artists Keep Ancient Japanese Craft Alive
+
+No media source currently available
+
+Eiko Araki is an expert of the Sanuki Kagari Temari, a Japanese traditional craft. The craft has been passed down for more than 1,000 years on the island of Shikoku.
+
+Araki is at the center of a small circle of women who are working hard to make “temari.” These balls are small artistic objects that have colorful designs. They can take weeks or months to finish. Some cost hundreds of dollars although others are less costly.
+
+The balls are not for sports. They are created as special objects, carrying prayers for health and goodness. They might be treasured like a painting in a Western home.
+
+“Out of nothing, something this beautiful is born, bringing joy,” said Araki about the temari. “I want it to be remembered there are beautiful things in this world that can only be made by hand.”
+
+Creating the balls
+
+The area where temari began was good for growing cotton. The round creations continue to be made out of that material.
+
+At Araki’s studio, which also serves as head office for temari’s preservation society, there are 140 colors of cotton thread.
+
+The women dye them by hand, using plants, flowers and other natural ingredients. Outside the studio, cotton thread, in different colors, hangs outside in the shade to dry.
+
+The lengthy process starts with making the basic ball. The careful work with thread called stitching is done on the ball. The outer covering of rice grains, called husks, are cooked and then dried and placed in a piece of cotton. Then the materials are wound with thread, over and over, until, almost magically, a ball appears.
+
+Then the stitching begins.
+
+The balls are surprisingly hard, so each stitch requires a careful, almost painful, push.
+
+New generation
+
+These days, temari is getting new recognition among Japanese and foreigners as well. Caroline Kennedy, for example, took lessons in the ball-making when she was United States ambassador to Japan 10 years ago.
+
+Yoshie Nakamura promotes Japanese handcrafted art in her shop at Tokyo’s Haneda airport. Nakamura says she features temari there because of its complex designs.
+
+“Temari that might have been everyday in a faraway era is now being used for interior decoration,” she said.
+
+“I really feel each Sanuki Kagari Temari speaks of a special, one-and-only existence in the world.”
+
+Araki has come up with some newer designs that feel both modern and historical. She is trying to make the balls more available for everyday life. For example, some of the balls can be used to beautify Christmas trees.
+
+Araki often travels to Tokyo to teach. But mostly she works and gives lessons in her studio.
+
+She started out as a metalwork artist. Her husband’s parents were temari masters who worked hard to bring back the artform when it was at risk of dying out.
+
+They were not emotional people. They rarely gave praise and instead always scolded her, she remembers. It is a “tough love” teaching method that is common in many Japanese traditional arts, from Kabuki acting to hogaku music. These art forms demand a lifetime of selfless devotion.
+
+Today, only a small number of people, all women, can make the temari balls to traditional standards.
+
+Araki said that the most difficult issue is training the next generation. She added that it usually “takes over 10 years to train them, so you need people who are willing to continue the craft for a very long time."
+
+But, she explained, “When people start to feel joy along with the hardship that comes with making temari, they tend to keep going.”
+
+I’m John Russell.
+
+Yuri Kageyama reported on this story for the Associated Press. John Russell adapted it for VOA Learning English.
+
+---
+
+studio –n. a building or room where artists work
+
+preservation -- n. the activity or process of keeping something alive
+
+thread – n. a continuous strand formed by spinning and twisting short textile fibers
+
+dye –v. to put on or apply a substance that colors cloth
+
+era –n. a period of time in the past
+
+interior decoration – n. the job of adding objects and furnishings to a room or home that do not involve its structure or utilities
+
+scold – v. to criticize sharply
+
+devotion – n. the act of dedicating something to a cause or activity
+
+standard – n. something set up and established by authority as a rule for the measure of quality
+
+tend – v. to continue development or movement in a particular direction

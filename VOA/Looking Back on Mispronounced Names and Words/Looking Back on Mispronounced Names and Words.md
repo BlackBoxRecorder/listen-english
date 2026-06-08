@@ -1,0 +1,57 @@
+# Looking Back on Mispronounced Names and Words
+
+No media source currently available
+
+Vice President Kamala Harris and pop singer Chappell Roan were among the year's most talked-about people. Their names were also among those people said incorrectly, or mispronounced.
+
+In early December, the language-learning company Babbel and The Captioning Group released a list of words that people in the U.S. struggled with the most in 2024. The list also provides a look back at the year's most discussed subjects and people, from pop culture to politics.
+
+Esteban Touma is a linguistic and cultural expert at Babbel. He said, "It's a nice way to kind of look back into the year and see everything that has happened."
+
+Chappell Roan became famous this year and is nominated for six Grammy awards. But people still do not know how to say her name correctly. The list says her name is pronounced CHAP-uhl ROHN, not SHA-pel ROW-an.
+
+Help with pronouncing names
+
+During Harris' campaign for president this year, two of her young relatives spoke at the Democratic National Convention to teach the crowd how to say her first name, pronounced COM-a-la.
+
+Also making the list was U.S. Transportation Secretary Pete Buttigieg, whose last name still causes some problems. During his 2020 presidential run, his campaign made shirts with the pronunciation "Boot-Edge-Edge" to help.
+
+Other words on the list include:
+
+— Dutch Kooikerhondje, pronounced COY-ker-HUND-che, is a breed of dog that became known this year. That is because Los Angeles Dodgers baseball player Shohei Ohtani has a Kooikerhondje called Decoy that appeared with him at an opening game.
+
+— The name of the actress Zendaya is often mispronounced as zen-DIE-uh, but it should be zen-DAY-a.
+
+— Online fast-fashion business Shein is SHE-in, not SHEEN.
+
+— Newly discovered exoplanet Speculoos-3b is pronounced SPEK-yuh-lohss three bee.
+
+— Phryge, the mascot of the Paris Olympics, is pronounced FREE-je.
+
+— Semaglutide, the drug in weight-loss medications Ozempic and Wegovy, is pronounced sem-ah-GLOO-tide, not SEE-mah-gloo-tide.
+
+— The last name of Irish actor Barry Keoghan, who starred in "Saltburn," is pronounced key-OH-gin.
+
+Nancy Niedzielski is chair of the linguistics department at Rice University in Houston. She points out that most of the words on the list are not English, so it is not surprising that they would be mispronounced in the U.S. The key to pronouncing them correctly, she said, would probably just be hearing them spoken.
+
+Touma, a native Spanish speaker, said if you cannot pronounce a word, it is important to just keep trying. "One of the problems we have is our mouths are not trained to do those sounds that come from different languages," he said.
+
+Touma admitted even he struggles with some words, including Harris' first name. Even though he knows the correct pronunciation, he said, it is hard to get it right in a conversation.
+
+As Roan's music gained popularity, it was an interesting cultural moment to watch as people learned to pronounce her first and last name, he said.
+
+"The way we create understanding with each other is just trying to do these things," Touma said.
+
+I’m Jill Robbins.
+
+Jamie Stengle reported this story for the Associated Press. Jill Robbins adapted it for Learning English.
+
+---
+
+nominate – v. to formally choose (someone) as a candidate for a job, position, office, or award
+
+fashion – n. a popular way of dressing during a particular time or among a particular group of people
+
+mascot - n. a person, animal, or object used as a symbol to represent a group (such as a sports team) and to bring good luck
+
+What do you think of this story? Write to us in the Comments Section.

@@ -1,0 +1,63 @@
+# Peace Brings Big Changes to Kabul's Luxury Housing Market
+
+No media source currently available
+
+The capital city of Kabul, Afghanistan, has seen big changes in its high-end housing market. Peace, it seems, is driving up property prices.
+
+Omidullah, a real estate agent, is selling a white-and-gold house with nine bedrooms and nine bathrooms in the Afghan capital. The house is on the market for $450,000, a surprising number in a country where more than half of the population depends on humanitarian aid to survive.
+
+Most Afghans do not have bank accounts. And it is rare to borrow money from banks to buy property. Yet the offers are coming in.
+
+“It’s a myth that Afghans don’t have money,” Omidullah said. “We have very big businessmen who have big businesses abroad. There are houses here worth millions of dollars.”
+
+Afghans coming home
+
+People who spent years living and working abroad are returning home. They are drawn by the country’s much-improved security and stability after years of war and destruction. Those returning include Afghans escaping deportation campaigns in Iran and Pakistan.
+
+Banks rarely have enough money for lending. So, Afghans buy properties with their own money or employ what is called “geerawi.” It is when someone provides a fixed amount to a property owner in return for living in his place. And the person stays until the property owner returns the money.
+
+Before the Taliban takeover, people were afraid to invest in Kabul, said another real estate agent, Ghulam Mohammed Haqdoost.
+
+But the Taliban have created better conditions for the property market. The city is less violent since the Taliban changed from an insurgency to a government. Foreign forces left the country, although armored vehicles, checkpoints and military buildings remain common sights.
+
+The Taliban have promised to end corruption and establish order. That means no more dealing with militia chiefs or paying officials for land purchases or building projects.
+
+Haqdoost is happy with how easily and quickly things are getting done under the new administration.
+
+“House prices have risen by almost 40 percent,” he said. “In the last three years, we have sold almost 400 properties. It wasn’t like that before.”
+
+Good times for builders
+
+Business is good for Haqdoost. He employs 1200 workers, including women who only deal with female buyers.
+
+Haqdoost said most purchasers bring their wives along because women often make decisions when it comes to real estate purchases — even in a nation that critics say oppresses women. “They decide whether to buy the house or not,” he said.
+
+Afghans often host visiting friends or family in their homes. So wealthy buyers want houses with a garden, gym, swimming pool, rooms for visitors and at least one kitchen.
+
+Since most of Haqdoost’s buyers are from overseas, their tastes are influencing the homes. They want houses with central heating, double-pane windows and elevators, and things like dining tables and beds.
+
+Kabul’s population was around 500,000 in the year 2000. Now it is more than 5 million. To make Kabul more livable, city officials are busy building and repairing roads, putting in streetlights, planting trees and removing trash. They are also developing plans for less costly housing and increased home ownership.
+
+Just outside of Kabul, Arash Asad is trying to sell his uncle’s property, which sits on around 4,000 square meters of land. He wants to sell the property for $800,000.
+
+“People think this country has no jobs and no economy,” Asad said. “But Afghans have made their money, illegally or legally, over the years. You wouldn’t believe it.”
+
+I’m John Russell.
+
+Riazat Butt reported on this story for the Associated Press. John Russell adapted it for VOA Learning English.
+
+---
+
+real estate -- n. property (buildings and land)
+
+myth – n. a false idea or notion
+
+deport – v. to send (a person) out of the country
+
+armored -- adj. protected with a defensive covering
+
+double-pane -- adj. describes a kind of window with two panes or layers of glass
+
+elevator -- n. a platform or cage that moves people up and down
+
+trash -- n. objects that are no longer wanted or needed and are thrown away

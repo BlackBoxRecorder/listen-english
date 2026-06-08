@@ -1,0 +1,53 @@
+# Microsoft Helps Vatican Recreate St. Peter’s Basilica Digitally
+
+No media source currently available
+
+Technology company Microsoft is working with the Roman Catholic Church to create a detailed, digital version of St. Peter’s Basilica in Vatican City.
+
+The project aims to give people a new way to experience the famous building, which sits in the Catholic Church’s spiritual and administrative center in Rome.
+
+Roman Catholic leaders recently joined Microsoft’s President Brad Smith to present the new digital creation to the public. The official launch of the system has been set for December 1. It will permit individuals to explore St. Peter’s Basilica online and provide interactive experiences for all visitors to the Vatican.
+
+The effort involved drones flying around the empty basilica for four weeks to capture images of all parts of the building. The drones – equipped with many cameras and lasers – took more than 400,000 high-quality pictures.
+
+The process used artificial intelligence (AI) methods to create a complete 3D copy of the basilica. One goal of the project was to provide a way for anyone in the world to have the chance to “visit” the church and learn about its history.
+
+Microsoft chief Smith told a press conference at Vatican City the project represented “one of the most technologically advanced and sophisticated projects of its kind” ever carried out.
+
+Cardinal Mauro Gambetti is the Archpriest of St. Peter’s Basilica. He praised the new technology at the press conference. Gambetti compared the highly detailed digital experience to looking up at a “starry sky on a summer night.” He added, “The new tools act like a telescope or spaceship for better viewing.”
+
+The project was launched ahead of the Vatican's 2025 Jubilee celebration. This marks a holy year at the Vatican when more than 30 million worshippers are expected to visit the basilica. This will be in addition to the 50,000 people who visit on a normal day. The basilica will celebrate its 400th anniversary in 2026.
+
+The Associated Press reported Pope Francis visited Smith and the project’s development teams at the Vatican. He said the effort should help everyone “feel welcome in this great house.”
+
+The pope added that the project was a way to recognize and continue to celebrate the Vatican’s rich spiritual history. “…It is a gift and a task to care for it, in both a spiritual and material sense, even through the latest technologies,” he said.
+
+Pope Francis has warned that AI should only be used in ethical ways. In his World Message of Peace this year, he proposed an international treaty to control, or regulate, the technology. He argued that AI systems lack human values and could cause great harm.
+
+The digital system permits visitors to request entry times to the basilica. This could be a welcome change for visitors used to waiting in lines for hours to get into the basilica, which is one of the world’s most visited buildings.
+
+The collected images have already identified structural damage and signs of deterioration. Experts said the technology can find such problems much faster and more effectively than human workers. Vatican officials plan to use the images to continually identify areas needing repairs.
+
+Smith did not say how much Microsoft had invested in the project. But he said the idea came after Pope Francis urged technology companies in 2018 to come together to use AI for cultural purposes.
+
+Smith noted his company had also completed similar AI projects at Mont Saint-Michel in France and for Ancient Olympia in Greece.
+
+I'm Bryan Lynn.
+
+The Associated Press, Reuters, Agence France-Presse and Vatican News reported on this story. Bryan Lynn adapted the reports for VOA Learning English.
+
+---
+
+drone – n. a pilotless aircraft
+
+advanced – adj. having developed or progressed to a late stage
+
+sophisticated – adj. developed to a high level of complexity
+
+worshipper – n. to honor or show respect for a divine being
+
+task – n. a piece of work to be done
+
+ethical – adj. conforming to accepted standards of behavior
+
+deteriorate – v. to make or become worse or of less value

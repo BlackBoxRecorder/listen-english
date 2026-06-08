@@ -1,0 +1,87 @@
+# Japan’s Kojima Has History of Making Blue Jeans
+
+No media source currently available
+
+In the Japanese town of Kojima, the main road is named Jeans Street.
+
+This street is where people from around the world come to visit. The drink machines at the train station have images of jeans on them. The roads are painted blue, with the lines at the edges colored pink and white, the trademark of Kojima jeans’ seams.
+
+With about 40 jeans manufacturers and stores, including cafes, the area gets about 100,000 visitors a year, the Japan National Tourism Organization said.
+
+Japanese jeans are often costly, dark and durable. Although a small part of the global jeans market, Japanese jean makers have developed a reputation for quality and attention to detail.
+
+Kojima is where popular brands like Big John are made. The city now supplies international clothing brands, including Gucci.
+
+Emma McClendon of St. John’s University in New York said that the Japanese industry has not taken a mass marketing path. Instead, the jean industry pays careful attention to creating quality products that collectors might like.
+
+In Kojima, Jeans Street is small and uncrowded. Each company in the area is small, hiring about 100 people.
+
+What you will find are workers taking pride in “monozukuri,” or “making things.” The term suggests careful attention to detail.
+
+This idea can be found throughout Japan, from carmakers to the local tofu store.
+
+“More like making a kimono” is the way Yoshiharu Okamoto, a dyeing craftsman at Kojima-based manufacturer Momotaro Jeans, puts it.
+
+His hands and nails are colored blue from putting threads of cotton into a big container of coloring called dye.
+
+He knows by smell and feel the right state of the indigo coloring, which he compares to a living thing. He says it is a 365-days-a-year job, as the dye has to be checked and mixed every day.
+
+“It’s not that easy to get this special color,” Okamoto told the Associated Press recently. “It’s my life.”
+
+The dark color is so special it has earned the name “Japan blue" or “tokuno blue,” meaning “especially concentrated blue.”
+
+Jeans made in Kojima are costly. The jeans can cost from $230 per pair to $1,400 or more.
+
+Thomas Stege Bojer is founder of Denimhunters, an online site for people who like jeans and the cotton material they are made out of — denim.
+
+He says Japanese brands use “raw denim” that ages well and lasts a long time. He pointed to the jeans as part of a movement known as “slow clothing."
+
+The idea is to produce fewer, but higher quality pieces of clothing. The movement came as a reaction to low-cost, mass-produced clothes.
+
+“We just make too many clothes…I think, and we need to slow down,” Bojer said from his home near Copenhagen, Denmark.
+
+McClendon said the Japanese industry is “shifting the conversation around jeans to be about heritage elements, about educating consumers on historical details as a form of quality.”
+
+Momotaro Jeans, for example, come with a lifetime guarantee. Tears and other problems get fixed at no cost, within reason.
+
+Japan Blue Co., which runs Momotaro, a brand that began in 2006, said yearly sales totaled about $11 million for the latest year. About 40 percent of sales come from outside Japan.
+
+Masataka Suzuki, president and chief operating officer at Japan Blue, said the area has a strong industrial history.
+
+In the past, industry centered around sewing heavy materials, including military clothes and obi sashes for kimonos, as well as the cotton and indigo-dyeing native to the area.
+
+The jeans are for life, Suzuki said. The jeans slowly change depending on how they are worn and how the wearer lives.
+
+“We want to create a product that is a testament to a person’s life,” he said.
+
+I'm John Russell.
+
+Yuri Kageyama reported on this story for the Associated Press. John Russell adapted it for VOA Learning English.
+
+---
+
+jeans – n. plural pants usually made of denim
+
+trademark –n. a characteristic or feature firmly associated with a person or thing
+
+seam –n. the joining of two pieces (as of cloth or denim) by sewing usually near the edge
+
+durable –adj. strong and able to last a long time
+
+reputation –n. the opinion that people have of a company or a person
+
+brand –n. a particular kind of product that has a name recognized by a lot of people
+
+kimono –n. a traditional Japanese clothing consisting of a long robe with wide sleeves
+
+dye - v. to impart a new and often permanent color
+
+craftsman –n. a person (especially a man) who is skilled in a craft
+
+concentrated –adj. very dense or thick
+
+conversation –n. a spoken exchange of opinions or ideas
+
+heritage –n. tradition
+
+testament –n. a proof or tribute

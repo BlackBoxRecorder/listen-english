@@ -1,0 +1,43 @@
+# California Proposes Plan to Protect Its Famous Joshua Trees
+
+No media source currently available
+
+The California Department of Fish and Wildlife has released a proposed plan to protect the state's famous Joshua trees. Environmentalists say the trees are threatened by wildfires, human development and climate change.
+
+An early version of the plan calls for avoiding or reducing direct and indirect effects of overgrazing, insect-killing chemical use and off-roading activity. The plan advises moving trees when projects require their removal or could harm them. It also calls for identifying and protecting lands where the trees could survive if the climate in southern California becomes drier and hotter.
+
+“In many ways, it's a good comprehensive plan of the things we need to do if the western Joshua tree is going to survive the very, very difficult decades ahead,” said Brendan Cummings. He is conservation director with the Center for Biological Diversity based in Tucson, Arizona. The nonprofit group asked the California government in 2019 to list the western Joshua tree as threatened under the state's Endangered Species Act.
+
+The conservation plan is a requirement by the Western Joshua Tree Conservation Act. California lawmakers passed the act last year. It is the first law in the state to protect a species from the threats of climate change. The law also bars anyone from killing, damaging, or removing a tree without state permission.
+
+The proposed plan lists ways to help identify land that should be recognized as most important for conservation. This includes large areas with Joshua trees or areas with a high density of healthy and adult trees. The plan suggests placing restrictions on areas where there is low risk of such threats as fires, invasive plants and animals, development and where pollinators and seed-spreading animals exist. It aims to identify these lands by December 2025 and place permanent restrictions on 70 percent of them by 2033.
+
+The plan also calls on land managers and wildfire workers to create methods to reduce and fight wildfires that threaten the trees and lessen effects from rehabilitating burned areas. That includes protecting trees, replanting them, planting other native species, and controlling invasive ones.
+
+The proposed plan says, its effectiveness and the survival of the trees will mainly depend on whether reductions can be made in the release of heat-trapping gases. Such emissions come mainly from burning coal, oil and gas.
+
+Cummings said climate change could destroy most, if not all, of the areas where the trees live if the situation does not change.
+
+If emissions are limited as planned, Cummings said, “we have a very good chance of saving the species if all the things outlined in this plan are carried out. And primarily that’s doing what we can to protect as many of them as possible."
+
+Approval from California’s Fish and Game Commission is necessary for the proposed plan to go into effect.
+
+I’m Caty Weaver.
+
+The Associated Press reported this story. Caty Weaver adapted the story for VOA Learning English.
+
+---
+
+over-grazing – n. the act of permitting animals to graze (an area, such as a field) to the point of damaging vegetational cover
+
+off-roading – n. the activity of driving a vehicle in a place where there is no road
+
+comprehensive – adj. covering completely or broadly
+
+decade – n. a period of 10 years
+
+pollinator – n. an agent (such as an insect) that pollinates flowers
+
+rehabilitate – v. to restore or bring to a condition of health or useful and constructive activity
+
+manager – n. a person who runs a business or organization

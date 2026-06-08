@@ -1,0 +1,45 @@
+# Video Game Maker Nintendo to Open a Museum
+
+No media source currently available
+
+The Japanese video game company Nintendo is opening a museum that will teach visitors about its history.
+
+At the museum, fans of Super Mario, The Legend of Zelda and the Game Boy and Switch devices can learn more about one of the world's most famous game makers.
+
+The museum is in Uji near the company's Kyoto headquarters.
+
+It will show the many developments of Nintendo, which was founded in 1889. The company began as a maker of "hanafuda" playing cards and has since grown to offer many kinds of electronic games.
+
+Shigeru Miyamoto is an executive fellow at Nintendo and the creator of Super Mario. Miyamoto said the museum was meant to deepen understanding of the company.
+
+"If making products while protecting concepts such as family, fun and ease of understanding is rooted in our employees then the new Nintendo will continue to grow," he told reporters recently.
+
+The museum, which opens to the public October 2, is in the place where the company used to make playing cards and was a center for product repairs. On its website, tickets to the museum are sold out for two months after the opening.
+
+In addition to showing famous devices such as the Wii console and the handheld Game Boy, visitors will be able to see lesser-known products. These include the Mamaberica baby stroller and the Copilas printer.
+
+The museum also offers special experiences. Visitors, for example, will be able to work together to play the video game Super Mario Bros. on an oversized Family Computer controller.
+
+The company’s push into mobile gaming has dropped off. But other efforts by Nintendo to grow beyond its main, or core, gaming business have made progress. The company has been opening stores and employing its characters in theme parks and movies.
+
+The Switch console has been a major success with over 140 million devices in use. But, with sales slowing, investor attention is now on the possibility for a new device.
+
+Nintendo aims to announce details of a possible new device in the current financial year, which ends in March.
+
+I’m John Russell.
+
+Sam Nussey and Irene Wang reported on this story for Reuters. John Russell adapted it for VOA Learning English.
+
+---
+
+museum – n. a place where objects are exhibited or shown
+
+concept – n. an abstract or generic idea
+
+ticket –n. paper or digital proof that you have paid for entry to a place like a museum, a show, movie or a sporting or music event
+
+stroller – n. a kind of carriage designed as a chair in which a small child may be pushed
+
+character – n. someone who appears in a book, movie, or video game
+
+theme park –n. an amusement park that has rides, events and goods that are all based on a product like a movie or video game

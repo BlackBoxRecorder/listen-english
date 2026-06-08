@@ -1,0 +1,83 @@
+Popeye the Sailor and the Belgian boy reporter Tintin lead the class of characters and works of art to enter public domain in 2025.
+
+On January 1, 2025, the U.S. copyright ends on creations from 1929.
+
+That means the early versions of the comic characters can be used without permission or payment.
+
+They will be joined by the books A Farewell to Arms by Ernest Hemingway and The Sound and the Fury by William Faulkner. Other works coming into the public domain include songs from American artist Cole Porter, early films from Alfred Hitchcock and the Marx Brothers, and several more films starring Mickey Mouse, whose earliest version became public domain last year.
+
+“It’s a trove! There are a dozen new Mickey cartoons — he speaks for the first time and dons the familiar white gloves,” said Jennifer Jenkins, director of the Center for the Study of the Public Domain, part of Duke University Law School in North Carolina.
+
+“There are masterpieces from Faulkner and Hemingway, the first sound films from Alfred Hitchcock, Cecil B. DeMille, and John Ford, and amazing music from Fats Waller, Cole Porter, and George Gershwin. Pretty exciting,” she added.
+
+Here is a closer look from the Associated Press at this year’s crop of public domain works:
+
+Comics characters
+
+Popeye the Sailor, with his big arm muscles and fighting spirit, was created by E.C. Segar and made his first appearance in the newspaper comic strip Thimble Theater in 1929. His first words were, “’Ja think I’m a cowboy?” when asked if he was a sailor. It was supposed to be a one-time appearance for the character. Instead, he became the main character, and the strip would be renamed Popeye.
+
+But as with Mickey Mouse last year and Winnie the Pooh in 2022, only the earliest version is free for reuse. Popeye did not become a film character until 1933 and that version remains under copyright.
+
+The 1929 version of the character Tintin, the creation of Belgian artist Hergé, will also come into the public domain. The simply drawn teenager with dots for eyes and hair shaped like an ocean wave, was among the most popular characters in Europe for much of the 20th century.
+
+However, in much of the world, Tintin will not become public property until 70 years after the 1983 death of his creator.
+
+Important American books
+
+The books entering the public domain this year read like a list for an American literature class.
+
+The Sound and the Fury is arguably William Faulkner’s most famous book. Its special style of expression was a big hit although the book was widely considered difficult to read and understand. The story is set in the southern state of Mississippi, where Faulkner was born and lived most of his life. It tells about the ruin of a leading family there.
+
+And Ernest Hemingway’s A Farewell to Arms joins his earlier The Sun Also Rises in the public domain. The story about an ambulance driver is set in Italy during World War I. It was based in part on Hemingway’s real life. It has been made into film, TV, and radio versions, and now can be done anew without permission.
+
+American John Steinbeck’s first novel, A Cup of Gold, will also enter the public domain.
+
+Movies
+
+Filmmaking was changing from silent to sound production during the late 1920s.
+
+The famous moviemaker Alfred Hitchcock was still living in Britain when he made the film Blackmail. The movie began as a silent film but was turned to sound film during production. Two versions of Blackmail were released. One of the versions became Britain’s and Hitchcock’s first sound film.
+
+American John Ford is probably best remembered for making the kind of films called Westerns. Those movies remain protected. But, Ford’s first sound film, 1929’s The Black Watch, enters the public domain next month. The action movie includes a young John Wayne who appears in a small part. Years later, Wayne was the star of many Ford films.
+
+Another notable director, Cecil B. DeMille, already a Hollywood leader in silent films, made Dynamite his first sound film in 1929.
+
+Groucho, Harpo, and the other Marx Brothers humor group had their first starring parts in 1929’s The Cocoanuts. The brothers went on to make the popular comedies, Animal Crackers and Duck Soup.
+
+And The Broadway Melody will also enter the public domain on January 1. It became the first sound film and the second film ever to win the Oscar for best picture — then called “outstanding production.”
+
+Music
+
+Songs from the last year of the 1920s are also about to become publicly available for use.
+
+Cole Porter’s compositions What Is This Thing Called Love? and Tiptoe Through the Tulips are among the highlights, as is the jazz classic Ain’t Misbehavin’ written by Fats Waller and Harry Brooks.
+
+Different laws cover sound recordings. Those newly in the public domain date to 1924. They include a recording of Nobody Knows the Trouble I’ve Seen from star and civil rights icon Marian Anderson, and Rhapsody in Blue performed by its composer George Gershwin.
+
+I’m Caty Weaver. And I’m Dorothy Gundy.
+
+The Associated Press’ Andrew Dalton reported this story. Caty Weaver adapted the report for VOA Learning English.
+
+---
+
+character – n. a person who appears in a book, movie, play or other artwork
+
+public domain – n. (law) when a creative product is outside of legal copyright protection and can freely be used and copied by the public
+
+trove – n. a valuable collection
+
+dozen – n. twelve of something
+
+cartoon –n. a series of simple pictures that tell a story or a movie made from similar simple pictures
+
+don –v. to put on (a piece of clothing)
+
+comic strip –n. a short series of simple pictures that tell a story that is often funny and that is published in a newspaper regularly
+
+style –n. a way of doing something that has recognizable, distinctive elements
+
+composition –n. a written musical work
+
+classic –adj. something that is considered among the best examples of the group to which it belongs
+
+icon –n. a person who is the representation of an idea or ideal

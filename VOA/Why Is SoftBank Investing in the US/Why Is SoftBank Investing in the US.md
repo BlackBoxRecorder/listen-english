@@ -1,0 +1,55 @@
+# Why Is SoftBank Investing in the US?
+
+No media source currently available
+
+Japanese business leader Masayoshi Son and President-elect Donald Trump recently met at Trump’s property, Mar-a-Lago, in the southeastern U.S. state of Florida. They announced plans for SoftBank Group to invest $100 billion in projects in the United States over the coming four years.
+
+Trump said the investments in building artificial intelligence (AI) infrastructure would create 100,000 jobs. Reuters news agency reported that it was the second time that SoftBank’s Son made a big promise to invest in U.S. projects. In 2016, Son announced $50 billion in investments with Trump after his election victory. The investments helped companies like Uber and WeWork.
+
+Son is a founder and CEO, or chief executive officer, of SoftBank Group. SoftBank has investments in many new technology businesses, along with big companies like silicon chip maker Arm Holdings and Chinese online business Alibaba. Investor interest in AI has increased SoftBank’s value, but it is unclear whether its investments will create that many jobs in the U.S.
+
+Son believes in the value of AI
+
+SoftBank investor meetings have supported the idea that AI will become profitable for the company. Son has said he believes AI will outdo human intelligence within 10 years, affecting every industry. He believes that companies and people working with AI will be the leaders of the next 10 to 20 years. SoftBank owns about 90 percent of Arm’s publicly traded stock. This puts the Japanese company in a good position for expansion of AI applications. Arm says most mobile devices operate on small Arm-based processors.
+
+Trump and Son said the $100 billion that SoftBank has promised to invest will go to building AI infrastructure, but the details remain unclear. The effect of AI on job creation remains an open question.
+
+What about the jobs?
+
+The announcement is like a promise Son made with then-President-elect Trump in December 2016 at Trump Tower in New York City. Then, Son said he would spend $50 billion and create 50,000 jobs. While that money was invested in businesses as time passed, it is unclear whether that many jobs were created.
+
+Early in his first term, Trump announced a $10 billion investment by Foxconn in Wisconsin. Foxconn Technology Group is a Taiwan company best known for making Apple iPhones. In 2017, the company won Trump's praise for announcing that it would build a $10 billion factory. Foxconn said it would employ 13,000 people in a small town just south of Milwaukee. A much smaller investment there created fewer than 800 jobs.
+
+Shutdowns during the COVID-19 pandemic starting in 2020 made job creation a more complex issue.
+
+SoftBank itself says it had 65,352 employees as of March.
+
+Reaction in Japan
+
+Officials in Tokyo praised Son's effort, considering it a sign of friendship between the U.S. and Japan. There is concern over whether Trump will increase tariffs on some imports from allies like Japan, as well as China.
+
+Yoji Muto is Japan's Trade and Industry minister. He said he was happy with the announcement. Muto said, "Generally speaking, I believe expansion of investment through steady accumulation of efforts between Japanese and U.S. companies would help further strengthen Japan-U.S. economic ties, so I find it delightful."
+
+Trump called Son "one of the most accomplished business leaders of our time." SoftBank has been rebuilding its finances after the failure of its WeWork business and after investors turned away from some of its technology investments. After a decrease in share value between 2021 and 2023, SoftBank stock has recovered. The company’s stock has increased sharply this year.
+
+Amir Anvarzadeh studies Japanese businesses at Asymmetric Advisors, a company that advises on Japanese securities. Speaking of the SoftBank announcement, he said he did not think there was a firm plan. "The question arises, what are they going to buy?" Anvarzadeh asked. He said there were no remaining easily purchased companies in the industry.
+
+I’m Jill Robbins.
+
+Jeff Mason and Steve Holland reported this story for Reuters and Elaine Kurtenbach reported on it for the Associated Press. Jill Robbins adapted it for Learning English.
+
+---
+
+infrastructure – n. the basic equipment and structures (such as roads and bridges) that are needed for a country, region, or organization to function properly
+
+chip – n. a very small piece of hard material (called silicon) in a computer or other device that contains many electronic circuits
+
+application –n. the economic use of something: in this case, the use of artificial intelligence-based technology
+
+tariff – n. a tax on goods coming into or leaving a country
+
+accumulate – v. to gather or acquire (something) gradually as time passes
+
+accomplished – adj. very successful; having done or achieved many good or important things
+
+What do you think of this story? Write to us in the Comments Section.

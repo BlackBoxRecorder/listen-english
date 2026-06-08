@@ -1,0 +1,43 @@
+# Report: Wealth Held by Billionaires Jumped in 2024
+
+No media source currently available
+
+The Union Bank of Switzerland (UBS) Billionaire Ambitions Report for 2024 said the total number of billionaires worldwide had risen to 2,682 from 2,544 a year earlier.
+
+Their worth increased to $14 trillion from $12 trillion. In 2015, their total wealth stood at $6.3 trillion.
+
+The World Bank says that the world’s population was just over 8 billion, and its gross domestic product, or GDP, was about $105.4 trillion last year. GDP is a measure of all the goods and services produced in a year. This shows that a very small group of people holds about 13 percent of the world’s GDP.
+
+Self-made billionaires
+
+The UBS report for 2023 showed that new billionaires gained more wealth through inheritance than through entrepreneurship. But most of the year's new billionaires were self-made.
+
+The 2024 report was based on a study of billionaires between June and September and wealth data on the super-rich. It showed the risk of international conflict and inflation were their main worries. The study also showed that most billionaires see North America as offering the best investment returns over the next year.
+
+In the United States, the number of billionaires jumped to 835 from 751, led by industrial and tech entrepreneurs, with their total wealth climbing to $5.8 trillion from $4.6 trillion.
+
+Wealth in China drops
+
+In mainland China, the number of billionaires dropped to 427 from 520, and their wealth to $1.4 trillion from $1.8 trillion. In 2021, there were 626 in mainland China, together worth more than $2.5 trillion, the UBS figures for that year said.
+
+Benjamin Cavalli of UBS said the decrease was from losses in real estate markets in China. There was also a drop in the value of businesses owned by some of China's wealthiest in an undependable economic period.
+
+India, the world’s most populous country, saw its number of billionaires increase during the past year by over a fifth to 185. Their wealth rose by more than 40 percent to almost $906 billion, UBS said.
+
+In Western Europe, Switzerland passed Britain to become the country with the second-highest number of billionaires after Germany, increasing its total by 10 to 85. The British total dropped by one to 82, UBS said.
+
+Germany with 117 (or 8 more), France with 46 (or 12 more), Italy with 62 (or 6 more) and Spain with 27 (or 3 more), all gained billionaires. The combined wealth of France's billionaires was highest among Europeans.
+
+I’m Caty Weaver.
+
+Jill Robbins adapted this story for Learning English from a Reuters report.
+
+---
+
+billionaire – n. a rich person who has at least a billion dollars, pounds, or other currency
+
+inheritance – n. money, property, etc., that is received from someone when that person dies
+
+entrepreneur – n. a person who starts a business and is willing to risk loss in order to make money
+
+What do you think of this story? Write to us in the Comments Section.

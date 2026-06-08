@@ -1,0 +1,45 @@
+# Polio Rises in Pakistan Ahead of a New Vaccination Campaign
+
+No media source currently available
+
+In Pakistan, polio cases are rising ahead of a new vaccination campaign. Violence targeting health workers has also hurt years of efforts toward making the country polio-free.
+
+The World Health Organization says polio is a highly infectious disease caused by a virus. The disease largely affects children under age five. The virus is transmitted from person to person and spread mainly through contact. It invades the nervous system and causes a person to be unable to move arms, legs or muscles, a condition called paralysis. Among those paralyzed, up to 10 percent die when their breathing muscles become immobilized.
+
+Since January, health officials have confirmed 39 new polio cases in Pakistan, compared to only six last year, said Anwarul Haq. He is with the National Emergency Operation Center for Polio Eradication. Eradication means getting rid of something completely.
+
+The new nationwide campaign starts on October 28. The campaign aims to vaccinate at least 32 million children.
+
+“The whole purpose of these campaigns is to achieve the target of making Pakistan a polio-free state,” Haq said.
+
+Pakistan regularly launches campaigns against polio despite attacks on the workers and police assigned to protect them.
+
+Militants falsely claim that the vaccination campaigns are a Western attempt to sterilize children. To sterilize means to make someone unable to produce children.
+
+Most of the new polio cases were reported in the southwestern Balochistan and southern Sindh provinces. The next two areas with the most cases are Khyber Pakhtunkhwa and eastern Punjab.
+
+The locations worry officials since previous cases were from the northwest areas bordering Afghanistan. In September, this is where the Taliban government suddenly stopped a house-to-house vaccination campaign.
+
+Afghanistan and Pakistan are the two countries in which the spread of the possibly deadly, paralyzing disease has never been eradicated. Officials in Pakistan have said that the Taliban’s decision will have major effects beyond the Afghan border. People from both sides frequently travel to each other’s country.
+
+The WHO has confirmed 18 polio cases in Afghanistan this year. All but two of these cases were in the south of the country. That number is up from six cases in 2023.
+
+In June, Afghanistan started a house-to-house vaccination campaign for the first time in five years. The campaign has helped to reach the majority of children targeted, officials at the WHO said.
+
+Health officials in Pakistan say they want both sides to hold anti-polio campaigns at the same time.
+
+I’m Anna Matteo.
+
+Anna Matteo adapted this story for VOA Learning English based on an Associated Press news report.
+
+---
+
+transmit – v. to transfer from one person or place to another
+
+immobile – adj. incapable of being moved
+
+province – n. an administrative district or division of a country
+
+location – n. a place fit for or having some particular use
+
+We want to hear from you. What are your thoughts on this topic? In the Comments section, you can also practice using any of the expressions from the story. Our comment policy is here.

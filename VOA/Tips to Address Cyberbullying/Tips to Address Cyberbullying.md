@@ -1,0 +1,61 @@
+# Tips to Address Cyberbullying
+
+No media source currently available
+
+Cyberbullying is the use of electronic communication to threaten or insult someone. Concern over cyberbullying has been at the center of recent criticism directed at social media companies.
+
+Last month, Facebook delayed the development of its child version of Instagram after opposition from American lawmakers and safety advocacy organizations.
+
+More than 40 state attorneys general wrote a letter to Facebook founder Mark Zuckerberg urging him to stop the release of the project. Social media can be “detrimental to the health and well-being of children,” and kids’ Instagram could make cyberbullying worse, the letter said.
+
+Facebook’s own data showed that Instagram can be harmful to teens’ mental health, especially girls. The information was first reported by The Wall Street Journal last September.
+
+Cyberbullying also appears to be worse among girls, says a 2019 survey by the National Center for Education Statistics. While 20.4 percent of students bullied online were girls, 10.9 percent were boys. Of the 22 percent of all kids ages 12 to 18 that were bullied during the school year, 16 percent of students said they were bullied electronically.
+
+A study by the organization Common Sense Media in 2019 found that teenagers use an average of 7 hours, 22 minutes of entertainment media a day. And that does not include time using media for school. Pew Research said the amount of time that children spent online also increased during the pandemic.
+
+With more time online comes a higher risk of exposure to cyberbullying. Cyberbullying can make feelings of depression worse and negatively impact mental health. Common Sense found that 38 percent of teens and young adults were depressed in 2020, up from 25 percent two years before. Higher levels of depression also were connected to higher levels of social media use.
+
+Almost all young people use some form of social media but may not know the risks they face online.
+
+October is National Bullying Prevention Awareness Month. Using free resources from StopBullying.gov and Common Sense Education, here are ways adults can help children deal with cyberbullying:
+
+Know the warning signs of cyberbullying
+
+A child can be involved in cyberbullying in different ways. They can bully, be bullied, or witness the bullying of others. The more digital forms of communication a child uses, the more exposure he or she may get to cyberbullying. Parents, teachers and other adults need to be aware of children’s online usage.
+
+Some warning signs that a child may be involved in cyberbullying are:
+
+How to address cyberbullying
+
+Cyberbullying is like other forms of bullying and should be handled in a similar way. If a child is being cyberbullied, adults should support the child being bullied and address the behavior of the child doing the bullying. Adults should show children that cyberbullying is something serious that should be stopped.
+
+If a child sees hateful content online, there are a few easy ways they can deal with it. The child could report the content anonymously, as hateful speech violates most websites’ terms of service. They can also block the person from posting abusive content. While ignoring posts might seem easier than blocking someone, it will not make the problem go away.
+
+Adults can try to make their kids feel more empathy towards others and consider how other people feel. They should see whether more help is needed for those involved, like speaking to a guidance counselor or mental health professional.
+
+Cyberbullying may be impossible to stop completely, but parents could watch their child’s behavior and internet time.
+
+France has taken stronger measures against cyberbullying. In January, the country created a special court to try online crimes, including harassment and bullying. Eleven people were convicted this summer of using the internet to harass a teenage girl, including sending her death threats.
+
+I’m Dan Novak.
+
+Dan Novak wrote this story with additional information from The U.S. Department of Health and Human Services and the Common Sense Organization. Hai Do was the editor.
+
+---
+
+advocacy — n. the act or process of supporting a cause or proposal : the act or process of advocating something​
+
+detrimental — adj. causing damage or injury​
+
+kid— n. a young person​
+
+bully — n. someone who frightens, hurts, or threatens smaller or weaker people​
+
+exposure — n. the fact or condition of being affected by something or experiencing something​
+
+anonymous — adj. not named or identified​
+
+empathy — n. the feeling that you understand and share another person's experiences and emotions​
+
+harass — v. to annoy or bother (someone) in a constant or repeated way​

@@ -1,0 +1,113 @@
+From VOA Learning English, this is the Health & Lifestyle report.
+
+Becky Litvintchouk did not think she would be able to finish the many tasks needed to start her own business. 
+
+She has Attention Deficit Hyperactivity Disorder, or ADHD. 
+
+It affects every part of her life and hurts her ability to focus on one thing at a time.
+
+So, two years ago, she turned to artificial intelligence, or AI. 
+
+She uses an app called Claude. 
+
+It helps her decide which contracts are the best for her cleaning-wipes business, GetDirty. 
+
+Using the app means she does not need to read each contract, word for word. 
+
+She also created business plans by telling the generative AI bot what her goals were. 
+
+It then created steps for her to reach them.
+
+“It’s been just massively instrumental. I probably would not be where I am today,” Litvintchouk said of using AI.
+
+People with ADHD experience difficulties with focusing, organizing and controlling urges. 
+
+Experts say generative AI tools can help them finish tasks more quickly.
+
+However, they also warn that such tools should not replace traditional treatments for ADHD. 
+
+Some experts also have concerns about possibly using AI too much. 
+
+They also worry about privacy risks.
+
+
+John Mitchell is an associate professor at Duke University School of Medicine in North Carolina. 
+
+He said that AI apps should be used as “one tool in a toolbox.” 
+
+AI should not take the place of traditional treatments, such as developing organizational skills or taking medications.
+
+He compared using AI to help ADHD with swimming and staying alive in the water. 
+
+“If you’re kind of treading water in your job and AI’s a life preserver, well, that’s great you’re staying above water.” 
+
+But, he added, “you still don’t know how to swim.”
+
+
+Litvintchouk, a married mother of four living in New York City, dropped out of high school and left the workforce.
+
+Research shows that these things are more likely to happen to people with ADHD.
+
+Aside from helping with her business, she uses ChatGPT to help with food shopping. 
+
+Food shopping and meal planning are tasks that can be difficult for people with ADHD because these tasks require organizational skills.
+
+After sharing her method with another mom with ADHD, she decided more people needed to know about it. 
+
+She started making videos on TikTok about the AI tools she uses to help with her ADHD struggles.
+
+Generative AI tools can help people with ADHD break down big tasks into smaller, more doable steps. 
+
+Chatbots can offer advice for specific things and make people feel like they are talking with a real person. 
+
+Some AI apps can also help with reminders and productivity.
+
+Software engineer Bram de Buyser said he created Goblin.tools with his neurodivergent friends in mind. 
+
+The tool’s most popular feature is the “magic to-do.” 
+
+A user can enter a task and the bot will create a to-do list. 
+
+It can even break down large items on the list into smaller tasks.
+
+“I’m not trying to build a cure,” de Buyser said, “but something that helps them out (for) two minutes out of the day that they would otherwise struggle with.”
+
+
+Russell Fulmer is a professor at Husson University in the northeastern state of Maine. 
+
+He described the research around AI and ADHD as “inconclusive.” 
+
+In other words, the results of its usefulness are still not known.
+
+Experts say they see how AI can have a positive effect on the lives of people with anxiety and ADHD. 
+
+But, Fulmer said, such tools may not work well for everyone, including people of color with ADHD. 
+
+He pointed to chatbot responses that have been racist and unfair toward certain groups of people at times.
+
+Valese Jones is a publicist and founder of Sincerely Nicole Media. 
+
+She was diagnosed with ADHD as a child. 
+
+She uses AI bots to help with reading and responding to emails as well as proofreading public relations plans. 
+
+But chatbot responses do not always go along with who she really is.
+
+“There are cadences in my writing where you can kind of pick up on the fact that I’m southern, and that’s on purpose,” said Jones, who is Black. 
+
+She purposefully writes in a way that shows her culture. 
+
+However, the responses she gets back from bots often do not show that.
+
+Software engineer de Buyser said that using AI chatbots as a personal assistant has a big upside: They are never tired and never sleep.
+
+The downside? They also create privacy issues. 
+
+When you give an AI chatbot your personal information, emails, calendar and personal writings, you are giving it to a big company, he warned.
+
+And that’s the Health & Lifestyle report.
+
+I’m Anna Matteo.
+
+And I’m Andrew Smith.
+

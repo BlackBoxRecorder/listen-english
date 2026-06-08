@@ -1,0 +1,83 @@
+# Five Things to Know about Notre Dame Cathedral
+
+No media source currently available
+
+Notre Dame Cathedral in the French capital of Paris is set to reopen to the public Sunday after a five-year-long rebuilding project. The Cathedral had been badly damaged in a fire in 2019.
+
+The Roman Catholic religious center is considered a jewel of Gothic building design, a symbol of Paris and is a popular site to visit.
+
+The cathedral took 182 years to build between the 12th and 14th centuries. It holds some surprising stories. Here are five special things to know about this famous Parisian site:
+
+The cathedral is considered France's geographic center.
+
+In front of the cathedral, a metal and stone marker in the road describes the place as the "starting point of the roads of France.'' This sign marks the starting point for measuring distances between Paris and other cities across the country.
+
+The marker was placed in 1924, but the idea of the cathedral as the center of the nation dates to 1769. King Louis XV thought there should be a central site for France's growing system of roads. That idea tied the nation’s geography to its heart in Paris.
+
+Its famous statues were added in the 19th century
+
+Those frightening stone statues on Notre Dame might seem ancient, but not all of them are what they appear. The gargoyles are monster-shaped elements used to direct rainwater away from the building. They have been around since the time of the cathedral's construction. But the monster-like creatures often seen in photos and movies are chimera, and they are much newer.
+
+In 1841, the French government asked the architects Eugène Viollet-le-Duc and Jean-Baptiste Lassus to repair the then-collapsing building. Viollet-le-Duc added these frightening-looking statues to make the cathedral seem more mysterious. He drew ideas for the chimera from Victor Hugo's famous book The Hunchback of Notre Dame.
+
+How to tell them apart? Gargoyles resemble horizontal spikes coming out of the facade and have spouts to permit rainwater to flow out.
+
+During the French Revolution, protesters changed Notre Dame.
+
+During the French Revolution, there were protests of religious centers.
+
+In 1793, revolutionaries took away the cathedral’s religious symbols and renamed it "Notre-Dame de la Raison," or, in English, “Our Lady of Reason.”
+
+During that time, the cathedral held events celebrating science and new ideas and, for a short time, it was even used to store the alcoholic drink called wine.
+
+Religious services started again in 1795 under the rule of Napoleon I.
+
+Statues without heads were found and repaired.
+
+In 1792, revolutionaries also cut the heads off 28 statues from the front of Notre Dame, thinking the statues were of French royalty. They were really representations of ancient kings of Judah, from stories in the Bible, the Christian holy book.
+
+The heads were thought lost forever.
+
+But in 1977, workers working in a courtyard in Paris uncovered hundreds of pieces of stone sculptures. Experts confirmed they were the missing heads of Notre Dame's kings of Judah statues.
+
+Today, 22 of the heads have been repaired and are shown at the Cluny Museum in Paris.
+
+The 2019 fire exposed a worldwide lack of outdoor lead pollution guidelines.
+
+The 2019 fire that almost destroyed Notre Dame caused a serious health risk. When the flames melted the top of the building, large amounts of harmful lead dust were released into the air and came down across Paris.
+
+Officials found there were no rules to measure the danger of outdoor lead dust. This was not just a Paris issue — major cities like London and Rome, and even the World Health Organization — do not have guidelines for outdoor lead pollution.
+
+The Notre Dame fire forced officials to take a closer look at their safety standards. It took four months for the city to complete an extensive cleaning of the city’s streets even as visitors and the citizens of Paris walked around the cathedral every day.
+
+Now that you know these five things, you can enjoy seeing the photos of the new Notre Dame when it opens to the public.
+
+I’m Caty Weaver.
+
+Tom Nouvian reported this story for the Associated Press. Jill Robbins adapted it for Learning English.
+
+---
+
+symbol – n. an action, object, event, etc., that expresses or represents a particular idea or quality
+
+gargoyle – n. a strange or ugly human or animal figure that sticks out from the roof of a building (such as a church) and is used to cause rainwater to flow away from the sides of a building.
+
+chimera – n. a monster from Greek mythology that breathes fire and has a lion's head, a goat's body, and a snake's tail
+
+resemble – v. to look or be like
+
+horizontal – adj. positioned from side to side rather than up and down; parallel to the ground
+
+spike – n. a long, thin rod that ends in a point and is often made of metal
+
+façade – n. the front of a building
+
+spout – n. a tube, pipe, or hole out of which a liquid flows
+
+royalty – n. members of a royal family
+
+courtyard – n. an open space that is surrounded completely or partly by a building or group of buildings
+
+flame – n. the hot, glowing gas that can be seen when a fire is burning
+
+What do you think of this story? Write to us in the Comments Section.

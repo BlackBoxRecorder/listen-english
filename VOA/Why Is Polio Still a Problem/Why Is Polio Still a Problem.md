@@ -1,0 +1,61 @@
+# Why Is Polio Still a Problem?
+
+No media source currently available
+
+Polio was driven out of much of the world more than 30 years ago after a series of successful vaccination campaigns. But the viral disease is still spreading in a small number of nations.
+
+The recent discovery of the first polio case in Gaza in 25 years led world health officials to set new goals to get rid of the disease in all areas.
+
+What is polio?
+
+Polio is an infection caused by a virus that mostly affects children under the age of five. Most infected people do not have any symptoms. But some can experience a high body temperature, headaches, vomiting and stiffness of the backbone, or spine.
+
+The World Health Organization (WHO) says polio can affect the nervous system and cause paralysis within hours. The U.N. agency estimates 1 in 200 polio cases results in permanent paralysis, usually of the legs. Among children who are paralyzed, up to 10 percent die when their breathing muscles stop working.
+
+The virus spreads from person to person, entering the body though the mouth. It is most often spread through contact with the waste from an infected person. Sometimes, it is also passed through water or food.
+
+How bad was polio in the past?
+
+Polio has existed for hundreds of years. The Associated Press says that Ancient Egyptian writings show children using sticks to walk and having wasted legs or arms, suggesting the effects of polio.
+
+Before the first vaccine was developed in the 1950s, polio was among the world’s most feared diseases. A 1916 outbreak in New York killed more than 2,000 people. The worst recorded U.S. outbreak in 1952 killed more than 3,000 people. Many who survived polio suffered lifelong effects, including paralysis and deformed limbs. Others whose breathing muscles were paralyzed required specialized lung treatments.
+
+When did the campaign to destroy polio begin?
+
+The WHO passed a resolution in 1988 calling for polio to be eradicated, or destroyed, worldwide. The effort followed a successful campaign against smallpox eight years earlier.
+
+The WHO’s first plan was to eradicate polio by 2000. The U.N. agency cooperated with the U.S. Centers for Disease Control and Prevention, UNICEF and Rotary International. The campaign centered on increasing the production of a vaccine and launching vaccination efforts. As a result, polio cases dropped by more than 99 percent.
+
+Afghanistan and Pakistan are the only countries where the spread of polio has never been stopped. There have also been outbreaks in several other countries, mostly in Africa. The WHO and its partners now aim to eradicate polio by 2026.
+
+Why have efforts to fight polio taken so long?
+
+Health experts say stopping polio outbreaks requires vaccinating at least 95 percent of the world’s population. Vaccinating people is more difficult in nations that have conflicts or weak health systems.
+
+The vaccine given by mouth does not cost a lot to manufacture and is better at preventing infection. But it contains weakened, live polio virus. In rare cases, the vaccine can spread or cause polio in unvaccinated people. In even rarer cases, live virus from the vaccine can mutate into a new form that could start new outbreaks.
+
+Health officials have become more successful at reducing the number of cases caused by the natural polio virus. The majority of infections in the world today are related to the vaccine.
+
+Scott Barrett is a professor at Columbia University in New York City who has studied polio eradication. He told the AP, “The problem with trying to eradicate polio is that the need for perfection is so great and there are so many weak links.” He added that while the technical ability to destroy polio exists, “We live in a vastly imperfect world.”
+
+I’m Bryan Lynn.
+
+The Associated Press reported this story. Bryan Lynn adapted the report for VOA Learning English.
+
+---
+
+symptom – n. a physical feeling or problem that suggests a person has a particular sickness
+
+vomit –v. to expel what is in the stomach through the mouth
+
+stiffness –n. a difficulty in either slowness or pain in moving a part of the body
+
+paralysis – n. being unable to move all of part of the body because of sickness or injury
+
+eradicate –v. to completely remove or destroy
+
+mutate – v. to cause a gene to change and create an unusual characteristic in a plant or animal
+
+perfection –n. a state in which no error or fault exists
+
+vastly – adv. to a very large extent

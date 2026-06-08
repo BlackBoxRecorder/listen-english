@@ -1,0 +1,65 @@
+# Study: How the Brain Cleans Itself
+
+No media source currently available
+
+From VOA Learning English, this is the Health & Lifestyle report.
+
+A rare look inside the human brain might help to explain how it clears away waste. Scientists say the failure to clear away such waste can lead to Alzheimer’s disease and other brain disorders.
+
+Brain cells use a lot of nutrients. This means they produce a lot of waste. Scientists believe the brain has special structures to take out this “cellular trash,” especially during sleep. They have reported observing this process happening in mice. But they had no clear evidence that this happens in humans.
+
+Recently published research appears to have identified a system, or network, of very small waste-clearing channels in the brains of living humans. The researchers used a special kind of imaging technology to study the network.
+
+One of the researchers was Dr. Juan Piantino of Oregon Health & Science University. Piantino said the new research was important evidence. “We needed this piece to say this happens in humans, too,” he said.
+
+His team recently published its findings in Proceedings of the National Academy of Sciences.
+
+The brain is very active during sleep. During sleeping hours, the brain appears to clean itself.
+
+That idea has gotten the attention of researchers. Losing a good night’s sleep can cause people’s thinking to be unclear. But a continuous lack of sleep is believed to increase the risk of the brain disorder dementia.
+
+How does the brain clean itself?
+
+Over 12 years ago, scientists at the University of Rochester first reported finding a network they named the “glymphatic system.” Fluid from the brain, called cerebrospinal fluid, travels through channels surrounding blood vessels to carry waste out of the brain.
+
+Beta-amyloids are substances linked to problems in the brain including Alzheimer’s disease. When scientists injected mice with beta-amyloids, the substance left the brain faster when the animals were sleeping.
+
+It is not clear exactly how the system works. However, some research has shown that the movement of blood vessels might help move the waste-clearing fluid where it needs to go.
+
+Finding the system in humans is not easy. Regular MRI scans can show some of the fluid-filled channels. But Piantino said the scans do not show their purpose.
+
+To find out more, his team at Oregon Health & Science University injected a substance called a tracer into five patients. The tracer “lit up” during MRI scans. Twenty-four to 48 hours later, the tracer material was seen moving through the brain using the channels as in the earlier research on mice.
+
+Rochester’s Dr. Maiken Nedergaard predicts that the study will increase interest in how brain waste clearance connects to people’s health.
+
+But to test if better sleep or other treatments might really increase waste clearance and improve health, researchers "have to be able to measure glymphatic function in people,” said Dr. Jeff Iliff. He is with the University of Washington and has helped lead waste-clearance research. The question is whether the new study might point to ways of measuring the process.
+
+Sleep is not the only question. For example, animal studies show that a blood pressure drug now used to treat the stress disorder called PTSD might improve glymphatic clearing. Iliff and Dr. Elaine Peskind plan to study this drug in a group of patients.
+
+Larger studies in healthy people are also needed.
+
+In addition, Piantino, who used tracer chemicals in people, wants to find an easier, noninvasive test to follow the waste clearance.
+
+“We cannot study all the questions by injecting people,” he said.
+
+And that’s the Health & Lifestyle report. I’m Anna Matteo.
+
+Lauran Neergaard reported this story for The Associated Press. Anna Matteo adapted it for VOA Learning English.
+
+---
+
+trash –n. waste materials, especially household waste
+
+network –n. an interconnected group of pathways, wires or links
+
+channel –n. a pathway for fluid
+
+blood vessel –n. any of a group of tubes made from tissue that carry blood throughout the body
+
+MRI scan (magnetic resonance imaging) –n. a technology that uses electromagnetism to create images of tissue inside the body
+
+tracer –n. a substance that has a chemical or radioactive property that permits it to be observed inside the body of a living thing
+
+noninvasive –n. a way of looking inside the body without using a medical operation or placing a device in the body
+
+We want to hear from you. What are your thoughts on this subject? Our comment policy is here.
