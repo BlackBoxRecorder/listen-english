@@ -1,0 +1,219 @@
+﻿1
+00:00:00,290 --> 00:00:06,286
+From VOA Learning English, this is the Health & Lifestyle report.
+
+2
+00:00:07,765 --> 00:00:16,759
+Becky Litvintchouk did not think she would be able to finish the many tasks needed to start her own business.
+
+3
+00:00:17,798 --> 00:00:25,253
+She has Attention Deficit Hyperactivity Disorder, or ADHD.
+
+4
+00:00:26,472 --> 00:00:34,247
+It affects every part of her life and hurts her ability to focus on one thing at a time.
+
+5
+00:00:35,387 --> 00:00:42,423
+So, two years ago, she turned to artificial intelligence, or AI.
+
+6
+00:00:43,762 --> 00:00:46,340
+She uses an app called Claude.
+
+7
+00:00:47,580 --> 00:00:55,035
+It helps her decide which contracts are the best for her cleaning-wipes business, GetDirty.
+
+8
+00:00:56,315 --> 00:01:02,762
+Using the app means she does not need to read each contract, word for word.
+
+9
+00:01:04,061 --> 00:01:12,176
+She also created business plans by telling the generative AI bot what her goals were.
+
+10
+00:01:13,155 --> 00:01:16,493
+It then created steps for her to reach them.
+
+11
+00:01:17,952 --> 00:01:27,957
+“It’s been just massively instrumental. I probably would not be where I am today,” Litvintchouk said of using AI.
+
+12
+00:01:29,576 --> 00:01:39,830
+People with ADHD experience difficulties with focusing, organizing and controlling urges.
+
+13
+00:01:41,169 --> 00:01:48,564
+Experts say generative AI tools can help them finish tasks more quickly.
+
+14
+00:01:50,023 --> 00:01:58,879
+However, they also warn that such tools should not replace traditional treatments for ADHD.
+
+15
+00:02:00,079 --> 00:02:06,716
+Some experts also have concerns about possibly using AI too much.
+
+16
+00:02:07,756 --> 00:02:11,174
+They also worry about privacy risks.
+
+17
+00:02:12,514 --> 00:02:21,010
+John Mitchell is an associate professor at Duke University School of Medicine in North Carolina.
+
+18
+00:02:22,314 --> 00:02:29,032
+He said that AI apps should be used as “one tool in a toolbox.”
+
+19
+00:02:30,672 --> 00:02:42,188
+AI should not take the place of traditional treatments, such as developing organizational skills or taking medications.
+
+20
+00:02:43,668 --> 00:02:53,520
+He compared using AI to help ADHD with swimming and staying alive in the water.
+
+21
+00:02:54,699 --> 00:03:05,532
+“If you’re kind of treading water in your job and AI’s a life preserver, well, that’s great you’re staying above water.”
+
+22
+00:03:06,491 --> 00:03:10,908
+But, he added, “you still don’t know how to swim.”
+
+23
+00:03:12,607 --> 00:03:21,709
+Litvintchouk, a married mother of four living in New York City, dropped out of high school and left the workforce.
+
+24
+00:03:22,808 --> 00:03:30,023
+Research shows that these things are more likely to happen to people with ADHD.
+
+25
+00:03:31,542 --> 00:03:38,777
+Aside from helping with her business, she uses ChatGPT to help with food shopping.
+
+26
+00:03:40,216 --> 00:03:54,160
+Food shopping and meal planning are tasks that can be difficult for people with ADHD because these tasks require organizational skills.
+
+27
+00:03:55,480 --> 00:04:03,516
+After sharing her method with another mom with ADHD, she decided more people needed to know about it.
+
+28
+00:04:04,756 --> 00:04:13,972
+She started making videos on TikTok about the AI tools she uses to help with her ADHD struggles.
+
+29
+00:04:15,112 --> 00:04:25,202
+Generative AI tools can help people with ADHD break down big tasks into smaller, more doable steps.
+
+30
+00:04:26,442 --> 00:04:34,956
+Chatbots can offer advice for specific things and make people feel like they are talking with a real person.
+
+31
+00:04:36,175 --> 00:04:42,211
+Some AI apps can also help with reminders and productivity.
+
+32
+00:04:43,630 --> 00:04:53,692
+Software engineer Bram de Buyser said he created Goblin.tools with his neurodivergent friends in mind.
+
+33
+00:04:55,092 --> 00:04:59,450
+The tool’s most popular feature is the “magic to-do.”
+
+34
+00:05:00,849 --> 00:05:06,087
+A user can enter a task and the bot will create a to-do list.
+
+35
+00:05:07,127 --> 00:05:13,244
+It can even break down large items on the list into smaller tasks.
+
+36
+00:05:14,663 --> 00:05:25,218
+“I’m not trying to build a cure,” de Buyser said, “but something that helps them out (for) two minutes out of the day that they would otherwise struggle with.”
+
+37
+00:05:27,176 --> 00:05:34,931
+Russell Fulmer is a professor at Husson University in the northeastern state of Maine.
+
+38
+00:05:35,990 --> 00:05:43,466
+He described the research around AI and ADHD as “inconclusive.”
+
+39
+00:05:44,365 --> 00:05:50,853
+In other words, the results of its usefulness are still not known.
+
+40
+00:05:52,273 --> 00:06:03,588
+Experts say they see how AI can have a positive effect on the lives of people with anxiety and ADHD.
+
+41
+00:06:04,688 --> 00:06:15,843
+But, Fulmer said, such tools may not work well for everyone, including people of color with ADHD.
+
+42
+00:06:16,963 --> 00:06:27,684
+He pointed to chatbot responses that have been racist and unfair toward certain groups of people at times.
+
+43
+00:06:29,203 --> 00:06:35,641
+Valese Jones is a publicist and founder of Sincerely Nicole Media.
+
+44
+00:06:37,101 --> 00:06:40,800
+She was diagnosed with ADHD as a child.
+
+45
+00:06:41,940 --> 00:06:52,624
+She uses AI bots to help with reading and responding to emails as well as proofreading public relations plans.
+
+46
+00:06:53,804 --> 00:07:00,041
+But chatbot responses do not always go along with who she really is.
+
+47
+00:07:01,441 --> 00:07:12,756
+“There are cadences in my writing where you can kind of pick up on the fact that I’m southern, and that’s on purpose,” said Jones, who is Black.
+
+48
+00:07:13,996 --> 00:07:17,974
+She purposefully writes in a way that shows her culture.
+
+49
+00:07:19,202 --> 00:07:24,978
+However, the responses she gets back from bots often do not show that.
+
+50
+00:07:26,337 --> 00:07:38,850
+Software engineer de Buyser said that using AI chatbots as a personal assistant has a big upside: They are never tired and never sleep.
+
+51
+00:07:39,949 --> 00:07:44,586
+The downside? They also create privacy issues.
+
+52
+00:07:45,642 --> 00:07:58,215
+When you give an AI chatbot your personal information, emails, calendar and personal writings, you are giving it to a big company, he warned.
+
+53
+00:08:00,174 --> 00:08:01,973
+And that’s the Health & Lifestyle report.
+
+54
+00:08:01,973 --> 00:08:03,973
+I’m Anna Matteo.
+
+55
+00:08:03,973 --> 00:08:05,973
+And I’m Andrew Smith.
