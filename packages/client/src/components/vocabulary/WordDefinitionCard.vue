@@ -66,20 +66,6 @@
           </ul>
         </section>
 
-        <!-- Collins Examples -->
-        <section v-if="result.collins_sents?.length">
-          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
-            Collins Examples
-          </h3>
-          <ul class="space-y-3">
-            <li v-for="(s, i) in result.collins_sents" :key="i">
-              <p v-if="s.description" class="text-xs text-gray-400 mb-0.5">{{ s.description }}</p>
-              <p class="text-sm font-medium text-gray-800">{{ s.example }}</p>
-              <p class="text-sm text-gray-500">{{ s.translate }}</p>
-            </li>
-          </ul>
-        </section>
-
         <!-- Translation Examples -->
         <section v-if="result.trans_sents?.length">
           <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Examples</h3>
