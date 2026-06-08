@@ -12,7 +12,8 @@ const DICT_API_BASE = process.env.DICT_API_BASE || "http://127.0.0.1:5088";
  */
 function resolveAudioUrl(filename: string | null | undefined): string {
   if (!filename) return "";
-  return `${DICT_API_BASE}/api/audio/${filename}`;
+  // 返回后端代理路由路径，避免前端直接访问词典API内网地址
+  return `/api/words/audio/${filename}`;
 }
 
 // GET /api/words/search?q=hello — 查词代理
