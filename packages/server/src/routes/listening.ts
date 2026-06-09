@@ -22,8 +22,8 @@ app.get("/", async (c) => {
 // GET /api/listening/:id - get detail with subtitles
 app.get("/:id", async (c) => {
   const id = Number(c.req.param("id"));
-  const material = await db.select().from(listeningMaterials).where(eq(listeningMaterials.id, id));
-  if (!material) return c.json({ error: "Not found" }, 404);
+  const rows = await db.select().from(listeningMaterials).where(eq(listeningMaterials.id, id));
+  if (!rows.length) return c.json({ error: "Not found" }, 404);
 
   const subs = await db
     .select()
@@ -31,7 +31,7 @@ app.get("/:id", async (c) => {
     .where(eq(subtitles.listeningId, id))
     .orderBy(subtitles.lineIndex);
 
-  return c.json({ ...material, subtitles: subs });
+  return c.json({ ...rows[0], subtitles: subs });
 });
 
 export default app;
