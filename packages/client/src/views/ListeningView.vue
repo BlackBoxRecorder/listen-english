@@ -10,6 +10,7 @@
     <!-- Center content -->
     <div class="flex-1 flex flex-col overflow-hidden min-w-0">
       <SubtitleDisplay />
+      <ChineseSubtitle />
       <AudioPlayer />
     </div>
 
@@ -26,6 +27,7 @@ import { useWordStore } from "../stores/word";
 import ListeningList from "../components/listening/ListeningList.vue";
 import SubtitleDisplay from "../components/subtitle/SubtitleDisplay.vue";
 import AudioPlayer from "../components/player/AudioPlayer.vue";
+import ChineseSubtitle from "../components/subtitle/ChineseSubtitle.vue";
 import WordDetailPanel from "../components/word/WordDetailPanel.vue";
 
 const listeningStore = useListeningStore();
