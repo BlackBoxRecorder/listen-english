@@ -128,7 +128,7 @@ It includes a large transport van with enough space to transport a vertical land
 
 33
 00:05:45,542 --> 00:05:53,715
-The idea is for users to be able launch the flying vehicle from anywhere the van can go.
+The idea is for users to be able to launch the flying vehicle from anywhere the van can go.
 
 34
 00:05:54,415 --> 00:06:00,610

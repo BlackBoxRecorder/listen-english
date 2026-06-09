@@ -8,8 +8,6 @@ Sometimes, businesses get good reviews in exchange for offering buyers rewards s
 
 But AI tools, popularized by OpenAI’s ChatGPT, permit people to produce reviews faster and in greater numbers, technology industry experts say.
 
-Where are AI-generated reviews appearing?
-
 Fake reviews are found across a wide range of industries, from e-commerce and travel to services such as home repairs, medical care and music lessons.
 
 The Transparency Company is a technology company and public protection group that uses software to detect fake reviews. 
@@ -31,8 +29,6 @@ The FTC accused Rytr of offering a service that could pollute the marketplace wi
 The FTC, which banned the sale or purchase of fake reviews in 2024, said some of Rytr’s buyers used the tool to produce hundreds and perhaps thousands of reviews. 
 
 The reviews appeared in support of garage door repair companies, sellers of copied designer handbags and other businesses.
-
-What are companies doing?
 
 Major companies are developing policies for how AI-generated content fits into their systems for removing fake reviews. 
 
@@ -61,8 +57,6 @@ However, some experts say they could be doing more.
 “Their efforts thus far are not nearly enough,” said Kay Dean, a former federal criminal investigator who runs a public protection group called Fake Review Watch. 
 
 “If these tech companies are so committed to eliminating review fraud on their platforms, why is it that I, one individual who works with no automation, can find hundreds or even thousands of fake reviews on any given day?”
-
-Finding fake reviews
 
 Consumers can try to find fake reviews by watching out for a few possible warning signs, researchers say. 
 
