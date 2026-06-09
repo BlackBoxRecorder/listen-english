@@ -5,6 +5,7 @@ import { cors } from "hono/cors";
 import listeningRoutes from "./routes/listening.js";
 import wordsRoutes from "./routes/words.js";
 import analysisRoutes from "./routes/analysis.js";
+import subtitlesRoutes from "./routes/subtitles.js";
 import { startSyncScheduler } from "./tasks/syncVoa.js";
 
 const app = new Hono();
@@ -15,6 +16,7 @@ app.get("/api/health", (c) => c.json({ status: "ok" }));
 app.route("/api/listening", listeningRoutes);
 app.route("/api/words", wordsRoutes);
 app.route("/api/analysis", analysisRoutes);
+app.route("/api/subtitles", subtitlesRoutes);
 
 startSyncScheduler();
 

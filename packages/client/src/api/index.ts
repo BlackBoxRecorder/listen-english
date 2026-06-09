@@ -18,3 +18,17 @@ export async function fetchSentenceAnalysis(subtitleId: number) {
   }
   return res.json();
 }
+
+export async function fetchSubtitle(id: number) {
+  const res = await fetch(`${BASE}/subtitles/${id}`);
+  if (!res.ok) {
+    if (res.status === 404) return null;
+    throw new Error(`HTTP ${res.status}`);
+  }
+  return res.json() as Promise<{
+    id: number;
+    englishText: string | null;
+    chineseText: string | null;
+    listeningId: number;
+  }>;
+}

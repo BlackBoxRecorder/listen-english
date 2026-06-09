@@ -20,7 +20,7 @@
           <template v-for="(seg, i) in splitIntoSegments(sub.englishText || '')" :key="i">
             <span
               v-if="seg.isWord"
-              @click="wordStore.selectWord(seg.text)"
+              @click="wordStore.selectWord(seg.text, sub.id)"
               class="cursor-pointer rounded-sm px-0.5 transition-colors hover:bg-blue-100"
               :class="isSelected(seg.text) ? 'bg-blue-200 hover:bg-blue-200' : ''"
               >{{ seg.text }}</span

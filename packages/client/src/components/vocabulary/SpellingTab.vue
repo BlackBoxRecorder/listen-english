@@ -111,7 +111,7 @@ const sessionStats = ref({ correct: 0, incorrect: 0, skipped: 0 });
 const wordDefinition = ref<WordData | null>(null);
 const wordLoading = ref(false);
 
-const words = computed(() => vocabularyStore.recentWords(20));
+const words = computed(() => vocabularyStore.recentWords(20).map((e) => e.word));
 const targetWord = computed(() => words.value[currentIndex.value] || "");
 const isComplete = computed(() => currentIndex.value >= words.value.length);
 

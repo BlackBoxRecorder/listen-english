@@ -15,16 +15,16 @@ export const useWordStore = defineStore("word", () => {
 
   let requestId = 0;
 
-  async function selectWord(word: string) {
+  async function selectWord(word: string, subtitleId?: number) {
     const normalized = word.trim().toLowerCase();
     if (!normalized) return;
 
     // 互斥：通过协调器关闭分析面板
     activatePanel("word");
 
-    // Auto-save to vocabulary notebook
+    // Auto-save to vocabulary notebook (含字幕上下文)
     const vocabularyStore = useVocabularyStore();
-    vocabularyStore.addWord(normalized);
+    vocabularyStore.addWord(normalized, subtitleId ?? 0);
 
     selectedWord.value = normalized;
     panelOpen.value = true;

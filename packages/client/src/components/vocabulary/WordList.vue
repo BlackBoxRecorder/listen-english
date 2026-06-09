@@ -12,20 +12,20 @@
       </div>
       <ul v-else>
         <li
-          v-for="word in vocabularyStore.words"
-          :key="word"
+          v-for="entry in vocabularyStore.words"
+          :key="entry.word"
           class="flex items-center justify-between px-4 py-2.5 hover:bg-gray-50 cursor-pointer transition-colors border-b border-gray-100"
-          :class="selectedWord === word ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''"
-          @click="emit('select', word)"
+          :class="selectedWord === entry.word ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''"
+          @click="emit('select', entry.word, entry.subtitleId)"
         >
           <div class="flex-1 min-w-0">
-            <span class="text-sm text-gray-800 block">{{ word }}</span>
-            <span v-if="briefDefs[word]" class="text-xs text-gray-400 block mt-0.5 truncate">
-              {{ briefDefs[word] }}
+            <span class="text-sm text-gray-800 block">{{ entry.word }}</span>
+            <span v-if="briefDefs[entry.word]" class="text-xs text-gray-400 block mt-0.5 truncate">
+              {{ briefDefs[entry.word] }}
             </span>
           </div>
           <button
-            @click.stop="vocabularyStore.removeWord(word)"
+            @click.stop="vocabularyStore.removeWord(entry.word)"
             class="w-6 h-6 rounded-full hover:bg-gray-200 flex items-center justify-center text-gray-400 hover:text-gray-600 text-xs shrink-0 ml-2"
           >
             &times;
@@ -56,7 +56,7 @@ defineProps<{
 }>();
 
 const emit = defineEmits<{
-  select: [word: string];
+  select: [word: string, subtitleId: number];
 }>();
 
 const vocabularyStore = useVocabularyStore();
@@ -81,9 +81,9 @@ async function fetchBriefDef(word: string) {
 // 监听单词列表变化，自动获取新增单词的释义
 watch(
   () => vocabularyStore.words.slice(),
-  (words) => {
-    for (const word of words) {
-      fetchBriefDef(word);
+  (entries) => {
+    for (const entry of entries) {
+      fetchBriefDef(entry.word);
     }
   },
   { immediate: true },

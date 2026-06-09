@@ -7,7 +7,7 @@
 
     <!-- Right column: Definition card -->
     <div class="flex-1 overflow-hidden">
-      <WordDefinitionCard :word="activeWord" />
+      <WordDefinitionCard :word="activeWord" :subtitle-id="activeSubtitleId" />
     </div>
   </div>
 </template>
@@ -18,8 +18,10 @@ import WordList from "./WordList.vue";
 import WordDefinitionCard from "./WordDefinitionCard.vue";
 
 const activeWord = ref<string | null>(null);
+const activeSubtitleId = ref<number>(0);
 
-function onSelectWord(word: string) {
+function onSelectWord(word: string, subtitleId: number) {
   activeWord.value = word;
+  activeSubtitleId.value = subtitleId;
 }
 </script>

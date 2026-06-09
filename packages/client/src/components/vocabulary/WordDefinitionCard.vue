@@ -35,6 +35,13 @@
             🔊
           </button>
         </div>
+        <!-- 字幕上下文 -->
+        <div
+          v-if="subtitleText"
+          class="mt-2 px-3 py-1.5 bg-blue-50 border-l-4 border-blue-300 rounded-r text-sm text-gray-600 italic"
+        >
+          {{ subtitleText }}
+        </div>
       </div>
 
       <!-- Scrollable body -->
@@ -92,14 +99,17 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import type { WordData, WordSearchResponse } from "../../types/word";
+import { fetchSubtitle } from "../../api";
 
 const props = defineProps<{
   word: string | null;
+  subtitleId?: number;
 }>();
 
 const isLoading = ref(false);
 const error = ref<string | null>(null);
 const result = ref<WordData | null>(null);
+const subtitleText = ref<string | null>(null);
 
 /** 播放音频 */
 function playAudio(url: string) {
@@ -135,6 +145,29 @@ watch(
       error.value = e instanceof Error ? e.message : "Lookup failed";
     } finally {
       isLoading.value = false;
+    }
+  },
+  { immediate: true },
+);
+
+// 监听 subtitleId 变化，获取字幕文本
+let subtitleRequestId = 0;
+
+watch(
+  () => props.subtitleId,
+  async (id) => {
+    if (!id || id === 0) {
+      subtitleText.value = null;
+      return;
+    }
+    const thisRequestId = ++subtitleRequestId;
+    try {
+      const sub = await fetchSubtitle(id);
+      if (thisRequestId !== subtitleRequestId) return; // 忽略过期请求
+      subtitleText.value = sub?.englishText ?? null;
+    } catch {
+      if (thisRequestId !== subtitleRequestId) return;
+      subtitleText.value = null;
     }
   },
   { immediate: true },
