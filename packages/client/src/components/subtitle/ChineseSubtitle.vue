@@ -1,9 +1,11 @@
 <template>
   <div
-    v-if="chineseText"
     class="h-[60px] shrink-0 bg-gray-50 border-t border-b border-gray-200 flex items-center justify-center px-4"
   >
-    <p class="text-base text-gray-700 text-center line-clamp-2">{{ chineseText }}</p>
+    <p v-if="chineseText" class="text-base text-gray-700 text-center line-clamp-2">
+      {{ chineseText }}
+    </p>
+    <p v-else class="text-sm text-gray-400 text-center">......</p>
   </div>
 </template>
 
