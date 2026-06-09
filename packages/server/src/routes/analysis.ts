@@ -46,7 +46,7 @@ app.get("/:subtitleId", async (c) => {
 
   try {
     // 1. 先查缓存（缓存命中不消耗频率配额）
-    const cached = await db
+    const cached = db
       .select()
       .from(sentenceAnalyses)
       .where(eq(sentenceAnalyses.subtitleId, subtitleId))
@@ -54,7 +54,7 @@ app.get("/:subtitleId", async (c) => {
 
     if (cached) {
       // 查原句用于统一响应结构
-      const sub = await db
+      const sub = db
         .select({ englishText: subtitles.englishText })
         .from(subtitles)
         .where(eq(subtitles.id, subtitleId))
@@ -74,7 +74,7 @@ app.get("/:subtitleId", async (c) => {
     }
 
     // 3. 查字幕原文
-    const sub = await db
+    const sub = db
       .select({ englishText: subtitles.englishText })
       .from(subtitles)
       .where(eq(subtitles.id, subtitleId))
@@ -89,7 +89,7 @@ app.get("/:subtitleId", async (c) => {
     const content = await callDeepSeek(prompt);
 
     // 5. 缓存结果
-    await db.insert(sentenceAnalyses).values({ subtitleId, analysisType, content }).run();
+    db.insert(sentenceAnalyses).values({ subtitleId, analysisType, content }).run();
 
     return c.json({ subtitleId, originalText: sub.englishText, analysisType, content });
   } catch (e) {

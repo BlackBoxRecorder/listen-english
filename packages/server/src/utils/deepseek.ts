@@ -2,7 +2,7 @@
 
 const DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions";
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
-const MODEL = "deepseek-chat";
+const MODEL = "deepseek-v4-flash";
 const TIMEOUT_MS = 15000;
 
 if (!DEEPSEEK_API_KEY) {
