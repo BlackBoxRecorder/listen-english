@@ -1,0 +1,203 @@
+﻿1
+00:00:00,034 --> 00:00:15,391
+At this year’s CES show in Las Vegas, Nevada, crowds from around the world came to see the latest products built with artificial intelligence (AI).
+
+2
+00:00:16,331 --> 00:00:23,530
+CES is produced by the Virginia-based Consumer Technology Association.
+
+3
+00:00:24,394 --> 00:00:32,290
+It presents the latest electronic product offerings or features, targeting consumers.
+
+4
+00:00:33,130 --> 00:00:40,567
+More than 138,000 people attended the event which ended last weekend.
+
+5
+00:00:41,527 --> 00:00:48,564
+More than 4,000 companies presented products at CES 2025.
+
+6
+00:00:49,403 --> 00:00:57,244
+Here is a look at some of the top products shown at this year’s 2025 show:
+
+7
+00:00:58,123 --> 00:01:09,958
+CES is historically an event at which large electronics manufacturers introduce their latest and greatest televisions.
+
+8
+00:01:10,498 --> 00:01:12,576
+This year was no different.
+
+9
+00:01:13,236 --> 00:01:23,709
+South Korean TV makers LG and Samsung both announced new smart models with built-in AI tools.
+
+10
+00:01:24,668 --> 00:01:36,238
+Others – including Japan’s Panasonic and China’s Hisense and TCL – also released TV models with new AI tools.
+
+11
+00:01:36,962 --> 00:01:52,957
+Korean manufacturer LG said its latest models are equipped with AI technologies designed to autonomously improve picture brightness, sharpness and sound quality.
+
+12
+00:01:52,957 --> 00:02:02,294
+The AI improvements are powered by the company’s own a11 processer technology.
+
+13
+00:02:03,218 --> 00:02:19,609
+LG also announced new updates for its Magic Remote device controller, saying new AI tools were added to provide more detailed search and interactive possibilities with users.
+
+14
+00:02:20,448 --> 00:02:31,502
+Samsung introduced a system called Samsung Vision AI for its line of OLED and QLED TV models.
+
+15
+00:02:32,438 --> 00:02:49,502
+The company said the AI tools are meant to turn the TVs into more “intelligent” assistive devices and to help “simplify and enrich everyday living” for its users.
+
+16
+00:02:50,401 --> 00:03:02,403
+One example is a feature that permits users to click on different screen elements to receive immediate information about what they see.
+
+17
+00:03:02,403 --> 00:03:12,856
+The company said another tool makes it possible to activate live language translations on-screen.
+
+18
+00:03:13,715 --> 00:03:25,738
+Several companies at CES introduced robotic transport vehicles designed to travel over many kinds of surfaces or terrain.
+
+19
+00:03:26,517 --> 00:03:33,772
+One model was built by Kubota, a Japanese maker of farm and building equipment.
+
+20
+00:03:34,591 --> 00:03:46,122
+The company demonstrated how the KATR four-wheeled robot uses hydraulics to control the vehicle’s four legs independently.
+
+21
+00:03:47,050 --> 00:03:57,068
+This design seeks to keep the robot secure and level even when working on hills or in rocky areas.
+
+22
+00:03:57,968 --> 00:04:10,846
+Kubota says the vehicle – which is able to carry loads up to 240 kilograms – is small enough to be transported in most pickup trucks.
+
+23
+00:04:11,810 --> 00:04:19,447
+Chinese developer Unitree Robotics showed off a dog-like robot model called Go2.
+
+24
+00:04:19,447 --> 00:04:27,225
+The robot was designed with a series of cameras, sensors and AI tools.
+
+25
+00:04:27,785 --> 00:04:35,882
+The company says this permits Go2 to make smooth movements and automatically follow its owner.
+
+26
+00:04:36,746 --> 00:04:48,180
+It is able to carry small loads on its back and can also be used in security operations involving businesses or individuals.
+
+27
+00:04:49,119 --> 00:05:00,713
+Demonstrations at CES showed Go2 doing tricks, like standing on two legs, dancing and giving high fives to visitors.
+
+28
+00:05:01,352 --> 00:05:09,098
+The company produces several other dog-like models, as well as humanoid robots.
+
+29
+00:05:09,837 --> 00:05:16,357
+The latest flying car designs are also a yearly favorite at CES.
+
+30
+00:05:16,956 --> 00:05:29,555
+But this year, Chinese automaker XPENG took its presentation a step further by introducing a combination truck and flying vehicle.
+
+31
+00:05:30,275 --> 00:05:34,794
+The company calls the system a Land Aircraft Carrier.
+
+32
+00:05:35,370 --> 00:05:44,703
+It includes a large transport van with enough space to transport a vertical landing flying vehicle inside.
+
+33
+00:05:45,542 --> 00:05:53,715
+The idea is for users to be able launch the flying vehicle from anywhere the van can go.
+
+34
+00:05:54,415 --> 00:06:00,610
+The flying car is fully autonomous and can carry two people at a time.
+
+35
+00:06:01,570 --> 00:06:14,823
+Chinese media reported the company – which also offers several traditional vehicles on its website – plans to sell the combination for about $300,000.
+
+36
+00:06:15,263 --> 00:06:23,978
+XPENG said it will aim to increase production for all its vehicles in the coming year.
+
+37
+00:06:24,962 --> 00:06:34,517
+California-based Aptera Motors demonstrated a new electronic vehicle model with a built-in charging system.
+
+38
+00:06:35,356 --> 00:06:45,690
+The company explains on its website that the vehicle has solar panels on its surface to capture energy from the sun.
+
+39
+00:06:45,690 --> 00:06:59,464
+When charged this way, Aptera claims the car can travel up to 64 kilometers in a single day without being plugged in to a power source.
+
+40
+00:07:00,403 --> 00:07:07,822
+On a full charge, the company says the vehicle can travel up to 640 kilometers.
+
+41
+00:07:08,638 --> 00:07:24,212
+Japanese drink producer Kirin Holdings introduced a new product that aims to strengthen, or enhance, the taste of salt in food products without increasing the amount of salt.
+
+42
+00:07:25,012 --> 00:07:30,590
+The spoon-shaped device uses electricity to increase saltiness.
+
+43
+00:07:31,426 --> 00:07:40,982
+The company says the tool – which can be taken anywhere – sends a weak electric current through the top of the device to food.
+
+44
+00:07:41,721 --> 00:07:53,416
+French electric sports equipment maker SQ-Motors presented an all-terrain electric board that can move on roads and snow.
+
+45
+00:07:54,336 --> 00:07:58,114
+The company calls its invention the Sternboard.
+
+46
+00:07:58,806 --> 00:08:03,344
+It is a three-wheeled board with an electric motor in the back.
+
+47
+00:08:04,003 --> 00:08:10,800
+First designed to be an electric skateboard, a version was developed to move on snow.
+
+48
+00:08:11,460 --> 00:08:18,616
+The powered boards have reached speeds of more than 60 kilometers per hour in tests.
+
+49
+00:08:19,336 --> 00:08:23,114
+But the snow versions are not designed for speed.
+
+50
+00:08:23,754 --> 00:08:29,991
+They seek to provide users with the ability to go up hills or move long distances over level land.
+
+51
+00:08:29,991 --> 00:08:31,991
+I’m Bryan Lynn.
