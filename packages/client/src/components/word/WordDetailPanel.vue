@@ -1,10 +1,22 @@
 <template>
   <div class="w-[360px] border-l border-gray-200 bg-white flex flex-col shrink-0">
-    <!-- Sticky header -->
+    <!-- Fixed header -->
     <div
-      class="sticky top-0 bg-white border-b border-gray-200 px-4 py-3 flex items-start justify-between z-10"
+      class="sticky top-0 bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between z-10"
     >
-      <div class="min-w-0">
+      <h2 class="text-base font-semibold text-gray-700">Word Definition</h2>
+      <button
+        @click="wordStore.closePanel()"
+        class="w-7 h-7 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-600 shrink-0"
+      >
+        &times;
+      </button>
+    </div>
+
+    <!-- Body (scrollable) -->
+    <div class="flex-1 overflow-y-auto px-4 py-3">
+      <!-- Word header: word + phonetic + audio button -->
+      <div v-if="wordStore.currentResult || wordStore.selectedWord" class="mb-4">
         <h2 class="text-xl font-bold text-gray-900 break-words">
           {{ wordStore.currentResult?.word ?? wordStore.selectedWord ?? "" }}
         </h2>
@@ -22,16 +34,6 @@
           </button>
         </div>
       </div>
-      <button
-        @click="wordStore.closePanel()"
-        class="w-7 h-7 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-600 shrink-0 ml-2"
-      >
-        &times;
-      </button>
-    </div>
-
-    <!-- Body (scrollable) -->
-    <div class="flex-1 overflow-y-auto px-4 py-3">
       <!-- Loading -->
       <div v-if="wordStore.isLoading" class="space-y-3 animate-pulse">
         <div class="h-4 bg-gray-200 rounded w-3/4"></div>

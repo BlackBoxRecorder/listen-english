@@ -1,4 +1,4 @@
-import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
+import { sqliteTable, integer, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 
 export const listeningMaterials = sqliteTable("listening_materials", {
   id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
@@ -20,3 +20,20 @@ export const subtitles = sqliteTable("subtitles", {
   englishText: text("english_text"),
   chineseText: text("chinese_text"),
 });
+
+// 字幕 AI 分析结果缓存表
+export const sentenceAnalyses = sqliteTable(
+  "sentence_analyses",
+  {
+    id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
+    subtitleId: integer("subtitle_id")
+      .notNull()
+      .references(() => subtitles.id, { onDelete: "cascade" }),
+    analysisType: text("analysis_type").notNull(),
+    content: text("content").notNull(),
+    createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+  },
+  (table) => ({
+    subtitleIdUnique: uniqueIndex("sentence_analyses_subtitle_id_unique").on(table.subtitleId),
+  }),
+);

@@ -27,6 +27,14 @@
             >
             <span v-else>{{ seg.text }}</span>
           </template>
+          <button
+            v-if="hasText(sub.englishText)"
+            @click.stop="analysisStore.analyzeSentence(sub.id)"
+            class="inline text-[10px] text-gray-300 hover:text-blue-400 ml-1 align-top leading-none"
+            title="AI 分析句子"
+          >
+            AI
+          </button>
         </p>
       </div>
       <div v-if="subtitles.length === 0" class="text-center text-gray-400 mt-20">
@@ -40,11 +48,13 @@
 import { computed, ref, watch, nextTick } from "vue";
 import { useListeningStore } from "../../stores/listening";
 import { useWordStore } from "../../stores/word";
+import { useAnalysisStore } from "../../stores/analysis";
 import { useSubtitleSync } from "../../composables/useSubtitleSync";
 import { splitIntoSegments } from "../../utils/wordSplitter";
 
 const listeningStore = useListeningStore();
 const wordStore = useWordStore();
+const analysisStore = useAnalysisStore();
 const activeEl = ref<HTMLElement | null>(null);
 
 const subtitles = computed(() => listeningStore.currentMaterial?.subtitles ?? []);
@@ -67,4 +77,15 @@ watch(activeIndex, async () => {
     activeEl.value.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 });
+
+/** 判断字幕文本是否有实际内容（过滤纯标点/括号行） */
+function hasText(text: string | null | undefined): boolean {
+  if (!text) return false;
+  const cleaned = text
+    .trim()
+    .replace(/[()\[\]{}]/g, "")
+    .replace(/[^\p{L}\d]/gu, " ")
+    .trim();
+  return cleaned.split(/\s+/).filter(Boolean).length > 0;
+}
 </script>

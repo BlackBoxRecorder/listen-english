@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `sentence_analyses_subtitle_id_unique` ON `sentence_analyses` (`subtitle_id`);
