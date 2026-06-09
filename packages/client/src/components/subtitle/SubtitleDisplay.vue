@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 overflow-y-auto p-4">
+  <div class="flex-1 flex flex-col p-4 overflow-hidden">
     <!-- 材料标题 -->
     <h2 v-if="title" class="font-bold text-lg text-gray-900 mb-4 pb-2 border-b border-gray-200">
       {{ title }}
@@ -8,7 +8,7 @@
       No material selected.
     </div>
 
-    <div class="space-y-2">
+    <div class="space-y-2 overflow-y-auto flex-1">
       <div
         v-for="(sub, idx) in subtitles"
         :key="sub.lineIndex"
