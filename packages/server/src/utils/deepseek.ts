@@ -30,14 +30,14 @@ export function getAnalysisType(text: string): "simple" | "detailed" {
  */
 export function buildPrompt(text: string, type: "simple" | "detailed"): string {
   if (type === "simple") {
-    return `你是一个英语语法助手。请简洁分析以下英文句子，用中文回复，包含：
+    return `你是一个英语语法助手。请简洁分析以下英文句子，用中文回复，控制在300字以内，包含：
 1. 句子结构（主谓宾/主系表等）
 2. 关键短语标注
 
 原句：${text}`;
   }
 
-  return `你是一个英语语法助手。请详细分析以下英文长难句，用中文回复，包含：
+  return `你是一个英语语法助手。请详细分析以下英文长难句，用中文回复，控制在1000字以内，包含：
 1. 整体句子结构（主谓宾/主系表等）
 2. 从句类型标注（定语从句、状语从句等）
 3. 逐层语法拆解
@@ -66,7 +66,7 @@ export async function callDeepSeek(prompt: string): Promise<string> {
     body: JSON.stringify({
       model: MODEL,
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 2000,
+      max_tokens: 2400,
       temperature: 0.3,
       thinking: { type: "disabled" },
     }),
