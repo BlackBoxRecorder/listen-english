@@ -62,7 +62,9 @@ The company calls the system a Land Aircraft Carrier.
 
 It includes a large transport van with enough space to transport a vertical landing flying vehicle inside.
 
-The idea is for users to be able launch the flying vehicle from anywhere the van can go. The flying car is fully autonomous and can carry two people at a time.
+The idea is for users to be able launch the flying vehicle from anywhere the van can go.
+
+The flying car is fully autonomous and can carry two people at a time.
 
 Chinese media reported the company – which also offers several traditional vehicles on its website – plans to sell the combination for about $300,000.
 

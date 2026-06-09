@@ -1,0 +1,87 @@
+Artificial intelligence (AI) tools that permit people to produce online reviews have put sellers, service providers and buyers in unfamiliar territory, public protection groups and researchers say.
+
+False, or fake, reviews have long appeared on many popular websites such as Amazon and Yelp. 
+
+The reviews are often traded on private social media groups between fake review dealers and businesses willing to pay. 
+
+Sometimes, businesses get good reviews in exchange for offering buyers rewards such as gift cards.
+
+But AI tools, popularized by OpenAI’s ChatGPT, permit people to produce reviews faster and in greater numbers, technology industry experts say.
+
+Where are AI-generated reviews appearing?
+
+Fake reviews are found across a wide range of industries, from e-commerce and travel to services such as home repairs, medical care and music lessons.
+
+The Transparency Company is a technology company and public protection group that uses software to detect fake reviews. 
+
+The company said it started to see AI-generated reviews appear in large numbers in mid-2023. 
+
+The reviews have increased quickly ever since.
+
+For a recently released report, The Transparency Company examined 73 million reviews in three areas: home, legal and medical services. 
+
+Nearly 14 percent of the reviews were likely fake. 
+
+The company expressed a “high degree of confidence” that 2.3 million reviews were partly or entirely AI-produced.
+
+Last September, the Federal Trade Commission (FTC) took legal action against the company behind an AI writing tool and content producer called Rytr. 
+
+The FTC accused Rytr of offering a service that could pollute the marketplace with fake reviews.
+
+The FTC, which banned the sale or purchase of fake reviews in 2024, said some of Rytr’s buyers used the tool to produce hundreds and perhaps thousands of reviews. 
+
+The reviews appeared in support of garage door repair companies, sellers of copied designer handbags and other businesses.
+
+What are companies doing?
+
+Major companies are developing policies for how AI-generated content fits into their systems for removing fake reviews. 
+
+Some companies already employ special programs and investigative teams to find and remove fake reviews. 
+
+Still, the companies are giving users some ability to use AI.
+
+Spokespeople for Amazon and Trustpilot, for example, said they would permit buyers to post AI-assisted reviews as long as the buyers represent their true experience. 
+
+Yelp has taken a more cautious approach, saying its rules require reviewers to write their own reviews.
+
+The Coalition for Trusted Reviews, which Amazon, Trustpilot, Glassdoor, Tripadvisor, Expedia and Booking.com launched last year, said that even though people may put AI to illegal use, the technology also presents “an opportunity to push back against those who seek to use reviews to mislead others.”
+
+The FTC’s rule banning fake reviews, which took effect in October, permits the agency to fine businesses and individuals who take part in fake reviews. 
+
+Tech companies hosting such reviews are protected from the penalty. 
+
+This is because they are not legally responsible under U.S. law for the content that outsiders post on their websites.
+
+Tech companies, including Amazon, Yelp and Google, have sued fake review dealers they accuse of selling fake reviews on their sites. 
+
+The companies say their technology has blocked or removed a large number of suspect reviews and suspicious accounts. 
+
+However, some experts say they could be doing more.
+
+“Their efforts thus far are not nearly enough,” said Kay Dean, a former federal criminal investigator who runs a public protection group called Fake Review Watch. 
+
+“If these tech companies are so committed to eliminating review fraud on their platforms, why is it that I, one individual who works with no automation, can find hundreds or even thousands of fake reviews on any given day?”
+
+Finding fake reviews
+
+Consumers can try to find fake reviews by watching out for a few possible warning signs, researchers say. 
+
+Overly good or bad reviews are suspect. 
+
+Highly specialized terms that repeat a product’s full name or model number are another possible clue.
+
+When it comes to AI, research done by Balázs Kovács, a Yale professor, has shown that people cannot tell the difference between AI-created and human-written reviews. 
+
+Some AI detectors may also be fooled by shorter texts, which are common in online reviews, the study said.
+
+However, there are some AI clues that online shoppers and service seekers should keep in mind. 
+
+Panagram Labs says reviews written with AI are often longer, highly structured and include “empty descriptors.” 
+
+Empty descriptors include general phrases and attributes or characteristics. 
+
+The writing also often includes overused phrases or opinions like “the first thing that struck me” and “game-changer.”
+
+I'm John Russell.
+
+And I'm Anna Matteo.
