@@ -1,5 +1,17 @@
 <template>
-  <div class="w-[360px] border-l border-gray-200 bg-white flex flex-col shrink-0">
+  <div
+    class="relative border-l border-gray-200 bg-white flex flex-col shrink-0"
+    :style="{ width: width + 'px' }"
+  >
+    <!-- 拖拽手柄 -->
+    <div
+      @mousedown="onMouseDown"
+      class="absolute left-0 top-0 bottom-0 w-2 -ml-1 cursor-col-resize z-20 group"
+    >
+      <div
+        class="absolute inset-y-0 left-1/2 w-0.5 -translate-x-1/2 group-hover:bg-blue-400 group-active:bg-blue-500 transition-colors"
+      ></div>
+    </div>
     <!-- Sticky header -->
     <div
       class="sticky top-0 bg-white border-b border-gray-200 px-4 py-3 flex items-start justify-between z-10"
@@ -15,29 +27,45 @@
       </button>
     </div>
 
-    <!-- Body (scrollable) -->
-    <div class="flex-1 overflow-y-auto px-4 py-3">
-      <!-- Loading -->
-      <div v-if="analysisStore.isLoading" class="space-y-3 animate-pulse">
-        <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-        <div class="h-4 bg-gray-200 rounded w-full"></div>
-        <div class="h-4 bg-gray-200 rounded w-2/3"></div>
-        <div class="h-4 bg-gray-100 rounded w-full mt-4"></div>
-        <div class="h-4 bg-gray-100 rounded w-5/6"></div>
+    <!-- Body -->
+    <div class="flex-1 flex flex-col min-h-0">
+      <!-- 英文句子原文（固定不滚动） -->
+      <div
+        v-if="analysisStore.currentResult?.originalText"
+        class="shrink-0 px-4 py-3 border-b border-gray-100 bg-gray-50"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed">
+          {{ analysisStore.currentResult.originalText }}
+        </p>
       </div>
 
-      <!-- Error -->
-      <div v-else-if="analysisStore.error" class="bg-red-50 text-red-600 rounded p-3 text-sm">
-        {{ analysisStore.error }}
-      </div>
+      <!-- AI 分析结果（可滚动） -->
+      <div class="flex-1 overflow-y-auto px-4 py-3">
+        <!-- Loading -->
+        <div v-if="analysisStore.isLoading" class="space-y-3 animate-pulse">
+          <div class="h-4 bg-gray-200 rounded w-3/4"></div>
+          <div class="h-4 bg-gray-200 rounded w-full"></div>
+          <div class="h-4 bg-gray-200 rounded w-2/3"></div>
+          <div class="h-4 bg-gray-100 rounded w-full mt-4"></div>
+          <div class="h-4 bg-gray-100 rounded w-5/6"></div>
+        </div>
 
-      <!-- No result -->
-      <div v-else-if="!analysisStore.currentResult" class="text-gray-400 text-sm text-center mt-8">
-        No analysis available.
-      </div>
+        <!-- Error -->
+        <div v-else-if="analysisStore.error" class="bg-red-50 text-red-600 rounded p-3 text-sm">
+          {{ analysisStore.error }}
+        </div>
 
-      <!-- Content -->
-      <div v-else class="markdown-body" v-html="renderedContent"></div>
+        <!-- No result -->
+        <div
+          v-else-if="!analysisStore.currentResult"
+          class="text-gray-400 text-sm text-center mt-8"
+        >
+          No analysis available.
+        </div>
+
+        <!-- Content -->
+        <div v-else class="markdown-body" v-html="renderedContent"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -47,9 +75,11 @@ import { computed, onMounted, onUnmounted } from "vue";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 import { useAnalysisStore } from "../../stores/analysis";
+import { useResizablePanel } from "../../composables/useResizablePanel";
 import "../../styles/github-markdown.css";
 
 const analysisStore = useAnalysisStore();
+const { width, onMouseDown } = useResizablePanel();
 
 const renderedContent = computed(() => {
   const content = analysisStore.currentResult?.content;

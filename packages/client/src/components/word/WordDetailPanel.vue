@@ -1,5 +1,17 @@
 <template>
-  <div class="w-[360px] border-l border-gray-200 bg-white flex flex-col shrink-0">
+  <div
+    class="relative border-l border-gray-200 bg-white flex flex-col shrink-0"
+    :style="{ width: width + 'px' }"
+  >
+    <!-- 拖拽手柄 -->
+    <div
+      @mousedown="onMouseDown"
+      class="absolute left-0 top-0 bottom-0 w-2 -ml-1 cursor-col-resize z-20 group"
+    >
+      <div
+        class="absolute inset-y-0 left-1/2 w-0.5 -translate-x-1/2 group-hover:bg-blue-400 group-active:bg-blue-500 transition-colors"
+      ></div>
+    </div>
     <!-- Fixed header -->
     <div
       class="sticky top-0 bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between z-10"
@@ -122,8 +134,10 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, watch } from "vue";
 import { useWordStore } from "../../stores/word";
+import { useResizablePanel } from "../../composables/useResizablePanel";
 
 const wordStore = useWordStore();
+const { width, onMouseDown } = useResizablePanel();
 
 /** 播放音频 */
 function playAudio(url: string) {
