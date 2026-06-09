@@ -8,6 +8,8 @@
     "db:generate": "pnpm --filter server db:generate",
     "db:migrate": "pnpm --filter server db:migrate",
     "db:studio": "pnpm --filter server db:studio",
+    "translate:subtitles": "pnpm --filter server exec tsx src/tasks/translateSubtitles.ts",
+    "sync:voa": "pnpm --filter server exec tsx src/tasks/syncVoa.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky"
