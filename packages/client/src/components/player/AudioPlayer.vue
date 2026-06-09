@@ -52,7 +52,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { onMounted, onUnmounted, ref, watch } from "vue";
 import { usePlayerStore } from "../../stores/player";
 
 const playerStore = usePlayerStore();
@@ -67,6 +67,24 @@ function togglePlay() {
   }
   playerStore.isPlaying = !playerStore.isPlaying;
 }
+
+/** 空格键全局快捷键：切换播放/暂停 */
+function handleGlobalSpace(e: KeyboardEvent) {
+  if (e.code !== "Space") return;
+
+  // 当用户在表单控件中输入时不拦截空格
+  const target = e.target as HTMLElement;
+  if (["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName)) return;
+
+  // 未加载音频时不响应
+  if (!playerStore.currentAudioUrl) return;
+
+  e.preventDefault();
+  togglePlay();
+}
+
+onMounted(() => document.addEventListener("keydown", handleGlobalSpace));
+onUnmounted(() => document.removeEventListener("keydown", handleGlobalSpace));
 
 function onTimeUpdate() {
   if (audioEl.value) {
