@@ -66,8 +66,9 @@ export async function callDeepSeek(prompt: string): Promise<string> {
     body: JSON.stringify({
       model: MODEL,
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 800,
+      max_tokens: 2000,
       temperature: 0.3,
+      thinking: { type: "disabled" },
     }),
     signal: AbortSignal.timeout(TIMEOUT_MS),
   });
