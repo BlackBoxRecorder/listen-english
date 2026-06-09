@@ -118,20 +118,23 @@ async function scanVoaDir(): Promise<void> {
           const result = tx
             .insert(listeningMaterials)
             .values({ title, audioFilePath, duration })
-            .returning({ id: listeningMaterials.id });
+            .returning({ id: listeningMaterials.id })
+            .get();
 
           const materialId = (result as unknown as { id: number }).id;
 
-          tx.insert(subtitles).values(
-            parsedSubs.map((s, i) => ({
-              listeningId: materialId,
-              lineIndex: s.lineIndex ?? i,
-              startTime: s.startTime,
-              endTime: s.endTime,
-              englishText: s.englishText ?? null,
-              chineseText: s.chineseText ?? null,
-            })),
-          );
+          tx.insert(subtitles)
+            .values(
+              parsedSubs.map((s, i) => ({
+                listeningId: materialId,
+                lineIndex: s.lineIndex ?? i,
+                startTime: s.startTime,
+                endTime: s.endTime,
+                englishText: s.englishText ?? null,
+                chineseText: s.chineseText ?? null,
+              })),
+            )
+            .run();
         });
 
         console.log(`[syncVoa] Synced: "${title}" (${parsedSubs.length} subtitles)`);
