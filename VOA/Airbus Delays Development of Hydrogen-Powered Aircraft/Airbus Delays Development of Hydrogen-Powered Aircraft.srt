@@ -1,0 +1,123 @@
+1
+00:00:00,000 --> 00:00:11,833
+European manufacturer Airbus has announced a delay in its development efforts of a hydrogen-powered aircraft.
+
+2
+00:00:11,833 --> 00:00:22,513
+The company explained that progress on the project has been slower and more complex than expected.
+
+3
+00:00:22,513 --> 00:00:31,169
+Airbus had set a goal to make a zero-emission airplane by 2035.
+
+4
+00:00:31,169 --> 00:00:38,235
+The company has not announced a new target date for the plane’s production.
+
+5
+00:00:38,235 --> 00:00:56,295
+But the French union Force Ouvrière said some of its aircraft workers were recently told the technology was running five to 10 years behind, Reuters news agency reported.
+
+6
+00:00:56,295 --> 00:01:13,487
+The French news agency AFP reported Airbus also said it had reduced the program’s budget by 25 percent, but was still examining ways to reduce emissions.
+
+7
+00:01:13,487 --> 00:01:25,459
+"Our ambition and roadmap towards decarbonizing. . .remain unchanged," an Airbus spokesman told AFP.
+
+8
+00:01:25,459 --> 00:01:40,037
+In September 2020, Airbus presented three hydrogen-fueled airplane designs, called ZEROe, as part of its efforts to decarbonize.
+
+9
+00:01:40,037 --> 00:01:54,101
+Other airplane manufacturers, however, have centered more on renewable fuels or developing electric-powered planes for short-distance flights.
+
+10
+00:01:54,101 --> 00:02:04,013
+Airbus noted it has no plans to completely stop developing hydrogen-powered aircraft technology.
+
+11
+00:02:04,013 --> 00:02:12,829
+The company said it sees hydrogen as “a revolutionary energy source for aviation."
+
+12
+00:02:12,829 --> 00:02:34,272
+However, Airbus said in a statement to Reuters it recognizes that developing systems to produce, transport, and store hydrogen represent “a huge challenge requiring global collaboration and investment."
+
+13
+00:02:34,272 --> 00:02:42,615
+Hydrogen motors do not release gases that can warm the earth’s atmosphere.
+
+14
+00:02:42,615 --> 00:02:46,449
+Instead, they release water.
+
+15
+00:02:46,449 --> 00:02:55,697
+However, much of the hydrogen used for fuel is produced using natural gas or coal.
+
+16
+00:02:55,697 --> 00:03:04,630
+Both of these production methods often release carbon dioxide gas, which can warm the atmosphere.
+
+17
+00:03:04,630 --> 00:03:14,024
+Running renewable electricity through water can produce hydrogen without adding to carbon emissions.
+
+18
+00:03:14,024 --> 00:03:19,256
+However, this process is generally more costly.
+
+19
+00:03:19,256 --> 00:03:24,803
+Transporting and storing hydrogen also present problems.
+
+20
+00:03:24,803 --> 00:03:32,450
+As a gas at room temperature, hydrogen takes up a very large space.
+
+21
+00:03:32,450 --> 00:03:37,580
+This makes it impossible to use as fuel.
+
+22
+00:03:37,580 --> 00:03:44,203
+It first needs to be turned into a liquid to be transported or stored.
+
+23
+00:03:44,203 --> 00:03:53,721
+And it needs to be cooled to -253° Celsius to be liquefied.
+
+24
+00:03:53,721 --> 00:03:59,246
+This cooling process requires its own source of energy.
+
+25
+00:03:59,246 --> 00:04:06,100
+Liquified hydrogen still takes up four times the space of jet fuel.
+
+26
+00:04:06,100 --> 00:04:23,621
+The airline industry trade association IATA believes aviation will reach most of its reduction in emissions by using sustainable aviation fuel (SAF).
+
+27
+00:04:23,621 --> 00:04:31,334
+It believes other technologies, like hydrogen, will take longer to develop.
+
+28
+00:04:31,334 --> 00:04:43,260
+SAF uses food and plant waste from cities, agricultural and forest wastes, and other non-petroleum sources.
+
+29
+00:04:43,260 --> 00:04:53,614
+This fuel is then added to jet fuel in mixtures of 10 to 50 percent to become SAF.
+
+30
+00:04:53,614 --> 00:05:08,811
+Airbus says it agrees that SAF can also play an important part in reducing emissions, particularly for medium and long-distance flights.
+
+31
+00:05:08,811 --> 00:05:12,816
+I’m Andrew Smith.
