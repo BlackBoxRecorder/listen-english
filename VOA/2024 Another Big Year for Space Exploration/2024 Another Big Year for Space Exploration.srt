@@ -1,0 +1,171 @@
+1
+00:00:00,000 --> 00:00:10,510
+As we enter the new year, we take a look back at some of the biggest space stories of 2024.
+
+2
+00:00:10,510 --> 00:00:21,576
+Nearly one year ago, a private spacecraft completed the first U.S. moon landing in more than 50 years.
+
+3
+00:00:21,576 --> 00:00:36,822
+The American space agency NASA announced the space lander, called Odysseus, had touched down on the lunar surface February 22.
+
+4
+00:00:36,822 --> 00:00:44,486
+Odysseus was developed by the Texas-based company Intuitive Machines.
+
+5
+00:00:44,486 --> 00:00:56,807
+The spacecraft carried out several science experiments before powering down permanently on the moon in late March.
+
+6
+00:00:56,807 --> 00:01:13,781
+NASA said Odysseus had successfully captured data to help the agency “better understand the moon’s environment and improve landing precision and safety.”
+
+7
+00:01:13,781 --> 00:01:27,841
+Japan’s space agency JAXA announced in January 2024 that its SLIM spacecraft had successfully landed on the moon.
+
+8
+00:01:27,841 --> 00:01:37,738
+But the lander touched down the wrong way up, causing some communication and power problems.
+
+9
+00:01:37,738 --> 00:01:47,799
+Japanese space officials reported that they stayed in communication with SLIM through late April.
+
+10
+00:01:47,799 --> 00:01:58,198
+They said the spacecraft was able to collect valuable data about the touchdown and surrounding area.
+
+11
+00:01:58,198 --> 00:02:06,077
+One purpose of the mission was to demonstrate new precision landing technology.
+
+12
+00:02:06,077 --> 00:02:18,200
+JAXA said the experiment was successful because SLIM was able to land within 10 meters of its planned target.
+
+13
+00:02:18,200 --> 00:02:27,708
+In May, China launched its Chang’e 6 spacecraft to the moon’s far side.
+
+14
+00:02:27,708 --> 00:02:42,139
+In late June, Chinese space officials announced the spacecraft had returned to Earth with rock and soil samples collected on the lunar surface.
+
+15
+00:02:42,139 --> 00:02:54,948
+The successful return made China the first country to ever collect and bring back lunar samples from the far side of the moon.
+
+16
+00:02:54,948 --> 00:03:03,075
+The area is known as the far side because it always faces away from Earth.
+
+17
+00:03:03,075 --> 00:03:20,967
+In October, the European Space Agency (ESA) said it had successfully launched a spacecraft, called Hera, to explore an asteroid struck in an earlier NASA test mission.
+
+18
+00:03:20,967 --> 00:03:28,005
+Hera’s trip to the asteroid is expected to take about two years.
+
+19
+00:03:28,005 --> 00:03:33,057
+Hera is headed to the asteroid Dimorphos.
+
+20
+00:03:33,057 --> 00:03:45,251
+NASA crashed its DART spacecraft into the space rock in 2022, about 11 million kilometers from Earth.
+
+21
+00:03:45,251 --> 00:03:58,120
+NASA said its mission successfully showed it was possible to change the orbit of asteroids that might threaten Earth in the future.
+
+22
+00:03:58,120 --> 00:04:10,115
+Hera aims to closely examine Dimorphos to get more details on how the strike by DART affected the asteroid.
+
+23
+00:04:10,115 --> 00:04:23,735
+The data that NASA collected is to be used together with information gathered by ESA to develop future planetary defense plans.
+
+24
+00:04:23,735 --> 00:04:32,608
+NASA announced the successful launch of its Europa Clipper spacecraft in October.
+
+25
+00:04:32,608 --> 00:04:41,555
+The explorer is designed to search for possible signs of life on Jupiter’s moon Europa.
+
+26
+00:04:41,555 --> 00:04:49,825
+Jupiter is the largest planet in our solar system and has numerous moons.
+
+27
+00:04:49,825 --> 00:05:01,656
+But icy Europa has been identified by scientists as a good candidate for having the right conditions to support life.
+
+28
+00:05:01,656 --> 00:05:11,872
+Several studies have suggested the moon likely contains a large ocean beneath its icy surface.
+
+29
+00:05:11,872 --> 00:05:26,298
+NASA said the Europa Clipper would fly past Mars, then back toward Earth, “using the gravity of each planet to increase its momentum.”
+
+30
+00:05:26,298 --> 00:05:38,946
+These kinds of “gravity assists” are expected to provide the needed push to get the spacecraft to Jupiter by 2030.
+
+31
+00:05:38,946 --> 00:05:59,047
+In early June, Boeing successfully carried out a test mission for NASA by transporting two American astronauts – Butch Wilmore and Suni Williams – to the International Space Station (ISS).
+
+32
+00:05:59,047 --> 00:06:05,177
+The two were expected to stay in space for only a week.
+
+33
+00:06:05,177 --> 00:06:13,528
+But ongoing technical issues with the Starliner spacecraft prevented a return trip.
+
+34
+00:06:13,528 --> 00:06:23,222
+NASA announced plans in August to have Starliner return to Earth without the astronauts.
+
+35
+00:06:23,222 --> 00:06:36,753
+The current plan is for Wilmore and Williams to return on a SpaceX Dragon spacecraft sometime in late March or April.
+
+36
+00:06:36,753 --> 00:06:46,037
+SpaceX has now completed six launch tests of its huge Starship rocket system.
+
+37
+00:06:46,037 --> 00:06:51,408
+Four of those tests were carried out in 2024.
+
+38
+00:06:51,408 --> 00:06:55,923
+The last test took place in November.
+
+39
+00:06:55,923 --> 00:07:09,292
+The Starship rocket and spacecraft system is designed to be a completely reusable vehicle to transport astronauts and supplies.
+
+40
+00:07:09,292 --> 00:07:17,921
+It has successfully demonstrated that ability in its most recent experimental flights.
+
+41
+00:07:17,921 --> 00:07:32,526
+During one of the tests in October, Starship’s Super Heavy booster rocket was "caught“ and secured by a huge structure that includes metal arms.
+
+42
+00:07:32,526 --> 00:07:41,914
+A short time later, Starship’s second stage safely splashed down in the Indian Ocean.
+
+43
+00:07:41,914 --> 00:07:45,136
+I’m Bryan Lynn.
