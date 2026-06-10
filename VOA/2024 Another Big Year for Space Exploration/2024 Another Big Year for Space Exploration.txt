@@ -8,6 +8,8 @@ Odysseus was developed by the Texas-based company Intuitive Machines.
 
 The spacecraft carried out several science experiments before powering down permanently on the moon in late March.
 
+NASA said Odysseus had successfully captured data to help the agency “better understand the moon’s environment and improve landing precision and safety.”
+
 Japan’s space agency JAXA announced in January 2024 that its SLIM spacecraft had successfully landed on the moon.
 
 But the lander touched down the wrong way up, causing some communication and power problems.
@@ -52,7 +54,9 @@ But icy Europa has been identified by scientists as a good candidate for having 
 
 Several studies have suggested the moon likely contains a large ocean beneath its icy surface.
 
-NASA said the Europa Clipper would fly past Mars, then back toward Earth, “using the gravity of each planet to increase its momentum.” These kinds of “gravity assists” are expected to provide the needed push to get the spacecraft to Jupiter by 2030.
+NASA said the Europa Clipper would fly past Mars, then back toward Earth, “using the gravity of each planet to increase its momentum.” 
+
+These kinds of “gravity assists” are expected to provide the needed push to get the spacecraft to Jupiter by 2030.
 
 In early June, Boeing successfully carried out a test mission for NASA by transporting two American astronauts – Butch Wilmore and Suni Williams – to the International Space Station (ISS).
 
@@ -74,8 +78,9 @@ The Starship rocket and spacecraft system is designed to be a completely reusabl
 
 It has successfully demonstrated that ability in its most recent experimental flights.
 
-During one of the tests in October, Starship’s Super Heavy booster rocket was "caught“ and secured by a huge structure that includes metal arms. A short time later, Starship’s second stage safely splashed down in the Indian Ocean.
+During one of the tests in October, Starship’s Super Heavy booster rocket was "caught“ and secured by a huge structure that includes metal arms. 
+
+A short time later, Starship’s second stage safely splashed down in the Indian Ocean.
 
 I’m Bryan Lynn.
 
-Bryan Lynn wrote this story for VOA Learning English.
