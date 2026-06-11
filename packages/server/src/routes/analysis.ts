@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { eq } from "drizzle-orm";
 import { db } from "../db/index.js";
 import { subtitles, sentenceAnalyses } from "../db/schema.js";
-import { getAnalysisType, buildPrompt, callDeepSeek } from "../utils/deepseek.js";
+import { getAnalysisType, buildPrompt, callLLM } from "../utils/llm.js";
 
 const app = new Hono();
 
@@ -86,7 +86,7 @@ app.get("/:subtitleId", async (c) => {
     // 4. 判断复杂度 + 调用 AI
     const analysisType = getAnalysisType(sub.englishText);
     const prompt = buildPrompt(sub.englishText, analysisType);
-    const content = await callDeepSeek(prompt);
+    const content = await callLLM(prompt);
 
     // 5. 缓存结果
     db.insert(sentenceAnalyses).values({ subtitleId, analysisType, content }).run();
@@ -95,8 +95,8 @@ app.get("/:subtitleId", async (c) => {
   } catch (e) {
     const message = e instanceof Error ? e.message : "Analysis failed";
 
-    // API Key 未配置 → 503
-    if (message === "DEEPSEEK_API_KEY_NOT_CONFIGURED") {
+    // LLM 未配置 → 503
+    if (message === "LLM_NOT_CONFIGURED") {
       return c.json({ error: "Analysis service not configured" }, 503);
     }
 

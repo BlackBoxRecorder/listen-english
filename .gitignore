@@ -2,6 +2,7 @@ node_modules/
 dist/
 *.db
 .env
+llm.config.json
 uploads/
 nul
 .DS_Store

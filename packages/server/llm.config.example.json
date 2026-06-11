@@ -1,0 +1,20 @@
+{
+  "activeProvider": "deepseek",
+  "providers": {
+    "deepseek": {
+      "endpoint": "https://api.deepseek.com/v1/chat/completions",
+      "model": "deepseek-v4-flash",
+      "apiKey": "$DEEPSEEK_API_KEY"
+    },
+    "siliconflow": {
+      "endpoint": "https://api.siliconflow.cn/v1/chat/completions",
+      "model": "deepseek-ai/DeepSeek-V3",
+      "apiKey": "$SILICONFLOW_API_KEY"
+    },
+    "glm": {
+      "endpoint": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+      "model": "glm-4-flash",
+      "apiKey": "$GLM_API_KEY"
+    }
+  }
+}
