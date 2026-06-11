@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:05,978
+Today rocket launches and space missions are common.
+
+2
+00:00:05,978 --> 00:00:13,055
+But in the early 1900s, space travel seemed like a dream.
+
+3
+00:00:13,055 --> 00:00:22,444
+One of the most influential people in the field of rocket science was American Robert Goddard.
+
+4
+00:00:22,444 --> 00:00:33,255
+The American space agency NASA describes Goddard as “the father of modern rocket propulsion.”
+
+5
+00:00:33,255 --> 00:00:44,793
+Robert Goddard once said that "the dream of yesterday is the hope of today and the reality of tomorrow."
+
+6
+00:00:44,793 --> 00:00:52,537
+His scientific work gave hope to many dreams about space travel.
+
+7
+00:00:52,537 --> 00:00:57,483
+He turned some of those dreams into reality.
+
+8
+00:00:57,483 --> 00:01:06,532
+More than one hundred years ago, Goddard carried out studies and tests of rocket engines.
+
+9
+00:01:06,532 --> 00:01:18,435
+He developed and flew many rockets that got their power from solid fuels: chemicals that formed a hard substance.
+
+10
+00:01:18,435 --> 00:01:28,324
+In 1925, he made and tested the first rocket engine using a soft chemical fuel.
+
+11
+00:01:28,324 --> 00:01:36,323
+The next year, he successfully launched the world's first liquid-fuel rocket.
+
+12
+00:01:36,323 --> 00:01:51,210
+Many historians consider liquid-fuel rocket flight to be as important as the first airplane flight by the American brothers Orville and Wilbur Wright.
+
+13
+00:01:51,210 --> 00:02:00,947
+Goddard's work proved that machines could travel outside of Earth's atmosphere and into space.
+
+14
+00:02:00,947 --> 00:02:10,727
+During his early research, he received money and support from the U.S. Smithsonian Institution.
+
+15
+00:02:10,727 --> 00:02:16,886
+The Smithsonian published several reports about his efforts.
+
+16
+00:02:16,886 --> 00:02:33,179
+One publication, called “A Method of Reaching Extreme Altitudes,” wrote about his search for ways to send weather recording instruments higher than balloons could fly.
+
+17
+00:02:33,179 --> 00:02:40,228
+It described how he developed the mathematical theories for rocket flight.
+
+18
+00:02:40,228 --> 00:02:50,473
+In that report, Goddard also suggested the possibility of a rocket someday reaching the moon.
+
+19
+00:02:50,473 --> 00:02:57,117
+At the time, there was a big dispute in the press about this claim.
+
+20
+00:02:57,117 --> 00:03:05,317
+Many people thought he was foolish for suggesting something that seemed so impossible.
+
+21
+00:03:05,317 --> 00:03:11,736
+Many of Goddard’s ideas are still used in rocket development.
+
+22
+00:03:11,736 --> 00:03:20,887
+So, in a way, every rocket that flies today could be considered a Goddard rocket.
+
+23
+00:03:20,887 --> 00:00:00,204
+I’m Bryan Lynn.
