@@ -6,3 +6,5 @@ llm.config.json
 uploads/
 nul
 .DS_Store
+
+start.sh
