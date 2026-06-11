@@ -1,0 +1,4153 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>英语语法全面研究：结构、词法、句法、语篇与特定用途</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Noto Serif SC", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: "#1e3a8a",
+              secondary: "#334155",
+              accent: "#3b82f6",
+              neutral: "#64748b",
+              base: "#f8fafc",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Mermaid diagram styling */
+      .mermaid-container {
+        display: flex;
+        justify-content: center;
+        min-height: 300px;
+        max-height: 800px;
+        background: #ffffff;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 30px 0;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mermaid-container .mermaid {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        cursor: grab;
+        transition: transform 0.3s ease;
+        transform-origin: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        touch-action: none; /* 防止触摸设备上的默认行为 */
+        -webkit-user-select: none; /* 防止文本选择 */
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .mermaid-container .mermaid svg {
+        max-width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .mermaid-container .mermaid:active {
+        cursor: grabbing;
+      }
+
+      .mermaid-container.zoomed .mermaid {
+        height: 100%;
+        width: 100%;
+        cursor: grab;
+      }
+
+      .mermaid-controls {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        gap: 10px;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .mermaid-control-btn {
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        color: #374151;
+        font-size: 14px;
+        min-width: 36px;
+        height: 36px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mermaid-control-btn:hover {
+        background: #f8fafc;
+        border-color: #3b82f6;
+        color: #3b82f6;
+        transform: translateY(-1px);
+      }
+
+      .mermaid-control-btn:active {
+        transform: scale(0.95);
+      }
+
+      /* Enhanced mermaid theme for better contrast */
+      .mermaid svg {
+        font-family: "Inter", sans-serif !important;
+        background: transparent;
+      }
+
+      .mermaid .node rect {
+        fill: #f8fafc !important;
+        stroke: #3b82f6 !important;
+        stroke-width: 2px !important;
+      }
+
+      .mermaid .node circle {
+        fill: #e0f2fe !important;
+        stroke: #0284c7 !important;
+        stroke-width: 2px !important;
+      }
+
+      .mermaid .node ellipse {
+        fill: #f0f9ff !important;
+        stroke: #0891b2 !important;
+        stroke-width: 2px !important;
+      }
+
+      .mermaid .node polygon {
+        fill: #ecfdf5 !important;
+        stroke: #059669 !important;
+        stroke-width: 2px !important;
+      }
+
+      .mermaid .node .label {
+        color: #1e293b !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+      }
+
+      .mermaid .edgePath .path {
+        stroke: #64748b !important;
+        stroke-width: 2px !important;
+        fill: none !important;
+      }
+
+      .mermaid .edgeLabel {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        color: #374151 !important;
+        font-weight: 500 !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        border: 1px solid #d1d5db !important;
+        font-size: 12px !important;
+      }
+
+      /* Ensure proper contrast for different node types */
+      .mermaid .node[class*="fill-"] rect {
+        stroke: #1e293b !important;
+      }
+
+      .mermaid text {
+        fill: #1e293b !important;
+        font-weight: 600 !important;
+      }
+
+      /* Override mermaid default colors for better contrast */
+      .mermaid .node[style*="fill:#e3f2fd"] rect {
+        fill: #e3f2fd !important;
+        stroke: #1976d2 !important;
+        stroke-width: 2px !important;
+      }
+
+      .mermaid .node[style*="fill:#f3e5f5"] rect {
+        fill: #f3e5f5 !important;
+        stroke: #7b1fa2 !important;
+        stroke-width: 2px !important;
+      }
+
+      .mermaid .node[style*="fill:#e8f5e8"] rect {
+        fill: #e8f5e8 !important;
+        stroke: #388e3c !important;
+        stroke-width: 2px !important;
+      }
+
+      .mermaid .node[style*="fill:#fff3e0"] rect {
+        fill: #fff3e0 !important;
+        stroke: #f57c00 !important;
+        stroke-width: 2px !important;
+      }
+    </style>
+    <base target="_blank" />
+  </head>
+
+  <body class="bg-base text-secondary font-sans leading-relaxed overflow-x-hidden">
+    <!-- Hamburger menu for mobile -->
+    <button
+      id="toc-toggle"
+      class="fixed top-4 left-4 z-50 p-2 bg-white rounded shadow-md md:hidden"
+    >
+      <i class="fas fa-bars text-primary"></i>
+    </button>
+
+    <!-- Fixed Table of Contents -->
+    <nav
+      id="toc-nav"
+      class="fixed left-0 top-0 w-80 h-full bg-white shadow-lg overflow-y-auto z-40 border-r border-gray-200 transform -translate-x-full md:translate-x-0 transition-transform duration-300"
+    >
+      <div class="p-6">
+        <h2 class="text-lg font-bold text-primary mb-4">目录导航</h2>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              class="block py-2 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#introduction"
+              >引言</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-2 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#structure"
+              >1. 语法结构核心体系</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#sentence-components"
+              >1.1 句子成分与基本架构</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#tense-system"
+              >1.2 时态系统</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#aspect"
+              >1.3 体态（Aspect）</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#voice"
+              >1.4 语态（Voice）</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#mood"
+              >1.5 语气（Mood）</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-2 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#morphology"
+              >2. 词法系统</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#nouns"
+              >2.1 名词（Nouns）</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#pronouns"
+              >2.2 代词（Pronouns）</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#verbs"
+              >2.3 动词（Verbs）</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#adjectives-adverbs"
+              >2.4 形容词与副词</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#prepositions"
+              >2.5 介词（Prepositions）</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#conjunctions"
+              >2.6 连词（Conjunctions）</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#interjections"
+              >2.7 感叹词（Interjections）</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#morphemes"
+              >2.8 词素与构词法</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-2 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#syntax"
+              >3. 句法系统</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#sentence-types"
+              >3.1 句子类型</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#phrase-structure"
+              >3.2 短语结构</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#clause-system"
+              >3.3 从句系统</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#special-sentences"
+              >3.4 特殊句型</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-2 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#discourse"
+              >4. 语篇语法</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#paragraph-structure"
+              >4.1 段落结构</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#cohesion"
+              >4.2 衔接手段</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#discourse-markers"
+              >4.3 话语标记</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#information-structure"
+              >4.4 信息结构</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-2 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#specific-purposes"
+              >5. 特定用途的语法</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#academic-grammar"
+              >5.1 学术写作语法</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#business-grammar"
+              >5.2 商务英语语法</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#spoken-grammar"
+              >5.3 口语语法</a
+            >
+          </li>
+          <li class="ml-4">
+            <a
+              class="block py-1 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#cross-register"
+              >5.4 跨用途语法对比</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-2 px-3 rounded hover:bg-gray-100 text-neutral hover:text-primary transition-colors"
+              href="#conclusion"
+              >结论</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content with left margin for TOC -->
+    <main class="ml-0 md:ml-80 min-h-screen">
+      <!-- Hero Section -->
+      <section
+        class="relative bg-gradient-to-br from-primary via-blue-800 to-blue-900 text-white overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <img
+            alt="抽象语法结构网络背景"
+            class="w-full h-full object-cover opacity-20"
+            src="https://kimi-web-img.moonshot.cn/img/pica.zhimg.com/81934bd41bcf45f1f0d85c73215bb39646cebb10.png"
+            size="wallpaper"
+            aspect="wide"
+            query="抽象语法结构网络"
+            referrerpolicy="no-referrer"
+            data-modified="1"
+            data-score="0.00"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-blue-900/60"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-8 py-16">
+          <div class="grid grid-cols-12 gap-8 items-center">
+            <!-- Title Section -->
+            <div class="col-span-12 lg:col-span-8">
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6"
+              >
+                <span class="italic text-blue-200">英语语法</span>
+                <br />
+                <span class="text-white">全面研究</span>
+              </h1>
+              <p class="text-base sm:text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+                深入探索英语语言的结构体系，从词法到语篇，从理论到实践应用
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm text-blue-200">
+                <span class="flex items-center"
+                  ><i class="fas fa-layer-group mr-2"></i>多层次分析</span
+                >
+                <span class="flex items-center"
+                  ><i class="fas fa-network-wired mr-2"></i>系统性研究</span
+                >
+                <span class="flex items-center"
+                  ><i class="fas fa-chart-line mr-2"></i>实用性导向</span
+                >
+              </div>
+            </div>
+
+            <!-- Key Highlights Grid -->
+            <div class="col-span-12 lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div class="text-2xl font-bold text-blue-200">16</div>
+                <div class="text-sm text-blue-100">种基本时态</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div class="text-2xl font-bold text-blue-200">8</div>
+                <div class="text-sm text-blue-100">大词类</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div class="text-2xl font-bold text-blue-200">5</div>
+                <div class="text-sm text-blue-100">种特定用途</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div class="text-2xl font-bold text-blue-200">∞</div>
+                <div class="text-sm text-blue-100">种可能组合</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introduction Section -->
+      <section class="py-16 bg-white" id="introduction">
+        <div class="max-w-6xl mx-auto px-8">
+          <div class="grid grid-cols-12 gap-8">
+            <div class="col-span-12 lg:col-span-8">
+              <h2 class="text-3xl font-serif font-bold text-primary mb-6">引言</h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-secondary leading-relaxed mb-6">
+                  英语语法是一个高度系统化的语言结构体系，涵盖从词素到语篇的多层次规则网络。其核心特征包括：<strong>分析型语言倾向</strong>（依赖语序和虚词而非形态变化）、<strong>双层时态-体态系统</strong>（tense标记绝对时间，aspect标记动作内部结构）、<strong>灵活的语态转换机制</strong>（主动-被动-中动的语用分工），以及<strong>语域敏感的变体系统</strong>（学术、商务、口语等用途的语法分化）。掌握英语语法需要理解形式规则与语用功能的动态互动，而非机械记忆孤立条目。
+                </p>
+
+                <div class="bg-blue-50 border-l-4 border-accent p-6 my-8">
+                  <h3 class="text-lg font-semibold text-primary mb-3">关键洞察</h3>
+                  <p class="text-secondary">
+                    英语语法的复杂性不在于规则的数量，而在于规则之间的互动关系和语境依赖性。同一个语法形式在不同语境中可能承担完全不同的语用功能，这种灵活性既是英语表达力的源泉，也是学习者的主要挑战。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-span-12 lg:col-span-4">
+              <div class="bg-gray-50 rounded-lg p-6 sticky top-8">
+                <h3 class="text-lg font-semibold text-primary mb-4">研究框架</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 bg-accent rounded-full mr-3"></div>
+                    <span class="text-sm text-secondary">语法结构体系</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                    <span class="text-sm text-secondary">词法系统</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span class="text-sm text-secondary">句法系统</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+                    <span class="text-sm text-secondary">语篇语法</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
+                    <span class="text-sm text-secondary">特定用途语法</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1: Grammar Structure -->
+      <section class="py-16 bg-gray-50" id="structure">
+        <div class="max-w-6xl mx-auto px-8">
+          <h2 class="text-4xl font-serif font-bold text-primary mb-12 text-center">
+            1. 语法结构核心体系
+          </h2>
+
+          <!-- Sentence Components -->
+          <div class="mb-16" id="sentence-components">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">
+              1.1 句子成分与基本架构
+            </h3>
+
+            <!-- SVO Structure -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">
+                主语-谓语-宾语（SVO）基本结构
+              </h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-primary mb-2">主语（Subject）</h5>
+                  <p class="text-sm text-secondary mb-2">动作执行者或状态承载者</p>
+                  <div class="bg-white p-3 rounded border-l-4 border-blue-400">
+                    <strong>She</strong> graduated from the University.
+                  </div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-primary mb-2">谓语（Predicate）</h5>
+                  <p class="text-sm text-secondary mb-2">表达动作、状态或事件</p>
+                  <div class="bg-white p-3 rounded border-l-4 border-green-400">
+                    She <strong>graduated</strong> from the University.
+                  </div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-primary mb-2">宾语（Object）</h5>
+                  <p class="text-sm text-secondary mb-2">动作承受者或目标</p>
+                  <div class="bg-white p-3 rounded border-l-4 border-purple-400">
+                    She graduated from <strong>the University</strong>.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sentence Components Table -->
+              <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300 text-sm">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        句子成分
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        核心功能
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        典型形式
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        位置特征
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">主语</td>
+                      <td class="border border-gray-300 px-4 py-2">动作执行者/状态承载者</td>
+                      <td class="border border-gray-300 px-4 py-2">名词、代词、名词短语、从句</td>
+                      <td class="border border-gray-300 px-4 py-2">句首位置，谓语之前</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">谓语</td>
+                      <td class="border border-gray-300 px-4 py-2">表达动作、状态、事件</td>
+                      <td class="border border-gray-300 px-4 py-2">
+                        动词或动词短语（含助动词、情态动词）
+                      </td>
+                      <td class="border border-gray-300 px-4 py-2">主语之后，句子核心</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">直接宾语</td>
+                      <td class="border border-gray-300 px-4 py-2">动作的直接承受者</td>
+                      <td class="border border-gray-300 px-4 py-2">名词短语、代词、从句</td>
+                      <td class="border border-gray-300 px-4 py-2">及物动词之后</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">间接宾语</td>
+                      <td class="border border-gray-300 px-4 py-2">动作的受益者/接收者</td>
+                      <td class="border border-gray-300 px-4 py-2">名词短语、代词</td>
+                      <td class="border border-gray-300 px-4 py-2">
+                        动词与直接宾语之间，或介词to/for之后
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tense System -->
+          <div class="mb-16" id="tense-system">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">1.2 时态系统</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+              <!-- Past Tense -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4 flex items-center">
+                  <i class="fas fa-clock text-blue-500 mr-2"></i>过去时态
+                </h4>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-blue-400 pl-4">
+                    <h5 class="font-medium text-secondary">一般过去时</h5>
+                    <p class="text-sm text-gray-600 mb-2">过去完成的动作或状态</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;She <strong>graduated</strong> from the University.&#34;
+                    </div>
+                  </div>
+                  <div class="border-l-4 border-blue-400 pl-4">
+                    <h5 class="font-medium text-secondary">过去进行时</h5>
+                    <p class="text-sm text-gray-600 mb-2">过去某时刻正在进行的动作</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;Dr. Jones <strong>was lecturing</strong> about grammar.&#34;
+                    </div>
+                  </div>
+                  <div class="border-l-4 border-blue-400 pl-4">
+                    <h5 class="font-medium text-secondary">过去完成时</h5>
+                    <p class="text-sm text-gray-600 mb-2">&#34;过去的过去&#34;</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;My family <strong>had left</strong> before the flooding.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Present Tense -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4 flex items-center">
+                  <i class="fas fa-clock text-green-500 mr-2"></i>现在时态
+                </h4>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-green-400 pl-4">
+                    <h5 class="font-medium text-secondary">一般现在时</h5>
+                    <p class="text-sm text-gray-600 mb-2">习惯动作、普遍真理</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;Water <strong>boils</strong> at 100°C.&#34;
+                    </div>
+                  </div>
+                  <div class="border-l-4 border-green-400 pl-4">
+                    <h5 class="font-medium text-secondary">现在进行时</h5>
+                    <p class="text-sm text-gray-600 mb-2">说话时正在进行的动作</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;I&#39;m <strong>playing</strong> football now.&#34;
+                    </div>
+                  </div>
+                  <div class="border-l-4 border-green-400 pl-4">
+                    <h5 class="font-medium text-secondary">现在完成时</h5>
+                    <p class="text-sm text-gray-600 mb-2">过去动作与现在的关联</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;I&#39;ve <strong>lost</strong> my keys.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Future Tense -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4 flex items-center">
+                  <i class="fas fa-clock text-purple-500 mr-2"></i>将来时态
+                </h4>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-purple-400 pl-4">
+                    <h5 class="font-medium text-secondary">一般将来时</h5>
+                    <p class="text-sm text-gray-600 mb-2">预测、承诺、计划</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;I <strong>will help</strong> you.&#34;
+                    </div>
+                  </div>
+                  <div class="border-l-4 border-purple-400 pl-4">
+                    <h5 class="font-medium text-secondary">将来进行时</h5>
+                    <p class="text-sm text-gray-600 mb-2">将来某时正在进行的动作</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;I&#39;ll <strong>be flying</strong> to Paris.&#34;
+                    </div>
+                  </div>
+                  <div class="border-l-4 border-purple-400 pl-4">
+                    <h5 class="font-medium text-secondary">将来完成时</h5>
+                    <p class="text-sm text-gray-600 mb-2">将来某时前将完成的动作</p>
+                    <div class="bg-gray-50 p-2 rounded text-sm">
+                      &#34;I <strong>will have graduated</strong> by next year.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tense Sequence -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">时态的呼应与序列原则</h4>
+              <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                <h5 class="font-semibold text-primary mb-3">时态呼应（Sequence of Tenses）</h5>
+                <p class="text-secondary mb-4">
+                  当主句谓语为过去时态时，从句谓语通常需&#34;回退&#34;至相应过去形式：
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="bg-white p-4 rounded border">
+                    <div class="text-sm font-medium text-gray-500 mb-2">直接引语</div>
+                    <div class="font-mono text-sm">&#34;She says, &#39;I am tired&#39;&#34;</div>
+                  </div>
+                  <div class="bg-white p-4 rounded border">
+                    <div class="text-sm font-medium text-gray-500 mb-2">间接引语</div>
+                    <div class="font-mono text-sm">&#34;He said she was tired&#34;</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Conditional Sentences Table -->
+              <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300 text-sm">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        条件类型
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        if从句
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">主句</th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        语义特征
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">零条件</td>
+                      <td class="border border-gray-300 px-4 py-2">一般现在时</td>
+                      <td class="border border-gray-300 px-4 py-2">一般现在时</td>
+                      <td class="border border-gray-300 px-4 py-2">必然因果关系</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">第一条件</td>
+                      <td class="border border-gray-300 px-4 py-2">一般现在时</td>
+                      <td class="border border-gray-300 px-4 py-2">will/can/may + V</td>
+                      <td class="border border-gray-300 px-4 py-2">将来可能实现</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">第二条件</td>
+                      <td class="border border-gray-300 px-4 py-2">一般过去时（be用were）</td>
+                      <td class="border border-gray-300 px-4 py-2">would/could/might + V</td>
+                      <td class="border border-gray-300 px-4 py-2">与现在事实相反</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">第三条件</td>
+                      <td class="border border-gray-300 px-4 py-2">过去完成时</td>
+                      <td class="border border-gray-300 px-4 py-2">
+                        would/could/might + have + V-ed
+                      </td>
+                      <td class="border border-gray-300 px-4 py-2">与过去事实相反</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aspect -->
+          <div class="mb-16" id="aspect">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">1.3 体态（Aspect）</h3>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                  <h4 class="text-lg font-semibold text-primary mb-4">进行体</h4>
+                  <p class="text-sm text-secondary mb-3">
+                    <strong>结构：</strong>be + V-ing
+                    <br />
+                    <strong>核心：</strong>动作的持续与进行
+                  </p>
+                  <div class="bg-white p-4 rounded border-l-4 border-blue-400">
+                    <div class="text-sm font-medium text-gray-500 mb-1">例句</div>
+                    <div class="font-mono text-sm">
+                      &#34;I <strong>am working</strong> now.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-2">强调动作的持续性、动态性</div>
+                  </div>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg">
+                  <h4 class="text-lg font-semibold text-primary mb-4">完成体</h4>
+                  <p class="text-sm text-secondary mb-3">
+                    <strong>结构：</strong>have + V-ed/V3
+                    <br />
+                    <strong>核心：</strong>动作的完成与结果
+                  </p>
+                  <div class="bg-white p-4 rounded border-l-4 border-green-400">
+                    <div class="text-sm font-medium text-gray-500 mb-1">例句</div>
+                    <div class="font-mono text-sm">
+                      &#34;I <strong>have finished</strong> the work.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-2">强调动作的完成状态和结果</div>
+                  </div>
+                </div>
+
+                <div class="bg-purple-50 p-6 rounded-lg">
+                  <h4 class="text-lg font-semibold text-primary mb-4">完成进行体</h4>
+                  <p class="text-sm text-secondary mb-3">
+                    <strong>结构：</strong>have been + V-ing
+                    <br />
+                    <strong>核心：</strong>复合时间视角
+                  </p>
+                  <div class="bg-white p-4 rounded border-l-4 border-purple-400">
+                    <div class="text-sm font-medium text-gray-500 mb-1">例句</div>
+                    <div class="font-mono text-sm">
+                      &#34;I <strong>have been reading</strong>.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-2">强调持续过程，可能未完成</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Voice -->
+          <div class="mb-16" id="voice">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">1.4 语态（Voice）</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <!-- Active vs Passive -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">主动语态 vs 被动语态</h4>
+                <div class="space-y-4">
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">主动语态</h5>
+                    <div class="text-sm text-secondary mb-2">S + V + (O)</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400">
+                      &#34;The scientist <strong>conducted</strong> the experiment.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-2">强调施事，直接简洁</div>
+                  </div>
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">被动语态</h5>
+                    <div class="text-sm text-secondary mb-2">be + V-ed/V3 (+ by-phrase)</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400">
+                      &#34;The experiment <strong>was conducted</strong> (by the scientist).&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-2">强调受事，客观化</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Voice Functions -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">被动语态的语用功能</h4>
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3"></div>
+                    <div>
+                      <div class="font-medium text-secondary">信息结构优化</div>
+                      <div class="text-sm text-gray-600">受事前置为话题焦点</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3"></div>
+                    <div>
+                      <div class="font-medium text-secondary">施事隐退</div>
+                      <div class="text-sm text-gray-600">省略by-短语，动作执行者背景化</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3"></div>
+                    <div>
+                      <div class="font-medium text-secondary">客观性营造</div>
+                      <div class="text-sm text-gray-600">消除第一人称主观印记</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3"></div>
+                    <div>
+                      <div class="font-medium text-secondary">语篇衔接</div>
+                      <div class="text-sm text-gray-600">维持主语链连续性</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Middle Voice -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">中动语态与伪被动结构</h4>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-yellow-50 p-6 rounded-lg">
+                  <h5 class="font-semibold text-primary mb-3">中动语态</h5>
+                  <p class="text-sm text-secondary mb-3">
+                    以主动形式表达被动意义，表达事物的固有属性或倾向。
+                  </p>
+                  <div class="bg-white p-4 rounded border-l-4 border-yellow-400">
+                    <div class="font-mono text-sm mb-2">
+                      &#34;This book <strong>sells</strong> well.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600">
+                      不是某人主动销售，而是书本身具有好卖的属性
+                    </div>
+                  </div>
+                  <div class="mt-3 text-xs text-gray-600">
+                    <strong>特征：</strong
+                    >主语为无生命事物；动词为及物动词；必须带有方式副词；施事不可出现
+                  </div>
+                </div>
+
+                <div class="bg-orange-50 p-6 rounded-lg">
+                  <h5 class="font-semibold text-primary mb-3">伪被动结构</h5>
+                  <p class="text-sm text-secondary mb-3">
+                    形式同被动，但已形容词化，表达状态而非动作。
+                  </p>
+                  <div class="bg-white p-4 rounded border-l-4 border-orange-400">
+                    <div class="space-y-2 text-sm">
+                      <div>
+                        <strong>事件被动：</strong>&#34;The window was broken by the boy.&#34;
+                      </div>
+                      <div><strong>状态被动：</strong>&#34;The window was broken.&#34;</div>
+                    </div>
+                  </div>
+                  <div class="mt-3 text-xs text-gray-600">
+                    <strong>区别：</strong>前者叙述过去动作，后者描述当前状态
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mood -->
+          <div class="mb-16" id="mood">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">1.5 语气（Mood）</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Mood Types -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">语气类型对比</h4>
+                <div class="space-y-4">
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">陈述语气</h5>
+                    <p class="text-sm text-secondary mb-2">表达事实、信念、假设或疑问</p>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;The earth <strong>is</strong> round.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">祈使语气</h5>
+                    <p class="text-sm text-secondary mb-2">表达命令、请求、指示</p>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;<strong>Please close</strong> the door.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">虚拟语气</h5>
+                    <p class="text-sm text-secondary mb-2">与事实相反的假设、愿望、建议</p>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;If I <strong>were</strong> you, I would apologize.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subjunctive Mood Details -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">虚拟语气形态标记</h4>
+                <div class="overflow-x-auto">
+                  <table class="w-full border-collapse border border-gray-300 text-sm">
+                    <thead>
+                      <tr class="bg-gray-100">
+                        <th class="border border-gray-300 px-3 py-2 text-left font-semibold">
+                          虚拟类型
+                        </th>
+                        <th class="border border-gray-300 px-3 py-2 text-left font-semibold">
+                          形态标记
+                        </th>
+                        <th class="border border-gray-300 px-3 py-2 text-left font-semibold">
+                          例句
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="border border-gray-300 px-3 py-2 font-medium">were-虚拟</td>
+                        <td class="border border-gray-300 px-3 py-2">所有人称be用were</td>
+                        <td class="border border-gray-300 px-3 py-2">
+                          &#34;If I <strong>were</strong> you...&#34;
+                        </td>
+                      </tr>
+                      <tr class="bg-gray-50">
+                        <td class="border border-gray-300 px-3 py-2 font-medium">be-虚拟</td>
+                        <td class="border border-gray-300 px-3 py-2">动词原形，无-s变化</td>
+                        <td class="border border-gray-300 px-3 py-2">
+                          &#34;It is essential that he <strong>be</strong> informed.&#34;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="border border-gray-300 px-3 py-2 font-medium">过去虚拟</td>
+                        <td class="border border-gray-300 px-3 py-2">过去完成时</td>
+                        <td class="border border-gray-300 px-3 py-2">
+                          &#34;If I <strong>had known</strong>...&#34;
+                        </td>
+                      </tr>
+                      <tr class="bg-gray-50">
+                        <td class="border border-gray-300 px-3 py-2 font-medium">固定表达</td>
+                        <td class="border border-gray-300 px-3 py-2">动词原形</td>
+                        <td class="border border-gray-300 px-3 py-2">
+                          &#34;God <strong>save</strong> the Queen&#34;
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Morphology -->
+      <section class="py-16 bg-white" id="morphology">
+        <div class="max-w-6xl mx-auto px-8">
+          <h2 class="text-4xl font-serif font-bold text-primary mb-12 text-center">2. 词法系统</h2>
+
+          <!-- Nouns -->
+          <div class="mb-16" id="nouns">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">2.1 名词（Nouns）</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+              <div class="bg-blue-50 rounded-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">专有名词</h4>
+                <p class="text-sm text-secondary mb-4">
+                  指称特定的人、地点、机构等独一无二实体，首字母大写。
+                </p>
+                <div class="space-y-2">
+                  <div class="bg-white p-3 rounded border-l-4 border-blue-400">
+                    <div class="font-medium text-sm">London</div>
+                    <div class="text-xs text-gray-600">地名</div>
+                  </div>
+                  <div class="bg-white p-3 rounded border-l-4 border-blue-400">
+                    <div class="font-medium text-sm">Einstein</div>
+                    <div class="text-xs text-gray-600">人名</div>
+                  </div>
+                  <div class="bg-white p-3 rounded border-l-4 border-blue-400">
+                    <div class="font-medium text-sm">United Nations</div>
+                    <div class="text-xs text-gray-600">机构名</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-green-50 rounded-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">可数名词</h4>
+                <p class="text-sm text-secondary mb-4">有单复数对立，可与数词直接搭配。</p>
+                <div class="space-y-2">
+                  <div class="bg-white p-3 rounded border-l-4 border-green-400">
+                    <div class="font-medium text-sm">book → books</div>
+                    <div class="text-xs text-gray-600">规则复数</div>
+                  </div>
+                  <div class="bg-white p-3 rounded border-l-4 border-green-400">
+                    <div class="font-medium text-sm">child → children</div>
+                    <div class="text-xs text-gray-600">不规则复数</div>
+                  </div>
+                  <div class="bg-white p-3 rounded border-l-4 border-green-400">
+                    <div class="font-medium text-sm">three books</div>
+                    <div class="text-xs text-gray-600">数词直接修饰</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 rounded-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">不可数名词</h4>
+                <p class="text-sm text-secondary mb-4">无复数形式，需用量词短语修饰。</p>
+                <div class="space-y-2">
+                  <div class="bg-white p-3 rounded border-l-4 border-purple-400">
+                    <div class="font-medium text-sm">water</div>
+                    <div class="text-xs text-gray-600">物质名词</div>
+                  </div>
+                  <div class="bg-white p-3 rounded border-l-4 border-purple-400">
+                    <div class="font-medium text-sm">information</div>
+                    <div class="text-xs text-gray-600">抽象名词</div>
+                  </div>
+                  <div class="bg-white p-3 rounded border-l-4 border-purple-400">
+                    <div class="font-medium text-sm">a piece of advice</div>
+                    <div class="text-xs text-gray-600">量词短语修饰</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Noun Inflections -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">名词的形态变化</h4>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Plural Forms -->
+                <div>
+                  <h5 class="text-lg font-semibold text-primary mb-4">复数形式构成</h5>
+                  <div class="space-y-3">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                      <div class="font-medium text-secondary mb-2">规则复数</div>
+                      <div class="text-sm text-gray-600 mb-2">
+                        加-s/-es，语音和拼写受词尾环境制约
+                      </div>
+                      <div class="grid grid-cols-2 gap-2 text-sm">
+                        <div>cat → cats</div>
+                        <div>dog → dogs</div>
+                        <div>box → boxes</div>
+                        <div>city → cities</div>
+                      </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                      <div class="font-medium text-secondary mb-2">不规则复数</div>
+                      <div class="text-sm text-gray-600 mb-2">保留历史形态，需单独记忆</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm">
+                        <div>man → men</div>
+                        <div>foot → feet</div>
+                        <div>child → children</div>
+                        <div>mouse → mice</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Possessive Forms -->
+                <div>
+                  <h5 class="text-lg font-semibold text-primary mb-4">所有格构成</h5>
+                  <div class="space-y-3">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                      <div class="font-medium text-secondary mb-2">基本规则</div>
+                      <div class="text-sm text-gray-600 mb-2">
+                        单数名词和不以-s结尾的复数名词：加-&#39;s
+                      </div>
+                      <div class="text-sm">John&#39;s car, children&#39;s books</div>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                      <div class="font-medium text-secondary mb-2">以-s结尾的复数名词</div>
+                      <div class="text-sm text-gray-600 mb-2">仅加-&#39;</div>
+                      <div class="text-sm">students&#39; dormitory</div>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                      <div class="font-medium text-secondary mb-2">复合所有格</div>
+                      <div class="text-sm text-gray-600 mb-2">of-短语与-&#39;s结合</div>
+                      <div class="text-sm">a friend of John&#39;s</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pronouns -->
+          <div class="mb-16" id="pronouns">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">
+              2.2 代词（Pronouns）
+            </h3>
+
+            <!-- Pronoun Table -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">人称代词系统</h4>
+              <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300 text-sm">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">人称</th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">数</th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">主格</th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">宾格</th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        形容词性所有格
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        名词性所有格
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        反身代词
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium" rowspan="2">
+                        第一人称
+                      </td>
+                      <td class="border border-gray-300 px-4 py-2">单数</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">I</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">me</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">my</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">mine</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">myself</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2">复数</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">we</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">us</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">our</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">ours</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">ourselves</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">第二人称</td>
+                      <td class="border border-gray-300 px-4 py-2">单/复数</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">you</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">you</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">your</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">yours</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">
+                        yourself/yourselves
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium" rowspan="4">
+                        第三人称
+                      </td>
+                      <td class="border border-gray-300 px-4 py-2">单数阳性</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">he</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">him</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">his</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">his</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">himself</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2">单数阴性</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">she</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">her</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">her</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">hers</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">herself</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2">单数中性</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">it</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">it</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">its</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">its</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">itself</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2">复数</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">they</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">them</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">their</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">theirs</td>
+                      <td class="border border-gray-300 px-4 py-2 font-mono">themselves</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="mt-6 bg-yellow-50 p-4 rounded-lg">
+                <div class="flex items-start">
+                  <i class="fas fa-exclamation-triangle text-yellow-600 mt-1 mr-3"></i>
+                  <div>
+                    <div class="font-semibold text-yellow-800">注意</div>
+                    <div class="text-sm text-yellow-700">
+                      <strong>its</strong>（所有格）与<strong>it&#39;s</strong>（= it is/it
+                      has）的区分是常见拼写错误源。
+                      第三人称复数<strong>they</strong>的单数用法是当代重要演变，用于性别不明或不愿指明性别者。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Other Pronoun Types -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">指示代词</h4>
+                <div class="space-y-3">
+                  <div class="bg-blue-50 p-3 rounded">
+                    <div class="font-medium text-blue-700">近指（this/these）</div>
+                    <div class="text-sm text-secondary">空间近、时间近、语篇近</div>
+                    <div class="text-xs text-gray-600 mt-1">&#34;This is my book.&#34;</div>
+                  </div>
+                  <div class="bg-purple-50 p-3 rounded">
+                    <div class="font-medium text-purple-700">远指（that/those）</div>
+                    <div class="text-sm text-secondary">空间远、时间远、语篇远</div>
+                    <div class="text-xs text-gray-600 mt-1">&#34;That was unexpected.&#34;</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">不定代词</h4>
+                <div class="space-y-3">
+                  <div class="bg-green-50 p-3 rounded">
+                    <div class="font-medium text-green-700">全称（all, every）</div>
+                    <div class="text-sm text-secondary">整体涵盖，无例外</div>
+                  </div>
+                  <div class="bg-yellow-50 p-3 rounded">
+                    <div class="font-medium text-yellow-700">存在（some, someone）</div>
+                    <div class="text-sm text-secondary">不确定存在</div>
+                  </div>
+                  <div class="bg-red-50 p-3 rounded">
+                    <div class="font-medium text-red-700">否定（no, none）</div>
+                    <div class="text-sm text-secondary">完全否定</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verbs -->
+          <div class="mb-16" id="verbs">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">2.3 动词（Verbs）</h3>
+
+            <!-- Verb Types -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">动词分类与功能</h4>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h5 class="text-lg font-semibold text-primary mb-4">按及物性分类</h5>
+                  <div class="space-y-4">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                      <div class="font-medium text-blue-700 mb-2">不及物动词</div>
+                      <div class="text-sm text-secondary mb-2">无需宾语，SV结构完整</div>
+                      <div class="bg-white p-2 rounded border-l-4 border-blue-400 text-sm">
+                        &#34;The baby <strong>cried</strong> loudly.&#34;
+                      </div>
+                      <div class="text-xs text-gray-600 mt-2">arrive, sleep, happen, exist</div>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                      <div class="font-medium text-green-700 mb-2">单及物动词</div>
+                      <div class="text-sm text-secondary mb-2">必须带直接宾语</div>
+                      <div class="bg-white p-2 rounded border-l-4 border-green-400 text-sm">
+                        &#34;She <strong>reads</strong> books.&#34;
+                      </div>
+                      <div class="text-xs text-gray-600 mt-2">make, eat, see, like, know</div>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                      <div class="font-medium text-purple-700 mb-2">双及物动词</div>
+                      <div class="text-sm text-secondary mb-2">带间接宾语+直接宾语</div>
+                      <div class="bg-white p-2 rounded border-l-4 border-purple-400 text-sm">
+                        &#34;He <strong>gave</strong> me a book.&#34;
+                      </div>
+                      <div class="text-xs text-gray-600 mt-2">give, send, show, tell, offer</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 class="text-lg font-semibold text-primary mb-4">按功能分类</h5>
+                  <div class="space-y-4">
+                    <div class="bg-yellow-50 p-4 rounded-lg">
+                      <div class="font-medium text-yellow-700 mb-2">系动词</div>
+                      <div class="text-sm text-secondary mb-2">连接主语与表语</div>
+                      <div class="bg-white p-2 rounded border-l-4 border-yellow-400 text-sm">
+                        &#34;He <strong>is</strong> a doctor.&#34;
+                      </div>
+                      <div class="text-xs text-gray-600 mt-2">be, seem, appear, become, feel</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                      <div class="font-medium text-gray-700 mb-2">助动词</div>
+                      <div class="text-sm text-secondary mb-2">构成时态、体、语态等</div>
+                      <div class="bg-white p-2 rounded border-l-4 border-gray-400 text-sm">
+                        &#34;I <strong>have finished</strong>.&#34;
+                      </div>
+                      <div class="text-xs text-gray-600 mt-2">be, have, do</div>
+                    </div>
+                    <div class="bg-indigo-50 p-4 rounded-lg">
+                      <div class="font-medium text-indigo-700 mb-2">情态动词</div>
+                      <div class="text-sm text-secondary mb-2">表达能力、许可、义务等</div>
+                      <div class="bg-white p-2 rounded border-l-4 border-indigo-400 text-sm">
+                        &#34;I <strong>can swim</strong>.&#34;
+                      </div>
+                      <div class="text-xs text-gray-600 mt-2">can, may, must, will, shall</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Non-finite Verb Forms -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">动词的非限定形式</h4>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                  <div class="bg-blue-50 p-6 rounded-lg">
+                    <h5 class="font-semibold text-blue-700 mb-3">不定式（Infinitive）</h5>
+                    <div class="text-sm text-secondary mb-3">
+                      <strong>结构：</strong>to + V（带to）/ V（bare）
+                      <br />
+                      <strong>功能：</strong>名词性、形容词性、副词性
+                    </div>
+                    <div class="bg-white p-4 rounded border-l-4 border-blue-400">
+                      <div class="text-sm space-y-2">
+                        <div>
+                          <strong>主语：</strong>&#34;<strong>To err</strong> is human.&#34;
+                        </div>
+                        <div>
+                          <strong>宾语：</strong>&#34;I want <strong>to leave</strong>.&#34;
+                        </div>
+                        <div><strong>定语：</strong>&#34;a book <strong>to read</strong>&#34;</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-6 rounded-lg">
+                    <h5 class="font-semibold text-green-700 mb-3">动名词（Gerund）</h5>
+                    <div class="text-sm text-secondary mb-3">
+                      <strong>结构：</strong>V-ing
+                      <br />
+                      <strong>功能：</strong>名词性功能
+                    </div>
+                    <div class="bg-white p-4 rounded border-l-4 border-green-400">
+                      <div class="text-sm space-y-2">
+                        <div>
+                          <strong>主语：</strong>&#34;<strong>Swimming</strong> is good
+                          exercise.&#34;
+                        </div>
+                        <div>
+                          <strong>宾语：</strong>&#34;I enjoy <strong>reading</strong>.&#34;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="space-y-6">
+                  <div class="bg-purple-50 p-6 rounded-lg">
+                    <h5 class="font-semibold text-purple-700 mb-3">现在分词</h5>
+                    <div class="text-sm text-secondary mb-3">
+                      <strong>结构：</strong>V-ing
+                      <br />
+                      <strong>功能：</strong>进行体、形容词性、副词性
+                    </div>
+                    <div class="bg-white p-4 rounded border-l-4 border-purple-400">
+                      <div class="text-sm space-y-2">
+                        <div><strong>进行体：</strong>&#34;is <strong>working</strong>&#34;</div>
+                        <div>
+                          <strong>定语：</strong>&#34;a <strong>sleeping</strong> child&#34;
+                        </div>
+                        <div>
+                          <strong>状语：</strong>&#34;<strong>Walking</strong> home, I met her.&#34;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-orange-50 p-6 rounded-lg">
+                    <h5 class="font-semibold text-orange-700 mb-3">过去分词</h5>
+                    <div class="text-sm text-secondary mb-3">
+                      <strong>结构：</strong>V-ed/V-en
+                      <br />
+                      <strong>功能：</strong>完成体、被动语态、形容词性
+                    </div>
+                    <div class="bg-white p-4 rounded border-l-4 border-orange-400">
+                      <div class="text-sm space-y-2">
+                        <div><strong>完成体：</strong>&#34;has <strong>finished</strong>&#34;</div>
+                        <div><strong>被动语态：</strong>&#34;was <strong>built</strong>&#34;</div>
+                        <div><strong>定语：</strong>&#34;a <strong>broken</strong> window&#34;</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 bg-yellow-50 p-6 rounded-lg">
+                <h5 class="font-semibold text-yellow-800 mb-3">不定式与动名词的选择</h5>
+                <div class="text-sm text-secondary mb-3">
+                  部分动词后接不定式（want, decide, hope），部分后接动名词（enjoy, avoid,
+                  finish），部分两者皆可但意义不同：
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-gray-700 mb-2">remember to do</div>
+                    <div class="text-gray-600">记得去做（未做）</div>
+                  </div>
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-gray-700 mb-2">remember doing</div>
+                    <div class="text-gray-600">记得做过（已做）</div>
+                  </div>
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-gray-700 mb-2">stop to do</div>
+                    <div class="text-gray-600">停下来去做另一事</div>
+                  </div>
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-gray-700 mb-2">stop doing</div>
+                    <div class="text-gray-600">停止正在做的事</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adjectives &amp; Adverbs -->
+          <div class="mb-16" id="adjectives-adverbs">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">2.4 形容词与副词</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Adjectives -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">形容词的分类与位置</h4>
+
+                <div class="space-y-4 mb-6">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">描述性形容词</h5>
+                    <div class="text-sm text-secondary mb-2">描述性质、特征、状态</div>
+                    <div class="text-xs text-gray-600">beautiful, large, interesting, careful</div>
+                  </div>
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">限定性形容词</h5>
+                    <div class="text-sm text-secondary mb-2">限定指称范围</div>
+                    <div class="text-xs text-gray-600">the, a, this, my, which, some</div>
+                  </div>
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">数量形容词</h5>
+                    <div class="text-sm text-secondary mb-2">表达数量或顺序</div>
+                    <div class="text-xs text-gray-600">three, first, many, several</div>
+                  </div>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg">
+                  <h5 class="font-medium text-yellow-700 mb-2">形容词顺序规则</h5>
+                  <div class="text-sm text-secondary mb-2">
+                    观点 → 大小 → 年龄 → 形状 → 颜色 → 来源 → 材料 → 用途
+                  </div>
+                  <div class="bg-white p-3 rounded border-l-4 border-yellow-400">
+                    <div class="text-sm italic">
+                      &#34;a lovely small old rectangular brown French oak writing desk&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Adverbs -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">副词的分类与位置</h4>
+
+                <div class="space-y-4 mb-6">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">方式副词</h5>
+                    <div class="text-sm text-secondary mb-2">描述动作方式</div>
+                    <div class="text-xs text-gray-600">quickly, carefully, well, hard, fast</div>
+                  </div>
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">时间副词</h5>
+                    <div class="text-sm text-secondary mb-2">表达时间点、时段</div>
+                    <div class="text-xs text-gray-600">now, then, today, soon, already</div>
+                  </div>
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">程度副词</h5>
+                    <div class="text-sm text-secondary mb-2">修饰形容词、副词、动词</div>
+                    <div class="text-xs text-gray-600">very, quite, rather, too, enough</div>
+                  </div>
+                </div>
+
+                <div class="bg-orange-50 p-4 rounded-lg">
+                  <h5 class="font-medium text-orange-700 mb-2">副词位置敏感性</h5>
+                  <div class="text-sm text-secondary mb-2">位置变化可能导致意义变化：</div>
+                  <div class="bg-white p-3 rounded border-l-4 border-orange-400">
+                    <div class="text-sm space-y-1">
+                      <div>&#34;Only <strong>John</strong> saw Mary.&#34;（别人没看见）</div>
+                      <div>&#34;John only <strong>saw</strong> Mary.&#34;（没做别的）</div>
+                      <div>&#34;John saw only <strong>Mary</strong>.&#34;（没看见别人）</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prepositions -->
+          <div class="mb-16" id="prepositions">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">
+              2.5 介词（Prepositions）
+            </h3>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">介词的语义分类</h4>
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                  <h5 class="font-semibold text-blue-700 mb-4">空间介词</h5>
+                  <div class="space-y-3">
+                    <div>
+                      <div class="font-medium text-sm">位置（静态）</div>
+                      <div class="text-xs text-gray-600 mt-1">
+                        at（点）、in（三维空间）、on（表面）
+                      </div>
+                      <div class="text-xs text-gray-500">
+                        at the door, in the room, on the table
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-medium text-sm">方向（动态）</div>
+                      <div class="text-xs text-gray-600 mt-1">
+                        to（朝向）、into（进入）、onto（到...上）
+                      </div>
+                      <div class="text-xs text-gray-500">go to school, walk into the room</div>
+                    </div>
+                    <div>
+                      <div class="font-medium text-sm">距离</div>
+                      <div class="text-xs text-gray-600 mt-1">near, by, beside, between, among</div>
+                      <div class="text-xs text-gray-500">near the station, among the crowd</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg">
+                  <h5 class="font-semibold text-green-700 mb-4">时间介词</h5>
+                  <div class="space-y-3">
+                    <div>
+                      <div class="font-medium text-sm">时间点</div>
+                      <div class="text-xs text-gray-600 mt-1">at（精确时刻）、on（具体日期）</div>
+                      <div class="text-xs text-gray-500">at 5 o&#39;clock, on Monday</div>
+                    </div>
+                    <div>
+                      <div class="font-medium text-sm">时间段</div>
+                      <div class="text-xs text-gray-600 mt-1">
+                        in（较长时段）、during（持续期间）
+                      </div>
+                      <div class="text-xs text-gray-500">in 2024, during the war</div>
+                    </div>
+                    <div>
+                      <div class="font-medium text-sm">期限/起止</div>
+                      <div class="text-xs text-gray-600 mt-1">for, since, from...to, by</div>
+                      <div class="text-xs text-gray-500">for two hours, by tomorrow</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-purple-50 p-6 rounded-lg">
+                  <h5 class="font-semibold text-purple-700 mb-4">搭配介词</h5>
+                  <div class="space-y-3">
+                    <div>
+                      <div class="font-medium text-sm">动词+介词</div>
+                      <div class="text-xs text-gray-600 mt-1">
+                        depend <strong>on</strong>, look <strong>after</strong>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-medium text-sm">形容词+介词</div>
+                      <div class="text-xs text-gray-600 mt-1">
+                        interested <strong>in</strong>, afraid <strong>of</strong>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-medium text-sm">名词+介词</div>
+                      <div class="text-xs text-gray-600 mt-1">
+                        the reason <strong>for</strong>, the solution <strong>to</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conjunctions &amp; Interjections -->
+          <div class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Conjunctions -->
+              <div class="bg-white rounded-lg shadow-lg p-6" id="conjunctions">
+                <h3 class="text-xl font-semibold text-primary mb-4">2.6 连词（Conjunctions）</h3>
+
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">并列连词</h5>
+                    <div class="text-sm text-secondary mb-2">连接语法功能对等的成分</div>
+                    <div class="grid grid-cols-2 gap-2 text-xs mt-2">
+                      <div>添加：and, both...and</div>
+                      <div>转折：but, yet, however</div>
+                      <div>选择：or, either...or</div>
+                      <div>因果：so, therefore</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">从属连词</h5>
+                    <div class="text-sm text-secondary mb-2">引导从属分句</div>
+                    <div class="grid grid-cols-2 gap-2 text-xs mt-2">
+                      <div>时间：when, while, before</div>
+                      <div>原因：because, since, as</div>
+                      <div>条件：if, unless, provided</div>
+                      <div>让步：although, though</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interjections -->
+              <div class="bg-white rounded-lg shadow-lg p-6" id="interjections">
+                <h3 class="text-xl font-semibold text-primary mb-4">2.7 感叹词（Interjections）</h3>
+
+                <div class="space-y-4">
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">情感感叹词</h5>
+                    <div class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <span>惊讶</span>
+                        <span class="text-gray-600">oh, ah, wow</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>痛苦</span>
+                        <span class="text-gray-600">ouch, ow</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>喜悦</span>
+                        <span class="text-gray-600">yay, hurrah</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>厌恶</span>
+                        <span class="text-gray-600">ugh, yuck</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">呼唤与应答</h5>
+                    <div class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <span>呼唤</span>
+                        <span class="text-gray-600">hey, hi, hello</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>告别</span>
+                        <span class="text-gray-600">goodbye, bye</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>致谢</span>
+                        <span class="text-gray-600">thanks, thank you</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>道歉</span>
+                        <span class="text-gray-600">sorry, excuse me</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Word Formation -->
+          <div class="mb-16" id="morphemes">
+            <h3 class="text-xl font-serif font-semibold text-primary mb-6">2.8 词素与构词法</h3>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h4 class="text-lg font-semibold text-primary mb-4">词素类型</h4>
+                  <div class="space-y-4">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                      <h5 class="font-medium text-blue-700 mb-2">自由词素</h5>
+                      <div class="text-sm text-secondary mb-2">可独立构词，具有完整词汇意义</div>
+                      <div class="text-xs text-gray-600">hand, book, run, happy</div>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                      <h5 class="font-medium text-green-700 mb-2">黏着词素</h5>
+                      <div class="text-sm text-secondary mb-2">
+                        仅能作为词的组成成分，不可独立使用
+                      </div>
+                      <div class="text-xs text-gray-600">
+                        -ful, -ness, un-, -ed, -ing, -s, -&#39;s
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-semibold text-primary mb-4">主要构词法</h4>
+                  <div class="space-y-4">
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                      <h5 class="font-medium text-purple-700 mb-2">派生法（Derivation）</h5>
+                      <div class="text-sm text-secondary mb-2">通过添加词缀构成新词</div>
+                      <div class="text-xs text-gray-600">
+                        un-（unhappy）, -ness（happiness）, -ize（modernize）
+                      </div>
+                    </div>
+                    <div class="bg-orange-50 p-4 rounded-lg">
+                      <h5 class="font-medium text-orange-700 mb-2">复合法（Compounding）</h5>
+                      <div class="text-sm text-secondary mb-2">两个或多个自由词素组合</div>
+                      <div class="text-xs text-gray-600">
+                        blackboard, software, sunrise, pickpocket
+                      </div>
+                    </div>
+                    <div class="bg-yellow-50 p-4 rounded-lg">
+                      <h5 class="font-medium text-yellow-700 mb-2">转化法（Conversion）</h5>
+                      <div class="text-sm text-secondary mb-2">词类转换，不添加形态标记</div>
+                      <div class="text-xs text-gray-600">
+                        bottle→to bottle（N→V）, email→to email（N→V）
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Word Formation Examples -->
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <h4 class="text-lg font-semibold text-secondary mb-4">构词法实例分析</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-primary mb-2">派生法</div>
+                    <div class="text-sm mb-2">happy（形容词） + -ness → happiness（名词）</div>
+                    <div class="text-xs text-gray-600">词类改变，语义保持</div>
+                  </div>
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-primary mb-2">复合法</div>
+                    <div class="text-sm mb-2">
+                      black（形容词） + board（名词） → blackboard（名词）
+                    </div>
+                    <div class="text-xs text-gray-600">句法功能由中心词决定</div>
+                  </div>
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-primary mb-2">转化法</div>
+                    <div class="text-sm mb-2">bottle（名词） → bottle（动词）</div>
+                    <div class="text-xs text-gray-600">&#34;以该名词典型方式处置&#34;</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Syntax -->
+      <section class="py-16 bg-gray-50" id="syntax">
+        <div class="max-w-6xl mx-auto px-8">
+          <h2 class="text-4xl font-serif font-bold text-primary mb-12 text-center">3. 句法系统</h2>
+
+          <!-- Sentence Types -->
+          <div class="mb-16" id="sentence-types">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">3.1 句子类型</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <!-- Functional Classification -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">按功能分类</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">陈述句</h5>
+                    <div class="text-sm text-secondary mb-2">陈述事实，传递信息</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;The cat slept.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-1">SVO语序，主语强制出现，降调</div>
+                  </div>
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">疑问句</h5>
+                    <div class="text-sm text-secondary mb-2">询问信息</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;Are you coming?&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-1">助动词前置/wh-词前置，升调/降调</div>
+                  </div>
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">祈使句</h5>
+                    <div class="text-sm text-secondary mb-2">命令、请求、指示</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;Please close the door.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-1">动词原形，省略主语，降调</div>
+                  </div>
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">感叹句</h5>
+                    <div class="text-sm text-secondary mb-2">表达强烈情感</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-orange-400 text-sm">
+                      &#34;What a beautiful day!&#34;
+                    </div>
+                    <div class="text-xs text-gray-600 mt-1">what/how引导，感叹号，降调</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Structural Classification -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">按结构分类</h4>
+                <div class="space-y-4">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-gray-700 mb-2">简单句</h5>
+                    <div class="text-sm text-secondary mb-2">包含一个独立分句</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-gray-400 text-sm">
+                      &#34;The cat slept.&#34;
+                    </div>
+                  </div>
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">并列句</h5>
+                    <div class="text-sm text-secondary mb-2">两个或多个独立分句并列</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;The cat slept, and the dog barked.&#34;
+                    </div>
+                  </div>
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">复合句</h5>
+                    <div class="text-sm text-secondary mb-2">一个独立分句+依赖从句</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;The cat that was tired slept.&#34;
+                    </div>
+                  </div>
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">并列复合句</h5>
+                    <div class="text-sm text-secondary mb-2">两个独立分句+依赖从句</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;The cat slept, and the dog barked while I was working.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sentence Structure Diagram -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">句子结构层次</h4>
+              <div class="mermaid-container">
+                <div class="mermaid-controls">
+                  <button class="mermaid-control-btn zoom-in" title="放大">
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                  <button class="mermaid-control-btn zoom-out" title="缩小">
+                    <i class="fas fa-search-minus"></i>
+                  </button>
+                  <button class="mermaid-control-btn reset-zoom" title="重置">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                  </button>
+                  <button class="mermaid-control-btn fullscreen" title="全屏查看">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+                <div class="mermaid">
+                  graph TD A[&#34;句子 Sentence&#34;] --&gt; B[&#34;分句 Clause&#34;] B --&gt;
+                  C[&#34;主句 Main Clause&#34;] B --&gt; D[&#34;从句 Subordinate Clause&#34;] C
+                  --&gt; E[&#34;短语 Phrase&#34;] D --&gt; E E --&gt; F[&#34;名词短语 NP&#34;] E
+                  --&gt; G[&#34;动词短语 VP&#34;] E --&gt; H[&#34;形容词短语 AP&#34;] E --&gt;
+                  I[&#34;副词短语 AdvP&#34;] E --&gt; J[&#34;介词短语 PP&#34;] F --&gt; K[&#34;词
+                  Word&#34;] G --&gt; K H --&gt; K I --&gt; K J --&gt; K K --&gt; L[&#34;词素
+                  Morpheme&#34;] style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000
+                  style B fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px,color:#000 style C
+                  fill:#e8f5e8,stroke:#388e3c,stroke-width:3px,color:#000 style D
+                  fill:#e8f5e8,stroke:#388e3c,stroke-width:3px,color:#000 style E
+                  fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#000 style F
+                  fill:#fce4ec,stroke:#c2185b,stroke-width:3px,color:#000 style G
+                  fill:#fce4ec,stroke:#c2185b,stroke-width:3px,color:#000 style H
+                  fill:#fce4ec,stroke:#c2185b,stroke-width:3px,color:#000 style I
+                  fill:#fce4ec,stroke:#c2185b,stroke-width:3px,color:#000 style J
+                  fill:#fce4ec,stroke:#c2185b,stroke-width:3px,color:#000 style K
+                  fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px,color:#000 style L
+                  fill:#e0f2f1,stroke:#00695c,stroke-width:3px,color:#000
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phrase Structure -->
+          <div class="mb-16" id="phrase-structure">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">3.2 短语结构</h3>
+
+            <!-- Noun Phrase -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">名词短语（NP）结构</h4>
+              <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                <div class="text-center">
+                  <div class="text-lg font-mono text-blue-700 mb-2">
+                    (限定词) + (前置修饰语) + 中心名词 + (后置修饰语)
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">限定词</h5>
+                    <div class="text-sm text-secondary mb-2">
+                      冠词、指示词、所有格、疑问词、不定词、数词
+                    </div>
+                    <div class="text-xs text-gray-600">the, a, this, my, which, some, three</div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">前置修饰语</h5>
+                    <div class="text-sm text-secondary mb-2">形容词、名词修饰语、分词</div>
+                    <div class="text-xs text-gray-600">beautiful, small, old, wooden, writing</div>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">中心名词</h5>
+                    <div class="text-sm text-secondary mb-2">名词</div>
+                    <div class="text-xs text-gray-600">desk, information, student</div>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">后置修饰语</h5>
+                    <div class="text-sm text-secondary mb-2">
+                      介词短语、关系从句、不定式短语、分词短语、同位语
+                    </div>
+                    <div class="text-xs text-gray-600">
+                      on the table, that I bought, to read, standing there
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                <h5 class="font-semibold text-secondary mb-2">实例分析</h5>
+                <div class="text-sm font-mono bg-white p-4 rounded border">
+                  the <span class="text-blue-600">(限定词)</span> lovely small old rectangular brown
+                  French oak writing <span class="text-green-600">(前置修饰语)</span> desk
+                  <span class="text-purple-600">(中心名词)</span> on the table that I bought
+                  <span class="text-orange-600">(后置修饰语)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Verb Phrase -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">动词短语（VP）结构</h4>
+              <div class="bg-green-50 p-6 rounded-lg mb-6">
+                <div class="text-center">
+                  <div class="text-lg font-mono text-green-700 mb-2">
+                    (情态动词) + (助动词have) + (助动词be) + 主要动词 + (补足成分)
+                  </div>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300 text-sm">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        成分类型
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">功能</th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">例示</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">情态动词</td>
+                      <td class="border border-gray-300 px-4 py-2">表达能力、许可、义务等</td>
+                      <td class="border border-gray-300 px-4 py-2">might, could, should, must</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">完成体助动词have</td>
+                      <td class="border border-gray-300 px-4 py-2">构成完成体</td>
+                      <td class="border border-gray-300 px-4 py-2">have, has, had</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">
+                        进行体/被动语态助动词be
+                      </td>
+                      <td class="border border-gray-300 px-4 py-2">构成进行体或被动语态</td>
+                      <td class="border border-gray-300 px-4 py-2">am, is, are, was, were</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">主要动词</td>
+                      <td class="border border-gray-300 px-4 py-2">承载核心词汇意义</td>
+                      <td class="border border-gray-300 px-4 py-2">working, finished, given</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">补足成分</td>
+                      <td class="border border-gray-300 px-4 py-2">完成动词语义</td>
+                      <td class="border border-gray-300 px-4 py-2">
+                        直接宾语、间接宾语、主语补语等
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="mt-6 bg-yellow-50 p-4 rounded-lg">
+                <h5 class="font-semibold text-yellow-800 mb-2">复杂动词短语示例</h5>
+                <div class="text-sm font-mono bg-white p-4 rounded border">
+                  <span class="text-blue-600">might</span>
+                  <span class="text-green-600">have been being questioned</span>
+                </div>
+                <div class="text-xs text-gray-600 mt-2">情态 + 完成 + 进行 + 被动</div>
+              </div>
+            </div>
+
+            <!-- Other Phrases -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">形容词短语</h4>
+                <div class="text-sm text-secondary mb-4">
+                  以形容词为中心词，可由副词修饰，可后接补足成分
+                </div>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-blue-50 p-2 rounded">very <strong>happy</strong></div>
+                  <div class="bg-green-50 p-2 rounded"><strong>fond of</strong> music</div>
+                  <div class="bg-purple-50 p-2 rounded"><strong>eager to</strong> please</div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">副词短语</h4>
+                <div class="text-sm text-secondary mb-4">以副词为中心词，可由程度副词修饰</div>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-blue-50 p-2 rounded">very <strong>quickly</strong></div>
+                  <div class="bg-green-50 p-2 rounded">quite <strong>slowly</strong></div>
+                  <div class="bg-purple-50 p-2 rounded"><strong>surprisingly</strong> well</div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">介词短语</h4>
+                <div class="text-sm text-secondary mb-4">由介词+名词短语构成，功能多样</div>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-blue-50 p-2 rounded">the book <strong>on the table</strong></div>
+                  <div class="bg-green-50 p-2 rounded">depend <strong>on you</strong></div>
+                  <div class="bg-purple-50 p-2 rounded">fond <strong>of music</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clause System -->
+          <div class="mb-16" id="clause-system">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">3.3 从句系统</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+              <!-- Noun Clauses -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">名词性从句</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">主语从句</h5>
+                    <div class="text-sm text-secondary mb-2">充当主语</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;<strong>What he said</strong> surprised everyone.&#34;
+                    </div>
+                  </div>
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">宾语从句</h5>
+                    <div class="text-sm text-secondary mb-2">充当动词或介词宾语</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;I believe <strong>(that) he will win</strong>.&#34;
+                    </div>
+                  </div>
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">表语从句</h5>
+                    <div class="text-sm text-secondary mb-2">充当系动词后的表语</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;The problem is <strong>that we don&#39;t have enough time</strong>.&#34;
+                    </div>
+                  </div>
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">同位语从句</h5>
+                    <div class="text-sm text-secondary mb-2">说明抽象名词的具体内容</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-orange-400 text-sm">
+                      &#34;the fact <strong>that he resigned</strong>&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Adjective Clauses -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">形容词性从句</h4>
+                <div class="space-y-6">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-3">限定性关系从句</h5>
+                    <div class="text-sm text-secondary mb-3">限定中心词的身份，提供识别性信息</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm mb-3">
+                      &#34;The man <strong>who is standing there</strong> is my boss.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600">
+                      <strong>特征：</strong>无逗号分隔，提供必要信息，that可用
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-3">非限定性关系从句</h5>
+                    <div class="text-sm text-secondary mb-3">提供附加信息，补充说明</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm mb-3">
+                      &#34;My boss, <strong>who is standing there</strong>, is very strict.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600">
+                      <strong>特征：</strong>有逗号分隔，提供附加信息，that不可用
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Adverbial Clauses -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">副词性从句</h4>
+                <div class="space-y-3">
+                  <div class="bg-blue-50 p-3 rounded">
+                    <div class="font-medium text-blue-700 text-sm">时间从句</div>
+                    <div class="text-xs text-gray-600 mt-1">when, while, before, after</div>
+                  </div>
+                  <div class="bg-green-50 p-3 rounded">
+                    <div class="font-medium text-green-700 text-sm">地点从句</div>
+                    <div class="text-xs text-gray-600 mt-1">where, wherever</div>
+                  </div>
+                  <div class="bg-purple-50 p-3 rounded">
+                    <div class="font-medium text-purple-700 text-sm">原因从句</div>
+                    <div class="text-xs text-gray-600 mt-1">because, since, as</div>
+                  </div>
+                  <div class="bg-orange-50 p-3 rounded">
+                    <div class="font-medium text-orange-700 text-sm">条件从句</div>
+                    <div class="text-xs text-gray-600 mt-1">if, unless, provided that</div>
+                  </div>
+                  <div class="bg-yellow-50 p-3 rounded">
+                    <div class="font-medium text-yellow-700 text-sm">让步从句</div>
+                    <div class="text-xs text-gray-600 mt-1">although, though, even though</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special Sentences -->
+          <div class="mb-16" id="special-sentences">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">3.4 特殊句型</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Existential &amp; Emphatic Sentences -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">存在句与强调句</h4>
+
+                <div class="space-y-6">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-3">存在句（Existential Sentences）</h5>
+                    <div class="text-sm text-secondary mb-3">
+                      以<strong>there be</strong>结构为典型，将新信息（存在物）后置
+                    </div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm mb-3">
+                      &#34;There <strong>is</strong> a book on the table.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600">
+                      <strong>变体：</strong>there + 助动词 + be, there + seem/appear + to be
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-3">强调句（Cleft Sentences）</h5>
+                    <div class="text-sm text-secondary mb-3">
+                      通过<strong>it be...that/who...</strong>分裂结构提取焦点成分
+                    </div>
+                    <div
+                      class="bg-white p-3 rounded border-l-4 border-green-400 text-sm space-y-2 mb-3"
+                    >
+                      <div>
+                        强调主语：&#34;It <strong>was John</strong> who bought the book.&#34;
+                      </div>
+                      <div>
+                        强调宾语：&#34;It <strong>was a book</strong> that John bought.&#34;
+                      </div>
+                      <div>
+                        强调状语：&#34;It <strong>was yesterday</strong> that John bought the
+                        book.&#34;
+                      </div>
+                    </div>
+                    <div class="text-xs text-gray-600">
+                      <strong>拟分裂句：</strong>&#34;What John bought was a book.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Inversion &amp; Ellipsis -->
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">倒装句与省略句</h4>
+
+                <div class="space-y-6">
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-3">倒装句（Inversion）</h5>
+                    <div class="space-y-3">
+                      <div>
+                        <div class="font-medium text-sm">完全倒装</div>
+                        <div class="text-xs text-gray-600 mb-1">地点/时间状语前置，主语为名词</div>
+                        <div class="bg-white p-2 rounded border text-xs">
+                          &#34;On the table <strong>sat</strong> a cat.&#34;
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-medium text-sm">部分倒装</div>
+                        <div class="text-xs text-gray-600 mb-1">
+                          否定词/only+状语前置，助动词前置
+                        </div>
+                        <div class="bg-white p-2 rounded border text-xs">
+                          &#34;Never <strong>have I seen</strong> such beauty.&#34;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-3">省略句（Ellipsis）</h5>
+                    <div class="space-y-3">
+                      <div>
+                        <div class="font-medium text-sm">主语省略</div>
+                        <div class="bg-white p-2 rounded border text-xs">
+                          &#34;(I) Don&#39;t know.&#34;
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-medium text-sm">助动词省略</div>
+                        <div class="bg-white p-2 rounded border text-xs">
+                          &#34;(Are) You coming?&#34;
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-medium text-sm">动词短语省略</div>
+                        <div class="bg-white p-2 rounded border text-xs">
+                          &#34;I like it, and so does she.&#34;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Discourse Grammar -->
+      <section class="py-16 bg-white" id="discourse">
+        <div class="max-w-6xl mx-auto px-8">
+          <h2 class="text-4xl font-serif font-bold text-primary mb-12 text-center">4. 语篇语法</h2>
+
+          <!-- Paragraph Structure -->
+          <div class="mb-16" id="paragraph-structure">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">4.1 段落结构</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+              <div class="bg-blue-50 rounded-lg p-6">
+                <h4 class="text-lg font-semibold text-blue-700 mb-4">主题句</h4>
+                <div class="text-sm text-secondary mb-4">
+                  段落的核心陈述，通常位于段首，明确表达段落的主旨或中心思想。
+                </div>
+                <div class="space-y-2 text-xs">
+                  <div class="flex items-center">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                    <span>预测功能：为读者提供阅读预期</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                    <span>统一功能：确保段落内容围绕同一主题</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                    <span>衔接功能：与前后段落形成逻辑链条</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-green-50 rounded-lg p-6">
+                <h4 class="text-lg font-semibold text-green-700 mb-4">支持句</h4>
+                <div class="text-sm text-secondary mb-4">承担展开、说明、论证主题句的功能。</div>
+                <div class="space-y-2 text-xs">
+                  <div><strong>例证：</strong>for example, for instance</div>
+                  <div><strong>定义：</strong>is defined as, refers to</div>
+                  <div><strong>分类：</strong>can be divided into, types of</div>
+                  <div><strong>因果：</strong>because, as a result, leads to</div>
+                  <div><strong>对比：</strong>however, in contrast, unlike</div>
+                  <div><strong>数据：</strong>according to, the data show</div>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 rounded-lg p-6">
+                <h4 class="text-lg font-semibold text-purple-700 mb-4">结论句</h4>
+                <div class="text-sm text-secondary mb-4">
+                  总结段落核心要点，强化主题句的论点，延伸思考，过渡至下一段。
+                </div>
+                <div class="space-y-2 text-xs">
+                  <div class="flex items-center">
+                    <div class="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                    <span>总结功能：概括核心要点</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                    <span>延伸功能：指向更广泛的意义</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                    <span>过渡功能：建立语篇流动感</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paragraph Example -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">段落结构实例分析</h4>
+              <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                <div class="text-sm leading-relaxed">
+                  <div class="bg-blue-100 p-3 rounded mb-2">
+                    <span class="font-semibold text-blue-700">[主题句]</span>
+                    <span class="text-gray-800"
+                      >The development of English grammar has been influenced by multiple historical
+                      factors.</span
+                    >
+                  </div>
+                  <div class="bg-green-100 p-3 rounded mb-2">
+                    <span class="font-semibold text-green-700">[支持句1 - 例证]</span>
+                    <span class="text-gray-800"
+                      >For example, the Norman Conquest in 1066 brought a significant number of
+                      French words into English, which affected grammatical structures.</span
+                    >
+                  </div>
+                  <div class="bg-green-100 p-3 rounded mb-2">
+                    <span class="font-semibold text-green-700">[支持句2 - 因果]</span>
+                    <span class="text-gray-800"
+                      >As a result, English developed a more complex system of word order to
+                      accommodate these new vocabulary items and their grammatical patterns.</span
+                    >
+                  </div>
+                  <div class="bg-purple-100 p-3 rounded">
+                    <span class="font-semibold text-purple-700">[结论句]</span>
+                    <span class="text-gray-800"
+                      >Therefore, understanding these historical influences is crucial for
+                      comprehending modern English grammar.</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <div class="flex items-start">
+                  <i class="fas fa-lightbulb text-blue-600 mt-1 mr-3"></i>
+                  <div>
+                    <div class="font-semibold text-blue-800">写作提示</div>
+                    <div class="text-sm text-blue-700">
+                      有效的段落应该像一个小型论证：主题句提出论点，支持句提供证据和分析，结论句总结并过渡。
+                      每个句子都应该与主题句有明确的逻辑关系，避免无关信息的插入。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cohesion -->
+          <div class="mb-16" id="cohesion">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">
+              4.2 衔接手段（Cohesive Devices）
+            </h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">指称衔接</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">人称指称</h5>
+                    <div class="text-sm text-secondary mb-2">人称代词系统建立照应链</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;John entered. <strong>He</strong> sat down. <strong>His</strong> coat was
+                      wet.&#34;
+                    </div>
+                  </div>
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">指示指称</h5>
+                    <div class="text-sm text-secondary mb-2">
+                      this/that/these/those及the标示距离
+                    </div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;<strong>This</strong> shows that...&#34; vs. &#34;<strong>That</strong>
+                      is why...&#34;
+                    </div>
+                  </div>
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">比较指称</h5>
+                    <div class="text-sm text-secondary mb-2">形容词/副词比较级建立关系</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;similar results&#34;, &#34;a different approach&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">替代与省略</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">替代</h5>
+                    <div class="space-y-3">
+                      <div>
+                        <div class="font-medium text-sm">名词性替代</div>
+                        <div class="text-xs text-gray-600">one/ones, same, so</div>
+                        <div class="bg-white p-2 rounded border text-xs mt-1">
+                          &#34;Do you have a pen? I need <strong>one</strong>.&#34;
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-medium text-sm">动词性替代</div>
+                        <div class="text-xs text-gray-600">do/does/did</div>
+                        <div class="bg-white p-2 rounded border text-xs mt-1">
+                          &#34;He likes coffee, and so <strong>do</strong> I.&#34;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">省略</h5>
+                    <div class="space-y-3">
+                      <div>
+                        <div class="font-medium text-sm">名词性省略</div>
+                        <div class="bg-white p-2 rounded border text-xs mt-1">
+                          &#34;I bought three apples, and she bought two [apples].&#34;
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-medium text-sm">动词性省略</div>
+                        <div class="bg-white p-2 rounded border text-xs mt-1">
+                          &#34;I can swim, and she can [swim] too.&#34;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">连接衔接</h4>
+                <div class="space-y-3">
+                  <div class="bg-blue-50 p-3 rounded">
+                    <div class="font-medium text-blue-700 text-sm">添加</div>
+                    <div class="text-xs text-gray-600">and, also, in addition, furthermore</div>
+                  </div>
+                  <div class="bg-red-50 p-3 rounded">
+                    <div class="font-medium text-red-700 text-sm">转折</div>
+                    <div class="text-xs text-gray-600">but, however, although, though</div>
+                  </div>
+                  <div class="bg-green-50 p-3 rounded">
+                    <div class="font-medium text-green-700 text-sm">因果</div>
+                    <div class="text-xs text-gray-600">so, therefore, thus, consequently</div>
+                  </div>
+                  <div class="bg-purple-50 p-3 rounded">
+                    <div class="font-medium text-purple-700 text-sm">时间</div>
+                    <div class="text-xs text-gray-600">then, next, after that, finally</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cohesion Example -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">衔接手段实例分析</h4>
+              <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                <div class="text-sm leading-relaxed space-y-2">
+                  <div>
+                    <span class="bg-blue-100 px-1">[指称衔接]</span>
+                    <span
+                      >English grammar is a complex system. <strong>It</strong> has evolved over
+                      centuries.</span
+                    >
+                  </div>
+                  <div>
+                    <span class="bg-green-100 px-1">[连接衔接]</span>
+                    <span
+                      ><strong>Moreover</strong>, <strong>this</strong> system continues to change
+                      with new linguistic influences.</span
+                    >
+                  </div>
+                  <div>
+                    <span class="bg-purple-100 px-1">[替代]</span>
+                    <span>Some changes are gradual; <strong>others</strong> are more rapid.</span>
+                  </div>
+                  <div>
+                    <span class="bg-orange-100 px-1">[省略]</span>
+                    <span
+                      >Traditional grammar rules remain important, but new rules
+                      <strong>[]</strong> emerge regularly.</span
+                    >
+                  </div>
+                  <div>
+                    <span class="bg-yellow-100 px-1">[比较指称]</span>
+                    <span
+                      ><strong>Such</strong> dynamic nature makes English grammar both challenging
+                      and fascinating.</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-blue-800 mb-3">衔接手段的功能</h5>
+                  <div class="space-y-2 text-sm">
+                    <div><strong>指称衔接：</strong>建立语篇参与者之间的照应关系</div>
+                    <div><strong>替代与省略：</strong>避免重复，实现语言经济性</div>
+                    <div><strong>连接衔接：</strong>明确逻辑关系，引导读者理解</div>
+                  </div>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-green-800 mb-3">衔接失误的影响</h5>
+                  <div class="space-y-2 text-sm">
+                    <div>• 指称不明确导致理解困难</div>
+                    <div>• 缺乏连接词使逻辑关系模糊</div>
+                    <div>• 过度重复影响可读性</div>
+                    <div>• 不当省略造成信息缺失</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discourse Markers -->
+          <div class="mb-16" id="discourse-markers">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">
+              4.3 话语标记（Discourse Markers）
+            </h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">信息组织标记</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">序列标记</h5>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                      <div>
+                        <div class="font-medium">开启</div>
+                        <div class="text-gray-600">first, to begin with</div>
+                      </div>
+                      <div>
+                        <div class="font-medium">延续</div>
+                        <div class="text-gray-600">second, next, then</div>
+                      </div>
+                      <div>
+                        <div class="font-medium">终结</div>
+                        <div class="text-gray-600">finally, in conclusion</div>
+                      </div>
+                      <div>
+                        <div class="font-medium">转换</div>
+                        <div class="text-gray-600">by the way, incidentally</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">举例与阐释</h5>
+                    <div class="space-y-2 text-xs">
+                      <div><strong>for example</strong> - 引入典型例证</div>
+                      <div><strong>such as</strong> - 直接附着列举</div>
+                      <div><strong>in other words</strong> - 同义改写</div>
+                      <div><strong>namely</strong> - 完整列举</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">逻辑关系标记</h4>
+                <div class="space-y-4">
+                  <div class="bg-red-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-red-700 mb-2">对比与转折</h5>
+                    <div class="space-y-2 text-xs">
+                      <div><strong>however</strong> - 强烈对比，正式语体</div>
+                      <div><strong>although/though</strong> - 前置让步信息</div>
+                      <div><strong>on the other hand</strong> - 系统性对比</div>
+                      <div><strong>nevertheless</strong> - 承认前述，强调对立</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">因果与推理</h5>
+                    <div class="space-y-2 text-xs">
+                      <div><strong>therefore</strong> - 演绎推理，正式</div>
+                      <div><strong>thus/hence</strong> - 正式结论</div>
+                      <div><strong>consequently</strong> - 结果导向</div>
+                      <div><strong>as a result</strong> - 自然结果</div>
+                      <div><strong>so</strong> - 口语化结果</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Discourse Markers Example -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">话语标记实例分析</h4>
+              <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                <div class="text-sm leading-relaxed">
+                  <div>
+                    <span class="bg-blue-100 px-1">[开启]</span>
+                    <span
+                      ><strong>First</strong>, let&#39;s consider the basic structure of English
+                      sentences.</span
+                    >
+                  </div>
+                  <div>
+                    <span class="bg-green-100 px-1">[延续]</span>
+                    <span
+                      ><strong>Next</strong>, we should examine how these structures combine to form
+                      complex sentences.</span
+                    >
+                  </div>
+                  <div>
+                    <span class="bg-purple-100 px-1">[转折]</span>
+                    <span
+                      ><strong>However</strong>, this process is not always straightforward.</span
+                    >
+                  </div>
+                  <div>
+                    <span class="bg-orange-100 px-1">[举例]</span>
+                    <span
+                      ><strong>For example</strong>, consider the difference between restrictive and
+                      non-restrictive clauses.</span
+                    >
+                  </div>
+                  <div>
+                    <span class="bg-red-100 px-1">[因果]</span>
+                    <span
+                      ><strong>Therefore</strong>, understanding these distinctions is crucial for
+                      effective writing.</span
+                    >
+                  </div>
+                  <div>
+                    <span class="bg-yellow-100 px-1">[终结]</span>
+                    <span
+                      ><strong>In conclusion</strong>, mastering discourse markers is essential for
+                      coherent academic writing.</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg">
+                <div class="flex items-start">
+                  <i class="fas fa-info-circle text-yellow-600 mt-1 mr-3"></i>
+                  <div>
+                    <div class="font-semibold text-yellow-800">使用建议</div>
+                    <div class="text-sm text-yellow-700">
+                      话语标记的使用需要考虑语体正式程度、读者期待和修辞效果。过度使用会显得机械，
+                      而恰当使用则能有效引导读者理解文本结构和论证逻辑。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Information Structure -->
+          <div class="mb-16" id="information-structure">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">4.4 信息结构</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">已知信息与新信息</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">已知信息（Given Information）</h5>
+                    <div class="text-sm text-secondary mb-2">说话者预设听话者已知晓的内容</div>
+                    <div class="text-xs text-gray-600">通常前置，作为句子的出发点</div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">新信息（New Information）</h5>
+                    <div class="text-sm text-secondary mb-2">说话者意图传递的未知内容</div>
+                    <div class="text-xs text-gray-600">通常后置，符合尾重原则</div>
+                  </div>
+
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">&#34;已知-新&#34;原则</h5>
+                    <div class="text-sm text-secondary">已知信息倾向于前置，新信息倾向于后置</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm mt-2">
+                      &#34;The man <strong>came into the room</strong>. <strong>He</strong> was
+                      carrying a suitcase.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">主位推进模式</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">线性推进</h5>
+                    <div class="text-sm text-secondary mb-2">前句述位成为后句主位</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;The cat <strong>sat on the mat</strong>. <strong>The mat</strong> was
+                      old.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">恒定主位</h5>
+                    <div class="text-sm text-secondary mb-2">同一主位贯穿多个句子</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;<strong>The company</strong> was founded in 1990.
+                      <strong>It</strong> expanded rapidly. <strong>Its</strong> products are now
+                      global.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">派生主位</h5>
+                    <div class="text-sm text-secondary mb-2">主位从同一超ordinate概念派生</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;<strong>Climate change</strong> affects agriculture.
+                      <strong>Rising temperatures</strong> reduce yields.
+                      <strong>Extreme weather</strong> damages crops.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- End Weight Principle -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">尾重原则与信息焦点</h4>
+
+              <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                <h5 class="font-semibold text-blue-800 mb-3">尾重原则（End-Weight Principle）</h5>
+                <div class="text-sm text-secondary mb-3">
+                  较长的、复杂的成分置于句末，避免头重脚轻。
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-sm mb-2">头重（不佳）</div>
+                    <div class="text-xs text-gray-600">
+                      &#34;A book that I bought yesterday and that I found very interesting is on
+                      the table.&#34;
+                    </div>
+                  </div>
+                  <div class="bg-white p-4 rounded border">
+                    <div class="font-medium text-sm mb-2">尾重（优选）</div>
+                    <div class="text-xs text-gray-600">
+                      &#34;On the table is a book that I bought yesterday and that I found very
+                      interesting.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-green-800 mb-3">信息焦点标记手段</h5>
+                  <div class="space-y-2 text-sm">
+                    <div><strong>语调重音：</strong>口语中通过重音突出焦点</div>
+                    <div><strong>分裂结构：</strong>it-cleft, wh-cleft结构</div>
+                    <div><strong>标记焦点：</strong>only, even, also等焦点敏感词</div>
+                    <div><strong>语序调整：</strong>倒装、前置等手段</div>
+                  </div>
+                </div>
+
+                <div class="bg-purple-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-purple-800 mb-3">尾重原则的应用</h5>
+                  <div class="space-y-2 text-sm">
+                    <div><strong>被动化：</strong>使长宾语后置</div>
+                    <div><strong>存在句：</strong>将长存在物后置</div>
+                    <div><strong>分裂句：</strong>提取长成分为焦点</div>
+                    <div><strong>后置修饰：</strong>避免前置修饰堆积</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Specific Purposes -->
+      <section class="py-16 bg-gray-50" id="specific-purposes">
+        <div class="max-w-6xl mx-auto px-8">
+          <h2 class="text-4xl font-serif font-bold text-primary mb-12 text-center">
+            5. 特定用途的语法
+          </h2>
+
+          <!-- Academic Grammar -->
+          <div class="mb-16" id="academic-grammar">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">5.1 学术写作语法</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">客观性与正式性</h4>
+
+                <div class="space-y-6">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-3">被动语态</h5>
+                    <div class="text-sm text-secondary mb-3">施事隐退或省略，营造非个人化叙述</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm mb-2">
+                      &#34;The experiment <strong>was conducted</strong> following standard
+                      protocols.&#34;
+                    </div>
+                    <div class="text-xs text-gray-600">
+                      <strong>适用场景：</strong>方法描述、结果报告、避免第一人称
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-3">名词化</h5>
+                    <div class="text-sm text-secondary mb-3">过程→实体，动词/形容词→名词</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm mb-2">
+                      &#34;X <strong>increases</strong> Y&#34; → &#34;the
+                      <strong>increase</strong> of X in Y&#34;
+                    </div>
+                    <div class="text-xs text-gray-600">
+                      <strong>效果：</strong>提升信息密度，便于量化修饰，实现客观化
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">精确性与限定性</h4>
+
+                <div class="space-y-4">
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-3">情态动词的精确使用</h5>
+                    <div class="space-y-2 text-sm">
+                      <div><strong>高确定性：</strong>must, certainly, it is clear that</div>
+                      <div><strong>中等确定性：</strong>should, probably, it seems that</div>
+                      <div><strong>低确定性：</strong>may, might, it could be argued that</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-3">模糊限制语</h5>
+                    <div class="space-y-2 text-sm">
+                      <div><strong>近似表达：</strong>approximately, roughly, more or less</div>
+                      <div><strong>程度限定：</strong>to some extent, in certain respects</div>
+                      <div><strong>频率限定：</strong>often, generally, typically</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Academic Writing Features -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">学术写作的复杂句式</h4>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">关系从句嵌套</h5>
+                    <div class="text-sm text-secondary mb-2">多重限定，信息密集</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;The theory
+                      <strong
+                        >that was proposed by the researcher who won the Nobel Prize in 2020</strong
+                      >
+                      has been widely cited.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">分词短语压缩</h5>
+                    <div class="text-sm text-secondary mb-2">背景信息前置，主句聚焦</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;<strong
+                        >Having reviewed the literature and identified three major gaps</strong
+                      >, we designed the present study.&#34;
+                    </div>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">同位语从句补充</h5>
+                    <div class="text-sm text-secondary mb-2">抽象名词的具体内容展开</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;The <strong>finding</strong>
+                      <strong>that stress affects cognitive performance</strong> has important
+                      <strong>implications</strong> <strong>for educational practice</strong>.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">前置修饰语堆积</h5>
+                    <div class="text-sm text-secondary mb-2">形容词、名词多层修饰</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-orange-400 text-sm">
+                      &#34;a
+                      <strong
+                        >widely-cited, empirically-tested, theoretically-grounded computational
+                        model</strong
+                      >&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 bg-yellow-50 p-4 rounded-lg">
+                <div class="flex items-start">
+                  <i class="fas fa-exclamation-triangle text-yellow-600 mt-1 mr-3"></i>
+                  <div>
+                    <div class="font-semibold text-yellow-800">注意事项</div>
+                    <div class="text-sm text-yellow-700">
+                      学术写作的复杂性需要平衡信息密度与可读性。过度复杂的句式可能导致读者处理困难。
+                      建议通过标点符号的规范使用、连接标记的显性标示、以及信息顺序的合理安排，
+                      确保读者在 working memory 容量限制内有效解析句子关系。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business English Grammar -->
+          <div class="mb-16" id="business-grammar">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">5.2 商务英语语法</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">礼貌性与间接性</h4>
+
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">情态降级</h5>
+                    <div class="text-sm text-secondary mb-2">
+                      would, could, might替代will, can, may
+                    </div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;Would you be able to send the report by Friday?&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">条件软化</h5>
+                    <div class="text-sm text-secondary mb-2">虚拟条件，尤其是与现在事实相反</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;If you could reduce the price slightly, we might be able to place a
+                      larger order.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">被动化责任模糊</h5>
+                    <div class="text-sm text-secondary mb-2">施事省略，问题客观化</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;It is suggested that the meeting be rescheduled.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">疑问形式</h5>
+                    <div class="text-sm text-secondary mb-2">将指令转化为选择询问</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-orange-400 text-sm">
+                      &#34;Could you possibly extend the deadline?&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">清晰性与简洁性</h4>
+
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">句子长度控制</h5>
+                    <div class="text-sm text-secondary mb-2">平均15-20词，避免超过30词</div>
+                    <div class="text-xs text-gray-600">复杂信息分解为多个句子</div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">嵌入层级限制</h5>
+                    <div class="text-sm text-secondary mb-2">从句嵌套不超过两层</div>
+                    <div class="text-xs text-gray-600">避免&#34;句包句&#34;导致的处理困难</div>
+                  </div>
+
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">主动语态优先</h5>
+                    <div class="text-sm text-secondary mb-2">除非施事无关或需客观化</div>
+                    <div class="text-xs text-gray-600">
+                      &#34;We will deliver the goods&#34; vs. &#34;The goods will be delivered&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">视觉辅助</h5>
+                    <div class="text-sm text-secondary mb-2">列表、表格、图表呈现复杂信息</div>
+                    <div class="text-xs text-gray-600">替代冗长的句法嵌套</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business Collocations -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">商务英语的专业搭配</h4>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h5 class="text-lg font-semibold text-primary mb-4">动词+名词搭配</h5>
+                  <div class="space-y-3">
+                    <div class="bg-blue-50 p-3 rounded">
+                      <div class="font-medium text-blue-700">正确</div>
+                      <div class="text-sm">make a decision, reach an agreement</div>
+                    </div>
+                    <div class="bg-red-50 p-3 rounded">
+                      <div class="font-medium text-red-700">错误</div>
+                      <div class="text-sm">*do a decision, *get an agreement</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 class="text-lg font-semibold text-primary mb-4">形容词+名词搭配</h5>
+                  <div class="space-y-3">
+                    <div class="bg-blue-50 p-3 rounded">
+                      <div class="font-medium text-blue-700">专业</div>
+                      <div class="text-sm">heavy losses, keen competition</div>
+                    </div>
+                    <div class="bg-yellow-50 p-3 rounded">
+                      <div class="font-medium text-yellow-700">非专业</div>
+                      <div class="text-sm">big losses (口语), sharp competition</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h5 class="text-lg font-semibold text-primary mb-4">名词+介词搭配</h5>
+                  <div class="space-y-2 text-sm">
+                    <div>increase <strong>in</strong> (not *of)</div>
+                    <div>demand <strong>for</strong> (not *of)</div>
+                    <div>interest <strong>in</strong> (not *for)</div>
+                    <div>solution <strong>to</strong> (not *of)</div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 class="text-lg font-semibold text-primary mb-4">动词+介词搭配</h5>
+                  <div class="space-y-2 text-sm">
+                    <div>depend <strong>on</strong> (not *of)</div>
+                    <div>deal <strong>with</strong> (not *about)</div>
+                    <div>comply <strong>with</strong> (not *to)</div>
+                    <div>focus <strong>on</strong> (not *in)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business Correspondence -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">商务信函与邮件的句式规范</h4>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                  <h5 class="font-semibold text-blue-800 mb-4">正式信函</h5>
+                  <div class="space-y-3 text-sm">
+                    <div>
+                      <div class="font-medium">开头称呼</div>
+                      <div class="text-gray-600">Dear Mr./Ms. [Surname], Dear Sir or Madam</div>
+                    </div>
+                    <div>
+                      <div class="font-medium">开场白</div>
+                      <div class="text-gray-600">
+                        I am writing to inquire about..., Thank you for your letter of...
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-medium">正文</div>
+                      <div class="text-gray-600">完整句子，避免缩略，复杂句式</div>
+                    </div>
+                    <div>
+                      <div class="font-medium">结尾礼貌</div>
+                      <div class="text-gray-600">
+                        I look forward to hearing from you, Please do not hesitate to contact me
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-medium">结束敬语</div>
+                      <div class="text-gray-600">
+                        Yours sincerely（知道姓名）, Yours faithfully（不知姓名）
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg">
+                  <h5 class="font-semibold text-green-800 mb-4">电子邮件（半正式）</h5>
+                  <div class="space-y-3 text-sm">
+                    <div>
+                      <div class="font-medium">开头称呼</div>
+                      <div class="text-gray-600">Hi/Hello [First name], Dear [First name]</div>
+                    </div>
+                    <div>
+                      <div class="font-medium">开场白</div>
+                      <div class="text-gray-600">
+                        Thanks for your email, Just a quick note about...
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-medium">正文</div>
+                      <div class="text-gray-600">可接受缩略，句子较短，列表使用</div>
+                    </div>
+                    <div>
+                      <div class="font-medium">结尾礼貌</div>
+                      <div class="text-gray-600">
+                        Looking forward to hearing from you, Let me know if you have any questions
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-medium">结束敬语</div>
+                      <div class="text-gray-600">Best regards, Kind regards, Thanks, Best</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spoken Grammar -->
+          <div class="mb-16" id="spoken-grammar">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">5.3 口语语法</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">省略与缩略</h4>
+
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">主语省略</h5>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      <div>&#34;(I) Don&#39;t know.&#34;</div>
+                      <div>&#34;(You) Want some coffee?&#34;</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">助动词省略</h5>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      <div>&#34;(Are) You coming?&#34;</div>
+                      <div>&#34;(Do) You like it?&#34;</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">缩略形式</h5>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      <div>I&#39;m, don&#39;t, can&#39;t, won&#39;t</div>
+                      <div>gonna, wanna, gotta, kinda</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <h4 class="text-lg font-semibold text-primary mb-4">话语标记</h4>
+
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">认知处理标记</h5>
+                    <div class="text-sm text-secondary mb-2">um, uh, er, well, let me see</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-400 text-sm">
+                      &#34;Um, I&#39;m not sure about that.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">态度表达标记</h5>
+                    <div class="text-sm text-secondary mb-2">you know, I mean, like, sort of</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      &#34;It&#39;s, you know, kind of difficult.&#34;
+                    </div>
+                  </div>
+
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">话语组织标记</h5>
+                    <div class="text-sm text-secondary mb-2">well, so, anyway, right, okay</div>
+                    <div class="bg-white p-3 rounded border-l-4 border-purple-400 text-sm">
+                      &#34;Well, let&#39;s move on to the next point.&#34;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Spoken Grammar Features -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">口语互动结构</h4>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">疑问与应答</h5>
+                    <div class="space-y-2 text-sm">
+                      <div>
+                        <strong>Yes/No问句：</strong>&#34;Are you coming?&#34; / &#34;You&#39;re
+                        coming?&#34;
+                      </div>
+                      <div><strong>wh-问句：</strong>&#34;What do you want?&#34;</div>
+                      <div>
+                        <strong>附加问句：</strong>&#34;You&#39;re coming, aren&#39;t you?&#34;
+                      </div>
+                      <div>
+                        <strong>回声问句：</strong>&#34;A: I&#39;m leaving tomorrow. B:
+                        <strong>Tomorrow</strong>?&#34;
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">应答一致性原则</h5>
+                    <div class="text-sm text-secondary mb-2">
+                      英语遵循&#34;形式一致&#34;而非&#34;语义一致&#34;
+                    </div>
+                    <div class="bg-white p-3 rounded border-l-4 border-green-400 text-sm">
+                      <div>&#34;Didn&#39;t you finish?&#34;</div>
+                      <div>&#34;No, I didn&#39;t [finish].&#34;（未完成的否定回答）</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">非标准形式容忍度</h5>
+                    <div class="space-y-2 text-sm">
+                      <div><strong>双重否定：</strong>&#34;I don&#39;t know nothing.&#34;</div>
+                      <div><strong>ain&#39;t：</strong>&#34;I ain&#39;t going.&#34;</div>
+                      <div>
+                        <strong>不规则动词变体：</strong>&#34;I seen it.&#34; / &#34;He done
+                        it.&#34;
+                      </div>
+                      <div><strong>主谓不一致：</strong>&#34;There&#39;s three books.&#34;</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">方言变体的身份功能</h5>
+                    <div class="text-sm text-secondary">
+                      特定社群中的非标准形式具有身份认同功能，
+                      但在正式场合和教育环境中仍需要标准语法的规范使用。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Conversation Analysis -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">自然对话片段分析</h4>
+
+              <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                <div class="text-sm leading-relaxed">
+                  <div class="mb-2">
+                    <span class="font-medium">A:</span> &#34;Hey, <strong>um</strong>, you got a
+                    minute?&#34;
+                    <span class="text-gray-600">[呼唤+认知标记]</span>
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-medium">B:</span> &#34;Yeah,
+                    <strong>what&#39;s up</strong>?&#34;
+                    <span class="text-gray-600">[应答+询问]</span>
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-medium">A:</span> &#34;I <strong>kinda</strong> need your help
+                    with this report. <strong>Like</strong>, <strong>you know</strong>, the one
+                    <strong>we were talking about</strong> yesterday?&#34;
+                    <span class="text-gray-600">[态度标记+填充词+回指]</span>
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-medium">B:</span> &#34;Oh, <strong>right</strong>,
+                    <strong>that one</strong>. <strong>Well</strong>,
+                    <strong>lemme see</strong>...&#34;
+                    <span class="text-gray-600">[认知标记+指示指称+组织标记+处理标记]</span>
+                  </div>
+                  <div>
+                    <span class="font-medium">A:</span> &#34;<strong>Awesome</strong>,
+                    <strong>thanks</strong>! I <strong>really appreciate it</strong>.&#34;
+                    <span class="text-gray-600">[情感表达+感谢+强化]</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-blue-800 mb-3">口语特征分析</h5>
+                  <div class="space-y-2 text-sm">
+                    <div><strong>高频话语标记：</strong>um, like, you know, well</div>
+                    <div><strong>非完整句式：</strong>you got a minute?, what&#39;s up?</div>
+                    <div><strong>缩略形式：</strong>kinda, lemme</div>
+                    <div><strong>情感表达：</strong>awesome, really appreciate it</div>
+                  </div>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h5 class="font-semibold text-green-800 mb-3">交际功能分析</h5>
+                  <div class="space-y-2 text-sm">
+                    <div><strong>呼唤注意：</strong>Hey, um</div>
+                    <div><strong>请求帮助：</strong>need your help with this report</div>
+                    <div><strong>确认理解：</strong>Oh, right, that one</div>
+                    <div><strong>表达感谢：</strong>Awesome, thanks</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cross-register Comparison -->
+          <div class="mb-16" id="cross-register">
+            <h3 class="text-2xl font-serif font-semibold text-primary mb-8">5.4 跨用途语法对比</h3>
+
+            <!-- Register Continuum -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">语体连续体分析</h4>
+
+              <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300 text-sm">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">维度</th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        口语（非正式）
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        中性（通用）
+                      </th>
+                      <th class="border border-gray-300 px-4 py-3 text-left font-semibold">
+                        书面语（正式）
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">词汇密度</td>
+                      <td class="border border-gray-300 px-4 py-2">&lt;2实词/语法词</td>
+                      <td class="border border-gray-300 px-4 py-2">2-4实词/语法词</td>
+                      <td class="border border-gray-300 px-4 py-2">4-6实词/语法词</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">句子长度</td>
+                      <td class="border border-gray-300 px-4 py-2">平均5-15词</td>
+                      <td class="border border-gray-300 px-4 py-2">平均15-25词</td>
+                      <td class="border border-gray-300 px-4 py-2">平均20-30词</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">名词化程度</td>
+                      <td class="border border-gray-300 px-4 py-2">动词主导</td>
+                      <td class="border border-gray-300 px-4 py-2">平衡</td>
+                      <td class="border border-gray-300 px-4 py-2">高度名词化</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">语态选择</td>
+                      <td class="border border-gray-300 px-4 py-2">主动语态主导</td>
+                      <td class="border border-gray-300 px-4 py-2">平衡</td>
+                      <td class="border border-gray-300 px-4 py-2">被动语态高频</td>
+                    </tr>
+                    <tr>
+                      <td class="border border-gray-300 px-4 py-2 font-medium">省略现象</td>
+                      <td class="border border-gray-300 px-4 py-2">广泛存在</td>
+                      <td class="border border-gray-300 px-4 py-2">有限使用</td>
+                      <td class="border border-gray-300 px-4 py-2">严格限制</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-4 py-2 font-medium">话语标记</td>
+                      <td class="border border-gray-300 px-4 py-2">互动标记（you know）</td>
+                      <td class="border border-gray-300 px-4 py-2">逻辑连接词</td>
+                      <td class="border border-gray-300 px-4 py-2">正式连接词（therefore）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Contextual Factors -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <h4 class="text-xl font-semibold text-secondary mb-6">语境对语法选择的调节作用</h4>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-blue-700 mb-2">交际目标</h5>
+                    <div class="text-sm text-secondary">
+                      说服 vs. 告知 vs. 娱乐 → 句式选择、情态使用
+                    </div>
+                  </div>
+
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-green-700 mb-2">社会关系</h5>
+                    <div class="text-sm text-secondary">
+                      权力距离、亲疏关系 → 礼貌策略、直接/间接程度
+                    </div>
+                  </div>
+
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-purple-700 mb-2">媒介渠道</h5>
+                    <div class="text-sm text-secondary">
+                      面对面 vs. 电话 vs. 书面 vs. 数字 → 省略容忍度
+                    </div>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="bg-orange-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-orange-700 mb-2">话题敏感性</h5>
+                    <div class="text-sm text-secondary">
+                      敏感/争议话题 → 被动化、名词化、模糊限制语
+                    </div>
+                  </div>
+
+                  <div class="bg-yellow-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-yellow-700 mb-2">时间压力</h5>
+                    <div class="text-sm text-secondary">即时 vs. 延时产出 → 复杂度、修订程度</div>
+                  </div>
+
+                  <div class="bg-red-50 p-4 rounded-lg">
+                    <h5 class="font-medium text-red-700 mb-2">受众特征</h5>
+                    <div class="text-sm text-secondary">专家 vs. 普通公众 → 术语密度、解释程度</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 bg-gray-50 p-6 rounded-lg">
+                <h5 class="font-semibold text-gray-800 mb-3">语境调节的典型案例：被动语态变体</h5>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <div class="font-medium mb-2">标准被动</div>
+                    <div class="text-xs text-gray-600 mb-2">受事主语+be+过去分词+by-施事</div>
+                    <div class="bg-white p-2 rounded border">
+                      &#34;The window was broken by the boy.&#34;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-medium mb-2">施事省略</div>
+                    <div class="text-xs text-gray-600 mb-2">省略by-短语</div>
+                    <div class="bg-white p-2 rounded border">&#34;The window was broken.&#34;</div>
+                  </div>
+                  <div>
+                    <div class="font-medium mb-2">Get-被动</div>
+                    <div class="text-xs text-gray-600 mb-2">口语色彩，意外含义</div>
+                    <div class="bg-white p-2 rounded border">
+                      &#34;He got hurt in the accident.&#34;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-medium mb-2">半被动</div>
+                    <div class="text-xs text-gray-600 mb-2">be+过去分词+形容词化</div>
+                    <div class="bg-white p-2 rounded border">&#34;The window was broken.&#34;</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="py-16 bg-primary text-white" id="conclusion">
+        <div class="max-w-6xl mx-auto px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-serif font-bold mb-6">结论</h2>
+            <p class="text-xl text-blue-100 leading-relaxed">
+              英语语法是一个动态、多层次、语境敏感的语言系统，其复杂性源于形式与功能的复杂互动
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div class="text-3xl font-bold text-blue-200 mb-4">系统性</div>
+              <p class="text-blue-100 text-sm">
+                英语语法不是孤立规则的集合，而是相互关联的网络系统，从词素到语篇形成完整的层次结构
+              </p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div class="text-3xl font-bold text-blue-200 mb-4">动态性</div>
+              <p class="text-blue-100 text-sm">
+                语法规则随语境、用途、时间而变化，体现了语言使用的灵活性和适应性
+              </p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div class="text-3xl font-bold text-blue-200 mb-4">实用性</div>
+              <p class="text-blue-100 text-sm">
+                掌握英语语法需要理解形式与功能的对应关系，而非机械记忆规则
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h3 class="text-2xl font-serif font-bold mb-6">核心洞察</h3>
+            <div class="space-y-4 text-blue-100">
+              <div class="flex items-start">
+                <i class="fas fa-check-circle text-green-300 mt-1 mr-3"></i>
+                <div>
+                  <div class="font-semibold">分析型语言特征</div>
+                  <div class="text-sm">
+                    英语依赖语序和虚词而非形态变化，这使得语序和介词系统尤为重要
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-check-circle text-green-300 mt-1 mr-3"></i>
+                <div>
+                  <div class="font-semibold">双层时态-体态系统</div>
+                  <div class="text-sm">
+                    tense标记外部时间，aspect标记动作内部结构，两者组合形成复杂的时间表达
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-check-circle text-green-300 mt-1 mr-3"></i>
+                <div>
+                  <div class="font-semibold">语域敏感的变体系统</div>
+                  <div class="text-sm">学术、商务、口语等不同用途有着各自的语法偏好和规范</div>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-check-circle text-green-300 mt-1 mr-3"></i>
+                <div>
+                  <div class="font-semibold">语用功能的核心地位</div>
+                  <div class="text-sm">语法形式的选择往往服务于特定的交际目的和修辞效果</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <p class="text-lg text-blue-100 mb-4">
+              英语语法的学习应当超越规则记忆，转向对语言系统性和语境敏感性的深入理解
+            </p>
+            <div class="flex justify-center items-center space-x-6 text-blue-200">
+              <span class="flex items-center"
+                ><i class="fas fa-graduation-cap mr-2"></i>系统性理解</span
+              >
+              <span class="flex items-center"
+                ><i class="fas fa-balance-scale mr-2"></i>语境敏感</span
+              >
+              <span class="flex items-center"><i class="fas fa-cogs mr-2"></i>动态应用</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer with Sources -->
+      <footer class="bg-secondary text-white py-12">
+        <div class="max-w-6xl mx-auto px-8">
+          <h3 class="text-xl font-serif font-semibold mb-6">参考文献与数据来源</h3>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-sm">
+            <div>
+              <h4 class="font-semibold mb-4">主要参考资料</h4>
+              <div class="space-y-2 text-gray-300">
+                <div>
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="https://edwebcontent.ed.ac.uk/sites/default/files/atoms/files/grammar_for_academic_writing_ism.pdf"
+                    target="_blank"
+                  >
+                    Grammar for Academic Writing, University of Edinburgh
+                  </a>
+                </div>
+                <div>
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="https://www.emgywomenscollege.ac.in/templateEditor/kcfinder/upload/files/-Free-English-Grammar.pdf"
+                    target="_blank"
+                  >
+                    Free English Grammar, E.M.G. Women&#39;s College
+                  </a>
+                </div>
+                <div>
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="https://docs.hoeit.edu.vn/NNA_25_108%20Tinchi/33.%20An%20introduction%20to%20English%20Grammar%20Morphology%20and%20Syntax/33.%20An%20introduction%20to%20English%20Grammar%20Morphology%20and%20Syntax.pdf"
+                    target="_blank"
+                  >
+                    An Introduction to English Grammar: Morphology and Syntax
+                  </a>
+                </div>
+                <div>
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="https://quillbot.com/courses/introduction-to-college-level-writing/chapter/verbs/"
+                    target="_blank"
+                  >
+                    Quillbot College-Level Writing Course
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="font-semibold mb-4">补充资源</h4>
+              <div class="space-y-2 text-gray-300">
+                <div>
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="https://www.grammarly.com/blog/parts-of-speech/the-8-parts-of-speech/"
+                    target="_blank"
+                  >
+                    Grammarly: The 8 Parts of Speech
+                  </a>
+                </div>
+                <div>
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="https://globalenglishtest.com/discourse-markers-however-although-in-contrast-explained/"
+                    target="_blank"
+                  >
+                    Global English Test: Discourse Markers
+                  </a>
+                </div>
+                <div>
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="https://www.seaproti.org/wp-content/uploads/2025/09/Oxford-Guide-to-English-Grammar.pdf"
+                    target="_blank"
+                  >
+                    Oxford Guide to English Grammar
+                  </a>
+                </div>
+                <div>
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="https://scb46.files.wordpress.com/2013/06/business-grammar-and-usage.pdf"
+                    target="_blank"
+                  >
+                    Business Grammar and Usage
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>本研究基于当代语言学理论和实证分析，旨在为英语学习者提供全面的语法参考。</p>
+            <p class="mt-2">2025 英语语法全面研究项目</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+            // Close TOC on mobile after clicking a link
+            if (window.innerWidth < 768) {
+              document.getElementById("toc-nav").classList.add("-translate-x-full");
+            }
+          }
+        });
+      });
+
+      // Highlight active section in TOC
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("bg-accent", "text-white");
+          link.classList.add("text-neutral", "hover:text-primary");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("bg-accent", "text-white");
+            link.classList.remove("text-neutral", "hover:text-primary");
+          }
+        });
+      });
+
+      // Initialize Mermaid with enhanced configuration
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: "base",
+        themeVariables: {
+          primaryColor: "#f8fafc",
+          primaryTextColor: "#1e293b",
+          primaryBorderColor: "#3b82f6",
+          lineColor: "#64748b",
+          secondaryColor: "#e2e8f0",
+          tertiaryColor: "#f1f5f9",
+          background: "#ffffff",
+          mainBkg: "#f8fafc",
+          secondBkg: "#e0f2fe",
+          tertiaryBkg: "#f0f9ff",
+          primaryBorderColor: "#3b82f6",
+          secondaryBorderColor: "#0284c7",
+          tertiaryBorderColor: "#0891b2",
+          clusterBkg: "#f8fafc",
+          clusterBorder: "#e2e8f0",
+          defaultLinkColor: "#64748b",
+          titleColor: "#1e293b",
+          edgeLabelBackground: "#ffffff",
+          nodeTextColor: "#1e293b",
+          // Enhanced contrast colors for different node types
+          cScale0: "#e3f2fd",
+          cScale1: "#f3e5f5",
+          cScale2: "#e8f5e8",
+          cScale3: "#fff3e0",
+          cScale4: "#fce4ec",
+          cScale5: "#f1f8e9",
+          cScale6: "#e8eaf6",
+          cScale7: "#fff8e1",
+          cScale8: "#e0f2f1",
+          cScale9: "#fbe9e7",
+        },
+        flowchart: {
+          useMaxWidth: false,
+          htmlLabels: true,
+          curve: "basis",
+          padding: 20,
+          nodeSpacing: 50,
+          rankSpacing: 80,
+          diagramPadding: 20,
+        },
+        fontFamily: "Inter, sans-serif",
+        fontSize: 14,
+        securityLevel: "loose",
+      });
+
+      // Initialize Mermaid Controls for zoom and pan
+      function initializeMermaidControls() {
+        const containers = document.querySelectorAll(".mermaid-container");
+
+        containers.forEach((container) => {
+          const mermaidElement = container.querySelector(".mermaid");
+          let scale = 1;
+          let isDragging = false;
+          let startX,
+            startY,
+            translateX = 0,
+            translateY = 0;
+
+          // 触摸相关状态
+          let isTouch = false;
+          let touchStartTime = 0;
+          let initialDistance = 0;
+          let initialScale = 1;
+          let isPinching = false;
+
+          // Zoom controls
+          const zoomInBtn = container.querySelector(".zoom-in");
+          const zoomOutBtn = container.querySelector(".zoom-out");
+          const resetBtn = container.querySelector(".reset-zoom");
+          const fullscreenBtn = container.querySelector(".fullscreen");
+
+          function updateTransform() {
+            mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+            if (scale > 1) {
+              container.classList.add("zoomed");
+            } else {
+              container.classList.remove("zoomed");
+            }
+
+            mermaidElement.style.cursor = isDragging ? "grabbing" : "grab";
+          }
+
+          if (zoomInBtn) {
+            zoomInBtn.addEventListener("click", () => {
+              scale = Math.min(scale * 1.25, 4);
+              updateTransform();
+            });
+          }
+
+          if (zoomOutBtn) {
+            zoomOutBtn.addEventListener("click", () => {
+              scale = Math.max(scale / 1.25, 0.3);
+              if (scale <= 1) {
+                translateX = 0;
+                translateY = 0;
+              }
+              updateTransform();
+            });
+          }
+
+          if (resetBtn) {
+            resetBtn.addEventListener("click", () => {
+              scale = 1;
+              translateX = 0;
+              translateY = 0;
+              updateTransform();
+            });
+          }
+
+          if (fullscreenBtn) {
+            fullscreenBtn.addEventListener("click", () => {
+              if (container.requestFullscreen) {
+                container.requestFullscreen();
+              } else if (container.webkitRequestFullscreen) {
+                container.webkitRequestFullscreen();
+              } else if (container.msRequestFullscreen) {
+                container.msRequestFullscreen();
+              }
+            });
+          }
+
+          // Mouse Events
+          mermaidElement.addEventListener("mousedown", (e) => {
+            if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
+
+            isDragging = true;
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+            mermaidElement.style.cursor = "grabbing";
+            updateTransform();
+            e.preventDefault();
+          });
+
+          document.addEventListener("mousemove", (e) => {
+            if (isDragging && !isTouch) {
+              translateX = e.clientX - startX;
+              translateY = e.clientY - startY;
+              updateTransform();
+            }
+          });
+
+          document.addEventListener("mouseup", () => {
+            if (isDragging && !isTouch) {
+              isDragging = false;
+              mermaidElement.style.cursor = "grab";
+              updateTransform();
+            }
+          });
+
+          document.addEventListener("mouseleave", () => {
+            if (isDragging && !isTouch) {
+              isDragging = false;
+              mermaidElement.style.cursor = "grab";
+              updateTransform();
+            }
+          });
+
+          // 获取两点之间的距离
+          function getTouchDistance(touch1, touch2) {
+            return Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+          }
+
+          // Touch Events - 触摸事件处理
+          mermaidElement.addEventListener(
+            "touchstart",
+            (e) => {
+              isTouch = true;
+              touchStartTime = Date.now();
+
+              if (e.touches.length === 1) {
+                // 单指拖动
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+              } else if (e.touches.length === 2) {
+                // 双指缩放
+                isPinching = true;
+                isDragging = false;
+
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                initialDistance = getTouchDistance(touch1, touch2);
+                initialScale = scale;
+              }
+
+              e.preventDefault();
+            },
+            { passive: false },
+          );
+
+          mermaidElement.addEventListener(
+            "touchmove",
+            (e) => {
+              if (e.touches.length === 1 && isDragging && !isPinching) {
+                // 单指拖动
+                const touch = e.touches[0];
+                translateX = touch.clientX - startX;
+                translateY = touch.clientY - startY;
+                updateTransform();
+              } else if (e.touches.length === 2 && isPinching) {
+                // 双指缩放
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                const currentDistance = getTouchDistance(touch1, touch2);
+
+                if (initialDistance > 0) {
+                  const newScale = Math.min(
+                    Math.max(initialScale * (currentDistance / initialDistance), 0.3),
+                    4,
+                  );
+                  scale = newScale;
+                  updateTransform();
+                }
+              }
+
+              e.preventDefault();
+            },
+            { passive: false },
+          );
+
+          mermaidElement.addEventListener("touchend", (e) => {
+            // 重置状态
+            if (e.touches.length === 0) {
+              isDragging = false;
+              isPinching = false;
+              initialDistance = 0;
+
+              // 延迟重置isTouch，避免鼠标事件立即触发
+              setTimeout(() => {
+                isTouch = false;
+              }, 100);
+            } else if (e.touches.length === 1 && isPinching) {
+              // 从双指变为单指，切换为拖动模式
+              isPinching = false;
+              isDragging = true;
+
+              const touch = e.touches[0];
+              startX = touch.clientX - translateX;
+              startY = touch.clientY - translateY;
+            }
+
+            updateTransform();
+          });
+
+          mermaidElement.addEventListener("touchcancel", (e) => {
+            isDragging = false;
+            isPinching = false;
+            initialDistance = 0;
+
+            setTimeout(() => {
+              isTouch = false;
+            }, 100);
+
+            updateTransform();
+          });
+
+          // Enhanced wheel zoom with better center point handling
+          container.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            const rect = container.getBoundingClientRect();
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const delta = e.deltaY > 0 ? 0.9 : 1.1;
+            const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+            // Adjust translation to zoom towards center
+            if (newScale !== scale) {
+              const scaleDiff = newScale / scale;
+              translateX = translateX * scaleDiff;
+              translateY = translateY * scaleDiff;
+              scale = newScale;
+
+              if (scale <= 1) {
+                translateX = 0;
+                translateY = 0;
+              }
+
+              updateTransform();
+            }
+          });
+
+          // Initialize display
+          updateTransform();
+        });
+      }
+
+      // Initialize mermaid controls after DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeMermaidControls();
+
+        // Toggle TOC on mobile
+        const tocToggle = document.getElementById("toc-toggle");
+        const tocNav = document.getElementById("toc-nav");
+
+        if (tocToggle && tocNav) {
+          tocToggle.addEventListener("click", function () {
+            tocNav.classList.toggle("-translate-x-full");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
