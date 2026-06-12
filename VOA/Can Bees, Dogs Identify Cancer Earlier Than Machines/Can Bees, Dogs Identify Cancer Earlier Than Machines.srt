@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:15,784
+Researchers at Michigan State University recently found that bees’ sense of “smell” is sensitive enough to identify chemical smells of cancer.
+
+2
+00:00:15,784 --> 00:00:27,447
+Bees sense chemicals in their environment using antennae, structures on their heads, which serve as “noses” to sense smells.
+
+3
+00:00:27,447 --> 00:00:38,571
+The researchers wrote in a study published last month that honeybees can sniff out lung cancer on a patient’s breath.
+
+4
+00:00:38,571 --> 00:00:48,113
+Debajit Saha is an assistant professor of biomedical engineering at Michigan State University.
+
+5
+00:00:48,113 --> 00:00:52,797
+He was part of a team that published the research.
+
+6
+00:00:52,797 --> 00:01:05,995
+“Our world is visual. The insects’ world is all based on smell, so their sense of smell is very, very good,” Saha said.
+
+7
+00:01:05,995 --> 00:01:29,063
+“There is quite a bit of research that shows that when some cancer grows inside our body, our breath actually changes. Our research does show that honeybees can detect lung cancer and possibly other diseases based on the smell of those cells.”
+
+8
+00:01:29,063 --> 00:01:38,355
+Saha and his team placed bees in small harnesses and attached small wires to their brains.
+
+9
+00:01:38,355 --> 00:01:46,024
+The insects were then placed near chemicals that are like the breath of a person with lung cancer.
+
+10
+00:01:46,024 --> 00:01:59,479
+The scientists said that the bees could tell the difference between the cancer breath and the laboratory copy of the healthy human breath 93 percent of the time.
+
+11
+00:00:00,000 --> 00:02:06,791
+The scientists added that the bees could also tell the difference between different kinds of lung cancer.
+
+12
+00:02:06,791 --> 00:02:20,582
+The discovery could help doctors detect many cancers, including lung, breast, head and neck, and colorectal cancers, earlier than other methods.
+
+13
+00:02:20,582 --> 00:02:26,793
+Saha says detecting cancers this way would be an improvement.
+
+14
+00:02:26,793 --> 00:02:36,554
+“The reason is, many times we detect the cancer late,” when a growth has become too big to control easily.
+
+15
+00:02:36,554 --> 00:02:44,065
+But, he added, when cancer starts growing the breath starts changing much earlier.
+
+16
+00:02:44,065 --> 00:02:53,074
+He hopes to develop a system that a patient will be able to breathe into and which can be carried around easily.
+
+17
+00:02:53,074 --> 00:02:57,179
+This would deliver test results immediately.
+
+18
+00:02:57,179 --> 00:03:09,740
+“Hopefully, within the next five years, we'll have something to show that humans can be diagnosed using these insect brain disc sensors,” Saha said.
+
+19
+00:03:09,740 --> 00:03:15,010
+Using animals to detect cancer is not a new idea.
+
+20
+00:03:15,010 --> 00:03:26,799
+At the Penn Vet Working Dog Center at the University of Pennsylvania, researchers are training dogs to smell some kinds of cancer.
+
+21
+00:03:26,799 --> 00:03:35,031
+Cindy Otto is executive director of the Penn Vet Working Dog Center in Philadelphia.
+
+22
+00:03:35,031 --> 00:03:41,882
+She said many other animals also have very good senses of smell.
+
+23
+00:03:41,882 --> 00:03:53,562
+“But part of what makes dogs so good is that they cooperate with humans, and so, they communicate that information,” she added.
+
+24
+00:03:53,562 --> 00:04:00,743
+The dogs are in a program where they live with families and are brought to “work” each day.
+
+25
+00:04:00,743 --> 00:04:11,079
+Not all dogs can do this work, Otto said, “They need to love it to be engaged. And so, it's a really fun game for them.”
+
+26
+00:04:11,079 --> 00:04:17,179
+Some researchers say that dogs detect cancer better than machines.
+
+27
+00:04:17,179 --> 00:04:27,022
+They note that a dog’s sense of smell is 10,000 to 100,000 times sharper than that of humans.
+
+28
+00:04:27,022 --> 00:04:33,874
+Amritha Mallikarjun is another postdoctoral researcher at the center.
+
+29
+00:04:33,874 --> 00:04:40,561
+She said dogs are more sensitive to smells than any machines sold today.
+
+30
+00:04:40,561 --> 00:04:49,393
+But the scientists hope to create a machine that will identify disease just as well as dogs.
+
+31
+00:04:49,393 --> 00:04:58,720
+Otto said doctors in ancient Greece and Rome used odor as a tool to identify disease.
+
+32
+00:04:58,720 --> 00:05:09,412
+She hopes the researchers can build on that “and advance the health of not only humans, but dogs and other species as well.”
+
+33
+00:05:09,412 --> 00:05:13,208
+I’m Jill Robbins.
