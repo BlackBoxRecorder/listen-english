@@ -93,7 +93,7 @@ function secToSrtTime(seconds: number): string {
 
 // ---- 核心对齐算法 ----
 
-const CHAR_DEVIATION_THRESHOLD = 5;
+const CHAR_DEVIATION_THRESHOLD = 10;
 
 /**
  * 将 ElevenLabs word 时间戳映射到 .txt 行（句子），生成 SRT 条目
@@ -328,8 +328,8 @@ async function main(): Promise<void> {
   if (loss > 0.5) {
     console.warn(`  [警告] 整体 loss 值偏高 (${loss.toFixed(4)})，对齐质量可能不佳`);
   }
-  const expectedWordCount = normalize(fullText).length;
-  if (words.length < expectedWordCount * 0.7) {
+  const expectedWordCount = fullText.split(/\s+/).length;
+  if (words.length < expectedWordCount * 0.9) {
     console.warn(
       `  [警告] API 返回 word 数量 (${words.length}) 明显少于原文估计 (${expectedWordCount})，结果可能不完整`,
     );
