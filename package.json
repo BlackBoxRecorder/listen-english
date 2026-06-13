@@ -10,6 +10,7 @@
     "db:studio": "pnpm --filter server db:studio",
     "translate:subtitles": "pnpm --filter server exec tsx src/tasks/translateSubtitles.ts",
     "sync:voa": "pnpm --filter server exec tsx src/tasks/syncVoa.ts",
+    "align": "pnpm --filter server exec tsx src/tasks/alignment.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky"
