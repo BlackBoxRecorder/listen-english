@@ -2,9 +2,11 @@
   <div class="flex h-full">
     <!-- Left sidebar -->
     <ListeningList
-      :materials="listeningStore.materials"
+      :materials="sortedMaterials"
       :selected-id="listeningStore.currentMaterial?.id ?? null"
+      :favorite-ids="favoritesStore.favoriteIds"
       @select="onSelect"
+      @toggle-favorite="favoritesStore.toggleFavorite"
     />
 
     <!-- Center content -->
@@ -22,11 +24,12 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import { useListeningStore } from "../stores/listening";
 import { usePlayerStore } from "../stores/player";
 import { useWordStore } from "../stores/word";
 import { useAnalysisStore } from "../stores/analysis";
+import { useFavoritesStore } from "../stores/favorites";
 import ListeningList from "../components/listening/ListeningList.vue";
 import SubtitleDisplay from "../components/subtitle/SubtitleDisplay.vue";
 import AudioPlayer from "../components/player/AudioPlayer.vue";
@@ -38,11 +41,19 @@ const listeningStore = useListeningStore();
 const playerStore = usePlayerStore();
 const wordStore = useWordStore();
 const analysisStore = useAnalysisStore();
+const favoritesStore = useFavoritesStore();
+
+const sortedMaterials = computed(() => {
+  const materials = listeningStore.materials;
+  const favs = materials.filter((m) => favoritesStore.isFavorite(m.id));
+  const rest = materials.filter((m) => !favoritesStore.isFavorite(m.id));
+  return [...favs, ...rest];
+});
 
 onMounted(async () => {
   await listeningStore.fetchMaterials();
-  if (listeningStore.materials.length > 0) {
-    await onSelect(listeningStore.materials[0].id);
+  if (sortedMaterials.value.length > 0) {
+    await onSelect(sortedMaterials.value[0].id);
   }
 });
 
