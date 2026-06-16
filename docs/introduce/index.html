@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listen English - 英语听力训练平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- ========== 区块 1：Hero 区 ========== -->
+    <section id="hero" class="bg-slate-50 pt-16 pb-20 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight">Listen English</h1>
+        <p class="mt-4 text-xl md:text-2xl text-blue-600 font-medium">
+          基于真实语境的英语听力训练平台
+        </p>
+        <p class="mt-4 text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          精选 VOA 英语新闻素材，中英文字幕同步、智能查词、AI 语法分析，一站式提升英语听力水平
+        </p>
+        <a
+          href="https://english.timetickme.com"
+          target="_blank"
+          class="inline-block mt-8 px-8 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+        >
+          立即体验
+        </a>
+        <div class="mt-12">
+          <img
+            src="./images/1.png"
+            alt="Listen English 听力练习主界面"
+            class="w-full rounded-xl shadow-xl border border-slate-200"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 区块 2：核心特性概览 ========== -->
+    <section id="features" class="py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">核心功能</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- 卡片1：听力练习 -->
+          <div class="bg-slate-50 rounded-xl p-6 shadow-md border border-slate-100">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg
+                class="w-6 h-6 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">沉浸式听力练习</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              VOA 真实新闻素材，中英文字幕同步高亮，支持倍速播放和材料收藏
+            </p>
+          </div>
+          <!-- 卡片2：查词 -->
+          <div class="bg-slate-50 rounded-xl p-6 shadow-md border border-slate-100">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg
+                class="w-6 h-6 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">查词与单词本</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              点击单词即查释义，自动收录到单词本，支持拼写练习巩固记忆
+            </p>
+          </div>
+          <!-- 卡片3：AI分析 -->
+          <div class="bg-slate-50 rounded-xl p-6 shadow-md border border-slate-100">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg
+                class="w-6 h-6 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">AI 句子分析</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              一键拆解长难句，分析句子结构、从句类型和语法成分
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 区块 3：功能详情 ========== -->
+    <section id="details" class="py-20 px-4 bg-slate-50">
+      <div class="max-w-6xl mx-auto space-y-24">
+        <!-- 3a. 听力练习：左文右图 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-5/12">
+            <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">真实语境，沉浸听力</h3>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>精选 VOA 英语新闻素材，每日更新</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>中英文字幕逐句同步高亮，跟读更轻松</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>支持 0.5x ~ 2.0x 倍速调节</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>收藏喜欢的材料，置顶快速访问</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:w-7/12">
+            <img src="./images/1.png" alt="听力练习界面" class="w-full rounded-xl shadow-lg" />
+          </div>
+        </div>
+
+        <!-- 3b. 智能查词 + 单词本：右文左图 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+          <div class="lg:w-5/12">
+            <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">点击查词，即学即记</h3>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>点击任意单词，右侧弹出词典释义</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>包含音标、发音、词组搭配和经典例句</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>查过的单词自动进入单词本，随时复习</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>拼写练习模式，根据释义拼写巩固记忆</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:w-7/12">
+            <img src="./images/1.1.png" alt="智能查词界面" class="w-full rounded-xl shadow-lg" />
+          </div>
+        </div>
+
+        <!-- 3c. AI 句子分析：左文右图 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-5/12">
+            <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">AI 驱动，语法透视</h3>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>点击句子旁 AI 按钮，智能分析句子结构</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>拆解主语、谓语、宾语等核心成分</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>标注从句类型和修饰关系</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-0.5 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>逐层语法讲解，从整体到细节</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:w-7/12">
+            <img src="./images/1.2.png" alt="AI句子分析界面" class="w-full rounded-xl shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 区块 4：更多学习工具 ========== -->
+    <section id="tools" class="py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">更多学习工具</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- 单词搜索 -->
+          <div class="bg-slate-50 rounded-xl shadow-md border border-slate-100 overflow-hidden">
+            <img
+              src="./images/3.png"
+              alt="单词搜索"
+              class="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <div class="p-5">
+              <h4 class="text-lg font-semibold text-slate-800 mb-1">单词搜索</h4>
+              <p class="text-slate-500 text-sm">手动输入单词查询词典释义、词组搭配和经典例句</p>
+            </div>
+          </div>
+          <!-- 拼写练习 -->
+          <div class="bg-slate-50 rounded-xl shadow-md border border-slate-100 overflow-hidden">
+            <img
+              src="./images/4.png"
+              alt="拼写练习"
+              class="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <div class="p-5">
+              <h4 class="text-lg font-semibold text-slate-800 mb-1">拼写练习</h4>
+              <p class="text-slate-500 text-sm">根据音标和释义拼写单词，20 题一组检验记忆效果</p>
+            </div>
+          </div>
+          <!-- 语法教程 -->
+          <div class="bg-slate-50 rounded-xl shadow-md border border-slate-100 overflow-hidden">
+            <img
+              src="./images/5.png"
+              alt="语法教程"
+              class="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <div class="p-5">
+              <h4 class="text-lg font-semibold text-slate-800 mb-1">语法教程</h4>
+              <p class="text-slate-500 text-sm">系统化英语语法知识，从句子成分到从句体系全覆盖</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 区块 5：技术栈 ========== -->
+    <section id="tech" class="py-16 px-4 bg-slate-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-slate-800 mb-8">技术栈</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-medium"
+            >Vue 3</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-medium"
+            >TypeScript</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-medium"
+            >Pinia</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-medium"
+            >Tailwind CSS</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-medium"
+            >Hono</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-medium"
+            >SQLite</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-medium"
+            >Drizzle ORM</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-medium"
+            >Vite</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 区块 6：底部 CTA ========== -->
+    <section
+      id="cta"
+      class="py-20 px-4"
+      style="background: linear-gradient(to bottom, #eff6ff, #dbeafe)"
+    >
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">开始你的英语听力提升之旅</h2>
+        <p class="text-lg text-slate-500 mb-8">免费使用，无需注册</p>
+        <a
+          href="https://english.timetickme.com"
+          target="_blank"
+          class="inline-block px-10 py-4 bg-blue-600 text-white text-lg font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+        >
+          立即体验
+        </a>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm"
+      onclick="closeLightbox()"
+    >
+      <button
+        onclick="closeLightbox()"
+        class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+        aria-label="关闭"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <img
+        id="lightbox-img"
+        src=""
+        alt=""
+        class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl"
+        onclick="event.stopPropagation()"
+      />
+    </div>
+
+    <script>
+      function openLightbox(src, alt) {
+        const lightbox = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+        img.src = src;
+        img.alt = alt || "";
+        lightbox.classList.remove("hidden");
+        lightbox.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+      function closeLightbox() {
+        const lightbox = document.getElementById("lightbox");
+        lightbox.classList.add("hidden");
+        lightbox.classList.remove("flex");
+        document.body.style.overflow = "";
+      }
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeLightbox();
+      });
+    </script>
+  </body>
+</html>
