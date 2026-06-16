@@ -119,23 +119,6 @@
             <li v-for="(s, i) in wordStore.currentResult.trans_sents" :key="i">
               <p class="text-sm font-medium text-gray-800">{{ s.example }}</p>
               <p class="text-sm text-gray-500">{{ s.translate }}</p>
-              <button
-                v-if="s.audio_url"
-                @click="playAudio(s.audio_url)"
-                class="text-xs text-gray-400 hover:text-blue-500 mt-0.5"
-                title="播放例句发音"
-              >
-                <svg
-                  class="w-3.5 h-3.5 inline-block align-text-bottom"
-                  viewBox="0 0 1024 1024"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M852.864 831.52l-35.488-53.248a320 320 0 0 0 0-532.544l35.488-53.248a384 384 0 0 1 0 639.04z m-106.464-159.808l-35.456-53.216a128 128 0 0 0 0-212.992l35.456-53.216a191.808 191.808 0 0 1 0 319.424zM560 1024H512v-2.624L232.416 800H64a64 64 0 0 1-64-64V288a64 64 0 0 1 64-64h168.448L512 2.912V0h48a16 16 0 0 1 16 16v992a16 16 0 0 1-16 16zM256 288H64v448h192l256 203.424V84.576z"
-                  />
-                </svg>
-                Play
-              </button>
             </li>
           </ul>
         </section>
