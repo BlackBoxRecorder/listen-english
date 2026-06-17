@@ -1,87 +1,175 @@
+1
+00:00:00,000 --> 00:00:06,528
 Air quality differs from place to place and day to day.
 
+2
+00:00:06,528 --> 00:00:23,741
 But about 99 percent of the world’s population breathes air at some point that does not meet pollution guidelines set by the World Health Organization (WHO).
 
+3
+00:00:23,741 --> 00:00:34,144
 Different forms of air pollution kill about 7 million people each year, the U.N. health agency estimates.
 
+4
+00:00:34,144 --> 00:00:46,907
 But health experts say there are some actions individuals can take to protect themselves, even in the world’s most polluted cities.
 
+5
+00:00:46,907 --> 00:01:00,000
 The first step is to start with the understanding that air is not only polluted when it looks smoky or smoggy, said Tanushree Ganguly.
 
+6
+00:01:00,000 --> 00:01:08,885
 She is an air quality expert with the Energy Policy Institute of Chicago’s India program.
 
+7
+00:01:08,885 --> 00:01:16,371
 “Blue skies can’t guarantee you clean air,” Ganguly told The Associated Press.
 
+8
+00:01:16,371 --> 00:01:22,472
 Air pollutants often come from people burning things.
 
+9
+00:01:22,472 --> 00:01:31,853
 Examples include fuels as well as clearing operations involving crops or trees.
 
+10
+00:01:31,853 --> 00:01:37,413
 Pollutants can also be released from wildfires.
 
+11
+00:01:37,413 --> 00:01:45,664
 Among the most dangerous particles we can breathe in are called particulate matter.
 
+12
+00:01:45,664 --> 00:01:51,808
 The smallest of these are known as PM 2.5.
 
+13
+00:01:51,808 --> 00:01:59,179
 This is because they are less than 2.5 microns in diameter.
 
+14
+00:01:59,179 --> 00:02:09,515
 These particles can travel deep inside human lungs and are mostly created by burning fuels.
 
+15
+00:02:09,515 --> 00:02:21,821
 Larger particles, known as PM 10, are linked to agriculture, roadways, mining or wind-blown dust.
 
+16
+00:02:21,821 --> 00:02:35,731
 Other dangerous pollutants include gases like nitrogen dioxide or sulfur dioxide, which are also produced from burning fuels.
 
+17
+00:02:35,731 --> 00:02:48,680
 This information comes from Anumita Roychowdhury, an air pollution expert at the Center for Science and Environment in New Delhi.
 
+18
+00:02:48,680 --> 00:03:02,480
 The American-based Health Effects Institute says air pollution is the second-largest risk factor for early death worldwide, behind high blood pressure.
 
+19
+00:03:02,480 --> 00:03:18,021
 Short-term exposure can cause asthma attacks and increase the risk of heart attacks and stroke, especially in older people and those with existing medical problems.
 
+20
+00:03:18,021 --> 00:03:26,008
 Long-term exposure can cause serious heart and lung problems that can lead to death.
 
+21
+00:03:26,008 --> 00:03:41,344
 A recent study by the U.N. children’s agency UNICEF found that more than 500 million children in East Asia and Pacific countries breathe unhealthy air.
 
+22
+00:03:41,344 --> 00:03:49,869
 The pollution is linked to the deaths of 100 children under age 5 every day.
 
+23
+00:03:49,869 --> 00:04:03,205
 June Kunugi, UNICEF’s Regional Director for East Asia, said the polluted air limits growth, harms lungs and affects thinking abilities.
 
+24
+00:04:03,205 --> 00:04:11,483
 “Every breath matters, but for too many children every breath can bring harm,” she said.
 
+25
+00:04:11,483 --> 00:04:22,624
 Over 6,000 cities in 117 countries now record and follow air quality levels.
 
+26
+00:04:22,624 --> 00:04:28,507
 Many mobile apps include air quality information as well.
 
+27
+00:04:28,507 --> 00:04:36,824
 But it can be difficult to know how bad the air is by looking at these numbers.
 
+28
+00:04:36,824 --> 00:04:50,168
 To help people better understand air quality levels, many countries have established an air quality index, or AQI.
 
+29
+00:04:50,168 --> 00:04:56,027
 Larger numbers on this index mean worse air.
 
+30
+00:04:56,027 --> 00:05:02,251
 Different countries have different air quality standards.
 
+31
+00:05:02,251 --> 00:05:20,355
 For example, India’s daily PM 2.5 limit is more than 1.5 times higher than in Thailand and 4 times higher than WHO standards.
 
+32
+00:05:20,355 --> 00:05:33,1000
 For individuals, experts say the goal should be to limit exposure when air quality is bad, by staying indoors or wearing a mask.
 
+33
+00:05:33,1000 --> 00:05:37,277
 This is not always possible, though.
 
+34
+00:05:37,277 --> 00:05:41,832
 Danny Djarum is with the World Resources Institute.
 
+35
+00:05:41,832 --> 00:05:51,931
 He told the AP there are many people who live or work outside and “can’t really afford” to stay indoors.
 
+36
+00:05:51,931 --> 00:06:04,085
 People also need to watch indoor air pollution that can be caused by common household activities like cooking or burning incense.
 
+37
+00:06:04,085 --> 00:06:13,576
 While air purifiers can help reduce indoor air pollution, experts say they do have limitations.
 
+38
+00:06:13,576 --> 00:06:23,099
 The devices work by pulling air from a room and then pushing it through a filter that traps pollutants.
 
+39
+00:06:23,099 --> 00:06:27,464
 The filtered air is then sent back into the room.
 
+40
+00:06:27,464 --> 00:06:35,245
 Air purifiers work best when used in small spaces and when people are nearby.
 
+41
+00:06:35,245 --> 00:06:47,851
 This is because they can only clean a certain amount of air, said Rajasekhar Balasubramanian of the National University of Singapore.
 
+42
+00:06:47,851 --> 00:06:55,819
 He added, “If we have a tiny air purifier in a large room, it won’t be effective.”
 
+43
+00:06:55,819 --> 00:06:58,325
 I’m John Russell.
 
+44
+00:06:58,325 --> 00:07:00,605
 And I'm Caty Weaver.
