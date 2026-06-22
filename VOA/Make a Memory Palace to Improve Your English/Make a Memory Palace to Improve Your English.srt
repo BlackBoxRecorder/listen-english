@@ -1,142 +1,283 @@
+1
+00:00:00,000 --> 00:00:13,016
 Sherlock Holmes is an imaginary private detective created by British writer Arthur Conan Doyle in the late 1880s.
 
+2
+00:00:13,016 --> 00:00:21,459
 Doyle’s stories about the detective have been turned into movies and television shows.
 
+3
+00:00:21,459 --> 00:00:27,501
 One of Sherlock Holmes’ great skills is a powerful memory.
 
+4
+00:00:27,501 --> 00:00:39,464
 In a recent BBC television series, the character uses a memory technique called a “mind palace” or “memory palace.”
 
+5
+00:00:39,464 --> 00:00:52,245
 On one show, for example, Holmes has been severely wounded in a shooting and retreats into his mind to search for ways to survive.
 
+6
+00:00:52,245 --> 00:00:59,296
 He visits rooms in his mind palace, looking for helpful memories.
 
+7
+00:00:59,296 --> 00:01:07,915
 In one room, he finds his childhood dog, and the memory helps calm the detective.
 
+8
+00:01:07,915 --> 00:01:14,352
 The memory palace idea was not a BBC creation.
 
+9
+00:01:14,352 --> 00:01:20,685
 The method for remembering has existed for thousands of years.
 
+10
+00:01:20,685 --> 00:01:30,499
 Many language educators today teach their students how to use the method to improve their language skills.
 
+11
+00:01:30,499 --> 00:01:34,357
 But what exactly is a memory palace?
 
+12
+00:01:34,357 --> 00:01:42,515
 It is a real structure, such as a home or building, that you can picture in your head.
 
+13
+00:01:42,515 --> 00:01:50,211
 You then imagine placing things you want to remember inside the structure.
 
+14
+00:01:50,211 --> 00:02:00,915
 You can use a memory palace to remember words, phrases, facts, or even the order of events.
 
+15
+00:02:00,915 --> 00:02:10,376
 If you can see the inside of a house or building in your mind, you can make your own memory palace.
 
+16
+00:02:10,376 --> 00:02:15,355
 On today’s Education Tips, we will show you how.
 
+17
+00:02:15,355 --> 00:02:21,493
 Start with a list of words or phrases that you want to remember.
 
+18
+00:02:21,493 --> 00:02:35,467
 Then, close your eyes and choose a physical space that you know well, such as your home, a school you attended, or a current or former workplace.
 
+19
+00:02:35,467 --> 00:02:42,643
 If your chosen space has only one or two rooms, do not worry.
 
+20
+00:02:42,643 --> 00:02:54,037
 You can also use things like doors, passageways, steps or other permanent places along the physical path.
 
+21
+00:02:54,037 --> 00:03:04,107
 The next step is to imagine walking through the space using the path that you would normally take through it.
 
+22
+00:03:04,107 --> 00:03:13,339
 As you walk through, put objects that you want to remember at specific places along the path.
 
+23
+00:03:13,339 --> 00:03:21,005
 Leave the objects there to pick up later when you visit your memory palace.
 
+24
+00:03:21,005 --> 00:03:35,144
 Now, let’s try this technique by using six ingredients for a pizza: flour, water, dry yeast, tomato sauce, cheese and basil.
 
+25
+00:03:35,144 --> 00:03:39,045
 Close your eyes and picture a home.
 
+26
+00:03:39,045 --> 00:03:47,112
 First, you open the front door and see a bag of flour on the floor.
 
+27
+00:03:47,112 --> 00:03:53,213
 The bag is broken and some of the flour has spilled.
 
+28
+00:03:53,213 --> 00:04:00,467
 You are worried that you might slip, so you carefully step over the area.
 
+29
+00:04:00,467 --> 00:04:05,336
 Second, you walk into your bedroom.
 
+30
+00:04:05,336 --> 00:04:10,035
 On top of your bed sits a cup of water.
 
+31
+00:04:10,035 --> 00:04:16,323
 The cup is shaped like an upside-down piece of pizza.
 
+32
+00:04:16,323 --> 00:04:21,840
 You think about how funny that is and laugh about it.
 
+33
+00:04:21,840 --> 00:04:32,243
 Third, as you enter the living room, you see a very large spoon of dry yeast sitting on the sofa.
 
+34
+00:04:32,243 --> 00:04:38,064
 The spoon is watching a cooking show on television.
 
+35
+00:04:38,064 --> 00:04:45,672
 Fourth, while standing in the living room, you notice the room has a strange smell to it.
 
+36
+00:04:45,672 --> 00:04:52,965
 You look above the television and see a block of cheese hanging on the wall.
 
+37
+00:04:52,965 --> 00:05:01,269
 Fifth, you walk into the kitchen and see two tomatoes chasing each other around the room.
 
+38
+00:05:01,269 --> 00:05:07,371
 Suddenly, they crash and explode, covering the floor in red.
 
+39
+00:05:07,371 --> 00:05:13,621
 And sixth, you open the back door and go outside.
 
+40
+00:05:13,621 --> 00:05:20,427
 There, you see a group of very tall green basil plants.
 
+41
+00:05:20,427 --> 00:05:28,179
 In a funny voice, the tallest plant says, “Choose me! Choose me!”
 
+42
+00:05:28,179 --> 00:05:38,333
 Did you notice anything strange about the palace? It was full of extraordinary and humorous imagery.
 
+43
+00:05:38,333 --> 00:05:42,355
 We will say more about that in a few minutes.
 
+44
+00:05:42,355 --> 00:05:48,549
 But first, let’s check how well our technique worked.
 
+45
+00:05:48,549 --> 00:05:52,059
 See if you can answer these questions:
 
+46
+00:05:52,059 --> 00:05:59,603
 1-What was on the wall above the television?
 
+47
+00:05:59,603 --> 00:06:04,888
 2-Where were the tomatoes and what were they doing?
 
+48
+00:06:04,888 --> 00:06:10,491
 3-Which object was sitting on the bed?
 
+49
+00:06:10,491 --> 00:06:16,611
 4-Where was the yeast and what was it doing?
 
+50
+00:06:16,611 --> 00:06:22,992
 5-Which ingredient spoke and what did it say?
 
+51
+00:06:22,992 --> 00:06:29,411
 6-What did you see when you opened the front door?
 
+52
+00:06:29,411 --> 00:06:35,528
 My guess is that you remembered everything in our memory palace.
 
+53
+00:06:35,528 --> 00:06:37,771
 That’s good news.
 
+54
+00:06:37,771 --> 00:06:44,208
 Experts offer some advice for making strong memory palaces.
 
+55
+00:06:44,208 --> 00:06:58,987
 For instance, if you want to remember a lot of words, memory trainer Anthony Metivier suggests first drawing a simple map of your memory palace.
 
+56
+00:06:58,987 --> 00:07:08,107
 Then, number the places along your path where you will put the things that you want to remember.
 
+57
+00:07:08,107 --> 00:07:13,240
 You can put more than one thing in each room or area.
 
+58
+00:07:13,240 --> 00:07:16,984
 Later, you will add the mental imagery.
 
+59
+00:07:16,984 --> 00:07:27,888
 English teacher James, of the YouTube channel JamesESL English Lessons, has additional advice.
 
+60
+00:07:27,888 --> 00:07:37,304
 In his video on memory palaces, he says that there are three keys to a strong memory palace.
 
+61
+00:07:37,304 --> 00:07:46,109
 They are: emotion, movement, and connections between the object and something permanent.
 
+62
+00:07:46,109 --> 00:07:57,621
 Both he and Metivier say imagining things in a humorous or crazy way improves your ability to remember them.
 
+63
+00:07:57,621 --> 00:08:08,216
 These experts also agree that connecting images to actions or movement will create lasting memories.
 
+64
+00:08:08,216 --> 00:08:15,344
 For instance, the tomatoes were chasing each other and the basil spoke.
 
+65
+00:08:15,344 --> 00:08:26,331
 And finally, teacher James suggests placing the objects next to or on something permanent in your palace.
 
+66
+00:08:26,331 --> 00:08:34,989
 Beds, sofas, floors, walls, doors – all of these are permanent.
 
+67
+00:08:34,989 --> 00:08:40,125
 The block of cheese was on the wall, for example.
 
+68
+00:08:40,125 --> 00:08:52,293
 Now, it’s your turn. Pick a list of English words or phrases that you have trouble remembering and try this method on your own.
 
+69
+00:08:52,293 --> 00:08:54,872
 Let us know how it goes.
 
+70
+00:08:54,872 --> 00:08:56,560
 I’m John Russell.
 
+71
+00:08:56,560 --> 00:08:59,951
 And I’m Alice Bryant.
-

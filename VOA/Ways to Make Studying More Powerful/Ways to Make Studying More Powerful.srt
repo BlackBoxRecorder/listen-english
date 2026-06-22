@@ -1,101 +1,203 @@
+1
+00:00:00,000 --> 00:00:06,493
 Many students ask VOA Learning English about studying.
 
+2
+00:00:06,493 --> 00:00:11,933
 They want to know the best ways to improve their learning.
 
+3
+00:00:11,933 --> 00:00:25,747
 In this week’s Education Tips, we will explore four methods you can use: focusing, testing yourself, interleaving and teaching.
 
+4
+00:00:25,747 --> 00:00:34,541
 One of the best ways to organize your study session is to use the Pomodoro Technique.
 
+5
+00:00:34,541 --> 00:00:41,592
 It is a powerful, but simple method that helps people focus on a task.
 
+6
+00:00:41,592 --> 00:00:44,829
 The idea is to use a timer.
 
+7
+00:00:44,829 --> 00:00:53,728
 Let’s say, you set the timer for 20 minutes, and focus only on your studies during that time.
 
+8
+00:00:53,728 --> 00:01:01,963
 You cannot check email, send text messages or do anything aside from your task.
 
+9
+00:01:01,963 --> 00:01:11,811
 When the timer goes off, you can reward yourself by listening to some music or having a drink of tea.
 
+10
+00:01:11,811 --> 00:01:17,069
 You can repeat the process as many times as needed.
 
+11
+00:01:17,069 --> 00:01:31,907
 If you would like to learn more details about the Pomodoro Technique, you can read a previous Education Tips story on our website, learningenglish.voanews.com
 
+12
+00:01:31,907 --> 00:01:37,029
 When you are studying, you should test yourself often.
 
+13
+00:01:37,029 --> 00:01:49,224
 If you are using a textbook, then you can do practice questions from the end of each chapter, as we suggested in an earlier Education Tips.
 
+14
+00:01:49,224 --> 00:01:57,125
 You can also find all kinds of online tests and quizzes for many subjects.
 
+15
+00:01:57,125 --> 00:02:00,747
 Flash cards are another tool.
 
+16
+00:02:00,747 --> 00:02:07,200
 There are free flash card programs, or you could use pieces of paper.
 
+17
+00:02:07,200 --> 00:02:15,704
 The point is that you make your questions somewhat difficult, and then practice with them regularly.
 
+18
+00:02:15,704 --> 00:02:19,819
 But, you should be careful about flash cards.
 
+19
+00:02:19,819 --> 00:02:25,461
 Think carefully about making different kinds of questions.
 
+20
+00:02:25,461 --> 00:02:35,304
 Many language learners put a vocabulary word on one side of a flash card, and the definition on the back.
 
+21
+00:02:35,304 --> 00:02:42,965
 Every flash card suggests the same basic question: what does this word mean?
 
+22
+00:02:42,965 --> 00:02:56,064
 While it is useful to remember what different words mean, be sure to make other kinds of questions – why questions or how questions, for example.
 
+23
+00:02:56,064 --> 00:03:07,533
 So, you might ask, “Why are determiners important?” or “How can I tell the difference between the progressive tense and the simple tense?”
 
+24
+00:03:07,533 --> 00:03:12,848
 When most people study, they do “blocked” practice.
 
+25
+00:03:12,848 --> 00:03:18,083
 In other words, they only study one topic at a time.
 
+26
+00:03:18,083 --> 00:03:28,768
 But research suggests that a different kind of practice, interleaved practice, may be better for long-term learning.
 
+27
+00:03:28,768 --> 00:03:35,389
 Interleaving is a technique that means you mix different topics.
 
+28
+00:03:35,389 --> 00:03:47,691
 So, for example, in one study session you might spend time testing yourself on vocabulary words and then test yourself on grammar.
 
+29
+00:03:47,691 --> 00:03:55,475
 Or, if studying math, you could mix multiplication and division problems.
 
+30
+00:03:55,475 --> 00:04:08,013
 A 2020 study published in the Journal of Educational Psychology found that interleaved study was much better than blocked practice.
 
+31
+00:04:08,013 --> 00:04:16,267
 The study examined 54 7th grade math classes over a period of 4 months.
 
+32
+00:04:16,267 --> 00:04:24,059
 Some classes did interleaved assignments while other classes did blocked assignments.
 
+33
+00:04:24,059 --> 00:04:29,021
 One month later, students took a surprise test.
 
+34
+00:04:29,021 --> 00:04:42,149
 The results were powerful: “The interleaved group outscored the blocked group, 61% versus 38%,” the researchers wrote.
 
+35
+00:04:42,149 --> 00:04:46,309
 Teaching is also a powerful way to learn.
 
+36
+00:04:46,309 --> 00:04:55,229
 In a study published in Contemporary Education Psychology, researchers compared different groups of students.
 
+37
+00:04:55,229 --> 00:05:02,315
 Some students did not expect to have to teach information, while others did.
 
+38
+00:05:02,315 --> 00:05:18,885
 Researchers Fiorella and Mayer wrote that when students actually teach a lesson, “they develop a deeper and more persistent understanding of the material than from solely preparing to teach.”
 
+39
+00:05:18,885 --> 00:05:27,523
 In the Guardian newspaper, David Robson points out ways to teach others, even if you are alone.
 
+40
+00:05:27,523 --> 00:05:42,277
 “If you don’t have a willing partner, you could imagine describing it to someone, or draft an email setting out what you’ve learned in as much detail as possible,” Robson wrote.
 
+41
+00:05:42,277 --> 00:05:48,563
 You can put all of these techniques together to make a powerful study plan.
 
+42
+00:05:48,563 --> 00:05:56,197
 For example, you might organize your study sessions with the Pomodoro technique.
 
+43
+00:05:56,197 --> 00:06:01,747
 Then, you can test yourself and interleave different topics.
 
+44
+00:06:01,747 --> 00:06:09,275
 After that, you could take a break, reward yourself and do another Pomodoro session.
 
+45
+00:06:09,275 --> 00:06:17,605
 There are many options. You can create your own plan based on what you need to learn.
 
+46
+00:06:17,605 --> 00:06:28,824
 But what you will realize is that when you focus and do tasks that are at the right difficulty level, your brain will become tired.
 
+47
+00:06:28,824 --> 00:06:35,827
 Some days, you might only be able to do one 20-minute session, for example.
 
+48
+00:06:35,827 --> 00:06:41,221
 Other days, you might do many 20-minute sessions.
 
+49
+00:06:41,221 --> 00:06:47,728
 After all of that mental training, you will surely need to rest and recover.
 
+50
+00:06:47,728 --> 00:06:53,597
 We will explore that topic in a future Education Tips story.
 
+51
+00:06:53,597 --> 00:06:56,456
 I’m John Russell.

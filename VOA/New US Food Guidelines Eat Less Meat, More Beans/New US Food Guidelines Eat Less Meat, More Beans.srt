@@ -1,92 +1,183 @@
+1
+00:00:00,000 --> 00:00:06,853
 From VOA Learning English, this is the Health & Lifestyle report.
 
+2
+00:00:06,853 --> 00:00:15,395
 For a healthy diet, people should eat more beans, peas and lentils.
 
+3
+00:00:15,395 --> 00:00:25,723
 They should eat less red meat and processed meats, as well as starchy vegetables, like potatoes.
 
+4
+00:00:25,723 --> 00:00:38,144
 Also, they should continue to limit added sugars, sodium and saturated fat, an especially unhealthy kind of fat.
 
+5
+00:00:38,144 --> 00:00:46,397
 That is the latest advice released on December 10 by a panel of nutrition experts.
 
+6
+00:00:46,397 --> 00:00:57,317
 This panel of experts is responsible for advising the U.S. government about the 2025 dietary guidelines.
 
+7
+00:00:57,317 --> 00:01:05,405
 These guidelines will inform and shape federal food programs and policy.
 
+8
+00:01:05,405 --> 00:01:16,747
 But the 20-member panel did not advise on ultra-processed foods that some research findings link to health problems.
 
+9
+00:01:16,747 --> 00:01:23,091
 The panel says there is not enough evidence to tell people to avoid them.
 
+10
+00:01:23,091 --> 00:01:32,515
 And the group did not speak to possibly updating controversial guidance on drinking alcohol.
 
+11
+00:01:32,515 --> 00:01:40,235
 They are leaving that issue to two independent reports expected to be released soon.
 
+12
+00:01:40,235 --> 00:01:53,565
 Overall, the recommendations for the 2025-2030 Dietary Guidelines for Americans sound familiar, said Marion Nestle.
 
+13
+00:01:53,565 --> 00:01:57,003
 She is a food policy expert.
 
+14
+00:01:57,003 --> 00:02:14,229
 “This looks like every other set of dietary guidelines since 1980: eat your veggies and reduce consumption of foods high in salt, sugar and saturated fat,” she said in an email.
 
+15
+00:02:14,229 --> 00:02:32,093
 She also said the latest advice “says nothing about balancing calories, when overconsumption of calories, especially from ultra-processed foods, is the biggest challenge to the health of Americans.”
 
+16
+00:02:32,093 --> 00:02:39,856
 The nutrition panel described a healthy diet for people beginning at two years old.
 
+17
+00:02:39,856 --> 00:02:53,616
 It is high in vegetables, fruits, legumes, nuts, whole grains, fish and vegetable oils that are higher in unsaturated fat.
 
+18
+00:02:53,616 --> 00:03:06,563
 The recommended diet is lower in red and processed meats, sugar-sweetened food and drink, refined grains and saturated fat.
 
+19
+00:03:06,563 --> 00:03:18,925
 It may also include fat-free or low-fat dairy and foods lower in sodium and may include plant-based foods.
 
+20
+00:03:18,925 --> 00:03:24,245
 This panel worked on the guidelines for almost two years.
 
+21
+00:03:24,245 --> 00:03:34,669
 It was the first to consider dietary needs based on financial situation, race, ethnicity and culture.
 
+22
+00:03:34,669 --> 00:03:46,133
 Panelist Fatima Cody Stanford is an obesity expert and doctor at Massachusetts General Hospital.
 
+23
+00:03:46,133 --> 00:03:59,760
 In an email, she said that considering these new elements will help make sure that the guidance “...reflects and includes various population groups."
 
+24
+00:03:59,760 --> 00:04:08,824
 The panel did not advise on two controversial food groups: ultra-processed foods or alcohol.
 
+25
+00:04:08,824 --> 00:04:16,424
 Ultra-processed foods make up about 60 percent of the American diet.
 
+26
+00:04:16,424 --> 00:04:20,776
 The panel considered more than 40 studies.
 
+27
+00:04:20,776 --> 00:04:29,979
 Several of them showed links between ultra-processed foods and being overweight or obesity.
 
+28
+00:04:29,979 --> 00:04:37,416
 But the nutrition experts had concerns with the quality of the research.
 
+29
+00:04:37,416 --> 00:04:44,323
 So, they said the evidence was too limited to make recommendations.
 
+30
+00:04:44,323 --> 00:04:51,021
 The panel also did not change recommendations about alcohol.
 
+31
+00:04:51,021 --> 00:05:02,707
 The current guidelines are two drinks or less a day for men and one drink or less a day for women.
 
+32
+00:05:02,707 --> 00:05:08,059
 The last time the guidance was updated was in 2020.
 
+33
+00:05:08,059 --> 00:05:18,611
 At that time, the government rejected the advice of scientific advisers to recommend less alcohol consumption.
 
+34
+00:05:18,611 --> 00:05:32,083
 Two separate government groups expect to release reports in the coming months on the effects of moderate alcohol use to inform the guidelines.
 
+35
+00:05:32,083 --> 00:05:41,333
 The advisory panel said they know that the diets of most Americans do not meet the current guidelines.
 
+36
+00:05:41,333 --> 00:05:50,939
 More than half of all adults in the country have one or more diet-related chronic health condition.
 
+37
+00:05:50,939 --> 00:06:01,291
 And 18 million individuals and families have insecure sources of food, the report says.
 
+38
+00:06:01,291 --> 00:06:11,781
 The report adds that “…nutrition-related chronic health conditions” will continue “to threaten health through the lifespan.”
 
+39
+00:06:11,781 --> 00:06:18,549
 It adds that this is not good “for the future of health in the United States.”
 
+40
+00:06:18,549 --> 00:06:27,189
 The scientific report informs the dietary guidelines which are updated every five years.
 
+41
+00:06:27,189 --> 00:06:40,493
 These new recommendations now go to the U.S. Health & Human Services (or HHS) and the U.S. Department of Agriculture (or USDA).
 
+42
+00:06:40,493 --> 00:06:47,336
 Officials there will create the final guidance and release it next year.
 
+43
+00:06:47,336 --> 00:06:54,608
 As of December 11, the public has 60 days to comment on the guidance.
 
+44
+00:06:54,608 --> 00:07:05,115
 HHS and USDA officials will hold a public meeting on January 16 to discuss the recommendations.
 
+45
+00:07:05,115 --> 00:07:08,736
 And that’s the Health & Lifestyle report.
 
+46
+00:07:08,736 --> 00:07:09,976
 I’m Anna Matteo.
-

@@ -1,91 +1,183 @@
+1
+00:00:00,000 --> 00:00:10,136
 Much of the United States “springs forward” on Sunday, March 9th, for daylight saving time.
 
+2
+00:00:10,136 --> 00:00:21,909
 Worldwide, many other countries also observe daylight saving time, starting and ending on different dates.
 
+3
+00:00:21,909 --> 00:00:30,539
 The time change can leave people tired and perhaps unhappy the next day.
 
+4
+00:00:30,539 --> 00:00:35,357
 But it also might even harm health.
 
+5
+00:00:35,357 --> 00:00:46,144
 Some studies have found an increase in heart attacks and strokes right after the March time change.
 
+6
+00:00:46,144 --> 00:00:56,869
 However, there are ways to ease the effects of the time change, including getting more sunshine.
 
+7
+00:00:56,869 --> 00:01:04,515
 The light helps reset your circadian rhythm for healthful sleep.
 
+8
+00:01:04,515 --> 00:01:13,117
 In the U.S., daylight saving time begins Sunday at 2:00 in the morning.
 
+9
+00:01:13,117 --> 00:01:25,237
 The time change will reverse on November 2 when clocks “fall back” as daylight saving time ends.
 
+10
+00:01:25,237 --> 00:01:34,541
 The state of Hawaii and most of the state of Arizona do not make the spring change.
 
+11
+00:01:34,541 --> 00:01:48,216
 Those areas remain on standard time along with Puerto Rico, American Samoa, Guam and the U.S. Virgin Islands.
 
+12
+00:01:48,216 --> 00:02:01,504
 Some people try to prepare for the change to daylight saving time by going to bed a little earlier two or three nights ahead.
 
+13
+00:02:01,504 --> 00:02:15,571
 But with a third of American adults already not getting the suggested seven hours of nightly sleep, catching up can be difficult.
 
+14
+00:02:15,571 --> 00:02:25,128
 The brain has a kind of clock that is set by exposure to sunlight and darkness.
 
+15
+00:02:25,128 --> 00:02:34,893
 This clock, known as the circadian rhythm, is on a roughly 24-hour cycle.
 
+16
+00:02:34,893 --> 00:02:41,643
 It governs when we become sleepy and when we are more wakeful.
 
+17
+00:02:41,643 --> 00:02:45,944
 The rhythms change with age.
 
+18
+00:02:45,944 --> 00:02:57,072
 This is one reason that early-to-rise young children turn into hard-to-wake teenagers.
 
+19
+00:02:57,072 --> 00:03:00,632
 Morning light resets the rhythm.
 
+20
+00:03:00,632 --> 00:03:10,976
 By evening, levels of a hormone called melatonin begin to increase, leading to tiredness.
 
+21
+00:03:10,976 --> 00:03:21,963
 Too much light in the evening — that extra hour from daylight saving time — delays the melatonin increase.
 
+22
+00:03:21,963 --> 00:03:26,307
 As a result, the cycle gets delayed.
 
+23
+00:03:26,307 --> 00:03:31,443
 The circadian rhythm affects more than sleep.
 
+24
+00:03:31,443 --> 00:03:40,419
 It also influences heart rate, blood pressure, hormone releases and other systems.
 
+25
+00:03:40,419 --> 00:03:54,864
 Sleep deprivation, or lack of sleep, is linked to heart disease, weight conditions, problems with thinking and remembering, and more.
 
+26
+00:03:54,864 --> 00:04:06,960
 Deadly car crash numbers increase the first few days after the spring time change, a study of U.S. traffic deaths says.
 
+27
+00:04:06,960 --> 00:04:12,829
 The risk of crashes is highest in the morning, it found.
 
+28
+00:04:12,829 --> 00:04:19,608
 Researchers suggested sleep deprivation might be responsible.
 
+29
+00:04:19,608 --> 00:04:24,733
 The time change also has a link to the heart.
 
+30
+00:04:24,733 --> 00:04:43,032
 The American Heart Association points to studies that suggest an increase in heart attacks on the Monday after daylight saving time begins, and in strokes for two days afterward.
 
+31
+00:04:43,032 --> 00:04:59,741
 Doctors already know that heart attacks, especially severe ones, are a bit more common on Mondays generally — and in the morning, when blood is more likely to clot.
 
+32
+00:04:59,741 --> 00:05:07,787
 Researchers do not know why the time change would add to that Monday connection.
 
+33
+00:05:07,787 --> 00:05:20,909
 But it is possible the sudden circadian change influences other issues such as high blood pressure in people already at risk.
 
+34
+00:05:20,909 --> 00:05:28,245
 To prepare for daylight saving time, experts offer some advice.
 
+35
+00:05:28,245 --> 00:05:39,299
 Slowly move bedtimes about 15 or 20 minutes earlier for several nights before the time change.
 
+36
+00:05:39,299 --> 00:05:44,883
 Try to rise earlier the next morning, too.
 
+37
+00:05:44,883 --> 00:05:53,043
 Go outside for early morning sunshine the first week of daylight saving time.
 
+38
+00:05:53,043 --> 00:05:59,069
 This is another way to help reset your body’s clock.
 
+39
+00:05:59,069 --> 00:06:07,205
 Start daily activities, like dinner or exercise, a little earlier.
 
+40
+00:06:07,205 --> 00:06:16,675
 This may help tell your body to start getting used to the new conditions, sleep experts suggest.
 
+41
+00:06:16,675 --> 00:06:31,696
 Daytime sleeping, the drug caffeine and light from phones and other electronic devices can make an earlier bedtime even harder.
 
+42
+00:06:31,696 --> 00:06:37,203
 Americans have discussed ending daylight saving time.
 
+43
+00:06:37,203 --> 00:06:42,499
 But so far, no official changes have been made.
 
+44
+00:06:42,499 --> 00:06:56,725
 Health groups such as the American Medical Association and American Academy of Sleep Medicine believe it is time to end time changes.
 
+45
+00:06:56,725 --> 00:07:08,827
 The groups suggest that staying with standard time year-round works better for human biology and sleep needs.
 
+46
+00:07:08,827 --> 00:07:11,308
 I’m Caty Weaver.

@@ -1,90 +1,179 @@
+1
+00:00:00,000 --> 00:00:12,931
 Since the beginning of the coronavirus crisis, many people have had to change their habits, or usual ways of doing things.
 
+2
+00:00:12,931 --> 00:00:18,803
 Some people who used to go to school now study at home.
 
+3
+00:00:18,803 --> 00:00:26,141
 Some of them have been trying to get in the habit of learning and studying on their own.
 
+4
+00:00:26,141 --> 00:00:30,373
 How might habits connect with studying and learning?
 
+5
+00:00:30,373 --> 00:00:35,563
 Today’s Education Tips will explore that very question.
 
+6
+00:00:35,563 --> 00:00:41,125
 Habits are regular ways of dealing with your environment.
 
+7
+00:00:41,125 --> 00:00:44,696
 You generally do not pay attention to them.
 
+8
+00:00:44,696 --> 00:00:58,848
 In the book Good Habits, Bad Habits, Dr. Wendy Wood notes that “A habit turns the world around you—your context—into a trigger to act.”
 
+9
+00:00:58,848 --> 00:01:05,288
 Habits take many forms – eating, exercising, even studying.
 
+10
+00:01:05,288 --> 00:01:12,901
 You may not realize it, but habits make up many of the actions that you do every day.
 
+11
+00:01:12,901 --> 00:01:22,349
 In the book Atomic Habits, James Clear describes a four-step process by which habits are made.
 
+12
+00:01:22,349 --> 00:01:30,139
 These steps are cue, craving, response, and reward.
 
+13
+00:01:30,139 --> 00:01:34,768
 The cue tells your brain to begin a behavior.
 
+14
+00:01:34,768 --> 00:01:39,243
 The craving is what makes you want to do something.
 
+15
+00:01:39,243 --> 00:01:44,080
 The response is the actual habit that you perform.
 
+16
+00:01:44,080 --> 00:01:48,747
 The response, in turn, gives you a reward.
 
+17
+00:01:48,747 --> 00:01:54,224
 “Rewards are the end goal of every habit,” Clear writes.
 
+18
+00:01:54,224 --> 00:02:01,693
 Consider this example. Maybe you have the habit of often checking social media.
 
+19
+00:02:01,693 --> 00:02:08,885
 The cue might be a feeling of boredom while you are near your computer or phone.
 
+20
+00:02:08,885 --> 00:02:13,853
 The craving could be a desire to stop that feeling.
 
+21
+00:02:13,853 --> 00:02:21,256
 The response is checking social media, and the reward is seeing something interesting.
 
+22
+00:02:21,256 --> 00:02:27,877
 When that process is repeated many times, it becomes a habit.
 
+23
+00:02:27,877 --> 00:02:35,379
 Clear believes that to create a good habit, you need to follow several steps.
 
+24
+00:02:35,379 --> 00:02:42,389
 You need to make your new habit obvious, or easy to see or understand.
 
+25
+00:02:42,389 --> 00:02:48,397
 The habit should also be attractive, simple and satisfying.
 
+26
+00:02:48,397 --> 00:02:53,651
 Let’s think about how you might develop an English study habit.
 
+27
+00:02:53,651 --> 00:03:02,685
 You should organize your surroundings in such a way that the cues of your new habit are very obvious.
 
+28
+00:03:02,685 --> 00:03:13,739
 For example, if you want to get in the habit of studying English every day, leave English books or notes in a very clear place.
 
+29
+00:03:13,739 --> 00:03:24,773
 To make your habit attractive, Clear recommends joining a culture where your new desired behavior is the normal behavior.
 
+30
+00:03:24,773 --> 00:03:31,928
 For example, you could join a group of other English learners in online meetings.
 
+31
+00:03:31,928 --> 00:03:40,581
 To make your new habit easy, you could decrease the number of steps you have to take in order to study.
 
+32
+00:03:40,581 --> 00:03:45,453
 You could also try reducing the amount of time you study.
 
+33
+00:03:45,453 --> 00:03:54,168
 Clear suggests beginning your habits with limited, shorter time periods – two minutes for example.
 
+34
+00:03:54,168 --> 00:03:59,736
 As you repeat the practice over time, you can go longer.
 
+35
+00:03:59,736 --> 00:04:11,456
 An important point to keep in mind is that if you place too many demands on yourself, you are more likely to give up on your new habit.
 
+36
+00:04:11,456 --> 00:04:16,408
 Finally, you need to make your habit satisfying.
 
+37
+00:04:16,408 --> 00:04:21,643
 You can give yourself a reward after completing your new habit.
 
+38
+00:04:21,643 --> 00:04:31,029
 For example, if you study English for 15 minutes, you could reward yourself by listening to a song you like.
 
+39
+00:04:31,029 --> 00:04:38,635
 Or you could think about how much progress you have made since you first started studying English.
 
+40
+00:04:38,635 --> 00:04:45,232
 Wood notes that your reward should come right after you do your new habit.
 
+41
+00:04:45,232 --> 00:04:55,736
 “Rewards have to be experienced right after we do something in order to build habit associations ... in memory,” she writes.
 
+42
+00:04:55,736 --> 00:04:58,912
 Building new habits can take time.
 
+43
+00:04:58,912 --> 00:05:04,605
 You may have to repeat an action many times before it becomes a habit.
 
+44
+00:05:04,605 --> 00:05:11,325
 But with time, careful planning and continued practice, you can do it.
 
+45
+00:05:11,325 --> 00:05:14,398
 I'm John Russell.
-
