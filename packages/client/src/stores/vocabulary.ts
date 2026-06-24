@@ -1,7 +1,8 @@
 import { defineStore } from "pinia";
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 
 const STORAGE_KEY = "listen-english-vocabulary";
+const SPELLING_CONFIG_KEY = "listen-english-spelling-config";
 
 export interface VocabEntry {
   word: string;
@@ -10,6 +11,8 @@ export interface VocabEntry {
 
 export const useVocabularyStore = defineStore("vocabulary", () => {
   const words = ref<VocabEntry[]>([]);
+  const selectedWordSet = ref<Set<string>>(new Set());
+  const practiceCount = ref<number>(20);
 
   function loadFromStorage() {
     try {
@@ -39,6 +42,37 @@ export const useVocabularyStore = defineStore("vocabulary", () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(words.value));
   }
 
+  function loadSpellingConfig() {
+    try {
+      const raw = localStorage.getItem(SPELLING_CONFIG_KEY);
+      if (!raw) return;
+      const parsed = JSON.parse(raw);
+      if (parsed.selectedWords && Array.isArray(parsed.selectedWords)) {
+        selectedWordSet.value = new Set(
+          (parsed.selectedWords as unknown[]).filter((v): v is string => typeof v === "string"),
+        );
+      }
+      if (
+        typeof parsed.practiceCount === "number" &&
+        [10, 20, 30, 40, 50].includes(parsed.practiceCount)
+      ) {
+        practiceCount.value = parsed.practiceCount;
+      }
+    } catch {
+      // 回退默认值
+    }
+  }
+
+  function persistSpellingConfig() {
+    localStorage.setItem(
+      SPELLING_CONFIG_KEY,
+      JSON.stringify({
+        selectedWords: [...selectedWordSet.value],
+        practiceCount: practiceCount.value,
+      }),
+    );
+  }
+
   function addWord(word: string, subtitleId: number = 0) {
     const normalized = word.trim().toLowerCase();
     if (!normalized) return;
@@ -54,12 +88,16 @@ export const useVocabularyStore = defineStore("vocabulary", () => {
 
   function removeWord(word: string) {
     words.value = words.value.filter((e) => e.word !== word);
+    selectedWordSet.value.delete(word.trim().toLowerCase());
     persist();
+    persistSpellingConfig();
   }
 
   function clearAll() {
     words.value = [];
+    selectedWordSet.value.clear();
     persist();
+    persistSpellingConfig();
   }
 
   const wordCount = computed(() => words.value.length);
@@ -78,8 +116,90 @@ export const useVocabularyStore = defineStore("vocabulary", () => {
     return entry?.subtitleId ?? 0;
   }
 
+  function toggleWord(word: string) {
+    const normalized = word.trim().toLowerCase();
+    if (!normalized) return;
+    if (selectedWordSet.value.has(normalized)) {
+      selectedWordSet.value.delete(normalized);
+    } else {
+      selectedWordSet.value.add(normalized);
+    }
+    // 触发响应式更新
+    selectedWordSet.value = new Set(selectedWordSet.value);
+    persistSpellingConfig();
+  }
+
+  function isWordSelected(word: string): boolean {
+    return selectedWordSet.value.has(word.trim().toLowerCase());
+  }
+
+  function selectAll() {
+    for (const entry of words.value) {
+      selectedWordSet.value.add(entry.word);
+    }
+    selectedWordSet.value = new Set(selectedWordSet.value);
+    persistSpellingConfig();
+  }
+
+  function deselectAll() {
+    selectedWordSet.value.clear();
+    selectedWordSet.value = new Set(selectedWordSet.value);
+    persistSpellingConfig();
+  }
+
+  const selectedCount = computed(() => selectedWordSet.value.size);
+
+  function getPracticeWords(): string[] {
+    const result: string[] = [];
+    const seen = new Set<string>();
+
+    // 1. 取勾选的词（按 words 顺序）
+    for (const entry of words.value) {
+      if (selectedWordSet.value.has(entry.word)) {
+        result.push(entry.word);
+        seen.add(entry.word);
+      }
+    }
+
+    // 2. 不足时补足未勾选的最近词
+    if (result.length < practiceCount.value) {
+      for (const entry of words.value) {
+        if (result.length >= practiceCount.value) break;
+        if (!seen.has(entry.word)) {
+          result.push(entry.word);
+          seen.add(entry.word);
+        }
+      }
+    }
+
+    return result;
+  }
+
   // Initialize on store creation
   loadFromStorage();
+  loadSpellingConfig();
 
-  return { words, wordCount, addWord, removeWord, clearAll, hasWord, recentWords, getSubtitleId };
+  // 持久化 practiceCount 变更
+  watch(practiceCount, () => {
+    persistSpellingConfig();
+  });
+
+  return {
+    words,
+    wordCount,
+    addWord,
+    removeWord,
+    clearAll,
+    hasWord,
+    recentWords,
+    getSubtitleId,
+    selectedWordSet,
+    practiceCount,
+    toggleWord,
+    isWordSelected,
+    selectAll,
+    deselectAll,
+    selectedCount,
+    getPracticeWords,
+  };
 });

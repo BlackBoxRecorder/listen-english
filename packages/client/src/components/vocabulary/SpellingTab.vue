@@ -2,9 +2,89 @@
   <div class="h-full overflow-y-auto py-8 px-4">
     <div class="max-w-2xl mx-auto">
       <!-- Empty state -->
-      <div v-if="words.length === 0" class="text-center py-16 text-gray-400">
+      <div v-if="vocabularyStore.words.length === 0" class="text-center py-16 text-gray-400">
         <p class="text-lg mb-2">No words to practice</p>
         <p class="text-sm">Add words to your notebook first to start spelling practice.</p>
+      </div>
+
+      <!-- View A: Confirmation -->
+      <div v-else-if="!isConfirmed" class="space-y-6">
+        <h3 class="text-lg font-semibold text-gray-900 text-center">Spelling Practice</h3>
+
+        <!-- Practice count selector -->
+        <div class="flex items-center justify-center gap-3">
+          <label class="text-sm text-gray-600">Words per session:</label>
+          <select
+            v-model.number="vocabularyStore.practiceCount"
+            class="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option v-for="n in [10, 20, 30, 40, 50]" :key="n" :value="n">{{ n }}</option>
+          </select>
+        </div>
+
+        <!-- Word preview list -->
+        <div class="bg-gray-50 rounded-lg p-4">
+          <p class="text-sm text-gray-500 mb-2">{{ words.length }} words ready</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              v-for="w in words"
+              :key="w"
+              class="px-2 py-0.5 rounded text-sm"
+              :class="
+                vocabularyStore.isWordSelected(w)
+                  ? 'bg-blue-100 text-blue-800'
+                  : 'bg-gray-200 text-gray-500'
+              "
+            >
+              {{ w
+              }}<span v-if="!vocabularyStore.isWordSelected(w)" class="text-xs ml-0.5">(auto)</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Tips -->
+        <div
+          v-if="
+            vocabularyStore.selectedCount > 0 &&
+            vocabularyStore.selectedCount < vocabularyStore.practiceCount
+          "
+          class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm text-yellow-800"
+        >
+          You selected {{ vocabularyStore.selectedCount }} words, and
+          {{
+            Math.min(vocabularyStore.practiceCount, vocabularyStore.words.length) -
+            vocabularyStore.selectedCount
+          }}
+          more will be added from your recent vocabulary.
+        </div>
+        <div
+          v-else-if="vocabularyStore.words.length < vocabularyStore.practiceCount"
+          class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm text-yellow-800"
+        >
+          Only {{ vocabularyStore.words.length }} words in your notebook — all will be practiced.
+        </div>
+        <div
+          v-else-if="words.length < 3"
+          class="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700"
+        >
+          Select at least 3 words to start.
+        </div>
+
+        <!-- Start button -->
+        <div class="text-center">
+          <button
+            :disabled="words.length < 3"
+            @click="startPractice"
+            class="px-6 py-2 rounded-lg font-medium transition-colors"
+            :class="
+              words.length >= 3
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            "
+          >
+            Start Practice
+          </button>
+        </div>
       </div>
 
       <!-- Session complete -->
@@ -22,7 +102,7 @@
           @click="restart"
           class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
         >
-          Practice Again
+          Back to Selection
         </button>
       </div>
 
@@ -110,8 +190,9 @@ const feedback = ref<"idle" | "correct" | "incorrect">("idle");
 const sessionStats = ref({ correct: 0, incorrect: 0, skipped: 0 });
 const wordDefinition = ref<WordData | null>(null);
 const wordLoading = ref(false);
+const isConfirmed = ref(false);
 
-const words = computed(() => vocabularyStore.recentWords(20).map((e) => e.word));
+const words = computed(() => vocabularyStore.getPracticeWords());
 const targetWord = computed(() => words.value[currentIndex.value] || "");
 const isComplete = computed(() => currentIndex.value >= words.value.length);
 
@@ -199,7 +280,8 @@ function skipWord() {
   }
 }
 
-function restart() {
+function startPractice() {
+  isConfirmed.value = true;
   currentIndex.value = 0;
   userInput.value = "";
   feedback.value = "idle";
@@ -208,6 +290,10 @@ function restart() {
     fetchWordDefinition(words.value[0]);
   }
   nextTick(() => inputRef.value?.focus());
+}
+
+function restart() {
+  isConfirmed.value = false;
 }
 
 // Watch for input changes to auto-update feedback display
@@ -232,9 +318,6 @@ function playAudio(url: string) {
 }
 
 onMounted(() => {
-  if (words.value.length > 0) {
-    fetchWordDefinition(words.value[0]);
-  }
-  nextTick(() => inputRef.value?.focus());
+  // No auto-start; user must confirm first
 });
 </script>

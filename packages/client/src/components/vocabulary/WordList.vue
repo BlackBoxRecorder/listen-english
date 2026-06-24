@@ -1,8 +1,24 @@
 <template>
   <div class="flex flex-col h-full">
     <!-- Word count header -->
-    <div class="px-4 py-2 border-b border-gray-200 text-sm text-gray-500">
-      {{ vocabularyStore.wordCount }} words
+    <div
+      class="px-4 py-2 border-b border-gray-200 text-sm text-gray-500 flex items-center justify-between"
+    >
+      <span>{{ vocabularyStore.wordCount }} words</span>
+      <div v-if="vocabularyStore.words.length > 0" class="flex gap-2">
+        <button
+          @click="vocabularyStore.selectAll()"
+          class="text-xs text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          Select All
+        </button>
+        <button
+          @click="vocabularyStore.deselectAll()"
+          class="text-xs text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          Deselect All
+        </button>
+      </div>
     </div>
 
     <!-- Word list -->
@@ -18,6 +34,12 @@
           :class="selectedWord === entry.word ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''"
           @click="emit('select', entry.word, entry.subtitleId)"
         >
+          <input
+            type="checkbox"
+            :checked="vocabularyStore.isWordSelected(entry.word)"
+            @click.stop="vocabularyStore.toggleWord(entry.word)"
+            class="w-4 h-4 text-blue-600 border-gray-300 rounded shrink-0 mr-3 cursor-pointer"
+          />
           <div class="flex-1 min-w-0">
             <span class="text-sm text-gray-800 block">{{ entry.word }}</span>
             <span v-if="briefDefs[entry.word]" class="text-xs text-gray-400 block mt-0.5 truncate">
