@@ -131,8 +131,8 @@
           <div v-else class="text-sm text-gray-400">Loading definition...</div>
         </div>
 
-        <!-- Letter input boxes -->
-        <div class="flex justify-center gap-2 mb-6 flex-wrap">
+        <!-- Letter input boxes - click to refocus hidden input -->
+        <div class="flex justify-center gap-2 mb-6 flex-wrap" @click="inputRef?.focus()">
           <div
             v-for="i in targetWord.length"
             :key="i"
@@ -143,33 +143,35 @@
           </div>
         </div>
 
-        <!-- Input field -->
-        <div class="flex justify-center mb-4">
-          <input
-            ref="inputRef"
-            v-model="userInput"
-            type="text"
-            :maxlength="targetWord.length"
-            class="px-4 py-2 border border-gray-300 rounded-lg text-center text-lg font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-48"
-            :placeholder="targetWord.length + ' letters'"
-            @keydown="onKeydown"
-            :disabled="feedback === 'correct'"
-            autocomplete="off"
-            autocapitalize="off"
-            spellcheck="false"
-          />
-        </div>
+        <!-- Hidden keyboard capture input -->
+        <input
+          ref="inputRef"
+          v-model="userInput"
+          type="text"
+          :maxlength="targetWord.length"
+          class="absolute opacity-0 w-0 h-0 pointer-events-none"
+          @keydown="onKeydown"
+          :disabled="feedback === 'correct'"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
 
         <!-- Feedback -->
         <div class="text-center min-h-[2rem]">
           <p v-if="feedback === 'correct'" class="text-green-600 font-medium">Correct!</p>
           <p v-else-if="feedback === 'incorrect'" class="text-red-600 font-medium">Try again</p>
-          <p v-else class="text-gray-400 text-sm">Press Enter to check</p>
+          <p v-else class="text-gray-400 text-sm">Type all letters to check</p>
         </div>
 
-        <!-- Skip hint -->
+        <!-- Skip button -->
         <div v-if="feedback !== 'correct'" class="text-center mt-4">
-          <span class="text-xs text-gray-400">Press → to skip</span>
+          <button
+            @click="skipWord"
+            class="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            Skip →
+          </button>
         </div>
       </div>
     </div>
@@ -191,6 +193,9 @@ const sessionStats = ref({ correct: 0, incorrect: 0, skipped: 0 });
 const wordDefinition = ref<WordData | null>(null);
 const wordLoading = ref(false);
 const isConfirmed = ref(false);
+
+let incorrectTimer: ReturnType<typeof setTimeout> | null = null;
+const lastCheckedInput = ref("");
 
 const words = computed(() => vocabularyStore.getPracticeWords());
 const targetWord = computed(() => words.value[currentIndex.value] || "");
@@ -231,15 +236,18 @@ async function fetchWordDefinition(word: string) {
 }
 
 function onKeydown(e: KeyboardEvent) {
-  if (e.key === "Enter") {
-    checkSpelling();
-  } else if (e.key === "ArrowRight") {
+  if (e.key === "ArrowRight") {
     e.preventDefault();
     skipWord();
   }
 }
 
 function checkSpelling() {
+  // Clear any pending incorrect-reset timer to prevent race condition
+  if (incorrectTimer) {
+    clearTimeout(incorrectTimer);
+    incorrectTimer = null;
+  }
   if (feedback.value === "correct") return;
   if (userInput.value.length === 0) return;
 
@@ -247,23 +255,25 @@ function checkSpelling() {
     feedback.value = "correct";
     sessionStats.value.correct++;
 
-    // Auto-advance after 1 second
+    // Auto-advance after short delay
     setTimeout(() => {
       currentIndex.value++;
       userInput.value = "";
       feedback.value = "idle";
+      lastCheckedInput.value = "";
       if (!isComplete.value) {
         fetchWordDefinition(words.value[currentIndex.value]);
         nextTick(() => inputRef.value?.focus());
       }
-    }, 1000);
+    }, 450);
   } else {
     feedback.value = "incorrect";
     sessionStats.value.incorrect++;
 
     // Reset to allow retry after a short delay
-    setTimeout(() => {
+    incorrectTimer = setTimeout(() => {
       feedback.value = "idle";
+      incorrectTimer = null;
     }, 800);
   }
 }
@@ -274,6 +284,7 @@ function skipWord() {
   currentIndex.value++;
   userInput.value = "";
   feedback.value = "idle";
+  lastCheckedInput.value = "";
   if (!isComplete.value) {
     fetchWordDefinition(words.value[currentIndex.value]);
     nextTick(() => inputRef.value?.focus());
@@ -285,6 +296,7 @@ function startPractice() {
   currentIndex.value = 0;
   userInput.value = "";
   feedback.value = "idle";
+  lastCheckedInput.value = "";
   sessionStats.value = { correct: 0, incorrect: 0, skipped: 0 };
   if (words.value.length > 0) {
     fetchWordDefinition(words.value[0]);
@@ -296,12 +308,24 @@ function restart() {
   isConfirmed.value = false;
 }
 
-// Watch for input changes to auto-update feedback display
+// Watch for input changes: sanitize + auto-check when full (from idle only)
 watch(userInput, (val) => {
-  userInput.value = val
+  const sanitized = val
     .toLowerCase()
     .replace(/[^a-z]/g, "")
     .slice(0, targetWord.value.length);
+  if (sanitized !== val) {
+    userInput.value = sanitized;
+    return;
+  }
+  if (
+    sanitized.length === targetWord.value.length &&
+    feedback.value === "idle" &&
+    sanitized !== lastCheckedInput.value
+  ) {
+    lastCheckedInput.value = sanitized;
+    checkSpelling();
+  }
 });
 
 // Auto-play audio when word definition loads
@@ -314,7 +338,9 @@ watch(wordDefinition, (def) => {
 /** 播放音频 */
 function playAudio(url: string) {
   const audio = new window.Audio(url);
-  audio.play();
+  audio.play().catch(() => {
+    // Browser blocks autoplay, silently ignore
+  });
 }
 
 onMounted(() => {
