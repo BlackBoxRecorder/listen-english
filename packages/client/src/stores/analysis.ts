@@ -6,7 +6,7 @@ import { registerPanel, activatePanel } from "../composables/usePanelCoordinator
 export interface AnalysisResult {
   subtitleId: number;
   originalText: string;
-  analysisType: "simple" | "detailed";
+  analysisType: "grammar";
   content: string;
 }
 

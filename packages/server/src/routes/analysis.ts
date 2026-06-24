@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { eq } from "drizzle-orm";
 import { db } from "../db/index.js";
 import { subtitles, sentenceAnalyses } from "../db/schema.js";
-import { getAnalysisType, buildPrompt, callLLMStream } from "../utils/llm.js";
+import { buildPrompt, callLLMStream } from "../utils/llm.js";
 import { stream } from "hono/streaming";
 
 const app = new Hono();
@@ -54,18 +54,23 @@ app.get("/:subtitleId", async (c) => {
       .get();
 
     if (cached) {
-      // 查原句用于统一响应结构
-      const sub = db
-        .select({ englishText: subtitles.englishText })
-        .from(subtitles)
-        .where(eq(subtitles.id, subtitleId))
-        .get();
-      return c.json({
-        subtitleId,
-        originalText: sub?.englishText ?? "",
-        analysisType: cached.analysisType,
-        content: cached.content,
-      });
+      // 旧格式缓存（simple/detailed）→ 删除并走 AI 重新分析
+      if (cached.analysisType !== "grammar") {
+        db.delete(sentenceAnalyses).where(eq(sentenceAnalyses.subtitleId, subtitleId)).run();
+      } else {
+        // 查原句用于统一响应结构
+        const sub = db
+          .select({ englishText: subtitles.englishText })
+          .from(subtitles)
+          .where(eq(subtitles.id, subtitleId))
+          .get();
+        return c.json({
+          subtitleId,
+          originalText: sub?.englishText ?? "",
+          analysisType: "grammar",
+          content: cached.content,
+        });
+      }
     }
 
     // 2. 频率检查（仅在实际需要 AI 调用前检查）
@@ -84,9 +89,9 @@ app.get("/:subtitleId", async (c) => {
       return c.json({ error: "Subtitle not found or has no text" }, 404);
     }
 
-    // 4. 判断复杂度 + 流式调用 AI
-    const analysisType = getAnalysisType(sub.englishText);
-    const prompt = buildPrompt(sub.englishText, analysisType);
+    // 4. 流式调用 AI
+    const analysisType = "grammar";
+    const prompt = buildPrompt(sub.englishText);
 
     return stream(c, async (writer) => {
       try {

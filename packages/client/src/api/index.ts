@@ -13,7 +13,7 @@ export async function fetchListening(id: number) {
 export interface AnalysisStreamResult {
   subtitleId: number;
   originalText: string;
-  analysisType: "simple" | "detailed";
+  analysisType: "grammar";
   content: string;
 }
 
@@ -28,11 +28,7 @@ export async function fetchSentenceAnalysisStream(
   subtitleId: number,
   onChunk: (chunk: string) => void,
   signal?: AbortSignal,
-  onMeta?: (meta: {
-    subtitleId: number;
-    originalText: string;
-    analysisType: "simple" | "detailed";
-  }) => void,
+  onMeta?: (meta: { subtitleId: number; originalText: string; analysisType: "grammar" }) => void,
 ): Promise<AnalysisStreamResult> {
   const res = await fetch(`${BASE}/analysis/${subtitleId}`, { signal });
   if (!res.ok) {
@@ -66,7 +62,7 @@ export async function fetchSentenceAnalysisStream(
   let meta: {
     subtitleId: number;
     originalText: string;
-    analysisType: "simple" | "detailed";
+    analysisType: "grammar";
   } | null = null;
 
   try {
@@ -93,7 +89,7 @@ export async function fetchSentenceAnalysisStream(
             meta?: {
               subtitleId: number;
               originalText: string;
-              analysisType: "simple" | "detailed";
+              analysisType: "grammar";
             };
             chunk?: string;
             error?: string;
@@ -127,7 +123,7 @@ export async function fetchSentenceAnalysisStream(
   return {
     subtitleId: meta?.subtitleId ?? subtitleId,
     originalText: meta?.originalText ?? "",
-    analysisType: meta?.analysisType ?? "simple",
+    analysisType: meta?.analysisType ?? "grammar",
     content: fullContent,
   };
 }

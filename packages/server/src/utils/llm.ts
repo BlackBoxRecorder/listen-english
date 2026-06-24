@@ -115,39 +115,22 @@ if (activeProvider) {
 // ── 公共导出 ──
 
 /**
- * 根据英文句子词数判断分析的复杂度等级
+ * 构建英语句子语法分析提示词（结构化标注式）
  * @param text 英文句子原文
- * @returns "simple"（≤10词）或 "detailed"（>10词）
- */
-export function getAnalysisType(text: string): "simple" | "detailed" {
-  const wordCount = text
-    .trim()
-    .split(/\s+/)
-    .filter((w) => w.length > 0).length;
-  return wordCount <= 10 ? "simple" : "detailed";
-}
-
-/**
- * 根据复杂度类型构建对应的中文提示词
- * @param text 英文句子原文
- * @param type 复杂度类型
  * @returns 完整的提示词字符串
  */
-export function buildPrompt(text: string, type: "simple" | "detailed"): string {
-  if (type === "simple") {
-    return `你是一个英语语法助手。请简洁分析以下英文句子，用中文回复，控制在300字以内，包含：
-1. 句子结构（主谓宾/主系表等）
-2. 关键短语标注
+export function buildPrompt(text: string): string {
+  return `你是一个英语语法助手。请分析以下英文句子的语法，用中文回复，控制在500字以内，严格按以下格式输出。
 
-原句：${text}`;
-  }
+示例——
+输入：She reads books quietly in the library.
+输出：
+【句子成分】
+主语：She / 谓语：reads / 宾语：books / 状语：quietly in the library
+【时态语态】
+时态：一般现在时 / 语态：主动语态
 
-  return `你是一个英语语法助手。请详细分析以下英文长难句，用中文回复，控制在1000字以内，包含：
-1. 整体句子结构（主谓宾/主系表等）
-2. 从句类型标注（定语从句、状语从句等）
-3. 逐层语法拆解
-4. 关键短语和特殊用法说明
-
+现在分析——
 原句：${text}`;
 }
 
