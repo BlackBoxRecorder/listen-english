@@ -153,8 +153,9 @@ export const useVocabularyStore = defineStore("vocabulary", () => {
     const result: string[] = [];
     const seen = new Set<string>();
 
-    // 1. 取勾选的词（按 words 顺序）
+    // 1. 取勾选的词（按 words 顺序），不超过 practiceCount
     for (const entry of words.value) {
+      if (result.length >= practiceCount.value) break;
       if (selectedWordSet.value.has(entry.word)) {
         result.push(entry.word);
         seen.add(entry.word);
