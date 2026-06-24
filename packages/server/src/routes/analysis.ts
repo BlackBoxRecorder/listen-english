@@ -2,7 +2,8 @@ import { Hono } from "hono";
 import { eq } from "drizzle-orm";
 import { db } from "../db/index.js";
 import { subtitles, sentenceAnalyses } from "../db/schema.js";
-import { getAnalysisType, buildPrompt, callLLM } from "../utils/llm.js";
+import { getAnalysisType, buildPrompt, callLLMStream } from "../utils/llm.js";
+import { stream } from "hono/streaming";
 
 const app = new Hono();
 
@@ -83,15 +84,39 @@ app.get("/:subtitleId", async (c) => {
       return c.json({ error: "Subtitle not found or has no text" }, 404);
     }
 
-    // 4. 判断复杂度 + 调用 AI
+    // 4. 判断复杂度 + 流式调用 AI
     const analysisType = getAnalysisType(sub.englishText);
     const prompt = buildPrompt(sub.englishText, analysisType);
-    const content = await callLLM(prompt);
 
-    // 5. 缓存结果
-    db.insert(sentenceAnalyses).values({ subtitleId, analysisType, content }).run();
+    return stream(c, async (writer) => {
+      try {
+        // 先发送元数据，让前端在流式过程中即可显示原文
+        await writer.write(
+          `data: ${JSON.stringify({ meta: { subtitleId, originalText: sub.englishText, analysisType } })}\n\n`,
+        );
 
-    return c.json({ subtitleId, originalText: sub.englishText, analysisType, content });
+        let fullContent = "";
+        const llmStream = callLLMStream(prompt);
+        for await (const chunk of llmStream) {
+          fullContent += chunk;
+          await writer.write(`data: ${JSON.stringify({ chunk })}\n\n`);
+        }
+        await writer.write("data: [DONE]\n\n");
+
+        // 5. 缓存结果（写入失败不影响已返回的流式内容）
+        try {
+          db.insert(sentenceAnalyses)
+            .values({ subtitleId, analysisType, content: fullContent })
+            .run();
+        } catch (cacheErr) {
+          console.error(`[analysis] 缓存写入失败 subtitleId=${subtitleId}:`, cacheErr);
+        }
+      } catch (streamErr) {
+        const msg = streamErr instanceof Error ? streamErr.message : "Analysis failed";
+        console.error("Sentence analysis stream error:", msg);
+        await writer.write(`data: ${JSON.stringify({ error: msg })}\n\n`);
+      }
+    });
   } catch (e) {
     const message = e instanceof Error ? e.message : "Analysis failed";
 

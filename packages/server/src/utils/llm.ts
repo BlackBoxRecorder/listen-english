@@ -18,6 +18,8 @@ interface ProviderConfig {
   apiKey: string;
   maxTokens?: number;
   timeout?: number;
+  /** 是否禁用思考模式（DeepSeek 专有参数，其他 provider 忽略） */
+  disableThinking?: boolean;
 }
 
 interface LLMConfig {
@@ -32,6 +34,7 @@ interface ResolvedProviderConfig {
   apiKey: string;
   maxTokens: number;
   timeout: number;
+  disableThinking: boolean;
 }
 
 // ── 配置加载 ──
@@ -98,6 +101,7 @@ function loadActiveProvider(): ResolvedProviderConfig | null {
     apiKey,
     maxTokens: provider.maxTokens ?? DEFAULT_MAX_TOKENS,
     timeout: provider.timeout ?? DEFAULT_TIMEOUT,
+    disableThinking: provider.disableThinking ?? false,
   };
 }
 
@@ -186,4 +190,85 @@ export async function callLLM(prompt: string): Promise<string> {
     throw new Error("LLM API returned empty response");
   }
   return content;
+}
+
+/**
+ * 流式调用 LLM API 生成句子分析（OpenAI 兼容 SSE 格式），逐 chunk 产出
+ * 相比 callLLM 额外传入 stream:true 和 thinking:{type:"disabled"} 以加速首字响应
+ * @param prompt 提示词
+ * @yields 逐段文本内容
+ * @throws LLM_NOT_CONFIGURED 配置文件缺失或 apiKey 未设置
+ */
+export async function* callLLMStream(prompt: string): AsyncGenerator<string> {
+  if (!activeProvider) {
+    throw new Error("LLM_NOT_CONFIGURED");
+  }
+
+  const body: Record<string, unknown> = {
+    model: activeProvider.model,
+    messages: [{ role: "user", content: prompt }],
+    max_tokens: activeProvider.maxTokens,
+    temperature: 0.3,
+    stream: true,
+  };
+  if (activeProvider.disableThinking) {
+    body.thinking = { type: "disabled" };
+  }
+
+  const res = await fetch(activeProvider.endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${activeProvider.apiKey}`,
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(activeProvider.timeout),
+  });
+
+  if (!res.ok) {
+    const errBody = await res.text().catch(() => "");
+    throw new Error(`LLM API error ${res.status}: ${errBody}`);
+  }
+
+  const reader = res.body?.getReader();
+  if (!reader) {
+    throw new Error("LLM API returned empty response body");
+  }
+
+  const decoder = new TextDecoder();
+  let buffer = "";
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+
+      // 按行解析
+      const lines = buffer.split("\n");
+      // 最后一行可能不完整，保留到下次
+      buffer = lines.pop() ?? "";
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed || !trimmed.startsWith("data:")) continue;
+
+        const dataStr = trimmed.slice(5).trim();
+        if (dataStr === "[DONE]") return;
+
+        try {
+          const parsed = JSON.parse(dataStr) as {
+            choices?: Array<{ delta?: { content?: string } }>;
+          };
+          const chunk = parsed.choices?.[0]?.delta?.content;
+          if (chunk) yield chunk;
+        } catch {
+          // 跳过无法解析的行（如注释）
+        }
+      }
+    }
+  } finally {
+    reader.releaseLock();
+  }
 }

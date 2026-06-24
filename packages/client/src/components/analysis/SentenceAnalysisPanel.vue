@@ -42,7 +42,10 @@
       <!-- AI 分析结果（可滚动） -->
       <div class="flex-1 overflow-y-auto px-4 py-3">
         <!-- Loading -->
-        <div v-if="analysisStore.isLoading" class="space-y-3 animate-pulse">
+        <div
+          v-if="analysisStore.isLoading && !analysisStore.streamingContent"
+          class="space-y-3 animate-pulse"
+        >
           <div class="h-4 bg-gray-200 rounded w-3/4"></div>
           <div class="h-4 bg-gray-200 rounded w-full"></div>
           <div class="h-4 bg-gray-200 rounded w-2/3"></div>
@@ -71,7 +74,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted } from "vue";
+import { ref, watch, onMounted, onUnmounted } from "vue";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 import { useAnalysisStore } from "../../stores/analysis";
@@ -81,12 +84,25 @@ import "../../styles/github-markdown.css";
 const analysisStore = useAnalysisStore();
 const { width, onMouseDown } = useResizablePanel();
 
-const renderedContent = computed(() => {
-  const content = analysisStore.currentResult?.content;
-  if (!content) return "";
-  const rawHtml = marked.parse(content, { async: false }) as string;
-  return DOMPurify.sanitize(rawHtml);
-});
+// 使用 rAF 防抖的 markdown 渲染 ref，避免每 chunk 都触发完整解析
+const renderedContent = ref("");
+let rafId = 0;
+
+watch(
+  () => analysisStore.streamingContent || analysisStore.currentResult?.content || "",
+  (content) => {
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      if (!content) {
+        renderedContent.value = "";
+        return;
+      }
+      const rawHtml = marked.parse(content, { async: false }) as string;
+      renderedContent.value = DOMPurify.sanitize(rawHtml);
+    });
+  },
+  { immediate: true },
+);
 
 function onKeydown(e: KeyboardEvent) {
   if (e.key === "Escape") analysisStore.closePanel();
