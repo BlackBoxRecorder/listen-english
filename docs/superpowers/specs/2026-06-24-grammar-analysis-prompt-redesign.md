@@ -1,60 +1,149 @@
-# 语法分析提示词重构
+# 语法分析 Prompt 升级：完整句子成分与从句分析
 
 ## 概述
 
-将句子 AI 分析的提示词从「simple/detailed 双层结构描述式」改为「统一的语法成分标注式」，聚焦句子成分拆解和时态语态判断，输出控制在 500 字以内。
+将 `buildPrompt` 从仅覆盖主谓宾状的简化版，升级为覆盖定语、补语、从句分析、主谓宾/主系表判别的完整版。采用统一单一 prompt（不区分 simple/detailed），输出采用两层标签 + 竖向排列，适配右侧窄栏阅读场景。
 
 ## 背景
 
-当前 `llm.ts` 中 `buildPrompt` 按词数分两档：
+当前 prompt（llm.ts L122-L135）仅分析主语、谓语、宾语、状语四个成分，不含：
 
-- simple（≤10 词）：句子结构 + 关键短语，300 字
-- detailed（>10 词）：句子结构 + 从句类型 + 逐层拆解 + 特殊用法，1000 字
+- 定语 / 补语
+- 从句类型识别与逐层展开（定语从句、状语从句、名词性从句等）
+- 句型结构判断（主谓宾 / 主系表 / 主谓双宾 / There be 等）
 
-用户希望分析结果更聚焦于语法教学场景：逐词标注句子成分 + 判断时态语态，且输出不宜过长。
+用户需要更完整、详细的语法分析以帮助英语学习。
 
 ## 设计决策
 
-- **统一提示词**：不再区分 simple/detailed，所有句子走同一个提示词
-- **结构化标注式**：用【句子成分】和【时态语态】标签，成分间斜杠分隔
-- **字数上限 500 字**
-- **分析维度**：主谓宾定状补（逐词标注）+ 时态 + 语态
-- **不包含**：从句类型归类、逐层语法拆解、句子类型分类（简单句/复合句等）
+| 维度          | 旧           | 新                                   |
+| ------------- | ------------ | ------------------------------------ |
+| 字数上限      | 500          | 1000                                 |
+| Prompt 策略   | 单一         | 单一（不变）                         |
+| 标签层级      | 两层         | 两层（不变）                         |
+| 排版方向      | 水平斜杠分隔 | 竖向换行排列                         |
+| 从句分析      | 无           | 缩进展开，标注从句类型与内部成分     |
+| 句型判断      | 无           | 标注主谓宾/主系表/主谓双宾等         |
+| 定语/补语     | 无           | 标注定语、补语                       |
+| Few-shot 示例 | 1 个简单句   | 3 个（简单句、定语从句、多从句嵌套） |
 
-## 新提示词
+### 关键约束
+
+- **两层标签不变**：【句子成分】统一承载所有成分、句型、从句信息；【时态语态】仅含时态和语态
+- **竖向排列**：每行独立一个成分/信息，避免长行，适配右侧栏 ~300px 宽度
+- **缩进表示层级**：从句内部的成分用两个空格缩进，清晰展示嵌套关系（不使用 ├ └ 等树形符号，避免 LLM 输出不稳定）
+- **统一 prompt**：所有句子走同一套 prompt，由 LLM 根据句子复杂度自行调整输出详略
+
+## 新 Prompt
 
 ```
-你是一个英语语法助手。请分析以下英文句子的语法，用中文回复，控制在500字以内，严格按以下格式输出：
+你是一个英语语法助手。请分析以下英文句子的语法，用中文回复，控制在1000字以内，严格按以下格式输出。
 
+示例1——
+输入：She reads books quietly in the library.
+输出：
 【句子成分】
-主语：xxx / 谓语：xxx / 宾语：xxx / 定语：xxx / 状语：xxx / 补语：xxx
-（逐词标注每个词的成分归属，无对应成分可省略该行）
+句型：主谓宾结构
+
+主语：She
+谓语：reads
+宾语：books
+状语：quietly in the library
 
 【时态语态】
-时态：xxx / 语态：xxx
+时态：一般现在时
+语态：主动语态
 
+示例2——
+输入：The girl who sits next to me is from Canada.
+输出：
+【句子成分】
+句型：主系表结构
+
+主语：The girl
+  定语从句（修饰主语）：who sits next to me
+    关系代词：who（作从句主语）
+    谓语：sits
+    状语：next to me
+系动词：is
+表语：from Canada
+
+【时态语态】
+主句时态：一般现在时
+从句时态：一般现在时
+语态：主动语态
+
+示例3——
+输入：The teacher told us that the exam would be difficult if we didn't study hard.
+输出：
+【句子成分】
+句型：主谓双宾结构
+
+主语：The teacher
+谓语：told
+间接宾语：us
+直接宾语（宾语从句）：that the exam would be difficult if we didn't study hard
+  引导词：that
+  主语：the exam
+  系动词：would be
+  表语：difficult
+  条件状语从句：if we didn't study hard
+    引导词：if
+    主语：we
+    谓语：didn't study
+    状语：hard
+
+【时态语态】
+主句时态：一般过去时
+宾语从句时态：过去将来时
+条件状语从句时态：一般过去时
+语态：主动语态
+
+现在分析——
 原句：${text}
 ```
 
+### Prompt 设计要点
+
+1. **Few-shot 梯度**：简单句（仅主干）→ 单从句（定语从句）→ 多从句嵌套（宾语从句 + 条件状语从句），覆盖三种典型复杂度
+2. **从句标注方式**：`<从句类型>：<从句原文>`，另起一行缩进展开内部成分。嵌套从句继续缩进
+3. **无对应成分时省略**：如句子没有定语/补语/从句，对应行不出现
+4. **原句放在末尾**：`${text}` 插入在 few-shot 之后，让 LLM 先看到格式规范再看到待分析句子
+
 ## 代码改动
 
-### 1. `packages/server/src/utils/llm.ts`
+### 文件：`packages/server/src/utils/llm.ts`
 
-- `buildPrompt(text)`：去掉 `type` 参数，返回上述统一提示词
-- `getAnalysisType()`：删除（不再需要区分 simple/detailed）
+**`buildPrompt(text)` — 重写**
 
-### 2. `packages/server/src/routes/analysis.ts`
+- 替换 L122-L135 的旧 prompt 为上述新 prompt
+- 函数签名不变：`(text: string) => string`
+- JSDoc 注释更新
 
-- 移除 `getAnalysisType` 的 import 和调用
-- `analysisType` 变量改为固定字符串 `"grammar"`
-- 其余 SSE 流式逻辑、缓存逻辑、频率限制不变
+**其他函数无改动**
 
-### 3. `packages/client/src/api/index.ts` + `packages/client/src/stores/analysis.ts`
+- `callLLM()` — 不变
+- `callLLMStream()` — 不变
+- `loadActiveProvider()` — 不变
 
-- `analysisType` 类型从 `"simple" | "detailed"` 改为 `"grammar"`
+### 文件：`packages/server/src/routes/analysis.ts` — 无改动
 
-### 不需要改动
+当前路由已使用 `buildPrompt(sub.englishText)` 生成 prompt，函数签名不变，无需任何修改。旧缓存兼容逻辑（`analysisType !== "grammar"` 时删除重分析）也无需调整。
 
-- DB schema：`analysis_type` 字段为 `text` 类型，存 `"grammar"` 完全兼容，无需迁移
-- `callLLM` / `callLLMStream`：接口不变
-- 前端 `SentenceAnalysisPanel` 展示逻辑不变
+### 文件：前端 — 无改动
+
+`SentenceAnalysisPanel.vue` 通过 `marked` 渲染 markdown。竖向文本 + 空行 + 缩进会被正确渲染为段落和换行，无需前端修改。
+
+## 旧数据迁移
+
+`analysis.ts` 第 58 行已有逻辑：`analysisType !== "grammar"` 的旧缓存自动删除并重新分析。升级后用户重新点击 AI 分析按钮时，旧缓存自然淘汰，无需额外迁移脚本。
+
+## 不变项
+
+| 模块        | 内容                                                  |
+| ----------- | ----------------------------------------------------- |
+| DB schema   | `sentenceAnalyses.analysis_type` 存 `"grammar"`，不变 |
+| 频率限制    | IP 级别，每 60 秒 5 次，不变                          |
+| 流式响应    | SSE 直透方案，不变                                    |
+| 多 provider | OpenAI 兼容格式调用，不变                             |
+| 前端面板    | markdown 渲染 + 可滚动区域，不变                      |

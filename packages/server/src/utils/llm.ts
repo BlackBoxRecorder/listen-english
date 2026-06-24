@@ -115,20 +115,72 @@ if (activeProvider) {
 // ── 公共导出 ──
 
 /**
- * 构建英语句子语法分析提示词（结构化标注式）
+ * 构建英语句子语法分析提示词（完整语法成分标注式，含定语/补语/从句分析/句型判断）
  * @param text 英文句子原文
- * @returns 完整的提示词字符串
+ * @returns 完整的提示词字符串，含 3 个 few-shot 示例（简单句/单从句/多从句嵌套）
  */
 export function buildPrompt(text: string): string {
-  return `你是一个英语语法助手。请分析以下英文句子的语法，用中文回复，控制在500字以内，严格按以下格式输出。
+  return `你是一个英语语法助手。请分析以下英文句子的语法，用中文回复，控制在1000字以内，严格按以下格式输出。
 
-示例——
+示例1——
 输入：She reads books quietly in the library.
 输出：
 【句子成分】
-主语：She / 谓语：reads / 宾语：books / 状语：quietly in the library
+句型：主谓宾结构
+
+主语：She
+谓语：reads
+宾语：books
+状语：quietly in the library
+
 【时态语态】
-时态：一般现在时 / 语态：主动语态
+时态：一般现在时
+语态：主动语态
+
+示例2——
+输入：The girl who sits next to me is from Canada.
+输出：
+【句子成分】
+句型：主系表结构
+
+主语：The girl
+  定语从句（修饰主语）：who sits next to me
+    关系代词：who（作从句主语）
+    谓语：sits
+    状语：next to me
+系动词：is
+表语：from Canada
+
+【时态语态】
+主句时态：一般现在时
+从句时态：一般现在时
+语态：主动语态
+
+示例3——
+输入：The teacher told us that the exam would be difficult if we didn't study hard.
+输出：
+【句子成分】
+句型：主谓双宾结构
+
+主语：The teacher
+谓语：told
+间接宾语：us
+直接宾语（宾语从句）：that the exam would be difficult if we didn't study hard
+  引导词：that
+  主语：the exam
+  系动词：would be
+  表语：difficult
+  条件状语从句：if we didn't study hard
+    引导词：if
+    主语：we
+    谓语：didn't study
+    状语：hard
+
+【时态语态】
+主句时态：一般过去时
+宾语从句时态：过去将来时
+条件状语从句时态：一般过去时
+语态：主动语态
 
 现在分析——
 原句：${text}`;
