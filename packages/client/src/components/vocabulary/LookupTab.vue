@@ -44,8 +44,11 @@ const searchedWord = ref<string | null>(null);
 function onSearch() {
   const word = query.value.trim().toLowerCase();
   if (!word) return;
-  // Auto-save to vocabulary
-  vocabularyStore.addWord(word);
+  // Auto-save to vocabulary (skip if query contains Chinese characters)
+  const isChinese = /[\u4e00-\u9fff]/.test(word);
+  if (!isChinese) {
+    vocabularyStore.addWord(word);
+  }
   searchedWord.value = word;
 }
 </script>
