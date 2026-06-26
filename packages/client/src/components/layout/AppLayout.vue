@@ -12,6 +12,9 @@
         <router-link to="/grammar" class="hover:text-blue-300 transition-colors"
           >Grammar</router-link
         >
+        <router-link to="/translation" class="hover:text-blue-300 transition-colors"
+          >Translation</router-link
+        >
       </nav>
     </header>
     <main class="flex-1 overflow-hidden">

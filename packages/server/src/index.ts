@@ -6,6 +6,7 @@ import listeningRoutes from "./routes/listening.js";
 import wordsRoutes from "./routes/words.js";
 import analysisRoutes from "./routes/analysis.js";
 import subtitlesRoutes from "./routes/subtitles.js";
+import translateRoutes from "./routes/translate.js";
 import { startSyncScheduler } from "./tasks/syncVoa.js";
 
 const app = new Hono();
@@ -17,6 +18,7 @@ app.route("/api/listening", listeningRoutes);
 app.route("/api/words", wordsRoutes);
 app.route("/api/analysis", analysisRoutes);
 app.route("/api/subtitles", subtitlesRoutes);
+app.route("/api/translate", translateRoutes);
 
 startSyncScheduler();
 

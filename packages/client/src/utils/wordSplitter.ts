@@ -3,7 +3,8 @@ export interface TextSegment {
   isWord: boolean;
 }
 
-const WORD_RE = /([a-zA-Z]+(?:['''][a-zA-Z]+)*)/g;
+// 匹配英文单词（含缩写撇号，支持 ASCII 和智能引号 U+2018/U+2019）
+const WORD_RE = /([a-zA-Z]+(?:['‘’][a-zA-Z]+)*)/g;
 
 export function splitIntoSegments(text: string): TextSegment[] {
   const segments: TextSegment[] = [];
