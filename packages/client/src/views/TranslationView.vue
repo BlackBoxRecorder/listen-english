@@ -1,46 +1,42 @@
 <template>
   <div class="flex flex-col h-full">
     <!-- Tab Bar -->
-    <div class="flex gap-1 px-4 pt-3 pb-0 border-b border-gray-200 bg-gray-50 shrink-0">
-      <button
-        @click="activeTab = 'translate'"
-        class="px-4 py-2 text-sm font-medium rounded-t-lg transition-colors"
-        :class="
-          activeTab === 'translate'
-            ? 'bg-white text-blue-600 border border-b-white border-gray-200'
-            : 'text-gray-500 hover:text-gray-700'
-        "
-      >
-        📝 文本翻译
-      </button>
-      <button
-        @click="activeTab = 'markdown'"
-        class="px-4 py-2 text-sm font-medium rounded-t-lg transition-colors"
-        :class="
-          activeTab === 'markdown'
-            ? 'bg-white text-blue-600 border border-b-white border-gray-200'
-            : 'text-gray-500 hover:text-gray-700'
-        "
-      >
-        📖 Markdown 查词
-      </button>
+    <div class="flex justify-center border-b border-gray-200 shrink-0">
+      <div class="flex gap-1 px-4">
+        <button
+          v-for="tab in tabs"
+          :key="tab.value"
+          @click="activeTab = tab.value"
+          class="px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px"
+          :class="
+            activeTab === tab.value
+              ? 'text-blue-600 border-blue-600'
+              : 'text-gray-500 border-transparent hover:text-gray-700 hover:border-gray-300'
+          "
+        >
+          {{ tab.label }}
+        </button>
+      </div>
     </div>
 
-    <!-- Tab 1: 文本翻译 -->
-    <div v-show="activeTab === 'translate'" class="flex-1 flex flex-col p-4 overflow-hidden">
+    <!-- Tab 1: Text Translation -->
+    <div
+      v-show="activeTab === 'translate'"
+      class="flex-1 flex flex-col p-4 overflow-hidden max-w-5xl mx-auto w-full"
+    >
       <div class="flex gap-4 flex-1 min-h-0">
         <!-- Left: Source -->
         <div class="flex-1 flex flex-col min-w-0">
-          <label class="text-xs text-gray-500 mb-1.5 font-medium">Source Text（输入原文）</label>
+          <label class="text-xs text-gray-500 mb-1.5 font-medium">Source Text</label>
           <textarea
             v-model="sourceText"
-            placeholder="输入要翻译的文本..."
-            class="flex-1 w-full border border-gray-300 rounded-lg p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+            placeholder="Enter text to translate..."
+            class="flex-1 w-full border border-gray-300 rounded-lg p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent break-words overflow-x-hidden"
             :disabled="isTranslating"
           ></textarea>
           <div class="flex justify-between items-center mt-1.5">
             <span v-if="translateError" class="text-xs text-red-500">{{ translateError }}</span>
-            <span v-else class="text-xs text-gray-400">自动检测中/英文并翻译</span>
+            <span v-else class="text-xs text-gray-400">Auto-detect &amp; translate</span>
             <span
               class="text-xs font-mono"
               :class="
@@ -54,12 +50,12 @@
 
         <!-- Right: Translation -->
         <div class="flex-1 flex flex-col min-w-0">
-          <label class="text-xs text-gray-500 mb-1.5 font-medium">Translation（翻译结果）</label>
+          <label class="text-xs text-gray-500 mb-1.5 font-medium">Translation</label>
           <textarea
             :value="translatedText"
             readonly
-            placeholder="翻译结果将显示在这里..."
-            class="flex-1 w-full border border-gray-300 rounded-lg p-3 text-sm resize-none bg-gray-50 text-gray-700"
+            placeholder="Translation will appear here..."
+            class="flex-1 w-full border border-gray-300 rounded-lg p-3 text-sm resize-none bg-gray-50 text-gray-700 break-words overflow-x-hidden"
           ></textarea>
         </div>
       </div>
@@ -97,22 +93,22 @@
               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
             ></path>
           </svg>
-          {{ isTranslating ? "翻译中..." : "翻译 Translate" }}
+          {{ isTranslating ? "Translating..." : "Translate" }}
         </button>
       </div>
     </div>
 
-    <!-- Tab 2: Markdown 查词 -->
+    <!-- Tab 2: Markdown Reading -->
     <div v-show="activeTab === 'markdown'" class="flex-1 flex overflow-hidden">
-      <!-- 输入态 -->
+      <!-- Input state -->
       <div v-if="!rendered" class="flex-1 flex flex-col items-center justify-center p-8">
         <p class="text-sm text-gray-600 mb-4">
-          输入或粘贴 Markdown 文本，渲染后点击任意单词即可查词
+          Enter or paste Markdown text, click any word to look it up after rendering
         </p>
         <textarea
           v-model="mdInput"
-          placeholder="输入 Markdown 文本..."
-          class="w-full max-w-2xl h-48 border border-gray-300 rounded-lg p-3 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+          placeholder="Enter Markdown text..."
+          class="w-full max-w-2xl h-48 border border-gray-300 rounded-lg p-3 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent break-words overflow-x-hidden"
         ></textarea>
         <button
           @click="renderMarkdown"
@@ -124,12 +120,12 @@
               : 'bg-gray-200 text-gray-400 cursor-not-allowed'
           "
         >
-          Render 渲染
+          Reading
         </button>
       </div>
 
-      <!-- 渲染态 -->
-      <div v-else class="flex flex-1 min-w-0">
+      <!-- Rendered state -->
+      <div v-else class="flex flex-1 min-w-0 max-w-6xl mx-auto w-full">
         <!-- Left: Rendered HTML -->
         <div class="flex-1 flex flex-col min-w-0 border-r border-gray-200">
           <div
@@ -143,7 +139,7 @@
               @click="clearMarkdown"
               class="px-5 py-1.5 rounded-lg text-sm text-gray-600 bg-white border border-gray-300 hover:bg-gray-50 transition-colors"
             >
-              ✕ 清空 Clear
+              ✕ Clear
             </button>
           </div>
         </div>
@@ -168,10 +164,17 @@ import InlineWordCard from "../components/translation/InlineWordCard.vue";
 import type { WordData } from "../types/word";
 import { splitIntoSegments } from "../utils/wordSplitter";
 
-// ---- Tab 状态 ----
-const activeTab = ref<"translate" | "markdown">("translate");
+type TabValue = "translate" | "markdown";
 
-// ---- Tab 1: 文本翻译 ----
+const tabs = [
+  { value: "translate" as const, label: "Text Translation" },
+  { value: "markdown" as const, label: "Markdown Reading" },
+];
+
+// ---- Tab 状态 ----
+const activeTab = ref<TabValue>("translate");
+
+// ---- Tab 1: Text Translation ----
 const MAX_CHARS = 1000;
 const sourceText = ref("");
 const translatedText = ref("");
@@ -205,13 +208,13 @@ async function doTranslate() {
 
     translatedText.value = data.translatedText;
   } catch (e) {
-    translateError.value = e instanceof Error ? e.message : "翻译失败";
+    translateError.value = e instanceof Error ? e.message : "Translation failed";
   } finally {
     isTranslating.value = false;
   }
 }
 
-// ---- Tab 2: Markdown 查词 ----
+// ---- Tab 2: Markdown Reading ----
 const mdInput = ref("");
 const rendered = ref(false);
 const renderedHtml = ref("");
@@ -244,7 +247,7 @@ async function renderMarkdown() {
     rendered.value = true;
   } catch (e) {
     console.error("Markdown render failed:", e);
-    lookupError.value = `渲染失败: ${e instanceof Error ? e.message : "未知错误"}`;
+    lookupError.value = `Render failed: ${e instanceof Error ? e.message : "unknown error"}`;
   }
 }
 
@@ -354,6 +357,12 @@ function clearMarkdown() {
 </script>
 
 <style scoped>
+/* Textarea word-wrap */
+textarea {
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
 /* Markdown 渲染样式 */
 .markdown-body {
   color: #24292e;
