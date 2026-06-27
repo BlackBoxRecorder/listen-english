@@ -11,6 +11,34 @@ const app = new Hono();
 /** 最大输入字符数 */
 const MAX_CHARS = 1000;
 
+// ---- 每日字符数限制 ----
+
+/** 每日翻译字符数上限 */
+const DAILY_LIMIT = 100_000;
+
+/** 当前计数日期 */
+let dailyDate = "";
+/** 当日已用字符数 */
+let dailyCharCount = 0;
+
+/**
+ * 检查每日字符限制，未超限则累加计数
+ * @returns 错误消息（超限时），否则 null
+ * @author yinnan
+ */
+function checkDailyLimit(textLength: number): string | null {
+  const today = new Date().toISOString().slice(0, 10);
+  if (dailyDate !== today) {
+    dailyDate = today;
+    dailyCharCount = 0;
+  }
+  if (dailyCharCount + textLength > DAILY_LIMIT) {
+    return `Daily translation limit (${DAILY_LIMIT.toLocaleString()} characters) reached. Please try again tomorrow.`;
+  }
+  dailyCharCount += textLength;
+  return null;
+}
+
 /**
  * 检测文本主要语言
  * CJK 字符占比 > 30% 视为中文，否则英文
@@ -48,6 +76,12 @@ app.post("/", async (c) => {
   }
   if (text.length > MAX_CHARS) {
     return c.json({ error: `Text exceeds ${MAX_CHARS} characters` }, 400);
+  }
+
+  // 每日字符限制检查
+  const limitError = checkDailyLimit(text.length);
+  if (limitError) {
+    return c.json({ error: limitError }, 429);
   }
 
   // 语言检测
