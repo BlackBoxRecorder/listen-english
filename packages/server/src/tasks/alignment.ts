@@ -11,7 +11,7 @@
  * @author yinnan
  */
 
-import { readFile, writeFile, stat } from "fs/promises";
+import { readFile, writeFile, stat, unlink } from "fs/promises";
 import { existsSync } from "fs";
 import { join, resolve, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -241,6 +241,39 @@ async function callAlignmentApi(
   }
 }
 
+// ---- 缓存管理 ----
+
+async function getAlignmentResult(
+  client: ElevenLabsClient,
+  audioBlob: Blob,
+  text: string,
+  jsonPath: string,
+): Promise<{ words: WordTiming[]; loss: number }> {
+  // 1. 检查缓存
+  if (existsSync(jsonPath)) {
+    try {
+      const cached = await readFile(jsonPath, "utf-8");
+      const result = JSON.parse(cached);
+      if (Array.isArray(result.words)) {
+        console.log(`  使用缓存: ${jsonPath}`);
+        return { words: result.words, loss: result.loss ?? 0 };
+      }
+    } catch (err) {
+      console.warn(`  [警告] 缓存文件损坏，将重新调用 API: ${(err as Error).message}`);
+      await unlink(jsonPath);
+    }
+  }
+
+  // 2. 调用 API
+  const result = await callAlignmentApi(client, audioBlob, text);
+
+  // 3. 写入缓存（完整响应）
+  await writeFile(jsonPath, JSON.stringify(result, null, 2), "utf-8");
+  console.log(`  缓存已保存: ${jsonPath}`);
+
+  return result;
+}
+
 // ---- readline 交互确认 ----
 
 function confirmOverwrite(filePath: string): Promise<boolean> {
@@ -271,6 +304,7 @@ async function main(): Promise<void> {
   const txtPath = join(folderPath, `${name}.txt`);
   const mp3Path = join(folderPath, `${name}.mp3`);
   const srtPath = join(folderPath, `${name}.srt`);
+  const jsonPath = join(folderPath, `${name}.alignment.json`);
 
   // 4. 校验文件存在
   if (!existsSync(folderPath)) {
@@ -320,7 +354,7 @@ async function main(): Promise<void> {
   const fullText = lines.join(" ");
   const audioBlob = new Blob([mp3Buffer], { type: "audio/mpeg" });
 
-  const { words, loss } = await callAlignmentApi(client, audioBlob, fullText);
+  const { words, loss } = await getAlignmentResult(client, audioBlob, fullText, jsonPath);
 
   console.log(`  API 返回 ${words.length} 个 word, loss=${loss.toFixed(4)}`);
 
