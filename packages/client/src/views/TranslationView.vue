@@ -103,11 +103,11 @@
       <!-- Input state -->
       <div v-if="!rendered" class="flex-1 flex flex-col items-center justify-center p-8">
         <p class="text-sm text-gray-600 mb-4">
-          Enter or paste Markdown text, click any word to look it up after rendering
+          Enter or paste Markdown or plain text, click any word to look it up after rendering
         </p>
         <textarea
           v-model="mdInput"
-          placeholder="Enter Markdown text..."
+          placeholder="Enter Markdown or plain text..."
           class="w-full max-w-2xl h-48 border border-gray-300 rounded-lg p-3 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent break-words overflow-x-hidden"
         ></textarea>
         <button
@@ -333,6 +333,11 @@ async function lookupWord(word: string) {
 
     if (json.success && json.data) {
       wordData.value = json.data;
+      // 自动播放单词发音
+      const audio = json.data?.phonetic?.audio;
+      if (audio) {
+        new window.Audio(audio).play();
+      }
     } else {
       lookupError.value = "No definition found";
     }
