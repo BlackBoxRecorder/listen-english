@@ -15,14 +15,14 @@ const router = createRouter({
       component: () => import("../views/VocabularyView.vue"),
     },
     {
-      path: "/grammar",
-      name: "grammar",
-      component: () => import("../views/GrammarView.vue"),
-    },
-    {
       path: "/translation",
       name: "translation",
       component: () => import("../views/TranslationView.vue"),
+    },
+    {
+      path: "/grammar",
+      name: "grammar",
+      component: () => import("../views/GrammarView.vue"),
     },
   ],
 });
