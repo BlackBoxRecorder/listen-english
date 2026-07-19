@@ -1,104 +1,211 @@
+1
+00:00:00,480 --> 00:00:08,500
 From VOA Learning English, this is the Health & Lifestyle report.
 
+2
+00:00:08,320 --> 00:00:18,320
 New guidelines have been issued in the United States for preventing stroke – the nation’s 4th biggest killer.
 
+3
+00:00:18,180 --> 00:00:32,940
 The U.S. Centers for Disease Control and Prevention (CDC) says that in 2023, stroke was the fourth leading cause of death in the United States.
 
+4
+00:00:32,800 --> 00:00:40,440
 An estimated half a million people suffer strokes in the U.S. each year.
 
+5
+00:00:39,940 --> 00:00:57,620
 But the CDC notes that up to 80 percent of strokes could be prevented with better nutrition and exercise, along with improved risk identification.
 
+6
+00:00:57,500 --> 00:01:09,810
 A stroke happens when blood flow to part of the brain is blocked or if a blood vessel in the brain breaks open, or bursts.
 
+7
+00:01:09,740 --> 00:01:14,820
 The event keeps oxygen from getting to the brain.
 
+8
+00:01:14,440 --> 00:01:21,620
 This can result in the person having difficulty thinking, talking and walking.
 
+9
+00:01:21,520 --> 00:01:25,360
 In some cases, a stroke can even cause death.
 
+10
+00:01:24,900 --> 00:01:31,620
 Stroke is a major health problem across the world.
 
+11
+00:01:31,520 --> 00:01:43,500
 On its website, the World Stroke Organization says the condition is a leading cause of death and disability worldwide.
 
+12
+00:01:43,180 --> 00:01:48,830
 Over 100 million people worldwide have suffered a stroke.
 
+13
+00:01:48,740 --> 00:01:59,460
 It is estimated that 25 percent of adults over 25 will have a stroke during their lifetime.
 
+14
+00:01:59,400 --> 00:02:06,200
 The new guidelines on stroke prevention came from the American Stroke Association.
 
+15
+00:02:06,050 --> 00:02:10,900
 They are the first to be issued in 10 years.
 
+16
+00:02:10,840 --> 00:02:23,280
 The advice includes suggestions for people and doctors and are based on improved information about who has strokes and why.
 
+17
+00:02:22,680 --> 00:02:30,380
 The guidelines also include new drugs that can help reduce risk.
 
+18
+00:02:29,940 --> 00:02:43,240
 Health researchers say the best way to reduce the risk of stroke is the same as reducing risks for many other conditions.
 
+19
+00:02:43,020 --> 00:02:52,400
 These include eating a healthy diet, moving the body often and not smoking.
 
+20
+00:02:52,080 --> 00:02:59,400
 Here is what to know about stroke and the newly issued guidelines:
 
+21
+00:02:58,900 --> 00:03:05,460
 Experts say eating healthy can help control possible stroke risks.
 
+22
+00:03:05,360 --> 00:03:19,160
 The goal is to prevent or reduce high cholesterol, high blood sugar and obesity, the condition of being extremely overweight.
 
+23
+00:03:19,020 --> 00:03:24,800
 The advice urges people to choose foods in the so-called Mediterranean diet.
 
+24
+00:03:24,280 --> 00:03:32,580
 These include fruits, vegetables, whole grains and olive oil.
 
+25
+00:03:32,220 --> 00:03:39,800
 Eating these foods can help keep cholesterol levels down.
 
+26
+00:03:39,580 --> 00:03:44,660
 Red meat should be limited, along with saturated fats.
 
+27
+00:03:44,200 --> 00:03:54,329
 Additional protein can come from beans, nuts, poultry and seafood.
 
+28
+00:03:54,000 --> 00:04:00,650
 Highly processed foods and drinks with a lot of added sugar should also be avoided.
 
+29
+00:04:00,100 --> 00:04:15,640
 Getting up and walking around for at least 10 minutes a day can greatly reduce a person’s stroke risk, said Dr. Cheryl Bushnell.
 
+30
+00:04:15,220 --> 00:04:24,100
 She is a neurologist at Wake Forest University School of Medicine in North Carolina.
 
+31
+00:04:23,480 --> 00:04:29,720
 Bushnell was part of the group that came up with the new guidelines.
 
+32
+00:04:29,560 --> 00:04:37,720
 She said regular exercise can help reduce blood pressure, a major risk factor for stroke.
 
+33
+00:04:37,160 --> 00:04:44,080
 However, health experts say more movement is better.
 
+34
+00:04:43,890 --> 00:04:59,520
 The stroke association suggests at least 150 minutes of moderate aerobic or 75 minutes of vigorous exercise activity every week.
 
+35
+00:04:59,240 --> 00:05:06,560
 Such exercise could include going to the gym, taking a walk or running.
 
+36
+00:05:06,180 --> 00:05:15,400
 People can also use exercise machines at home, dance or play a sport.
 
+37
+00:05:15,250 --> 00:05:23,710
 The guidelines include a new group of drugs that have been proven to help people lose weight.
 
+38
+00:05:23,640 --> 00:05:35,560
 The drugs – designed for people with obesity or diabetes – had not been approved when past guidelines were issued.
 
-But the advice now suggests doctors consider these drugs for patients at risk for stroke. 
+39
+00:05:35,260 --> 00:05:44,520
+But the advice now suggests doctors consider these drugs for patients at risk for stroke.
+
+40
+00:05:44,320 --> 00:05:54,820
 These include versions sold under the names Ozempic, Wegovy, Mounjaro, and Zepbound.
 
+41
+00:05:54,700 --> 00:06:04,080
 The new guidelines also help doctors identify people who might be at higher risk for stroke.
 
+42
+00:06:03,960 --> 00:06:13,620
 For the first time, the advice suggests doctors screen patients for other risk factors.
 
+43
+00:06:13,300 --> 00:06:24,700
 They could include gender or non-medical factors such as economic issues or the availability of quality health care.
 
+44
+00:06:24,580 --> 00:06:35,640
 The new guidelines also suggest that doctors screen for conditions that may increase a woman’s risk for stroke.
 
+45
+00:06:35,200 --> 00:06:43,640
 These could include high blood pressure during pregnancy or early menopause.
 
+46
+00:06:43,160 --> 00:06:54,980
 Three of the most common stroke signs include face weakness, arm weakness and difficulty speaking.
 
+47
+00:06:54,520 --> 00:07:00,980
 Also, time is important when a person suffers a stroke.
 
+48
+00:07:00,720 --> 00:07:10,200
 Brain damage can happen quickly, but it can be limited if a stroke is treated quickly.
 
+49
+00:07:09,860 --> 00:07:26,640
 Stroke experts have created an acronym to help people remember: FAST -- F for face, A for arm, S for speech, and T for time.
 
+50
+00:07:26,520 --> 00:07:36,220
 If you think you or a loved one may be having a stroke, call the emergency response number in your area immediately.
 
+51
+00:07:36,100 --> 00:07:39,870
 And that’s the Health & Lifestyle report.
 
+52
+00:07:39,660 --> 00:07:41,640
 I’m Anna Matteo.
 
+53
+00:07:41,480 --> 00:07:43,500
 And I’m Bryan Lynn.
