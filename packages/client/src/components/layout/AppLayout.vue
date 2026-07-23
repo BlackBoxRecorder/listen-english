@@ -1,18 +1,28 @@
 <template>
   <div class="h-screen flex flex-col">
-    <header class="h-12 bg-gray-800 text-white flex items-center px-4 shrink-0">
-      <h1 class="text-lg font-semibold">Listen English</h1>
-      <nav class="ml-8 flex gap-4">
-        <router-link to="/listening" class="hover:text-blue-300 transition-colors"
+    <header
+      class="h-12 bg-gray-800 text-white flex items-center px-2 sm:px-4 shrink-0 overflow-x-auto"
+    >
+      <h1 class="text-sm sm:text-lg font-semibold shrink-0">Listen English</h1>
+      <nav class="ml-3 sm:ml-8 flex gap-2 sm:gap-4 shrink-0">
+        <router-link
+          to="/listening"
+          class="text-xs sm:text-sm hover:text-blue-300 transition-colors whitespace-nowrap"
           >Listening</router-link
         >
-        <router-link to="/vocabulary" class="hover:text-blue-300 transition-colors"
+        <router-link
+          to="/vocabulary"
+          class="hidden sm:inline text-xs sm:text-sm hover:text-blue-300 transition-colors whitespace-nowrap"
           >Vocabulary</router-link
         >
-        <router-link to="/translation" class="hover:text-blue-300 transition-colors"
+        <router-link
+          to="/translation"
+          class="hidden sm:inline text-xs sm:text-sm hover:text-blue-300 transition-colors whitespace-nowrap"
           >Translation</router-link
         >
-        <router-link to="/grammar" class="hover:text-blue-300 transition-colors"
+        <router-link
+          to="/grammar"
+          class="text-xs sm:text-sm hover:text-blue-300 transition-colors whitespace-nowrap"
           >Grammar</router-link
         >
       </nav>

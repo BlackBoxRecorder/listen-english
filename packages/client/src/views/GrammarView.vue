@@ -1,20 +1,43 @@
 <template>
   <div class="h-full flex">
     <!-- 左侧目录 -->
-    <GrammarSidebar :sections="grammarSections" :active-id="activeId" @navigate="scrollToSection" />
+    <GrammarSidebar
+      :sections="grammarSections"
+      :active-id="activeId"
+      :is-mobile="isMobile"
+      :drawer-open="drawerOpen"
+      @navigate="scrollToSection"
+      @close="drawerOpen = false"
+    />
 
     <!-- 右侧内容区 -->
     <div ref="contentRef" class="flex-1 overflow-y-auto">
-      <div class="max-w-4xl mx-auto px-8 py-8">
+      <!-- 移动端：显示目录按钮 -->
+      <div
+        v-if="isMobile && !drawerOpen"
+        class="flex items-center gap-2 px-3 py-2 bg-gray-50 border-b border-gray-200 cursor-pointer"
+        @click="openDrawer"
+      >
+        <span class="text-lg leading-none text-gray-700">☰</span>
+        <span class="text-xs font-medium text-gray-600">目录</span>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 py-4 sm:py-8">
         <template v-for="section in grammarSections" :key="section.id">
           <!-- 章节标题 -->
-          <h2 :id="section.id" class="text-2xl font-bold text-gray-800 mb-6 pt-2 scroll-mt-4">
+          <h2
+            :id="section.id"
+            class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 pt-2 scroll-mt-4"
+          >
             {{ section.title }}
           </h2>
 
           <template v-for="sub in section.subsections" :key="sub.id">
             <!-- 子章节标题 -->
-            <h3 :id="sub.id" class="text-xl font-semibold text-gray-700 mb-4 mt-8 scroll-mt-4">
+            <h3
+              :id="sub.id"
+              class="text-lg sm:text-xl font-semibold text-gray-700 mb-3 sm:mb-4 mt-6 sm:mt-8 scroll-mt-4"
+            >
               {{ sub.title }}
             </h3>
 
@@ -24,6 +47,13 @@
         </template>
       </div>
     </div>
+
+    <!-- 移动端：遮罩层 -->
+    <div
+      v-if="isMobile && drawerOpen"
+      class="fixed inset-0 bg-black/50 z-35"
+      @click="drawerOpen = false"
+    />
   </div>
 </template>
 
@@ -35,6 +65,24 @@ import GrammarCard from "../components/grammar/GrammarCard.vue";
 
 const contentRef = ref<HTMLElement | null>(null);
 const activeId = ref("");
+
+// 响应式检测
+const mediaQuery = window.matchMedia("(min-width: 768px)");
+const isMobile = ref(!mediaQuery.matches);
+const drawerOpen = ref(false);
+
+function onMediaChange(e: MediaQueryListEvent) {
+  isMobile.value = !e.matches;
+  if (!isMobile.value) {
+    drawerOpen.value = false;
+  }
+}
+onMounted(() => mediaQuery.addEventListener("change", onMediaChange));
+onUnmounted(() => mediaQuery.removeEventListener("change", onMediaChange));
+
+function openDrawer() {
+  drawerOpen.value = true;
+}
 
 let observer: IntersectionObserver | null = null;
 
